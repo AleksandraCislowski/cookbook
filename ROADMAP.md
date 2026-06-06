@@ -1,269 +1,236 @@
-# Roadmap: Sprint Intelligence Dashboard
+# Roadmap: Personal Cookbook
 
 ## Working Principles
 
-This plan covers 16 weeks with five small, meaningful commits per week. That
-provides approximately 80 days of regular work without artificially splitting a
-single change into multiple commits.
+This project is a personal cookbook that should stay easy to extend for years.
+The code should make adding recipes feel calm and predictable: Markdown files for
+content, reusable templates for structure, image folders for photos, and strict
+validation so mistakes are found before deployment.
 
 A good daily commit:
 
 - delivers one complete change,
-- includes a test or a verifiable result,
-- uses an intention-revealing message, such as `feat: add sprint selector`,
-- does not mix features, refactoring, and documentation without a reason,
+- keeps content, styling, and logic changes easy to review,
+- includes a test or a clear manual verification note,
+- uses an intention-revealing message, such as `feat: add recipe index`,
 - reaches GitHub only after the relevant checks pass.
 
-Green contribution squares should be a result of regular work, not the product's
-goal. Work five days per week and leave weekends for rest, research, or writing
-about important technical decisions.
-
-All repository content must be written in English, including code, comments,
-documentation, issue titles, branch names, and commit messages.
+All repository content should be written in English, including code, comments,
+documentation, branch names, and commit messages. Recipe content can later be
+written in Polish, English, or both if the content model supports language.
 
 ## Proposed Product
 
-Working name: **Sprint Intelligence Dashboard**.
+Working name: **Personal Cookbook**.
 
 Core user flow:
 
-1. The user creates a team and a sprint.
-2. The user imports work items from a demonstration CSV file.
-3. The dashboard calculates and displays sprint metrics.
-4. The user adds a meeting transcript.
-5. AI returns a summary, decisions, blockers, and action items.
-6. The user reviews the results and connects them with work items.
-7. The retrospective view combines metrics with recurring meeting topics.
+1. The user opens a beautiful recipe library.
+2. The user searches or filters recipes by category, tag, time, difficulty,
+   cuisine, season, ingredient, or occasion.
+3. The user opens a recipe with photos, metadata, ingredients, instructions,
+   notes, variations, and related recipes.
+4. The user switches to cooking mode with large readable steps, timers, and
+   servings scaling.
+5. The user adds a new Markdown recipe using a template and places photos in the
+   matching image folder.
+6. The app validates the recipe and automatically includes it in the cookbook.
 
 ## Proposed Technology Stack
 
-- Next.js with TypeScript as a full-stack application
-- PostgreSQL and Prisma for data persistence
-- Tailwind CSS and an accessible component library
-- Recharts or Nivo for charts
-- Zod for validation at system boundaries
+- React with TypeScript
+- MUI for layout, theme, components, icons, and responsive UI
+- Vite or Next.js, finalized during project setup
+- Markdown with frontmatter for recipes
+- `gray-matter` or an equivalent parser for frontmatter
+- `remark`/`rehype` tooling for safe Markdown rendering
+- Zod for recipe schema validation
 - Vitest and Testing Library for unit and component tests
-- Playwright for critical end-to-end flows
-- A language model API behind an internal provider adapter
+- Playwright for critical browsing and cooking-mode flows
 - GitHub Actions for linting, testing, and building
 
-The stack should be finalized during the first week. Do not introduce a separate
-backend, queue, or microservices until a real requirement justifies them.
+The first implementation should avoid unnecessary backend complexity. Recipe
+content can be static at build time until editing from the browser becomes a real
+requirement.
 
 ## MVP Definition
 
-The MVP is complete when a new user can open the demo, select a sprint, review
-four reliable metrics, add a sample transcript, and receive an editable summary
-with action items. The main flow has an end-to-end test, and the application is
-deployed and documented.
+The MVP is complete when the app can load Markdown recipes, validate their
+frontmatter, display a responsive recipe index, open a polished recipe detail
+page, and provide a comfortable cooking mode. It should include at least five
+sample recipes, one reusable recipe template, and documentation for adding a new
+recipe with images.
 
-## 16-Week Plan
+## Suggested Project Structure
 
-Each item represents one meaningful day of work and potentially one commit. When
-a task is too large, split it by behavior, such as implementing tested logic
-first and its interface the following day.
+```txt
+content/
+  recipes/
+    lemon-ricotta-pancakes.md
+  templates/
+    meal.md
+    baking.md
+public/
+  images/
+    recipes/
+      lemon-ricotta-pancakes/
+        hero.jpg
+src/
+  app/
+  components/
+  content/
+  features/
+    recipes/
+  theme/
+  tests/
+```
 
-### Week 1: Product Foundation
+## Programming Plan
 
-1. Document the problem, audience, MVP scope, and success criteria.
-2. Initialize the Next.js application with TypeScript and core scripts.
-3. Add linting, formatting, and commit conventions.
-4. Build the base layout, navigation, and empty page states.
-5. Add CI that runs linting, tests, and the production build.
+### Phase 1: Product Foundation
 
-Outcome: a working project skeleton with a clearly limited MVP.
+1. Align repository naming, documentation, and metadata with the cookbook
+   concept.
+2. Initialize the React, TypeScript, and MUI application.
+3. Add linting, formatting, test scripts, and basic CI.
+4. Create the MUI theme with typography, spacing, color tokens, and responsive
+   layout rules.
+5. Build the base app shell with navigation, search entry point, and empty
+   states.
 
-### Week 2: Design System and Accessibility
+Outcome: the repository has a real app skeleton and a clear product identity.
 
-1. Define colors, typography, spacing, and theme variables.
-2. Add Button, Card, and Badge components with their states.
-3. Add form components and validation messages.
-4. Build a responsive sidebar and header.
-5. Run the first accessibility audit and fix the identified issues.
+### Phase 2: Recipe Content System
 
-Outcome: a consistent UI foundation for efficiently building product views.
+1. Define the recipe frontmatter schema.
+2. Add Markdown parsing and typed recipe loading.
+3. Add Zod validation with helpful error messages.
+4. Add sample recipes and matching image folders.
+5. Add recipe templates for everyday meals, baking, sauces, drinks, preserves,
+   and menu ideas.
 
-### Week 3: Domain Model
+Outcome: recipes can be added as Markdown files without changing UI code.
 
-1. Document the Team, Sprint, WorkItem, Meeting, and Insight entities.
-2. Configure PostgreSQL and Prisma.
-3. Add the initial database migration.
-4. Create seed data for a realistic demonstration team.
-5. Add domain rule tests and an architecture decision record.
+### Phase 3: Recipe Library Experience
 
-Outcome: a credible data model instead of disconnected objects made for charts.
+1. Build recipe cards with image, title, tags, timing, difficulty, and category.
+2. Add the recipe index grid with responsive behavior.
+3. Add search across title, description, tags, ingredients, and notes.
+4. Add filters for category, cuisine, difficulty, time, season, dietary notes,
+   and occasion.
+5. Add sorting by newest, fastest, easiest, title, and favorites.
 
-### Week 4: Sprints and Work Items
+Outcome: the cookbook becomes useful once it contains more than a few recipes.
 
-1. Add the sprint list query and view.
-2. Add sprint details and status.
-3. Build a sortable work item table.
-4. Add work item filters for status and assignee.
-5. Add empty, loading, and error states with view tests.
+### Phase 4: Recipe Detail Page
 
-Outcome: users can comfortably explore the data of a single sprint.
+1. Build the recipe hero with the primary photo and key metadata.
+2. Render ingredients, instructions, notes, variations, and storage tips.
+3. Add servings scaling for ingredient amounts where possible.
+4. Add related recipes based on tags, category, and shared ingredients.
+5. Add print-friendly styling.
 
-### Week 5: Data Import
+Outcome: each recipe page feels complete, readable, and worth saving.
 
-1. Define and document the CSV format.
-2. Build a CSV parser with Zod validation.
-3. Add a preview of valid and invalid records before import.
-4. Persist approved imports and prevent duplicates.
-5. Add import tests and sample files.
+### Phase 5: Cooking Mode
 
-Outcome: the application accepts real data without requiring a Jira integration.
+1. Add a distraction-free cooking view.
+2. Display one step at a time with large readable text.
+3. Add step navigation, progress, and screen-awake friendly layout.
+4. Add timers attached to steps.
+5. Add quick access to ingredients while cooking.
 
-### Week 6: Metrics Engine
+Outcome: the app works in the kitchen, not only while browsing on a laptop.
 
-1. Implement velocity calculations with tests.
-2. Implement sprint predictability calculations with tests.
-3. Implement cycle time calculations with tests.
-4. Implement scope change calculations with tests.
-5. Add a metrics aggregation service and missing-data handling.
+### Phase 6: Personal Organization
 
-Outcome: tested business logic independent of the presentation layer.
+1. Add favorites.
+2. Add collections, such as weekly dinners, baking ideas, party food, and comfort
+   meals.
+3. Add menu planning for selected dates or occasions.
+4. Generate a shopping list from selected recipes.
+5. Allow ingredients to be checked off and grouped by section.
 
-### Week 7: Dashboard
+Outcome: the cookbook becomes a planning tool, not only an archive.
 
-1. Add KPI cards that explain the meaning of each metric.
-2. Build the burndown chart.
-3. Build the multi-sprint velocity chart.
-4. Add cycle time and scope change visualizations.
-5. Add tooltips, responsive behavior, and chart component tests.
+### Phase 7: Quality, Content Tooling, and Polish
 
-Outcome: the first visually strong portfolio-ready part of the product.
+1. Add tests for recipe parsing, validation, filters, and search.
+2. Add an end-to-end flow for browsing, opening a recipe, and using cooking mode.
+3. Add a script that creates a new recipe from a selected template.
+4. Add checks for missing images, duplicate slugs, and invalid frontmatter.
+5. Refine responsive layout, accessibility, loading states, and error states.
 
-### Week 8: Data Interpretation
+Outcome: adding recipes stays safe as the library grows.
 
-1. Add rules that detect sprint risks.
-2. Build a trends and warnings panel.
-3. Compare the current sprint with historical averages.
-4. Add date filters and synchronize them with the URL.
-5. Document the methodology and limitations of each metric.
+### Phase 8: Portfolio-Ready Presentation
 
-Outcome: the dashboard supports decisions instead of only displaying numbers.
+1. Add screenshots and setup instructions to the README.
+2. Document the recipe schema and image conventions.
+3. Add an architecture note explaining the Markdown content pipeline.
+4. Deploy the app.
+5. Tag the first release and write release notes.
 
-### Week 9: Meetings Without AI
+Outcome: the project is easy to understand, run, evaluate, and maintain.
 
-1. Add the meeting model and daily, refinement, review, and retro types.
-2. Build meeting list and detail views.
-3. Add a transcript input form.
-4. Add manual creation of decisions, blockers, and action items.
-5. Connect an action item with a sprint or work item.
+## Recipe Frontmatter Draft
 
-Outcome: the complete meeting flow works before connecting an AI model.
+```yaml
+title: Lemon Ricotta Pancakes
+slug: lemon-ricotta-pancakes
+description: Fluffy pancakes with lemon zest and creamy ricotta.
+category: breakfast
+cuisine: modern
+tags:
+  - sweet
+  - weekend
+  - vegetarian
+difficulty: easy
+prepTime: 10
+cookTime: 15
+restTime: 0
+servings: 4
+season:
+  - spring
+occasion:
+  - weekend breakfast
+dietary:
+  - vegetarian
+image: hero.jpg
+gallery:
+  - batter.jpg
+  - plated.jpg
+source:
+  name: Family notes
+  url:
+publishedAt: 2026-06-06
+updatedAt: 2026-06-06
+```
 
-### Week 10: AI Layer
+## Backlog Ideas
 
-1. Define the structured AI response contract.
-2. Add a model provider adapter and environment configuration.
-3. Create a prompt and a set of anonymized test transcripts.
-4. Add a summary generation endpoint with response validation.
-5. Add a mock AI provider for tests and the local demo.
-
-Outcome: the AI integration is replaceable, testable, and optional for the demo.
-
-### Week 11: Assistant Experience
-
-1. Add the generation screen and a clear processing state.
-2. Display summaries, decisions, blockers, and action items.
-3. Allow users to edit and approve every generated item.
-4. Add retry behavior and safe API limit handling.
-5. Add privacy information and explicit transcript deletion.
-
-Outcome: AI assists the user without saving its output uncritically.
-
-### Week 12: Connecting Insights and Metrics
-
-1. Display meeting blockers on the sprint dashboard.
-2. Display open action items next to connected work items.
-3. Add a trend view for recurring topics.
-4. Build the retrospective preparation view.
-5. Add retrospective summary export to Markdown.
-
-Outcome: the application becomes one coherent product rather than two features
-sharing a repository.
-
-### Week 13: Quality and Security
-
-1. Add input size and type limits.
-2. Protect secrets, logs, and transcript content.
-3. Add rate limiting or controlled AI usage limits.
-4. Review error handling and user-facing messages.
-5. Add regression tests for the most important identified risks.
-
-Outcome: the project demonstrates technical maturity beyond the happy path.
-
-### Week 14: End-to-End Tests and Performance
-
-1. Add an end-to-end test for data import and dashboard access.
-2. Add an end-to-end meeting flow test using the mock AI provider.
-3. Measure performance and improve the slowest view.
-4. Test the application on mobile and improve responsiveness.
-5. Run a second accessibility audit.
-
-Outcome: critical product flows are protected from regressions.
-
-### Week 15: Deployment and Observability
-
-1. Prepare the production database and environment configuration.
-2. Deploy the demonstration application.
-3. Add privacy-conscious error logging.
-4. Add basic usage metrics without collecting meeting content.
-5. Document deployment, migration, and recovery procedures.
-
-Outcome: recruiters can open a live product, and its author can maintain it.
-
-### Week 16: Portfolio Presentation
-
-1. Improve the README with screenshots, architecture, and setup instructions.
-2. Add a data flow diagram and document important technical decisions.
-3. Write a case study covering the problem, decisions, tradeoffs, and results.
-4. Record a short demonstration of the main user flow.
-5. Organize the backlog, tag the first release, and publish release notes.
-
-Outcome: the project is easy to evaluate without reading the entire codebase.
-
-## Optional Weeks 17-24
-
-After the MVP, choose extensions based on what the product genuinely needs. Each
-topic can provide one or two additional weeks of meaningful work:
-
-- authentication and multi-team data isolation,
-- Jira, Linear, or GitHub Projects integration,
-- audio upload and transcription,
-- semantic search across previous meetings,
-- source-grounded questions about sprint history,
-- AI summary quality evaluation against a prepared dataset,
-- AI request budgets and cost observability,
-- prompt versioning and output comparisons,
-- notifications for unresolved action items,
-- controlled-access public sprint reports.
+- bilingual recipe content,
+- recipe import from pasted text,
+- pantry mode based on ingredients already at home,
+- automatic unit conversion,
+- nutrition notes,
+- seasonal calendar,
+- holiday menu builder,
+- photo gallery per recipe,
+- "cook again" history and personal ratings,
+- private notes for adjustments after each attempt,
+- offline support for cooking without reliable internet.
 
 ## Weekly Rhythm
 
 Suggested weekly rhythm:
 
-- Monday: a small feature or data model change,
-- Tuesday: logic and tests,
-- Wednesday: interface and edge cases,
-- Thursday: integration or quality improvement,
-- Friday: end-to-end test, decision documentation, or a focused refactor.
+- Monday: one product or data model change,
+- Tuesday: parsing, validation, or tests,
+- Wednesday: interface and responsive behavior,
+- Thursday: integration, edge cases, or content tooling,
+- Friday: polish, documentation, accessibility, or a focused refactor.
 
-Before each week, create five issues with acceptance criteria. Each day, close
-one issue or a clearly separated part of it. There is no need to commit at any
-cost: an empty contribution square is better than a commit that cannot be
-explained honestly.
-
-## Presenting the Project
-
-Do not introduce the project in an interview as "a dashboard with AI." A stronger
-story is:
-
-> I built a tool that connects quantitative sprint metrics with qualitative
-> context from team meetings. I designed the import flow and data model,
-> implemented a tested metrics engine, and placed AI behind a validated adapter
-> so that a human always reviews its output.
-
-This story demonstrates product thinking, Scrum Master experience, and a mature
-approach to software development.
+Before each week, create a small set of issues with acceptance criteria. The
+project should grow through useful, reviewable changes rather than large unclear
+rewrites.

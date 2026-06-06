@@ -1,48 +1,93 @@
-# Sprint Intelligence Dashboard
+# Personal Cookbook
 
-Sprint Intelligence Dashboard combines sprint analytics with an AI meeting notes
-assistant. It helps teams understand the state of a sprint and turns daily,
-refinement, and retrospective transcripts into decisions, blockers, and action
-items.
+Personal Cookbook is a React and MUI application for collecting, browsing, and
+cooking from a private recipe library. Recipes are stored as Markdown files, so
+new meals can be added without touching application code: create a recipe file,
+add frontmatter, place photos in the matching image folder, and the app turns it
+into a polished, searchable cookbook.
 
-## Problem
+## Product Goal
 
-Information about a team's work is scattered across project management tools,
-meetings, and private notes. Metrics show that a sprint has a problem, but rarely
-explain why. Meeting notes often contain the answer, but are difficult to
-organize consistently and connect with sprint data.
+The project should feel like a real kitchen companion rather than a static recipe
+archive. It should make it easy to save everyday meals, family favorites,
+seasonal ideas, baking notes, quick lunches, party menus, and recipes worth
+returning to.
 
-## Solution
+The application will focus on:
 
-The application allows users to:
+- fast browsing across categories, cuisines, seasons, and occasions,
+- rich recipe pages with photos, ingredients, steps, notes, and variations,
+- powerful filtering by time, difficulty, tags, dietary notes, and ingredients,
+- a comfortable cooking mode for reading steps in the kitchen,
+- Markdown-based content that can grow naturally over time,
+- reusable templates that make every new recipe consistent,
+- a beautiful interface built with React, TypeScript, and MUI.
 
-- review velocity, burndown, cycle time, and sprint predictability,
-- import data from CSV and later from project management APIs,
-- paste or upload meeting transcripts,
-- generate summaries, decisions, blockers, and action items,
-- connect meeting insights with work items and sprints,
-- identify trends and prepare retrospective summaries.
+## Content Model
 
-## Why This Project Belongs in a Portfolio
+Each recipe will live in `content/recipes` as a Markdown file with frontmatter.
+Images will live in a matching folder under `public/images/recipes`.
 
-The project demonstrates:
+Example:
 
-- TypeScript and modern frontend development,
-- data visualization and processing,
-- API and data model design,
-- integrations with external services,
-- practical AI usage with cost and quality controls,
-- experience with product teams and Scrum processes.
+```md
+---
+title: Lemon Ricotta Pancakes
+slug: lemon-ricotta-pancakes
+description: Fluffy pancakes with lemon zest and creamy ricotta.
+category: breakfast
+cuisine: modern
+tags:
+  - sweet
+  - weekend
+  - vegetarian
+difficulty: easy
+prepTime: 10
+cookTime: 15
+servings: 4
+image: hero.jpg
+---
 
-The core product story is simple: metrics explain **what** happened, while
-meeting insights help explain **why**.
+## Ingredients
 
-## Initial Release Scope
+- 250 g ricotta
+- 2 eggs
+- 180 ml milk
 
-The first public version supports one team and a demonstration dataset. A user
-can select a sprint, review its key metrics, add a transcript, and receive a
-structured summary. Billing, organizations, advanced roles, and integrations
-with every project management tool are intentionally outside the initial scope.
+## Instructions
 
-See [ROADMAP.md](./ROADMAP.md) for the detailed implementation plan.
+1. Whisk the wet ingredients.
+2. Fold in the dry ingredients.
+3. Cook on a lightly buttered pan.
 
+## Notes
+
+Add blueberries directly to the pan for a fruitier version.
+```
+
+## Planned Features
+
+- home view with featured recipes, quick filters, and recently added meals,
+- recipe index with search, sorting, tags, and visual recipe cards,
+- recipe detail page with hero image, metadata, ingredients, steps, notes, and
+  related recipes,
+- cooking mode with large step text, timers, servings scaling, and sticky
+  progress,
+- recipe templates for meals, baking, sauces, drinks, preserves, and menu ideas,
+- content validation so broken Markdown fields or missing images are caught
+  early,
+- favorites, collections, and planned menus,
+- shopping list generation from selected recipes,
+- responsive design that works well on desktop, tablet, and phone.
+
+## Technology Direction
+
+- React with TypeScript
+- MUI for the component system and theme
+- Markdown with frontmatter for recipe content
+- A local content loader that converts recipe files into typed data
+- Zod for frontmatter validation
+- Vitest and Testing Library for recipe parsing and UI behavior
+- Playwright for the most important flows once the app shell exists
+
+See [ROADMAP.md](./ROADMAP.md) for the programming plan.
