@@ -4,14 +4,14 @@
 
 This project is a personal cookbook that should stay easy to extend for years.
 The code should make adding recipes feel calm and predictable: Markdown files for
-content, reusable templates for structure, image folders for photos, and strict
-validation so mistakes are found before deployment.
+content, reusable templates for structure, image folders for photos, and clear
+content conventions so new recipes stay consistent.
 
 A good daily commit:
 
 - delivers one complete change,
 - keeps content, styling, and logic changes easy to review,
-- includes a test or a clear manual verification note,
+- includes a clear manual verification note,
 - uses an intention-revealing message, such as `feat: add recipe index`,
 - reaches GitHub only after the relevant checks pass.
 
@@ -34,7 +34,7 @@ Core user flow:
    servings scaling.
 5. The user adds a new Markdown recipe using a template and places photos in the
    matching image folder.
-6. The app validates the recipe and automatically includes it in the cookbook.
+6. The app reads the recipe and automatically includes it in the cookbook.
 
 ## Proposed Technology Stack
 
@@ -44,10 +44,8 @@ Core user flow:
 - Markdown with frontmatter for recipes
 - `gray-matter` or an equivalent parser for frontmatter
 - `remark`/`rehype` tooling for safe Markdown rendering
-- Zod for recipe schema validation
-- Vitest and Testing Library for unit and component tests
 - Playwright for critical browsing and cooking-mode flows
-- GitHub Actions for linting, testing, and building
+- GitHub Actions for building and type checking
 
 The first implementation should avoid unnecessary backend complexity. Recipe
 content can be static at build time until editing from the browser becomes a real
@@ -55,7 +53,7 @@ requirement.
 
 ## MVP Definition
 
-The MVP is complete when the app can load Markdown recipes, validate their
+The MVP is complete when the app can load Markdown recipes, read their
 frontmatter, display a responsive recipe index, open a polished recipe detail
 page, and provide a comfortable cooking mode. It should include at least five
 sample recipes, one reusable recipe template, and documentation for adding a new
@@ -82,7 +80,6 @@ src/
   features/
     recipes/
   theme/
-  tests/
 ```
 
 ## Programming Plan
@@ -92,7 +89,7 @@ src/
 1. Align repository naming, documentation, and metadata with the cookbook
    concept.
 2. Initialize the React, TypeScript, and MUI application.
-3. Add linting, formatting, test scripts, and basic CI.
+3. Add core scripts, and basic CI.
 4. Create the MUI theme with typography, spacing, color tokens, and responsive
    layout rules.
 5. Build the base app shell with navigation, search entry point, and empty
@@ -104,7 +101,7 @@ Outcome: the repository has a real app skeleton and a clear product identity.
 
 1. Define the recipe frontmatter schema.
 2. Add Markdown parsing and typed recipe loading.
-3. Add Zod validation with helpful error messages.
+3. Add clear required-field handling for recipe metadata.
 4. Add sample recipes and matching image folders.
 5. Add recipe templates for everyday meals, baking, sauces, drinks, preserves,
    and menu ideas.
@@ -155,10 +152,10 @@ Outcome: the cookbook becomes a planning tool, not only an archive.
 
 ### Phase 7: Quality, Content Tooling, and Polish
 
-1. Add tests for recipe parsing, validation, filters, and search.
-2. Add an end-to-end flow for browsing, opening a recipe, and using cooking mode.
+1. Add manual checks for recipe parsing, filters, and search.
+2. Add a manual smoke-check flow for browsing, opening a recipe, and using cooking mode.
 3. Add a script that creates a new recipe from a selected template.
-4. Add checks for missing images, duplicate slugs, and invalid frontmatter.
+4. Document checks for missing images, duplicate slugs, and incomplete frontmatter.
 5. Refine responsive layout, accessibility, loading states, and error states.
 
 Outcome: adding recipes stays safe as the library grows.
@@ -226,7 +223,7 @@ updatedAt: 2026-06-06
 Suggested weekly rhythm:
 
 - Monday: one product or data model change,
-- Tuesday: parsing, validation, or tests,
+- Tuesday: parsing, content workflow, or manual checks,
 - Wednesday: interface and responsive behavior,
 - Thursday: integration, edge cases, or content tooling,
 - Friday: polish, documentation, accessibility, or a focused refactor.

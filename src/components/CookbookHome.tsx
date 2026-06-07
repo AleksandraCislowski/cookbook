@@ -1,0 +1,463 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import AddIcon from "@mui/icons-material/Add";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FilterListIcon from "@mui/icons-material/FilterList";
+import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import PrintIcon from "@mui/icons-material/Print";
+import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+import SearchIcon from "@mui/icons-material/Search";
+import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
+import {
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  Chip,
+  Container,
+  Divider,
+  FormControl,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  LinearProgress,
+  MenuItem,
+  Paper,
+  Select,
+  Stack,
+  TextField,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import { recipes, type Recipe } from "@/data/recipes";
+
+const ALL = "all";
+
+const categoryOptions = [ALL, ...Array.from(new Set(recipes.map((recipe) => recipe.category)))];
+const tagOptions = ["quick", "vegetarian", "comfort", "weekend", "fish", "dessert"];
+
+function getTotalTime(recipe: Recipe) {
+  return recipe.prepTime + recipe.cookTime;
+}
+
+function matchesSearch(recipe: Recipe, searchTerm: string) {
+  const normalizedSearch = searchTerm.trim().toLowerCase();
+
+  if (!normalizedSearch) {
+    return true;
+  }
+
+  return [
+    recipe.title,
+    recipe.description,
+    recipe.category,
+    recipe.cuisine,
+    recipe.difficulty,
+    ...recipe.tags,
+    ...recipe.ingredients,
+  ]
+    .join(" ")
+    .toLowerCase()
+    .includes(normalizedSearch);
+}
+
+function RecipeCard({
+  recipe,
+  selected,
+  onSelect,
+}: {
+  recipe: Recipe;
+  selected: boolean;
+  onSelect: () => void;
+}) {
+  return (
+    <Card
+      variant="outlined"
+      sx={{
+        overflow: "hidden",
+        borderColor: selected ? "primary.main" : "rgba(35, 33, 30, 0.12)",
+        boxShadow: selected ? "0 0 0 2px rgba(53, 104, 89, 0.16)" : "none",
+      }}
+    >
+      <CardActionArea onClick={onSelect} sx={{ height: "100%" }}>
+        <Box
+          component="img"
+          src={recipe.image}
+          alt=""
+          sx={{
+            display: "block",
+            width: "100%",
+            aspectRatio: "4 / 3",
+            objectFit: "cover",
+            backgroundColor: "#d8ddd2",
+          }}
+        />
+        <Box sx={{ p: 2 }}>
+          <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 1 }}>
+            <Chip size="small" label={recipe.category} color="primary" variant="outlined" />
+            <Chip size="small" label={recipe.difficulty} variant="outlined" />
+          </Stack>
+          <Typography variant="h3" sx={{ fontSize: "1.05rem", lineHeight: 1.2, mb: 0.75 }}>
+            {recipe.title}
+          </Typography>
+          <Typography color="text.secondary" sx={{ minHeight: 44 }}>
+            {recipe.description}
+          </Typography>
+          <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mt: 1.5 }}>
+            <Stack direction="row" spacing={0.5} alignItems="center">
+              <TimerOutlinedIcon fontSize="small" color="action" />
+              <Typography variant="body2">{getTotalTime(recipe)} min</Typography>
+            </Stack>
+            <Stack direction="row" spacing={0.5} alignItems="center">
+              <RestaurantMenuIcon fontSize="small" color="action" />
+              <Typography variant="body2">{recipe.servings}</Typography>
+            </Stack>
+          </Stack>
+        </Box>
+      </CardActionArea>
+    </Card>
+  );
+}
+
+export function CookbookHome() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [category, setCategory] = useState(ALL);
+  const [activeTag, setActiveTag] = useState(ALL);
+  const [sort, setSort] = useState("newest");
+  const [selectedSlug, setSelectedSlug] = useState(recipes[0].slug);
+
+  const filteredRecipes = useMemo(() => {
+    return recipes
+      .filter((recipe) => category === ALL || recipe.category === category)
+      .filter((recipe) => activeTag === ALL || recipe.tags.includes(activeTag))
+      .filter((recipe) => matchesSearch(recipe, searchTerm))
+      .sort((firstRecipe, secondRecipe) => {
+        if (sort === "fastest") {
+          return getTotalTime(firstRecipe) - getTotalTime(secondRecipe);
+        }
+
+        if (sort === "title") {
+          return firstRecipe.title.localeCompare(secondRecipe.title);
+        }
+
+        return secondRecipe.addedDate.localeCompare(firstRecipe.addedDate);
+      });
+  }, [activeTag, category, searchTerm, sort]);
+
+  const selectedRecipe =
+    filteredRecipes.find((recipe) => recipe.slug === selectedSlug) || filteredRecipes[0] || recipes[0];
+
+  const stats = [
+    { label: "Recipes", value: recipes.length },
+    { label: "Fast meals", value: recipes.filter((recipe) => getTotalTime(recipe) <= 30).length },
+    { label: "Categories", value: categoryOptions.length - 1 },
+  ];
+
+  return (
+    <Box sx={{ minHeight: "100vh", pb: 6 }}>
+      <Box
+        component="header"
+        sx={{
+          borderBottom: "1px solid rgba(35, 33, 30, 0.1)",
+          backgroundColor: "rgba(255, 250, 242, 0.86)",
+          backdropFilter: "blur(18px)",
+          position: "sticky",
+          top: 0,
+          zIndex: 10,
+        }}
+      >
+        <Container maxWidth="xl">
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={2}
+            alignItems={{ xs: "stretch", md: "center" }}
+            justifyContent="space-between"
+            sx={{ py: 1.5 }}
+          >
+            <Stack direction="row" spacing={1.25} alignItems="center">
+              <Box
+                sx={{
+                  width: 40,
+                  height: 40,
+                  display: "grid",
+                  placeItems: "center",
+                  borderRadius: 2,
+                  backgroundColor: "primary.main",
+                  color: "primary.contrastText",
+                }}
+              >
+                <MenuBookIcon />
+              </Box>
+              <Box>
+                <Typography variant="h1" sx={{ fontSize: { xs: "1.35rem", md: "1.55rem" } }}>
+                  Personal Cookbook
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Markdown recipes, photos, notes, and kitchen flow
+                </Typography>
+              </Box>
+            </Stack>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <Tooltip title="Add recipe">
+                <Button variant="contained" startIcon={<AddIcon />}>
+                  New recipe
+                </Button>
+              </Tooltip>
+              <Tooltip title="Favorites">
+                <IconButton aria-label="Favorites">
+                  <FavoriteBorderIcon />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Shopping list">
+                <IconButton aria-label="Shopping list">
+                  <LocalGroceryStoreIcon />
+                </IconButton>
+              </Tooltip>
+            </Stack>
+          </Stack>
+        </Container>
+      </Box>
+
+      <Container maxWidth="xl" sx={{ pt: { xs: 3, md: 4 } }}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", lg: "280px minmax(0, 1fr) 380px" },
+            gap: 2.5,
+            alignItems: "start",
+          }}
+        >
+          <Stack spacing={2}>
+            <Paper variant="outlined" sx={{ p: 2, bgcolor: "background.paper" }}>
+              <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 2 }}>
+                <FilterListIcon color="primary" />
+                <Typography variant="h2" sx={{ fontSize: "1rem" }}>
+                  Browse
+                </Typography>
+              </Stack>
+              <Stack spacing={2}>
+                <TextField
+                  value={searchTerm}
+                  onChange={(event) => setSearchTerm(event.target.value)}
+                  label="Search recipes"
+                  placeholder="miso, lemon, dinner..."
+                  size="small"
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SearchIcon fontSize="small" />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <FormControl size="small" fullWidth>
+                  <InputLabel id="category-filter-label">Category</InputLabel>
+                  <Select
+                    labelId="category-filter-label"
+                    value={category}
+                    label="Category"
+                    onChange={(event) => setCategory(event.target.value)}
+                  >
+                    {categoryOptions.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option === ALL ? "All categories" : option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+                <FormControl size="small" fullWidth>
+                  <InputLabel id="sort-label">Sort</InputLabel>
+                  <Select
+                    labelId="sort-label"
+                    value={sort}
+                    label="Sort"
+                    onChange={(event) => setSort(event.target.value)}
+                  >
+                    <MenuItem value="newest">Recently added</MenuItem>
+                    <MenuItem value="fastest">Fastest first</MenuItem>
+                    <MenuItem value="title">Title A-Z</MenuItem>
+                  </Select>
+                </FormControl>
+              </Stack>
+            </Paper>
+
+            <Paper variant="outlined" sx={{ p: 2, bgcolor: "background.paper" }}>
+              <Typography variant="h2" sx={{ fontSize: "1rem", mb: 1.5 }}>
+                Tags
+              </Typography>
+              <Stack direction="row" flexWrap="wrap" gap={1}>
+                <Chip
+                  label="all"
+                  color={activeTag === ALL ? "primary" : "default"}
+                  onClick={() => setActiveTag(ALL)}
+                />
+                {tagOptions.map((tag) => (
+                  <Chip
+                    key={tag}
+                    label={tag}
+                    color={activeTag === tag ? "primary" : "default"}
+                    variant={activeTag === tag ? "filled" : "outlined"}
+                    onClick={() => setActiveTag(tag)}
+                  />
+                ))}
+              </Stack>
+            </Paper>
+
+            <Paper variant="outlined" sx={{ p: 2, bgcolor: "#eef3e8" }}>
+              <Typography variant="h2" sx={{ fontSize: "1rem", mb: 1.5 }}>
+                Library
+              </Typography>
+              <Stack spacing={1.25}>
+                {stats.map((stat) => (
+                  <Stack key={stat.label} direction="row" justifyContent="space-between">
+                    <Typography color="text.secondary">{stat.label}</Typography>
+                    <Typography fontWeight={800}>{stat.value}</Typography>
+                  </Stack>
+                ))}
+              </Stack>
+            </Paper>
+          </Stack>
+
+          <Box>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              spacing={1.5}
+              justifyContent="space-between"
+              alignItems={{ xs: "stretch", sm: "center" }}
+              sx={{ mb: 2 }}
+            >
+              <Box>
+                <Typography variant="h2" sx={{ fontSize: { xs: "1.45rem", md: "1.85rem" } }}>
+                  Recipes ready to cook
+                </Typography>
+                <Typography color="text.secondary">
+                  {filteredRecipes.length} shown from your starter library
+                </Typography>
+              </Box>
+              <Button variant="outlined" startIcon={<PrintIcon />}>
+                Print menu
+              </Button>
+            </Stack>
+
+            {filteredRecipes.length > 0 ? (
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "1fr",
+                    sm: "repeat(2, minmax(0, 1fr))",
+                    xl: "repeat(3, minmax(0, 1fr))",
+                  },
+                  gap: 2,
+                }}
+              >
+                {filteredRecipes.map((recipe) => (
+                  <RecipeCard
+                    key={recipe.slug}
+                    recipe={recipe}
+                    selected={selectedRecipe.slug === recipe.slug}
+                    onSelect={() => setSelectedSlug(recipe.slug)}
+                  />
+                ))}
+              </Box>
+            ) : (
+              <Paper variant="outlined" sx={{ p: 4, textAlign: "center" }}>
+                <Typography variant="h2" sx={{ fontSize: "1.25rem" }}>
+                  No recipes match this search.
+                </Typography>
+                <Button
+                  sx={{ mt: 2 }}
+                  onClick={() => {
+                    setSearchTerm("");
+                    setCategory(ALL);
+                    setActiveTag(ALL);
+                  }}
+                >
+                  Show all recipes
+                </Button>
+              </Paper>
+            )}
+          </Box>
+
+          <Paper
+            variant="outlined"
+            sx={{
+              overflow: "hidden",
+              bgcolor: "background.paper",
+              position: { lg: "sticky" },
+              top: { lg: 96 },
+            }}
+          >
+            <Box
+              component="img"
+              src={selectedRecipe.image}
+              alt=""
+              sx={{ width: "100%", aspectRatio: "16 / 10", objectFit: "cover", display: "block" }}
+            />
+            <Box sx={{ p: 2.25 }}>
+              <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
+                <Chip size="small" color="secondary" label={selectedRecipe.category} />
+                <Chip size="small" variant="outlined" label={selectedRecipe.cuisine} />
+              </Stack>
+              <Typography variant="h2" sx={{ fontSize: "1.45rem", mb: 0.75 }}>
+                {selectedRecipe.title}
+              </Typography>
+              <Typography color="text.secondary" sx={{ mb: 2 }}>
+                {selectedRecipe.description}
+              </Typography>
+
+              <Box sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, mb: 2 }}>
+                {[
+                  ["Prep", `${selectedRecipe.prepTime}m`],
+                  ["Cook", `${selectedRecipe.cookTime}m`],
+                  ["Serves", selectedRecipe.servings],
+                ].map(([label, value]) => (
+                  <Box key={label} sx={{ p: 1, bgcolor: "#f3efe6", borderRadius: 2 }}>
+                    <Typography variant="caption" color="text.secondary">
+                      {label}
+                    </Typography>
+                    <Typography fontWeight={800}>{value}</Typography>
+                  </Box>
+                ))}
+              </Box>
+
+              <Stack spacing={1.75}>
+                <Box>
+                  <Typography variant="h3" sx={{ fontSize: "1rem", mb: 1 }}>
+                    Ingredients
+                  </Typography>
+                  <Stack component="ul" spacing={0.75} sx={{ pl: 2.5, m: 0 }}>
+                    {selectedRecipe.ingredients.map((ingredient) => (
+                      <Typography component="li" key={ingredient} color="text.secondary">
+                        {ingredient}
+                      </Typography>
+                    ))}
+                  </Stack>
+                </Box>
+                <Divider />
+                <Box>
+                  <Typography variant="h3" sx={{ fontSize: "1rem", mb: 1 }}>
+                    Cooking mode preview
+                  </Typography>
+                  <LinearProgress variant="determinate" value={25} sx={{ mb: 1.5, height: 8, borderRadius: 4 }} />
+                  <Typography fontWeight={800} sx={{ mb: 0.75 }}>
+                    Step 1 of {selectedRecipe.steps.length}
+                  </Typography>
+                  <Typography color="text.secondary">{selectedRecipe.steps[0]}</Typography>
+                </Box>
+                <Paper variant="outlined" sx={{ p: 1.5, bgcolor: "#f8f1e7" }}>
+                  <Typography variant="caption" color="text.secondary">
+                    Note
+                  </Typography>
+                  <Typography>{selectedRecipe.note}</Typography>
+                </Paper>
+              </Stack>
+            </Box>
+          </Paper>
+        </Box>
+      </Container>
+    </Box>
+  );
+}

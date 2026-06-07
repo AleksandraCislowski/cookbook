@@ -74,8 +74,7 @@ Add blueberries directly to the pan for a fruitier version.
 - cooking mode with large step text, timers, servings scaling, and sticky
   progress,
 - recipe templates for meals, baking, sauces, drinks, preserves, and menu ideas,
-- content validation so broken Markdown fields or missing images are caught
-  early,
+- a clear content workflow so recipes and images stay consistent,
 - favorites, collections, and planned menus,
 - shopping list generation from selected recipes,
 - responsive design that works well on desktop, tablet, and phone.
@@ -86,8 +85,7 @@ Add blueberries directly to the pan for a fruitier version.
 - MUI for the component system and theme
 - Markdown with frontmatter for recipe content
 - A local content loader that converts recipe files into typed data
-- Zod for frontmatter validation
-- Vitest and Testing Library for recipe parsing and UI behavior
 - Playwright for the most important flows once the app shell exists
 
-See [ROADMAP.md](./ROADMAP.md) for the programming plan.
+See [ROADMAP.md](./ROADMAP.md) for the broader roadmap and
+[PROGRAMMING_PLAN.md](./PROGRAMMING_PLAN.md) for the practical build plan.
