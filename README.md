@@ -74,6 +74,7 @@ Add blueberries directly to the pan for a fruitier version.
 - cooking mode with large step text, timers, servings scaling, and sticky
   progress,
 - recipe templates for meals, baking, sauces, drinks, preserves, and menu ideas,
+- `npm run new-recipe` for creating matching Markdown files and image folders,
 - a clear content workflow so recipes and images stay consistent,
 - favorites, collections, and planned menus,
 - shopping list generation from selected recipes,
@@ -87,5 +88,6 @@ Add blueberries directly to the pan for a fruitier version.
 - A local content loader that converts recipe files into typed data
 - Playwright for the most important flows once the app shell exists
 
-See [ROADMAP.md](./ROADMAP.md) for the broader roadmap and
-[PROGRAMMING_PLAN.md](./PROGRAMMING_PLAN.md) for the practical build plan.
+See [ROADMAP.md](./ROADMAP.md) for the broader roadmap,
+[PROGRAMMING_PLAN.md](./PROGRAMMING_PLAN.md) for the practical build plan, and
+[docs/content-workflow.md](./docs/content-workflow.md) for adding recipes.

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3000",
+    "new-recipe": "node scripts/new-recipe.js",
     "build": "next build",
     "typecheck": "tsc --noEmit"
   },

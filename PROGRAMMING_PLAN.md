@@ -206,8 +206,8 @@ Goal: make the project comfortable to grow without adding a heavy testing setup.
 
 Tasks:
 
-1. Add a script for creating a recipe from a template.
-2. Add documentation for the recipe workflow.
+1. Add a script for creating a recipe from a template. (Done: `npm run new-recipe`.)
+2. Add documentation for the recipe workflow. (Done: `docs/content-workflow.md`.)
 3. Add a publishing checklist for new recipes.
 4. Add manual smoke-check steps for browsing, searching, opening a recipe, and entering cooking mode.
 5. Keep CI focused on building and type checking.
