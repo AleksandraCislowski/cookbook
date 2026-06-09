@@ -25,28 +25,54 @@ The app should feel like a polished private cookbook:
 - Use Markdown files with frontmatter for recipes.
 - Keep recipes static at build time for the first version.
 - Use a small content loading layer that exposes typed recipe objects to the UI.
+- Use Next.js for the application framework.
 
-Open decision:
+Framework decision:
 
-- Choose Vite or Next.js during setup. If image optimization, file-based routes,
-  and static generation matter most, choose Next.js. If a simpler client app is
-  enough, choose Vite.
+- **Chosen: Next.js.** It fits Markdown content, generated recipe pages, image
+  handling, static builds, and future deployment well.
 
-Recommended first choice: **Next.js**, because it fits Markdown content,
-generated recipe pages, image handling, and future deployment well.
+## Current Status
+
+The project has a working Next.js foundation with React, TypeScript, MUI, base
+scripts, a custom theme, and an initial cookbook browsing screen. The current
+recipe data is still hard-coded in TypeScript, so the main next milestone is the
+Markdown content pipeline.
+
+Completed or started:
+
+- Next.js app shell exists.
+- MUI is installed and wired through the app provider.
+- Scripts exist for `dev`, `build`, `typecheck`, and `new-recipe`.
+- Base theme and responsive home layout exist.
+- A starter recipe library UI exists with cards, search, category filtering,
+  tag chips, sorting, empty state, and selected recipe preview.
+- Recipe workflow documentation exists in `docs/content-workflow.md`.
+- Recipe creation script exists as `npm run new-recipe`.
+
+Current gaps:
+
+- Recipe files are not yet loaded from Markdown/frontmatter.
+- The planned `content/recipes` and `content/templates` structure has not been
+  fully adopted yet.
+- Recipe detail pages, cooking mode, favorites, collections, menu planning, and
+  shopping lists are not implemented yet.
 
 ## Milestone 1: App Foundation
 
 Goal: create a working application shell with the right stack and project
 structure.
 
+Status: mostly complete. Remaining work is formatting conventions and aligning
+the folder structure with the content plan.
+
 Tasks:
 
-1. Initialize the app with React, TypeScript, and the selected build framework.
-2. Install and configure MUI.
-3. Add base scripts: `dev`, `build`, and `typecheck`.
-4. Add formatting conventions.
-5. Add the base folder structure:
+1. Initialize the app with React, TypeScript, and Next.js. (Done.)
+2. Install and configure MUI. (Done.)
+3. Add base scripts: `dev`, `build`, and `typecheck`. (Done.)
+4. Add formatting conventions. (Pending.)
+5. Add the base folder structure. (Started.)
 
 ```txt
 content/
@@ -65,8 +91,8 @@ src/
 ```
 
 6. Create the main layout with navigation, content width rules, and responsive
-   behavior.
-7. Add the initial MUI theme.
+   behavior. (Done.)
+7. Add the initial MUI theme. (Done.)
 
 Done when:
 
@@ -78,6 +104,9 @@ Done when:
 ## Milestone 2: Recipe Content Model
 
 Goal: make recipes load from Markdown files predictably.
+
+Status: next primary milestone. This should be completed before expanding the
+recipe library or adding recipe detail pages.
 
 Tasks:
 
@@ -107,12 +136,16 @@ Done when:
 
 Goal: build the main browsing experience.
 
+Status: partially started with static TypeScript recipe data. The browsing UI
+exists, but it should be connected to the Markdown content layer after Milestone
+2.
+
 Tasks:
 
 1. Create recipe cards with image, title, description, tags, time, difficulty,
-   and category.
-2. Build the recipe grid.
-3. Add search across title, description, tags, ingredients, and notes.
+   and category. (Started.)
+2. Build the recipe grid. (Started.)
+3. Add search across title, description, tags, ingredients, and notes. (Started.)
 4. Add filters:
 
 - category,
@@ -124,7 +157,7 @@ Tasks:
 - occasion,
 - ingredient.
 
-5. Add sorting:
+5. Add sorting: (Started.)
 
 - newest,
 - title,
@@ -132,7 +165,7 @@ Tasks:
 - easiest,
 - recently updated.
 
-6. Add empty states for no results and no recipes.
+6. Add empty states for no results and no recipes. (Started.)
 7. Persist search and filter state in the URL if the framework makes it simple.
 
 Done when:
@@ -204,6 +237,8 @@ Done when:
 
 Goal: make the project comfortable to grow without adding a heavy testing setup.
 
+Status: partially started.
+
 Tasks:
 
 1. Add a script for creating a recipe from a template. (Done: `npm run new-recipe`.)
@@ -219,34 +254,34 @@ Done when:
 - the manual checklist is clear enough to follow,
 - the app still builds cleanly after new content is added.
 
-## First Five Programming Sessions
+## Updated Next Programming Sessions
 
-### Session 1: Project Setup
+### Session 1: Finish Foundation Alignment
 
-- Initialize the framework.
-- Install MUI.
-- Add scripts and base configuration.
-- Render the first app shell.
+- Add formatting conventions.
+- Align the folder structure with the plan.
+- Confirm `npm run typecheck` and `npm run build` pass.
+- Update documentation if folder names change.
 
-### Session 2: Theme And Layout
+### Session 2: Markdown Content Pipeline
 
-- Build the theme.
-- Add navigation.
-- Add responsive content layout.
-- Create first shared UI primitives.
-
-### Session 3: Markdown Content Pipeline
-
-- Add recipe schema.
+- Define the frontmatter schema.
 - Add Markdown parsing.
-- Load sample recipe data.
+- Create typed recipe objects.
+- Add duplicate slug validation.
 
-### Session 4: Recipe Index
+### Session 3: Convert Starter Recipes
 
-- Build recipe cards.
-- Render the recipe grid.
-- Add basic search.
-- Add empty states.
+- Move the five starter recipes into Markdown files.
+- Add matching image-folder conventions.
+- Add reusable recipe templates.
+- Keep the recipe creation script aligned with the templates.
+
+### Session 4: Connect Recipe Index
+
+- Replace hard-coded recipe data with loaded Markdown recipes.
+- Expand filters and sorting against the typed recipe model.
+- Persist search and filter state in the URL if simple.
 
 ### Session 5: Recipe Detail
 
@@ -297,13 +332,14 @@ hero.jpg
 
 ## Near-Term Backlog
 
-- Decide framework: Next.js or Vite.
-- Create initial app.
-- Create theme direction.
-- Add recipe schema.
-- Add sample recipes.
-- Add templates.
-- Add recipe index.
-- Add recipe detail.
+- Add formatting conventions.
+- Align folders with the planned content structure:
+  `content/recipes`, `content/templates`, and `public/images/recipes`.
+- Define the recipe frontmatter schema.
+- Add Markdown parsing and typed recipe loading.
+- Move starter recipes from `src/data/recipes.ts` into Markdown files.
+- Add reusable recipe templates.
+- Connect the existing recipe index UI to the Markdown content layer.
+- Add recipe slug pages.
 - Add cooking mode.
-- Add the recipe creation script.
+- Add the publishing checklist and manual smoke-check documentation.
