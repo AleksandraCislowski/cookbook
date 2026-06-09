@@ -31,6 +31,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
+import { alpha } from "@mui/material/styles";
 import { recipes, type Recipe } from "@/data/recipes";
 
 const ALL = "all";
@@ -77,8 +78,9 @@ function RecipeCard({
       variant="outlined"
       sx={{
         overflow: "hidden",
-        borderColor: selected ? "primary.main" : "rgba(35, 33, 30, 0.12)",
-        boxShadow: selected ? "0 0 0 2px rgba(53, 104, 89, 0.16)" : "none",
+        borderColor: selected ? "primary.main" : "app.border",
+        boxShadow: (theme) =>
+          selected ? `0 0 0 2px ${alpha(theme.palette.primary.main, 0.16)}` : "none",
       }}
     >
       <CardActionArea onClick={onSelect} sx={{ height: "100%" }}>
@@ -91,7 +93,7 @@ function RecipeCard({
             width: "100%",
             aspectRatio: "4 / 3",
             objectFit: "cover",
-            backgroundColor: "#d8ddd2",
+            backgroundColor: "app.imageFallback",
           }}
         />
         <Box sx={{ p: 2 }}>
@@ -160,8 +162,9 @@ export function CookbookHome() {
       <Box
         component="header"
         sx={{
-          borderBottom: "1px solid rgba(35, 33, 30, 0.1)",
-          backgroundColor: "rgba(255, 250, 242, 0.86)",
+          borderBottom: "1px solid",
+          borderColor: "app.border",
+          backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.9),
           backdropFilter: "blur(18px)",
           position: "sticky",
           top: 0,
@@ -305,7 +308,7 @@ export function CookbookHome() {
               </Stack>
             </Paper>
 
-            <Paper variant="outlined" sx={{ p: 2, bgcolor: "#eef3e8" }}>
+            <Paper variant="outlined" sx={{ p: 2, bgcolor: "app.surface" }}>
               <Typography variant="h2" sx={{ fontSize: "1rem", mb: 1.5 }}>
                 Library
               </Typography>
@@ -414,7 +417,7 @@ export function CookbookHome() {
                   ["Cook", `${selectedRecipe.cookTime}m`],
                   ["Serves", selectedRecipe.servings],
                 ].map(([label, value]) => (
-                  <Box key={label} sx={{ p: 1, bgcolor: "#f3efe6", borderRadius: 2 }}>
+                  <Box key={label} sx={{ p: 1, bgcolor: "app.surface", borderRadius: 2 }}>
                     <Typography variant="caption" color="text.secondary">
                       {label}
                     </Typography>
@@ -447,7 +450,7 @@ export function CookbookHome() {
                   </Typography>
                   <Typography color="text.secondary">{selectedRecipe.steps[0]}</Typography>
                 </Box>
-                <Paper variant="outlined" sx={{ p: 1.5, bgcolor: "#f8f1e7" }}>
+                <Paper variant="outlined" sx={{ p: 1.5, bgcolor: "app.note" }}>
                   <Typography variant="caption" color="text.secondary">
                     Note
                   </Typography>
