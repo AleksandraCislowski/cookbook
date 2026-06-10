@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
+import CloseIcon from "@mui/icons-material/Close";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
@@ -17,6 +18,9 @@ import {
   CardActionArea,
   Chip,
   Container,
+  Dialog,
+  DialogContent,
+  DialogTitle,
   Divider,
   FormControl,
   IconButton,
@@ -30,8 +34,9 @@ import {
   TextField,
   Tooltip,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import { alpha } from "@mui/material/styles";
+import { alpha, useTheme } from "@mui/material/styles";
 import { recipes, type Recipe } from "@/data/recipes";
 
 const ALL = "all";
@@ -67,11 +72,11 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
 function RecipeCard({
   recipe,
   selected,
-  onSelect,
+  onOpen,
 }: {
   recipe: Recipe;
   selected: boolean;
-  onSelect: () => void;
+  onOpen: () => void;
 }) {
   return (
     <Card
@@ -83,7 +88,7 @@ function RecipeCard({
           selected ? `0 0 0 2px ${alpha(theme.palette.primary.main, 0.16)}` : "none",
       }}
     >
-      <CardActionArea onClick={onSelect} sx={{ height: "100%" }}>
+      <CardActionArea onClick={onOpen} sx={{ height: "100%" }}>
         <Box
           component="img"
           src={recipe.image}
@@ -123,12 +128,87 @@ function RecipeCard({
   );
 }
 
+function RecipePreview({ recipe }: { recipe: Recipe }) {
+  return (
+    <>
+      <Box
+        component="img"
+        src={recipe.image}
+        alt=""
+        sx={{ width: "100%", aspectRatio: "16 / 10", objectFit: "cover", display: "block" }}
+      />
+      <Box sx={{ p: 2.25 }}>
+        <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
+          <Chip size="small" color="secondary" label={recipe.category} />
+          <Chip size="small" variant="outlined" label={recipe.cuisine} />
+        </Stack>
+        <Typography variant="h2" sx={{ fontSize: "1.45rem", mb: 0.75 }}>
+          {recipe.title}
+        </Typography>
+        <Typography color="text.secondary" sx={{ mb: 2 }}>
+          {recipe.description}
+        </Typography>
+
+        <Box sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, mb: 2 }}>
+          {[
+            ["Prep", `${recipe.prepTime}m`],
+            ["Cook", `${recipe.cookTime}m`],
+            ["Serves", recipe.servings],
+          ].map(([label, value]) => (
+            <Box key={label} sx={{ p: 1, bgcolor: "app.surface", borderRadius: 2 }}>
+              <Typography variant="caption" color="text.secondary">
+                {label}
+              </Typography>
+              <Typography fontWeight={800}>{value}</Typography>
+            </Box>
+          ))}
+        </Box>
+
+        <Stack spacing={1.75}>
+          <Box>
+            <Typography variant="h3" sx={{ fontSize: "1rem", mb: 1 }}>
+              Ingredients
+            </Typography>
+            <Stack component="ul" spacing={0.75} sx={{ pl: 2.5, m: 0 }}>
+              {recipe.ingredients.map((ingredient) => (
+                <Typography component="li" key={ingredient} color="text.secondary">
+                  {ingredient}
+                </Typography>
+              ))}
+            </Stack>
+          </Box>
+          <Divider />
+          <Box>
+            <Typography variant="h3" sx={{ fontSize: "1rem", mb: 1 }}>
+              Cooking mode preview
+            </Typography>
+            <LinearProgress variant="determinate" value={25} sx={{ mb: 1.5, height: 8, borderRadius: 4 }} />
+            <Typography fontWeight={800} sx={{ mb: 0.75 }}>
+              Step 1 of {recipe.steps.length}
+            </Typography>
+            <Typography color="text.secondary">{recipe.steps[0]}</Typography>
+          </Box>
+          <Paper variant="outlined" sx={{ p: 1.5, bgcolor: "app.note" }}>
+            <Typography variant="caption" color="text.secondary">
+              Note
+            </Typography>
+            <Typography>{recipe.note}</Typography>
+          </Paper>
+        </Stack>
+      </Box>
+    </>
+  );
+}
+
 export function CookbookHome() {
+  const theme = useTheme();
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState(ALL);
   const [activeTag, setActiveTag] = useState(ALL);
   const [sort, setSort] = useState("newest");
   const [selectedSlug, setSelectedSlug] = useState(recipes[0].slug);
+  const [isRecipeDialogOpen, setIsRecipeDialogOpen] = useState(false);
 
   const filteredRecipes = useMemo(() => {
     return recipes
@@ -150,6 +230,14 @@ export function CookbookHome() {
 
   const selectedRecipe =
     filteredRecipes.find((recipe) => recipe.slug === selectedSlug) || filteredRecipes[0] || recipes[0];
+
+  function openRecipe(recipe: Recipe) {
+    setSelectedSlug(recipe.slug);
+
+    if (!isLargeScreen) {
+      setIsRecipeDialogOpen(true);
+    }
+  }
 
   const stats = [
     { label: "Recipes", value: recipes.length },
@@ -361,7 +449,7 @@ export function CookbookHome() {
                     key={recipe.slug}
                     recipe={recipe}
                     selected={selectedRecipe.slug === recipe.slug}
-                    onSelect={() => setSelectedSlug(recipe.slug)}
+                    onOpen={() => openRecipe(recipe)}
                   />
                 ))}
               </Box>
@@ -387,80 +475,42 @@ export function CookbookHome() {
           <Paper
             variant="outlined"
             sx={{
+              display: { xs: "none", lg: "block" },
               overflow: "hidden",
               bgcolor: "background.paper",
               position: { lg: "sticky" },
               top: { lg: 96 },
             }}
           >
-            <Box
-              component="img"
-              src={selectedRecipe.image}
-              alt=""
-              sx={{ width: "100%", aspectRatio: "16 / 10", objectFit: "cover", display: "block" }}
-            />
-            <Box sx={{ p: 2.25 }}>
-              <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
-                <Chip size="small" color="secondary" label={selectedRecipe.category} />
-                <Chip size="small" variant="outlined" label={selectedRecipe.cuisine} />
-              </Stack>
-              <Typography variant="h2" sx={{ fontSize: "1.45rem", mb: 0.75 }}>
-                {selectedRecipe.title}
-              </Typography>
-              <Typography color="text.secondary" sx={{ mb: 2 }}>
-                {selectedRecipe.description}
-              </Typography>
-
-              <Box sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, mb: 2 }}>
-                {[
-                  ["Prep", `${selectedRecipe.prepTime}m`],
-                  ["Cook", `${selectedRecipe.cookTime}m`],
-                  ["Serves", selectedRecipe.servings],
-                ].map(([label, value]) => (
-                  <Box key={label} sx={{ p: 1, bgcolor: "app.surface", borderRadius: 2 }}>
-                    <Typography variant="caption" color="text.secondary">
-                      {label}
-                    </Typography>
-                    <Typography fontWeight={800}>{value}</Typography>
-                  </Box>
-                ))}
-              </Box>
-
-              <Stack spacing={1.75}>
-                <Box>
-                  <Typography variant="h3" sx={{ fontSize: "1rem", mb: 1 }}>
-                    Ingredients
-                  </Typography>
-                  <Stack component="ul" spacing={0.75} sx={{ pl: 2.5, m: 0 }}>
-                    {selectedRecipe.ingredients.map((ingredient) => (
-                      <Typography component="li" key={ingredient} color="text.secondary">
-                        {ingredient}
-                      </Typography>
-                    ))}
-                  </Stack>
-                </Box>
-                <Divider />
-                <Box>
-                  <Typography variant="h3" sx={{ fontSize: "1rem", mb: 1 }}>
-                    Cooking mode preview
-                  </Typography>
-                  <LinearProgress variant="determinate" value={25} sx={{ mb: 1.5, height: 8, borderRadius: 4 }} />
-                  <Typography fontWeight={800} sx={{ mb: 0.75 }}>
-                    Step 1 of {selectedRecipe.steps.length}
-                  </Typography>
-                  <Typography color="text.secondary">{selectedRecipe.steps[0]}</Typography>
-                </Box>
-                <Paper variant="outlined" sx={{ p: 1.5, bgcolor: "app.note" }}>
-                  <Typography variant="caption" color="text.secondary">
-                    Note
-                  </Typography>
-                  <Typography>{selectedRecipe.note}</Typography>
-                </Paper>
-              </Stack>
-            </Box>
+            <RecipePreview recipe={selectedRecipe} />
           </Paper>
         </Box>
       </Container>
+
+      <Dialog
+        fullScreen={!isLargeScreen}
+        fullWidth
+        maxWidth="sm"
+        open={isRecipeDialogOpen}
+        onClose={() => setIsRecipeDialogOpen(false)}
+        sx={{ display: { xs: "block", lg: "none" } }}
+      >
+        <DialogTitle sx={{ p: 1, borderBottom: "1px solid", borderColor: "app.border" }}>
+          <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1}>
+            <Typography variant="h2" sx={{ fontSize: "1rem" }}>
+              Recipe preview
+            </Typography>
+            <Tooltip title="Close recipe">
+              <IconButton aria-label="Close recipe" onClick={() => setIsRecipeDialogOpen(false)}>
+                <CloseIcon />
+              </IconButton>
+            </Tooltip>
+          </Stack>
+        </DialogTitle>
+        <DialogContent sx={{ p: 0 }}>
+          <RecipePreview recipe={selectedRecipe} />
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 }
