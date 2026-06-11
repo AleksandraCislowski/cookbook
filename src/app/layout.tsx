@@ -5,6 +5,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Personal Cookbook",
   description: "A private cookbook prototype for Markdown recipes and photos.",
+  icons: {
+    icon: "/images/recipes/logo.png",
+    apple: "/images/recipes/logo.png",
+  },
 };
 
 export default function RootLayout({
