@@ -12,8 +12,13 @@ The script creates:
 
 ```txt
 recipes/recipe-name.md
-public/images/recipes/recipe-name/
 ```
 
-You can copy the template manually, but the script is safer because it keeps the
-recipe slug, markdown file, and image folder aligned.
+Each recipe should have one matching image:
+
+```txt
+public/images/recipes/recipe-name.jpg
+```
+
+The script is safer than copying the template manually because it keeps the slug
+and markdown filename aligned.
