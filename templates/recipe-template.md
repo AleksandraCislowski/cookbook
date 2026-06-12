@@ -1,49 +1,46 @@
 ---
-title: "Recipe Name"
+title: "Nazwa przepisu"
 slug: recipe-name
-description: A short, useful summary for cards, search, and previews.
-category: Dinner
-cuisine: Home cooking
+description: Krótki, konkretny opis do kart, wyszukiwarki i podglądu przepisu.
+category: Obiad
+cuisine: Domowa
 tags:
-  - weeknight
-  - comfort
+  - szybki obiad
+  - domowe
 difficulty: easy
 prepTime: 15
 cookTime: 30
 restTime: 0
 servings: 4
-image: recipe-name1.jpg
-gallery:
-  - recipe-name2.jpg
-  - recipe-name3.jpg
+image: recipe-name.jpg
 source:
-  name: Personal notes
+  name: Notatki własne
   url:
 publishedAt: "YYYY-MM-DD"
 updatedAt: "YYYY-MM-DD"
 ---
 
-## Ingredients
+## Składniki
 
-- 1 ingredient with amount
-- 1 ingredient with amount
-- Salt and pepper
+- 1 składnik z ilością
+- 1 składnik z ilością
+- Sól i pieprz
 
-## Instructions
+## Przygotowanie
 
-1. Start with the first clear action.
-2. Add the next important step.
-3. Finish with serving or resting instructions.
+1. Zacznij od pierwszego konkretnego kroku.
+2. Dodaj kolejny ważny etap.
+3. Zakończ podaniem, odpoczynkiem albo doprawieniem.
 
-## Cooking Notes
+## Notatki
 
-Add practical notes here: texture, substitutions, what to watch for, or what you changed after cooking it.
+Dodaj praktyczne uwagi: konsystencja, zamienniki, na co uważać albo co zmienić następnym razem.
 
-## Variations
+## Warianty
 
-- Add one easy variation.
-- Add one seasonal or pantry variation.
+- Dodaj jeden prosty wariant.
+- Dodaj jeden sezonowy albo awaryjny wariant ze spiżarni.
 
-## Storage
+## Przechowywanie
 
-Store leftovers in the fridge for 2-3 days, or update this note for the specific recipe.
+Przechowuj resztki w lodówce przez 2-3 dni albo dopasuj tę notatkę do konkretnego przepisu.

@@ -45,14 +45,13 @@ const categoryOptions = [
   ALL,
   ...Array.from(new Set(recipes.map((recipe) => recipe.category))),
 ];
-const tagOptions = [
-  'quick',
-  'vegetarian',
-  'comfort',
-  'weekend',
-  'fish',
-  'dessert',
-];
+const tagOptions = Array.from(new Set(recipes.flatMap((recipe) => recipe.tags)));
+
+const difficultyLabels: Record<Recipe['difficulty'], string> = {
+  easy: 'łatwe',
+  medium: 'średnie',
+  slow: 'powolne',
+};
 
 function getTotalTime(recipe: Recipe) {
   return recipe.prepTime + recipe.cookTime;
@@ -109,7 +108,7 @@ function RecipeCard({
             display: 'block',
             width: '100%',
             aspectRatio: '4 / 3',
-            objectFit: 'cover',
+            objectFit: 'contain',
             backgroundColor: 'app.imageFallback',
           }}
         />
@@ -121,7 +120,11 @@ function RecipeCard({
               color='primary'
               variant='outlined'
             />
-            <Chip size='small' label={recipe.difficulty} variant='outlined' />
+            <Chip
+              size='small'
+              label={difficultyLabels[recipe.difficulty]}
+              variant='outlined'
+            />
           </Stack>
           <Typography
             variant='h3'
@@ -164,9 +167,10 @@ function RecipePreview({ recipe }: { recipe: Recipe }) {
         alt=''
         sx={{
           width: '100%',
-          aspectRatio: '16 / 10',
-          objectFit: 'cover',
+          aspectRatio: '4 / 3',
+          objectFit: 'contain',
           display: 'block',
+          backgroundColor: 'app.imageFallback',
         }}
       />
       <Box sx={{ p: 2.25 }}>
@@ -190,9 +194,9 @@ function RecipePreview({ recipe }: { recipe: Recipe }) {
           }}
         >
           {[
-            ['Prep', `${recipe.prepTime}m`],
-            ['Cook', `${recipe.cookTime}m`],
-            ['Serves', recipe.servings],
+            ['Przygotowanie', `${recipe.prepTime} min`],
+            ['Gotowanie', `${recipe.cookTime} min`],
+            ['Porcje', recipe.servings],
           ].map(([label, value]) => (
             <Box
               key={label}
@@ -209,7 +213,7 @@ function RecipePreview({ recipe }: { recipe: Recipe }) {
         <Stack spacing={1.75}>
           <Box>
             <Typography variant='h3' sx={{ fontSize: '1rem', mb: 1 }}>
-              Ingredients
+              Składniki
             </Typography>
             <Stack component='ul' spacing={0.75} sx={{ pl: 2.5, m: 0 }}>
               {recipe.ingredients.map((ingredient) => (
@@ -226,7 +230,7 @@ function RecipePreview({ recipe }: { recipe: Recipe }) {
           <Divider />
           <Box>
             <Typography variant='h3' sx={{ fontSize: '1rem', mb: 1 }}>
-              Cooking mode preview
+              Podgląd gotowania
             </Typography>
             <LinearProgress
               variant='determinate'
@@ -234,13 +238,13 @@ function RecipePreview({ recipe }: { recipe: Recipe }) {
               sx={{ mb: 1.5, height: 8, borderRadius: 4 }}
             />
             <Typography fontWeight={800} sx={{ mb: 0.75 }}>
-              Step 1 of {recipe.steps.length}
+              Krok 1 z {recipe.steps.length}
             </Typography>
             <Typography color='text.secondary'>{recipe.steps[0]}</Typography>
           </Box>
           <Paper variant='outlined' sx={{ p: 1.5, bgcolor: 'app.note' }}>
             <Typography variant='caption' color='text.secondary'>
-              Note
+              Notatka
             </Typography>
             <Typography>{recipe.note}</Typography>
           </Paper>
@@ -292,12 +296,12 @@ export function CookbookHome() {
   }
 
   const stats = [
-    { label: 'Recipes', value: recipes.length },
+    { label: 'Przepisy', value: recipes.length },
     {
-      label: 'Fast meals',
+      label: 'Szybkie dania',
       value: recipes.filter((recipe) => getTotalTime(recipe) <= 30).length,
     },
-    { label: 'Categories', value: categoryOptions.length - 1 },
+    { label: 'Kategorie', value: categoryOptions.length - 1 },
   ];
 
   return (
@@ -327,7 +331,7 @@ export function CookbookHome() {
               <Box
                 component='img'
                 src={LOGO_SRC}
-                alt='Personal Cookbook logo'
+                alt='Logo domowej książki kucharskiej'
                 sx={{
                   width: { xs: 68, md: 92 },
                   height: { xs: 92, md: 126 },
@@ -341,21 +345,21 @@ export function CookbookHome() {
                   variant='h1'
                   sx={{ fontSize: { xs: '1.35rem', md: '1.55rem' } }}
                 >
-                  Personal Cookbook
+                  Domowa książka kucharska
                 </Typography>
                 <Typography variant='body2' color='text.secondary'>
-                  Markdown recipes, photos, notes, and kitchen flow
+                  Przepisy, zdjęcia, notatki i spokojny rytm gotowania
                 </Typography>
               </Box>
             </Stack>
             <Stack direction='row' spacing={1} alignItems='center'>
-              <Tooltip title='Favorites'>
-                <IconButton aria-label='Favorites'>
+              <Tooltip title='Ulubione'>
+                <IconButton aria-label='Ulubione'>
                   <FavoriteBorderIcon />
                 </IconButton>
               </Tooltip>
-              <Tooltip title='Shopping list'>
-                <IconButton aria-label='Shopping list'>
+              <Tooltip title='Lista zakupów'>
+                <IconButton aria-label='Lista zakupów'>
                   <LocalGroceryStoreIcon />
                 </IconButton>
               </Tooltip>
@@ -389,15 +393,15 @@ export function CookbookHome() {
               >
                 <FilterListIcon color='primary' />
                 <Typography variant='h2' sx={{ fontSize: '1rem' }}>
-                  Browse
+                  Przeglądaj
                 </Typography>
               </Stack>
               <Stack spacing={2}>
                 <TextField
                   value={searchTerm}
                   onChange={(event) => setSearchTerm(event.target.value)}
-                  label='Search recipes'
-                  placeholder='miso, lemon, dinner...'
+                  label='Szukaj przepisów'
+                  placeholder='miso, cytryna, obiad...'
                   size='small'
                   InputProps={{
                     startAdornment: (
@@ -408,31 +412,31 @@ export function CookbookHome() {
                   }}
                 />
                 <FormControl size='small' fullWidth>
-                  <InputLabel id='category-filter-label'>Category</InputLabel>
+                  <InputLabel id='category-filter-label'>Kategoria</InputLabel>
                   <Select
                     labelId='category-filter-label'
                     value={category}
-                    label='Category'
+                    label='Kategoria'
                     onChange={(event) => setCategory(event.target.value)}
                   >
                     {categoryOptions.map((option) => (
                       <MenuItem key={option} value={option}>
-                        {option === ALL ? 'All categories' : option}
+                        {option === ALL ? 'Wszystkie kategorie' : option}
                       </MenuItem>
                     ))}
                   </Select>
                 </FormControl>
                 <FormControl size='small' fullWidth>
-                  <InputLabel id='sort-label'>Sort</InputLabel>
+                  <InputLabel id='sort-label'>Sortowanie</InputLabel>
                   <Select
                     labelId='sort-label'
                     value={sort}
-                    label='Sort'
+                    label='Sortowanie'
                     onChange={(event) => setSort(event.target.value)}
                   >
-                    <MenuItem value='newest'>Recently added</MenuItem>
-                    <MenuItem value='fastest'>Fastest first</MenuItem>
-                    <MenuItem value='title'>Title A-Z</MenuItem>
+                    <MenuItem value='newest'>Najnowsze</MenuItem>
+                    <MenuItem value='fastest'>Najszybsze</MenuItem>
+                    <MenuItem value='title'>Tytuł A-Z</MenuItem>
                   </Select>
                 </FormControl>
               </Stack>
@@ -443,11 +447,11 @@ export function CookbookHome() {
               sx={{ p: 2, bgcolor: 'background.paper' }}
             >
               <Typography variant='h2' sx={{ fontSize: '1rem', mb: 1.5 }}>
-                Tags
+                Tagi
               </Typography>
               <Stack direction='row' flexWrap='wrap' gap={1}>
                 <Chip
-                  label='all'
+                  label='wszystkie'
                   color={activeTag === ALL ? 'primary' : 'default'}
                   onClick={() => setActiveTag(ALL)}
                 />
@@ -465,7 +469,7 @@ export function CookbookHome() {
 
             <Paper variant='outlined' sx={{ p: 2, bgcolor: 'app.surface' }}>
               <Typography variant='h2' sx={{ fontSize: '1rem', mb: 1.5 }}>
-                Library
+                Biblioteka
               </Typography>
               <Stack spacing={1.25}>
                 {stats.map((stat) => (
@@ -495,14 +499,14 @@ export function CookbookHome() {
                   variant='h2'
                   sx={{ fontSize: { xs: '1.45rem', md: '1.85rem' } }}
                 >
-                  Recipes ready to cook
+                  Przepisy gotowe do gotowania
                 </Typography>
                 <Typography color='text.secondary'>
-                  {filteredRecipes.length} shown from your starter library
+                  Pokazano {filteredRecipes.length} z Twojej biblioteki
                 </Typography>
               </Box>
               <Button variant='outlined' startIcon={<PrintIcon />}>
-                Print menu
+                Drukuj menu
               </Button>
             </Stack>
 
@@ -530,7 +534,7 @@ export function CookbookHome() {
             ) : (
               <Paper variant='outlined' sx={{ p: 4, textAlign: 'center' }}>
                 <Typography variant='h2' sx={{ fontSize: '1.25rem' }}>
-                  No recipes match this search.
+                  Brak przepisów pasujących do wyszukiwania.
                 </Typography>
                 <Button
                   sx={{ mt: 2 }}
@@ -540,7 +544,7 @@ export function CookbookHome() {
                     setActiveTag(ALL);
                   }}
                 >
-                  Show all recipes
+                  Pokaż wszystkie przepisy
                 </Button>
               </Paper>
             )}
@@ -579,11 +583,11 @@ export function CookbookHome() {
             spacing={1}
           >
             <Typography variant='h2' sx={{ fontSize: '1rem' }}>
-              Recipe preview
+              Podgląd przepisu
             </Typography>
-            <Tooltip title='Close recipe'>
+            <Tooltip title='Zamknij przepis'>
               <IconButton
-                aria-label='Close recipe'
+                aria-label='Zamknij przepis'
                 onClick={() => setIsRecipeDialogOpen(false)}
               >
                 <CloseIcon />

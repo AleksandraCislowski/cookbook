@@ -1,6 +1,6 @@
 # Content Workflow
 
-This guide is for adding recipes to Personal Cookbook.
+This guide is for adding recipes to the cookbook.
 
 ## Create A New Recipe
 
@@ -13,50 +13,55 @@ npm run new-recipe -- "Recipe Name"
 Example:
 
 ```bash
-npm run new-recipe -- "Lemon Pasta"
+npm run new-recipe -- "Poke bowl z szarpaną wołowiną"
 ```
 
 This creates:
 
 ```txt
-recipes/lemon-pasta.md
-public/images/recipes/lemon-pasta/
+recipes/poke-bowl-z-szarpana-wolowina.md
 ```
 
 The recipe file is generated from `templates/recipe-template.md`.
 
-## Add Images
+## Add The Image
 
-Add images to the generated folder:
-
-```txt
-public/images/recipes/lemon-pasta/
-```
-
-The generated template expects names like:
+Each recipe uses one image. Add it here:
 
 ```txt
-lemon-pasta1.jpg
-lemon-pasta2.jpg
-lemon-pasta3.jpg
+public/images/recipes/poke-bowl-z-szarpana-wolowina.jpg
 ```
 
-The main image must match the `image` field in frontmatter:
+The image filename should match the recipe slug. Use `.jpg`, `.png`, or `.webp`,
+then make sure the `image` field in frontmatter matches the real filename:
 
 ```yaml
-image: lemon-pasta1.jpg
+image: poke-bowl-z-szarpana-wolowina.jpg
 ```
 
-Gallery images should use only file names:
+Recommended image size:
 
-```yaml
-gallery:
-  - lemon-pasta2.jpg
-  - lemon-pasta3.jpg
+```txt
+1600 x 1200 px
 ```
 
-When markdown body images are added later, they should also use only the file
-name. The app will resolve images from `public/images/recipes/[recipe-slug]/`.
+Aim for roughly `200-500 KB` per image when possible.
+
+## Language Rule
+
+User-facing cookbook content should be in Polish:
+
+- recipe titles,
+- recipe descriptions,
+- categories and tags,
+- ingredients,
+- instructions,
+- notes,
+- UI copy.
+
+Technical docs, scripts, filenames, and internal field names can stay in English.
+Slugs and image filenames should not use Polish characters because they are used
+in paths and URLs.
 
 ## Fill In Frontmatter
 
@@ -64,45 +69,42 @@ Every recipe should include:
 
 ```yaml
 ---
-title: "Lemon Pasta"
-slug: lemon-pasta
-description: A short, useful summary for cards, search, and previews.
-category: Dinner
-cuisine: Italian-inspired
+title: "Poke bowl z szarpaną wołowiną"
+slug: poke-bowl-z-szarpana-wolowina
+description: Kolorowa miska z ryżem, soczystą szarpaną wołowiną i warzywami.
+category: Obiad
+cuisine: Nowoczesna domowa
 tags:
-  - weeknight
-  - vegetarian
-difficulty: easy
-prepTime: 10
-cookTime: 15
+  - miska
+  - wołowina
+difficulty: medium
+prepTime: 25
+cookTime: 180
 restTime: 0
-servings: 2
-image: lemon-pasta1.jpg
-gallery:
-  - lemon-pasta2.jpg
+servings: 4
+image: poke-bowl-z-szarpana-wolowina.jpg
 source:
-  name: Personal notes
+  name: Notatki własne
   url:
-publishedAt: "2026-06-08"
-updatedAt: "2026-06-08"
+publishedAt: "2026-06-12"
+updatedAt: "2026-06-12"
 ---
 ```
 
 ## What Each Field Does
 
-- `title`: Used on recipe pages, cards, and search results.
-- `slug`: Must match the markdown file name and image folder name.
-- `description`: Used on cards and previews.
-- `category`: Used for browsing and filtering.
-- `cuisine`: Adds context and can become a filter later.
-- `tags`: Used for search, chips, related recipes, and filtering.
-- `difficulty`: Expected values for now: `easy`, `medium`, or `slow`.
-- `prepTime`, `cookTime`, `restTime`: Numbers in minutes.
-- `servings`: Default serving count.
-- `image`: Main recipe image file from the recipe image folder.
-- `gallery`: Optional extra image file names.
-- `source.name`, `source.url`: Where the recipe came from, if useful.
-- `publishedAt`, `updatedAt`: Dates in `YYYY-MM-DD` format.
+- `title`: shown on recipe pages, cards, and search results.
+- `slug`: must match the markdown filename and image filename.
+- `description`: short summary for cards and previews.
+- `category`: used for browsing and filtering.
+- `cuisine`: adds context and can become a filter later.
+- `tags`: used for search, chips, related recipes, and filtering.
+- `difficulty`: expected values for now: `easy`, `medium`, or `slow`; the UI maps these to Polish labels.
+- `prepTime`, `cookTime`, `restTime`: numbers in minutes.
+- `servings`: default serving count.
+- `image`: single recipe image from `public/images/recipes/`.
+- `source.name`, `source.url`: where the recipe came from, if useful.
+- `publishedAt`, `updatedAt`: dates in `YYYY-MM-DD` format.
 
 ## Writing Guidelines
 
@@ -117,10 +119,9 @@ updatedAt: "2026-06-08"
 Before committing a new recipe:
 
 - The markdown file is in `recipes/`.
-- The image folder exists in `public/images/recipes/[recipe-slug]/`.
-- The markdown file name, `slug`, and image folder name match.
-- The main image listed in `image` exists.
-- Gallery image file names exist if listed.
+- The image exists in `public/images/recipes/[slug].[ext]`.
+- The markdown filename, `slug`, and image filename match.
+- The `image` field matches the real image file.
 - Frontmatter fields are filled in intentionally.
 - Ingredients and instructions are not left as template placeholders.
 - `npm run build` passes.

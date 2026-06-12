@@ -3,8 +3,8 @@ import { Providers } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Personal Cookbook",
-  description: "A private cookbook prototype for Markdown recipes and photos.",
+  title: "Domowa książka kucharska",
+  description: "Prywatna książka kucharska z przepisami, zdjęciami i notatkami.",
   icons: {
     icon: "/images/recipes/logo.png",
     apple: "/images/recipes/logo.png",
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body>
         <Providers>{children}</Providers>
       </body>
