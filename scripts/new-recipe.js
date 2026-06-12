@@ -13,60 +13,54 @@ function slugify(value) {
     .replace(/^-+|-+$/g, "");
 }
 
-function toTitleCase(value) {
-  return value
-    .split(/[\s-]+/)
-    .filter(Boolean)
-    .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
-    .join(" ");
+function normalizeTitle(value) {
+  return `${value.charAt(0).toUpperCase()}${value.slice(1)}`;
 }
 
 if (!titleInput) {
-  console.error('Usage: npm run new-recipe -- "Recipe Name"');
+  console.error('Użycie: npm run new-recipe -- "Nazwa przepisu"');
   process.exit(1);
 }
 
 const slug = slugify(titleInput);
 
 if (!slug) {
-  console.error("Could not create a valid slug from this title.");
+  console.error("Nie udało się utworzyć poprawnego sluga z tej nazwy.");
   process.exit(1);
 }
 
 const projectRoot = process.cwd();
 const recipePath = path.join(projectRoot, "recipes", `${slug}.md`);
-const imageDirectory = path.join(projectRoot, "public", "images", "recipes", slug);
+const imageRoot = path.join(projectRoot, "public", "images", "recipes");
+const imagePath = path.join(imageRoot, `${slug}.jpg`);
 const templatePath = path.join(projectRoot, "templates", "recipe-template.md");
 
 if (fs.existsSync(recipePath)) {
-  console.error(`Recipe already exists: recipes/${slug}.md`);
+  console.error(`Przepis już istnieje: recipes/${slug}.md`);
   process.exit(1);
 }
 
-if (fs.existsSync(imageDirectory)) {
-  console.error(`Image directory already exists: public/images/recipes/${slug}/`);
+if (fs.existsSync(imagePath)) {
+  console.error(`Zdjęcie już istnieje: public/images/recipes/${slug}.jpg`);
   process.exit(1);
 }
 
 const template = fs.readFileSync(templatePath, "utf8");
-const title = toTitleCase(titleInput);
+const title = normalizeTitle(titleInput);
 const today = new Date().toISOString().slice(0, 10);
 const recipeContent = template
-  .replace('title: "Recipe Name"', `title: "${title}"`)
+  .replace('title: "Nazwa przepisu"', `title: "${title}"`)
   .replace("slug: recipe-name", `slug: ${slug}`)
-  .replace("image: recipe-name1.jpg", `image: ${slug}1.jpg`)
-  .replace("  - recipe-name2.jpg", `  - ${slug}2.jpg`)
-  .replace("  - recipe-name3.jpg", `  - ${slug}3.jpg`)
+  .replace("image: recipe-name.jpg", `image: ${slug}.jpg`)
   .replace('publishedAt: "YYYY-MM-DD"', `publishedAt: "${today}"`)
   .replace('updatedAt: "YYYY-MM-DD"', `updatedAt: "${today}"`);
 
-fs.mkdirSync(imageDirectory, { recursive: true });
+fs.mkdirSync(imageRoot, { recursive: true });
 fs.writeFileSync(recipePath, recipeContent);
 
-console.log(`Created recipes/${slug}.md`);
-console.log(`Created public/images/recipes/${slug}/`);
+console.log(`Utworzono recipes/${slug}.md`);
 console.log("");
-console.log("Next steps:");
-console.log(`1. Add images named ${slug}1.jpg, ${slug}2.jpg, ...`);
-console.log("2. Fill in category, cuisine, tags, timing, ingredients, and instructions.");
-console.log("3. Run npm run build before publishing.");
+console.log("Następne kroki:");
+console.log(`1. Dodaj zdjęcie public/images/recipes/${slug}.jpg`);
+console.log("2. Uzupełnij kategorie, tagi, czasy, składniki i przygotowanie.");
+console.log("3. Przed publikacją odpal npm run build.");
