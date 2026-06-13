@@ -8,9 +8,12 @@ export type Recipe = {
   category: string;
   cuisine: string;
   difficulty: 'easy' | 'medium' | 'slow';
-  prepTime: number;
-  cookTime: number;
-  servings: number;
+  prepTime?: number;
+  cookTime?: number;
+  bakeTime?: number;
+  bakeTemperature?: string;
+  restTime?: number;
+  servings?: number;
   image: string;
   tags: string[];
   ingredients: string[];
@@ -28,6 +31,9 @@ type RecipeFrontmatter = {
   difficulty: Recipe['difficulty'];
   prepTime: number;
   cookTime: number;
+  bakeTime: number;
+  bakeTemperature: string;
+  restTime: number;
   servings: number;
   tags: string[];
   publishedAt: string;
@@ -117,6 +123,19 @@ function readRequiredString(
   return value;
 }
 
+function readOptionalString(
+  frontmatter: Record<string, string | string[]>,
+  key: keyof RecipeFrontmatter,
+) {
+  const value = frontmatter[key];
+
+  if (typeof value !== 'string') {
+    return '';
+  }
+
+  return value;
+}
+
 function readRequiredNumber(
   frontmatter: Record<string, string | string[]>,
   key: keyof RecipeFrontmatter,
@@ -125,6 +144,29 @@ function readRequiredNumber(
 
   if (!Number.isFinite(value)) {
     throw new Error(`Recipe field must be a number: ${key}`);
+  }
+
+  return value;
+}
+
+function readOptionalNumber(
+  frontmatter: Record<string, string | string[]>,
+  key: keyof RecipeFrontmatter,
+) {
+  const rawValue = readOptionalString(frontmatter, key);
+
+  if (!rawValue) {
+    return undefined;
+  }
+
+  const value = Number(rawValue);
+
+  if (!Number.isFinite(value)) {
+    throw new Error(`Recipe field must be a number: ${key}`);
+  }
+
+  if (value <= 0) {
+    return undefined;
   }
 
   return value;
@@ -206,13 +248,16 @@ function parseRecipeFile(filename: string): Recipe {
   return {
     slug,
     title: readRequiredString(frontmatter, 'title'),
-    description: readRequiredString(frontmatter, 'description'),
+    description: readOptionalString(frontmatter, 'description'),
     category: readRequiredString(frontmatter, 'category'),
-    cuisine: readRequiredString(frontmatter, 'cuisine'),
+    cuisine: readOptionalString(frontmatter, 'cuisine'),
     difficulty: readDifficulty(frontmatter),
-    prepTime: readRequiredNumber(frontmatter, 'prepTime'),
-    cookTime: readRequiredNumber(frontmatter, 'cookTime'),
-    servings: readRequiredNumber(frontmatter, 'servings'),
+    prepTime: readOptionalNumber(frontmatter, 'prepTime'),
+    cookTime: readOptionalNumber(frontmatter, 'cookTime'),
+    bakeTime: readOptionalNumber(frontmatter, 'bakeTime'),
+    bakeTemperature: readOptionalString(frontmatter, 'bakeTemperature'),
+    restTime: readOptionalNumber(frontmatter, 'restTime'),
+    servings: readOptionalNumber(frontmatter, 'servings'),
     image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
     tags: readTags(frontmatter),
     ingredients: readListItems(getSection(markdown, 'Składniki')),

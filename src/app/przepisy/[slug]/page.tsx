@@ -1,5 +1,6 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
 import {
   Box,
@@ -32,7 +33,22 @@ const difficultyLabels: Record<Recipe['difficulty'], string> = {
 };
 
 function getTotalTime(recipe: Recipe) {
-  return recipe.prepTime + recipe.cookTime;
+  return (
+    (recipe.prepTime ?? 0) +
+    (recipe.cookTime ?? 0) +
+    (recipe.bakeTime ?? 0) +
+    (recipe.restTime ?? 0)
+  );
+}
+
+function getBakingLabel(recipe: Recipe) {
+  if (!recipe.bakeTime && !recipe.bakeTemperature) {
+    return null;
+  }
+
+  return [recipe.bakeTemperature, recipe.bakeTime ? `${recipe.bakeTime} min` : '']
+    .filter(Boolean)
+    .join(' / ');
 }
 
 export function generateStaticParams() {
@@ -64,6 +80,16 @@ export default async function RecipePage({ params }: RecipePageProps) {
   if (!recipe) {
     notFound();
   }
+
+  const bakingLabel = getBakingLabel(recipe);
+  const totalTime = getTotalTime(recipe);
+  const recipeStats = [
+    recipe.prepTime ? ['Przygotowanie', `${recipe.prepTime} min`] : null,
+    recipe.cookTime ? ['Gotowanie', `${recipe.cookTime} min`] : null,
+    bakingLabel ? ['Pieczenie', bakingLabel] : null,
+    recipe.restTime ? ['Odpoczynek', `${recipe.restTime} min`] : null,
+    recipe.servings ? ['Porcje', recipe.servings] : null,
+  ].filter((stat): stat is [string, string | number] => Boolean(stat));
 
   return (
     <Box sx={{ minHeight: '100vh', pb: 6 }}>
@@ -159,11 +185,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   mt: 2.5,
                 }}
               >
-                {[
-                  ['Przygotowanie', `${recipe.prepTime} min`],
-                  ['Gotowanie', `${recipe.cookTime} min`],
-                  ['Porcje', recipe.servings],
-                ].map(([label, value]) => (
+                {recipeStats.map(([label, value]) => (
                   <Box
                     key={label}
                     sx={{
@@ -181,17 +203,29 @@ export default async function RecipePage({ params }: RecipePageProps) {
                 ))}
               </Box>
 
-              <Stack direction='row' spacing={1.5} sx={{ mt: 2 }}>
-                <Stack direction='row' spacing={0.5} alignItems='center'>
-                  <TimerOutlinedIcon fontSize='small' color='action' />
-                  <Typography variant='body2'>
-                    {getTotalTime(recipe)} min razem
-                  </Typography>
-                </Stack>
-                <Stack direction='row' spacing={0.5} alignItems='center'>
-                  <RestaurantMenuIcon fontSize='small' color='action' />
-                  <Typography variant='body2'>{recipe.servings} porcje</Typography>
-                </Stack>
+              <Stack direction='row' flexWrap='wrap' gap={1.5} sx={{ mt: 2 }}>
+                {totalTime > 0 ? (
+                  <Stack direction='row' spacing={0.5} alignItems='center'>
+                    <TimerOutlinedIcon fontSize='small' color='action' />
+                    <Typography variant='body2'>
+                      {totalTime} min razem
+                    </Typography>
+                  </Stack>
+                ) : null}
+                {recipe.servings ? (
+                  <Stack direction='row' spacing={0.5} alignItems='center'>
+                    <RestaurantMenuIcon fontSize='small' color='action' />
+                    <Typography variant='body2'>
+                      {recipe.servings} porcje
+                    </Typography>
+                  </Stack>
+                ) : null}
+                {bakingLabel ? (
+                  <Stack direction='row' spacing={0.5} alignItems='center'>
+                    <ThermostatIcon fontSize='small' color='action' />
+                    <Typography variant='body2'>{bakingLabel}</Typography>
+                  </Stack>
+                ) : null}
               </Stack>
             </Paper>
 

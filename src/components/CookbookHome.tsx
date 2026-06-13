@@ -6,7 +6,9 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import PrintIcon from '@mui/icons-material/Print';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import SearchIcon from '@mui/icons-material/Search';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
 import {
   Box,
@@ -41,7 +43,22 @@ const difficultyLabels: Record<Recipe['difficulty'], string> = {
 };
 
 function getTotalTime(recipe: Recipe) {
-  return recipe.prepTime + recipe.cookTime;
+  return (
+    (recipe.prepTime ?? 0) +
+    (recipe.cookTime ?? 0) +
+    (recipe.bakeTime ?? 0) +
+    (recipe.restTime ?? 0)
+  );
+}
+
+function getBakingLabel(recipe: Recipe) {
+  if (!recipe.bakeTime && !recipe.bakeTemperature) {
+    return null;
+  }
+
+  return [recipe.bakeTemperature, recipe.bakeTime ? `${recipe.bakeTime} min` : '']
+    .filter(Boolean)
+    .join(' / ');
 }
 
 function matchesSearch(recipe: Recipe, searchTerm: string) {
@@ -111,6 +128,9 @@ function RecipeCard({
 }: {
   recipe: Recipe;
 }) {
+  const bakingLabel = getBakingLabel(recipe);
+  const totalTime = getTotalTime(recipe);
+
   return (
     <Card
       variant='outlined'
@@ -189,18 +209,28 @@ function RecipeCard({
             direction='row'
             spacing={1.5}
             alignItems='center'
+            flexWrap='wrap'
+            gap={1}
             sx={{ mt: 'auto', pt: 2.25 }}
           >
-            <Stack direction='row' spacing={0.5} alignItems='center'>
-              <TimerOutlinedIcon fontSize='small' color='action' />
-              <Typography variant='body2'>
-                {getTotalTime(recipe)} min
-              </Typography>
-            </Stack>
-            <Stack direction='row' spacing={0.5} alignItems='center'>
-              <RestaurantMenuIcon fontSize='small' color='action' />
-              <Typography variant='body2'>{recipe.servings}</Typography>
-            </Stack>
+            {totalTime > 0 ? (
+              <Stack direction='row' spacing={0.5} alignItems='center'>
+                <TimerOutlinedIcon fontSize='small' color='action' />
+                <Typography variant='body2'>Razem {totalTime} min</Typography>
+              </Stack>
+            ) : null}
+            {recipe.servings ? (
+              <Stack direction='row' spacing={0.5} alignItems='center'>
+                <RestaurantMenuIcon fontSize='small' color='action' />
+                <Typography variant='body2'>{recipe.servings}</Typography>
+              </Stack>
+            ) : null}
+            {bakingLabel ? (
+              <Stack direction='row' spacing={0.5} alignItems='center'>
+                <ThermostatIcon fontSize='small' color='action' />
+                <Typography variant='body2'>{bakingLabel}</Typography>
+              </Stack>
+            ) : null}
           </Stack>
         </Box>
       </CardActionArea>
@@ -224,6 +254,11 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const [category, setCategory] = useState(ALL);
   const [activeTag, setActiveTag] = useState(ALL);
   const [sort, setSort] = useState('newest');
+  const hasActiveFilters =
+    searchTerm !== '' ||
+    category !== ALL ||
+    activeTag !== ALL ||
+    sort !== 'newest';
 
   const filteredRecipes = useMemo(() => {
     return recipes
@@ -232,7 +267,11 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
       .filter((recipe) => matchesSearch(recipe, searchTerm))
       .sort((firstRecipe, secondRecipe) => {
         if (sort === 'fastest') {
-          return getTotalTime(firstRecipe) - getTotalTime(secondRecipe);
+          const firstTime = getTotalTime(firstRecipe) || Number.POSITIVE_INFINITY;
+          const secondTime =
+            getTotalTime(secondRecipe) || Number.POSITIVE_INFINITY;
+
+          return firstTime - secondTime;
         }
 
         if (sort === 'title') {
@@ -247,10 +286,21 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     { label: 'Przepisy', value: recipes.length },
     {
       label: 'Szybkie dania',
-      value: recipes.filter((recipe) => getTotalTime(recipe) <= 30).length,
+      value: recipes.filter((recipe) => {
+        const totalTime = getTotalTime(recipe);
+
+        return totalTime > 0 && totalTime <= 30;
+      }).length,
     },
     { label: 'Kategorie', value: categoryOptions.length - 1 },
   ];
+
+  function resetFilters() {
+    setSearchTerm('');
+    setCategory(ALL);
+    setActiveTag(ALL);
+    setSort('newest');
+  }
 
   return (
     <Box sx={{ minHeight: '100vh', pb: 6 }}>
@@ -263,30 +313,27 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
             alpha(theme.palette.background.paper, 0.9),
           backdropFilter: 'blur(18px)',
           overflow: 'visible',
-          position: 'sticky',
-          top: 0,
-          zIndex: 10,
         }}
       >
         <Container maxWidth='xl' sx={{ position: 'relative' }}>
           <Stack
             direction='row'
-            spacing={{ xs: 1.25, md: 1.75 }}
+            spacing={{ xs: 1, md: 1.75 }}
             alignItems='center'
             justifyContent='space-between'
-            sx={{ minHeight: { xs: 82, md: 96 }, py: 1 }}
+            sx={{ minHeight: { xs: 70, sm: 82, md: 96 }, py: { xs: 0.75, md: 1 } }}
           >
             <Stack
               direction='row'
-              spacing={1.25}
+              spacing={{ xs: 0.75, sm: 1.25 }}
               alignItems='center'
               sx={{ minWidth: 0 }}
             >
               <Box
                 sx={{
                   position: 'relative',
-                  width: 132,
-                  height: { xs: 72, md: 84 },
+                  width: { xs: 72, sm: 96, md: 132 },
+                  height: { xs: 58, sm: 72, md: 84 },
                   flexShrink: 0,
                 }}
               >
@@ -296,10 +343,10 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                   alt='Logo domowej książki kucharskiej'
                   sx={{
                     position: 'absolute',
-                    top: { xs: -26, md: -32 },
+                    top: { xs: -16, sm: -22, md: -32 },
                     left: 0,
-                    width: 132,
-                    height: 166,
+                    width: { xs: 72, sm: 96, md: 132 },
+                    height: { xs: 92, sm: 124, md: 166 },
                     display: 'block',
                     objectFit: 'contain',
                   }}
@@ -309,8 +356,9 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                 <Typography
                   variant='h1'
                   sx={{
-                    fontSize: { xs: '1.25rem', md: '1.55rem' },
-                    lineHeight: 1.05,
+                    fontSize: { xs: '1.05rem', sm: '1.25rem', md: '1.55rem' },
+                    lineHeight: { xs: 1, sm: 1.05 },
+                    overflowWrap: 'anywhere',
                   }}
                 >
                   Kącik Kulinarny Aleksandry
@@ -332,7 +380,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
               direction='row'
               spacing={0.5}
               alignItems='center'
-              sx={{ flexShrink: 0 }}
+              sx={{ display: { xs: 'none', sm: 'flex' }, flexShrink: 0 }}
             >
               <Tooltip title='Ulubione'>
                 <IconButton aria-label='Ulubione'>
@@ -420,6 +468,14 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                     <MenuItem value='title'>Tytuł A-Z</MenuItem>
                   </Select>
                 </FormControl>
+                <Button
+                  variant='outlined'
+                  startIcon={<RestartAltIcon />}
+                  disabled={!hasActiveFilters}
+                  onClick={resetFilters}
+                >
+                  Resetuj filtry
+                </Button>
               </Stack>
             </Paper>
 
@@ -518,11 +574,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                 </Typography>
                 <Button
                   sx={{ mt: 2 }}
-                  onClick={() => {
-                    setSearchTerm('');
-                    setCategory(ALL);
-                    setActiveTag(ALL);
-                  }}
+                  onClick={resetFilters}
                 >
                   Pokaż wszystkie przepisy
                 </Button>
