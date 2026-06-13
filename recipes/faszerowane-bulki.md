@@ -1,12 +1,13 @@
 ---
 title: 'Faszerowane bułki'
 slug: faszerowane-bulki
-description: gg
+description: Chrupiące kajzerki wypełnione farszem z kurczaka, papryki, cebuli i mozzarelli, zapiekane do roztopienia sera.
 category: Śniadanie
-cuisine: j
+cuisine: Domowa
 tags:
-  - jf
-  - kk
+  - zapiekane bułki
+  - kurczak
+  - piekarnik
 difficulty: easy
 prepTime: 15
 cookTime: 0
@@ -28,27 +29,25 @@ publishedAt: '2026-06-13'
 - mozarella w wiórkach
 - szczypiorek
 - 1 ząbek czosnku
+- 2 łyżki oliwy
 
 ## Przyprawy
 
 - Sól
 - Pieprz
+- Mieszanka do kurczaka
+- Majeranek
+- Papryka słodka
 
 ## Przygotowanie
 
-1. Zacznij od pierwszego konkretnego kroku.
-2. Dodaj kolejny ważny etap.
-3. Zakończ podaniem, odpoczynkiem albo doprawieniem.
+1. Mięso pokrój w drobną kostkę, dodaj przyprawy, posiekany czosnek i podsmaż na odrobinie oliwy, następnie przełóż do miseczki.
+2. Pokrój paprykę i cebulę w drobną kostkę i dodaj do mięsa.
+3. Dodaj jajko i trochę startego sera, całość wymieszaj.
+4. Bułki przekrój zgodnie z liniami wypieku, żeby utworzyć gniazdo w środku każdej z nich.
+5. Nakładaj farsz do środka, starając się nie rozerwać wierzchu bułek.
+6. Posyp startym serem i piecz w 200°C przez około 15 minut, aż bułki będą chrupiące, a ser się roztopi i lekko zarumieni.
 
 ## Notatki
 
-Dodaj praktyczne uwagi: konsystencja, zamienniki, na co uważać albo co zmienić następnym razem.
-
-## Warianty
-
-- Dodaj jeden prosty wariant.
-- Dodaj jeden sezonowy albo awaryjny wariant ze spiżarni.
-
-## Przechowywanie
-
-Przechowuj resztki w lodówce przez 2-3 dni albo dopasuj tę notatkę do konkretnego przepisu.
+Podawaj z ketchupem lub ulubionym sosem, np. czosnkowym.
