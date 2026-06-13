@@ -1,23 +1,21 @@
 ---
-title: 'Faszerowane bulki'
+title: 'Faszerowane bułki'
 slug: faszerowane-bulki
-description: Krótki, konkretny opis do kart, wyszukiwarki i podglądu przepisu.
-category: Obiad
-cuisine: Domowa
+description: gg
+category: Śniadanie
+cuisine: j
 tags:
-  - szybki obiad
-  - domowe
+  - jf
+  - kk
 difficulty: easy
 prepTime: 15
-cookTime: 15
-restTime: 0
+cookTime: 10
+bakeTime: 15
+bakeTemperature: 200°C
+restTime: 50
 servings: 4
 image: faszerowane-bulki.png
-source:
-  name: Notatki własne
-  url:
 publishedAt: '2026-06-13'
-updatedAt: '2026-06-13'
 ---
 
 ## Składniki

@@ -8,16 +8,14 @@ tags:
   - szybki obiad
   - domowe
 difficulty: easy
-prepTime: 15
-cookTime: 30
-restTime: 0
-servings: 4
+prepTime:
+cookTime:
+bakeTime:
+bakeTemperature:
+restTime:
+servings:
 image: recipe-name.png
-source:
-  name: Notatki własne
-  url:
 publishedAt: "YYYY-MM-DD"
-updatedAt: "YYYY-MM-DD"
 ---
 
 ## Składniki

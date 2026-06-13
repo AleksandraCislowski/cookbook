@@ -16,11 +16,7 @@ cookTime: 180
 restTime: 0
 servings: 4
 image: poke-bowl-z-szarpana-wolowina.png
-source:
-  name: Notatki własne
-  url:
 publishedAt: '2026-06-12'
-updatedAt: '2026-06-12'
 ---
 
 ## Składniki

@@ -79,15 +79,13 @@ tags:
   - wołowina
 difficulty: medium
 prepTime: 25
-cookTime: 180
-restTime: 0
+cookTime:
+bakeTime:
+bakeTemperature:
+restTime:
 servings: 4
 image: poke-bowl-z-szarpana-wolowina.png
-source:
-  name: Notatki własne
-  url:
 publishedAt: "2026-06-12"
-updatedAt: "2026-06-12"
 ---
 ```
 
@@ -100,11 +98,12 @@ updatedAt: "2026-06-12"
 - `cuisine`: adds context and can become a filter later.
 - `tags`: used for search, chips, related recipes, and filtering.
 - `difficulty`: expected values for now: `easy`, `medium`, or `slow`; the UI maps these to Polish labels.
-- `prepTime`, `cookTime`, `restTime`: numbers in minutes.
-- `servings`: default serving count.
+- `prepTime`, `cookTime`, `restTime`: optional numbers in minutes. Empty or `0` values are not shown.
+- `bakeTime`: optional baking time in minutes.
+- `bakeTemperature`: optional oven temperature, for example `180°C`.
+- `servings`: optional serving count. Empty or `0` values are not shown.
 - `image`: single PNG recipe image from `public/images/recipes/`.
-- `source.name`, `source.url`: where the recipe came from, if useful.
-- `publishedAt`, `updatedAt`: dates in `YYYY-MM-DD` format.
+- `publishedAt`: date in `YYYY-MM-DD` format.
 
 ## Writing Guidelines
 
