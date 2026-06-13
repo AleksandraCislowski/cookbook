@@ -379,45 +379,78 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
           backgroundColor: (theme) =>
             alpha(theme.palette.background.paper, 0.9),
           backdropFilter: 'blur(18px)',
+          overflow: 'visible',
           position: 'sticky',
           top: 0,
           zIndex: 10,
         }}
       >
-        <Container maxWidth='xl'>
+        <Container maxWidth='xl' sx={{ position: 'relative' }}>
           <Stack
-            direction={{ xs: 'column', md: 'row' }}
-            spacing={2}
-            alignItems={{ xs: 'stretch', md: 'center' }}
+            direction='row'
+            spacing={{ xs: 1.25, md: 1.75 }}
+            alignItems='center'
             justifyContent='space-between'
-            sx={{ py: 1.5 }}
+            sx={{ minHeight: { xs: 82, md: 96 }, py: 1 }}
           >
-            <Stack direction='row' spacing={1.25} alignItems='center'>
+            <Stack
+              direction='row'
+              spacing={1.25}
+              alignItems='center'
+              sx={{ minWidth: 0 }}
+            >
               <Box
-                component='img'
-                src={LOGO_SRC}
-                alt='Logo domowej książki kucharskiej'
                 sx={{
-                  width: { xs: 68, md: 92 },
-                  height: { xs: 92, md: 126 },
-                  display: 'block',
-                  objectFit: 'contain',
+                  position: 'relative',
+                  width: 132,
+                  height: { xs: 72, md: 84 },
                   flexShrink: 0,
                 }}
-              />
-              <Box>
+              >
+                <Box
+                  component='img'
+                  src={LOGO_SRC}
+                  alt='Logo domowej książki kucharskiej'
+                  sx={{
+                    position: 'absolute',
+                    top: { xs: -26, md: -32 },
+                    left: 0,
+                    width: 132,
+                    height: 166,
+                    display: 'block',
+                    objectFit: 'contain',
+                  }}
+                />
+              </Box>
+              <Box sx={{ minWidth: 0 }}>
                 <Typography
                   variant='h1'
-                  sx={{ fontSize: { xs: '1.35rem', md: '1.55rem' } }}
+                  sx={{
+                    fontSize: { xs: '1.25rem', md: '1.55rem' },
+                    lineHeight: 1.05,
+                  }}
                 >
-                  Domowa książka kucharska
+                  Kącik Kulinarny Aleksandry
                 </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                  Przepisy, zdjęcia, notatki i spokojny rytm gotowania
+                <Typography
+                  variant='body2'
+                  color='text.secondary'
+                  sx={{
+                    display: { xs: 'none', sm: 'block' },
+                    lineHeight: 1.25,
+                  }}
+                >
+                  Prywatna książka kucharska z przepisami, zdjęciami i
+                  notatkami.
                 </Typography>
               </Box>
             </Stack>
-            <Stack direction='row' spacing={1} alignItems='center'>
+            <Stack
+              direction='row'
+              spacing={0.5}
+              alignItems='center'
+              sx={{ flexShrink: 0 }}
+            >
               <Tooltip title='Ulubione'>
                 <IconButton aria-label='Ulubione'>
                   <FavoriteBorderIcon />

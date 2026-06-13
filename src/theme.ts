@@ -1,5 +1,10 @@
 import { alpha, createTheme } from "@mui/material/styles";
 
+const headingFontFamily =
+  '"Fraunces", Georgia, "Times New Roman", serif';
+const bodyFontFamily =
+  '"DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+
 export const appColors = {
   ink: "#172033",
   mutedInk: "#5F687A",
@@ -79,18 +84,35 @@ export const theme = createTheme({
     borderRadius: 8,
   },
   typography: {
-    fontFamily:
-      'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    fontFamily: bodyFontFamily,
     h1: {
+      fontFamily: headingFontFamily,
       fontWeight: 800,
       letterSpacing: 0,
     },
     h2: {
+      fontFamily: headingFontFamily,
       fontWeight: 800,
       letterSpacing: 0,
     },
     h3: {
-      fontWeight: 760,
+      fontFamily: headingFontFamily,
+      fontWeight: 750,
+      letterSpacing: 0,
+    },
+    h4: {
+      fontFamily: headingFontFamily,
+      fontWeight: 750,
+      letterSpacing: 0,
+    },
+    h5: {
+      fontFamily: headingFontFamily,
+      fontWeight: 750,
+      letterSpacing: 0,
+    },
+    h6: {
+      fontFamily: headingFontFamily,
+      fontWeight: 750,
       letterSpacing: 0,
     },
     button: {
@@ -100,18 +122,21 @@ export const theme = createTheme({
   },
   components: {
     MuiCssBaseline: {
-      styleOverrides: {
-        ":root": {
-          background: appColors.background,
-        },
-        body: {
-          background: `linear-gradient(180deg, ${alpha(appColors.background, 0.96)}, ${alpha(
+      styleOverrides: `
+        @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,650,35,1;9..144,750,45,1;9..144,800,50,1&display=swap");
+
+        :root {
+          background: ${appColors.background};
+        }
+
+        body {
+          background: linear-gradient(180deg, ${alpha(appColors.background, 0.96)}, ${alpha(
             appColors.surface,
             0.94,
-          )}), ${appColors.background}`,
-          color: appColors.ink,
-        },
-      },
+          )}), ${appColors.background};
+          color: ${appColors.ink};
+        }
+      `,
     },
     MuiButton: {
       styleOverrides: {
