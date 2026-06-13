@@ -9,10 +9,10 @@ tags:
   - kk
 difficulty: easy
 prepTime: 15
-cookTime: 10
+cookTime: 0
 bakeTime: 15
 bakeTemperature: 200°C
-restTime: 50
+restTime: 0
 servings: 4
 image: faszerowane-bulki.png
 publishedAt: '2026-06-13'
@@ -20,9 +20,19 @@ publishedAt: '2026-06-13'
 
 ## Składniki
 
-- 1 składnik z ilością
-- 1 składnik z ilością
-- Sól i pieprz
+- 4 bułki kajzerki
+- 1 pierś z kurczaka
+- 1/2 czerwonej cebuli
+- 1 papryka czerwona
+- 1 jajko
+- mozarella w wiórkach
+- szczypiorek
+- 1 ząbek czosnku
+
+## Przyprawy
+
+- Sól
+- Pieprz
 
 ## Przygotowanie
 

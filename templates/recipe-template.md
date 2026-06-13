@@ -22,6 +22,10 @@ publishedAt: "YYYY-MM-DD"
 
 - 1 składnik z ilością
 - 1 składnik z ilością
+
+## Przyprawy
+
+- 1 przyprawa
 - Sól i pieprz
 
 ## Przygotowanie

@@ -17,6 +17,7 @@ export type Recipe = {
   image: string;
   tags: string[];
   ingredients: string[];
+  spices: string[];
   steps: string[];
   note: string;
   addedDate: string;
@@ -261,6 +262,7 @@ function parseRecipeFile(filename: string): Recipe {
     image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
     tags: readTags(frontmatter),
     ingredients: readListItems(getSection(markdown, 'Składniki')),
+    spices: readListItems(getSection(markdown, 'Przyprawy')),
     steps: readListItems(getSection(markdown, 'Przygotowanie')),
     note: readNote(markdown),
     addedDate: readRequiredString(frontmatter, 'publishedAt'),

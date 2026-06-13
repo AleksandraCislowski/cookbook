@@ -246,6 +246,25 @@ export default async function RecipePage({ params }: RecipePageProps) {
               </Stack>
             </Paper>
 
+            {recipe.spices.length > 0 ? (
+              <Paper variant='outlined' sx={{ p: { xs: 2, md: 2.5 } }}>
+                <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
+                  Przyprawy
+                </Typography>
+                <Stack component='ul' spacing={0.75} sx={{ m: 0, pl: 2.5 }}>
+                  {recipe.spices.map((spice, index) => (
+                    <Typography
+                      component='li'
+                      key={`${spice}-${index}`}
+                      color='text.secondary'
+                    >
+                      {spice}
+                    </Typography>
+                  ))}
+                </Stack>
+              </Paper>
+            ) : null}
+
             {recipe.note ? (
               <Paper variant='outlined' sx={{ p: 2, bgcolor: 'app.note' }}>
                 <Typography variant='caption' color='text.secondary'>

@@ -108,6 +108,7 @@ publishedAt: "2026-06-12"
 ## Writing Guidelines
 
 - Keep ingredients scannable and include amounts when possible.
+- Put seasonings in `## Przyprawy`, separate from `## Składniki`.
 - Write instructions as clear numbered actions.
 - Add practical notes after cooking the recipe.
 - Use variations for swaps, seasonal versions, or pantry shortcuts.
@@ -122,7 +123,7 @@ Before committing a new recipe:
 - The markdown filename, `slug`, and image filename match.
 - The `image` field matches the real image file.
 - Frontmatter fields are filled in intentionally.
-- Ingredients and instructions are not left as template placeholders.
+- Ingredients, spices, and instructions are not left as template placeholders.
 - `npm run build` passes.
 
 ## After Adding A Recipe

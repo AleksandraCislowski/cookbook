@@ -32,9 +32,7 @@ publishedAt: '2026-06-12'
 - 1 łyżka octu ryżowego albo soku z limonki
 - 1 łyżka miodu albo brązowego cukru
 - 1 łyżeczka startego imbiru
-- 1/2 łyżeczki płatków chili
 - 250 ml bulionu wołowego albo wody
-- Sól i pieprz
 
 ### Miska
 
@@ -56,6 +54,12 @@ publishedAt: '2026-06-12'
 - Sok z 1 limonki
 - 1 łyżeczka miodu
 - 1 łyżeczka srirachy albo chili crisp
+
+## Przyprawy
+
+- Sól
+- Pieprz
+- 1/2 łyżeczki płatków chili
 
 ## Przygotowanie
 

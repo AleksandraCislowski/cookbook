@@ -76,6 +76,7 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
     recipe.difficulty,
     ...recipe.tags,
     ...recipe.ingredients,
+    ...recipe.spices,
   ]
     .join(' ')
     .toLowerCase()
