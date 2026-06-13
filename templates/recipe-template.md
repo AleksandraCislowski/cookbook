@@ -37,12 +37,3 @@ publishedAt: "YYYY-MM-DD"
 ## Notatki
 
 Dodaj praktyczne uwagi: konsystencja, zamienniki, na co uważać albo co zmienić następnym razem.
-
-## Warianty
-
-- Dodaj jeden prosty wariant.
-- Dodaj jeden sezonowy albo awaryjny wariant ze spiżarni.
-
-## Przechowywanie
-
-Przechowuj resztki w lodówce przez 2-3 dni albo dopasuj tę notatkę do konkretnego przepisu.

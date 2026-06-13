@@ -1,9 +1,9 @@
 import { alpha, createTheme } from "@mui/material/styles";
 
 const headingFontFamily =
-  '"Fraunces", Georgia, "Times New Roman", serif';
+  'var(--font-heading), "Fraunces", Georgia, "Times New Roman", serif';
 const bodyFontFamily =
-  '"DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+  'var(--font-body), "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
 
 export const appColors = {
   ink: "#172033",
@@ -97,22 +97,22 @@ export const theme = createTheme({
     },
     h3: {
       fontFamily: headingFontFamily,
-      fontWeight: 750,
+      fontWeight: 700,
       letterSpacing: 0,
     },
     h4: {
       fontFamily: headingFontFamily,
-      fontWeight: 750,
+      fontWeight: 700,
       letterSpacing: 0,
     },
     h5: {
       fontFamily: headingFontFamily,
-      fontWeight: 750,
+      fontWeight: 700,
       letterSpacing: 0,
     },
     h6: {
       fontFamily: headingFontFamily,
-      fontWeight: 750,
+      fontWeight: 700,
       letterSpacing: 0,
     },
     button: {
@@ -123,8 +123,6 @@ export const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: `
-        @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,650,35,1;9..144,750,45,1;9..144,800,50,1&display=swap");
-
         :root {
           background: ${appColors.background};
         }

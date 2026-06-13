@@ -111,8 +111,6 @@ publishedAt: "2026-06-12"
 - Put seasonings in `## Przyprawy`, separate from `## Składniki`.
 - Write instructions as clear numbered actions.
 - Add practical notes after cooking the recipe.
-- Use variations for swaps, seasonal versions, or pantry shortcuts.
-- Keep storage notes simple and realistic.
 
 ## Publishing Checklist
 

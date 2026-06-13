@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { RecipeActions } from '@/components/RecipeActions';
 import {
   getRecipeBySlug,
   getRecipeSlugs,
@@ -32,15 +33,6 @@ const difficultyLabels: Record<Recipe['difficulty'], string> = {
   slow: 'powolne',
 };
 
-function getTotalTime(recipe: Recipe) {
-  return (
-    (recipe.prepTime ?? 0) +
-    (recipe.cookTime ?? 0) +
-    (recipe.bakeTime ?? 0) +
-    (recipe.restTime ?? 0)
-  );
-}
-
 function getBakingLabel(recipe: Recipe) {
   if (!recipe.bakeTime && !recipe.bakeTemperature) {
     return null;
@@ -49,6 +41,18 @@ function getBakingLabel(recipe: Recipe) {
   return [recipe.bakeTemperature, recipe.bakeTime ? `${recipe.bakeTime} min` : '']
     .filter(Boolean)
     .join(' / ');
+}
+
+function getStatIcon(label: string) {
+  if (label === 'Pieczenie') {
+    return <ThermostatIcon fontSize='small' color='action' />;
+  }
+
+  if (label === 'Porcje') {
+    return <RestaurantMenuIcon fontSize='small' color='action' />;
+  }
+
+  return <TimerOutlinedIcon fontSize='small' color='action' />;
 }
 
 export function generateStaticParams() {
@@ -82,7 +86,6 @@ export default async function RecipePage({ params }: RecipePageProps) {
   }
 
   const bakingLabel = getBakingLabel(recipe);
-  const totalTime = getTotalTime(recipe);
   const recipeStats = [
     recipe.prepTime ? ['Przygotowanie', `${recipe.prepTime} min`] : null,
     recipe.cookTime ? ['Gotowanie', `${recipe.cookTime} min`] : null,
@@ -94,13 +97,18 @@ export default async function RecipePage({ params }: RecipePageProps) {
   return (
     <Box sx={{ minHeight: '100vh', pb: 6 }}>
       <Container maxWidth='lg' sx={{ pt: { xs: 2.5, md: 4 } }}>
-        <Button
-          href='/'
-          startIcon={<ArrowBackIcon />}
+        <Stack
+          direction='row'
+          justifyContent='space-between'
+          alignItems='center'
+          spacing={1}
           sx={{ mb: 2 }}
         >
-          Wróć do przepisów
-        </Button>
+          <Button href='/' startIcon={<ArrowBackIcon />}>
+            Wróć do przepisów
+          </Button>
+          <RecipeActions />
+        </Stack>
 
         <Box
           sx={{
@@ -190,43 +198,37 @@ export default async function RecipePage({ params }: RecipePageProps) {
                     key={label}
                     sx={{
                       minWidth: 0,
-                      p: 1,
+                      p: 1.15,
                       bgcolor: 'app.surface',
                       borderRadius: 2,
+                      textAlign: 'center',
                     }}
                   >
-                    <Typography variant='caption' color='text.secondary'>
+                    <Typography
+                      variant='caption'
+                      color='text.secondary'
+                      sx={{ display: 'block', lineHeight: 1.1, mb: 0.5 }}
+                    >
                       {label}
                     </Typography>
-                    <Typography fontWeight={800}>{value}</Typography>
+                    <Stack
+                      direction='row'
+                      spacing={0.5}
+                      alignItems='center'
+                      justifyContent='center'
+                      sx={{ minWidth: 0 }}
+                    >
+                      {getStatIcon(label)}
+                      <Typography
+                        fontWeight={800}
+                        sx={{ lineHeight: 1.15, overflowWrap: 'anywhere' }}
+                      >
+                        {value}
+                      </Typography>
+                    </Stack>
                   </Box>
                 ))}
               </Box>
-
-              <Stack direction='row' flexWrap='wrap' gap={1.5} sx={{ mt: 2 }}>
-                {totalTime > 0 ? (
-                  <Stack direction='row' spacing={0.5} alignItems='center'>
-                    <TimerOutlinedIcon fontSize='small' color='action' />
-                    <Typography variant='body2'>
-                      {totalTime} min razem
-                    </Typography>
-                  </Stack>
-                ) : null}
-                {recipe.servings ? (
-                  <Stack direction='row' spacing={0.5} alignItems='center'>
-                    <RestaurantMenuIcon fontSize='small' color='action' />
-                    <Typography variant='body2'>
-                      {recipe.servings} porcje
-                    </Typography>
-                  </Stack>
-                ) : null}
-                {bakingLabel ? (
-                  <Stack direction='row' spacing={0.5} alignItems='center'>
-                    <ThermostatIcon fontSize='small' color='action' />
-                    <Typography variant='body2'>{bakingLabel}</Typography>
-                  </Stack>
-                ) : null}
-              </Stack>
             </Paper>
 
             <Paper variant='outlined' sx={{ p: { xs: 2, md: 2.5 } }}>

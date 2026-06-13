@@ -1,10 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-import PrintIcon from '@mui/icons-material/Print';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import SearchIcon from '@mui/icons-material/Search';
@@ -18,7 +15,6 @@ import {
   Chip,
   Container,
   FormControl,
-  IconButton,
   InputAdornment,
   InputLabel,
   MenuItem,
@@ -26,7 +22,6 @@ import {
   Select,
   Stack,
   TextField,
-  Tooltip,
   Typography,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
@@ -56,7 +51,10 @@ function getBakingLabel(recipe: Recipe) {
     return null;
   }
 
-  return [recipe.bakeTemperature, recipe.bakeTime ? `${recipe.bakeTime} min` : '']
+  return [
+    recipe.bakeTemperature,
+    recipe.bakeTime ? `${recipe.bakeTime} min` : '',
+  ]
     .filter(Boolean)
     .join(' / ');
 }
@@ -124,11 +122,7 @@ function RecipeImage({ recipe }: { recipe: Recipe }) {
   );
 }
 
-function RecipeCard({
-  recipe,
-}: {
-  recipe: Recipe;
-}) {
+function RecipeCard({ recipe }: { recipe: Recipe }) {
   const bakingLabel = getBakingLabel(recipe);
   const totalTime = getTotalTime(recipe);
 
@@ -162,7 +156,7 @@ function RecipeCard({
             display: 'flex',
             flex: 1,
             flexDirection: 'column',
-            minHeight: 220,
+            minHeight: 260,
             p: 2.5,
           }}
         >
@@ -197,11 +191,7 @@ function RecipeCard({
           <Typography
             color='text.secondary'
             sx={{
-              display: '-webkit-box',
-              minHeight: 54,
-              overflow: 'hidden',
-              WebkitBoxOrient: 'vertical',
-              WebkitLineClamp: 2,
+              minHeight: 76,
             }}
           >
             {recipe.description}
@@ -268,7 +258,8 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
       .filter((recipe) => matchesSearch(recipe, searchTerm))
       .sort((firstRecipe, secondRecipe) => {
         if (sort === 'fastest') {
-          const firstTime = getTotalTime(firstRecipe) || Number.POSITIVE_INFINITY;
+          const firstTime =
+            getTotalTime(firstRecipe) || Number.POSITIVE_INFINITY;
           const secondTime =
             getTotalTime(secondRecipe) || Number.POSITIVE_INFINITY;
 
@@ -322,7 +313,10 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
             spacing={{ xs: 1, md: 1.75 }}
             alignItems='center'
             justifyContent='space-between'
-            sx={{ minHeight: { xs: 70, sm: 82, md: 96 }, py: { xs: 0.75, md: 1 } }}
+            sx={{
+              minHeight: { xs: 70, sm: 82, md: 96 },
+              py: { xs: 0.75, md: 1 },
+            }}
           >
             <Stack
               direction='row'
@@ -376,23 +370,6 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                   notatkami.
                 </Typography>
               </Box>
-            </Stack>
-            <Stack
-              direction='row'
-              spacing={0.5}
-              alignItems='center'
-              sx={{ display: { xs: 'none', sm: 'flex' }, flexShrink: 0 }}
-            >
-              <Tooltip title='Ulubione'>
-                <IconButton aria-label='Ulubione'>
-                  <FavoriteBorderIcon />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title='Lista zakupów'>
-                <IconButton aria-label='Lista zakupów'>
-                  <LocalGroceryStoreIcon />
-                </IconButton>
-              </Tooltip>
             </Stack>
           </Stack>
         </Container>
@@ -525,13 +502,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
           </Stack>
 
           <Box>
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              spacing={1.5}
-              justifyContent='space-between'
-              alignItems={{ xs: 'stretch', sm: 'center' }}
-              sx={{ mb: 2 }}
-            >
+            <Stack sx={{ mb: 2 }}>
               <Box>
                 <Typography
                   variant='h2'
@@ -543,9 +514,6 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                   Pokazano {filteredRecipes.length} z Twojej biblioteki
                 </Typography>
               </Box>
-              <Button variant='outlined' startIcon={<PrintIcon />}>
-                Drukuj menu
-              </Button>
             </Stack>
 
             {filteredRecipes.length > 0 ? (
@@ -562,10 +530,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                 }}
               >
                 {filteredRecipes.map((recipe) => (
-                  <RecipeCard
-                    key={recipe.slug}
-                    recipe={recipe}
-                  />
+                  <RecipeCard key={recipe.slug} recipe={recipe} />
                 ))}
               </Box>
             ) : (
@@ -573,16 +538,12 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                 <Typography variant='h2' sx={{ fontSize: '1.25rem' }}>
                   Brak przepisów pasujących do wyszukiwania.
                 </Typography>
-                <Button
-                  sx={{ mt: 2 }}
-                  onClick={resetFilters}
-                >
+                <Button sx={{ mt: 2 }} onClick={resetFilters}>
                   Pokaż wszystkie przepisy
                 </Button>
               </Paper>
             )}
           </Box>
-
         </Box>
       </Container>
     </Box>
