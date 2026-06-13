@@ -1,5 +1,5 @@
 ---
-title: "Poke bowl z szarpaną wołowiną"
+title: 'Poke bowl z szarpaną wołowiną'
 slug: poke-bowl-z-szarpana-wolowina
 description: Kolorowa miska z ryżem, soczystą szarpaną wołowiną, chrupiącymi warzywami, mango i sojowo-limonkowym sosem.
 category: Obiad
@@ -19,8 +19,8 @@ image: poke-bowl-z-szarpana-wolowina.png
 source:
   name: Notatki własne
   url:
-publishedAt: "2026-06-12"
-updatedAt: "2026-06-12"
+publishedAt: '2026-06-12'
+updatedAt: '2026-06-12'
 ---
 
 ## Składniki
