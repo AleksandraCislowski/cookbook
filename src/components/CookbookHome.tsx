@@ -1,8 +1,6 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import AddIcon from '@mui/icons-material/Add';
-import CloseIcon from '@mui/icons-material/Close';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
@@ -17,15 +15,10 @@ import {
   CardActionArea,
   Chip,
   Container,
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  Divider,
   FormControl,
   IconButton,
   InputAdornment,
   InputLabel,
-  LinearProgress,
   MenuItem,
   Paper,
   Select,
@@ -33,9 +26,9 @@ import {
   TextField,
   Tooltip,
   Typography,
-  useMediaQuery,
 } from '@mui/material';
-import { alpha, useTheme } from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
+import Link from 'next/link';
 import type { Recipe } from '@/data/recipes';
 
 const ALL = 'all';
@@ -106,9 +99,7 @@ function RecipeImage({ recipe }: { recipe: Recipe }) {
           inset: 0,
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
-          transform: 'scale(1.04)',
-          transformOrigin: 'center',
+          objectFit: 'contain',
         }}
       />
     </Box>
@@ -117,12 +108,8 @@ function RecipeImage({ recipe }: { recipe: Recipe }) {
 
 function RecipeCard({
   recipe,
-  selected,
-  onOpen,
 }: {
   recipe: Recipe;
-  selected: boolean;
-  onOpen: () => void;
 }) {
   return (
     <Card
@@ -130,15 +117,12 @@ function RecipeCard({
       sx={{
         height: '100%',
         overflow: 'hidden',
-        borderColor: selected ? 'primary.main' : 'app.border',
-        boxShadow: (theme) =>
-          selected
-            ? `0 0 0 2px ${alpha(theme.palette.primary.main, 0.16)}`
-            : 'none',
+        borderColor: 'app.border',
       }}
     >
       <CardActionArea
-        onClick={onOpen}
+        component={Link}
+        href={`/przepisy/${recipe.slug}`}
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -157,7 +141,8 @@ function RecipeCard({
             display: 'flex',
             flex: 1,
             flexDirection: 'column',
-            p: 2,
+            minHeight: 220,
+            p: 2.5,
           }}
         >
           <Stack direction='row' spacing={1} alignItems='center' sx={{ mb: 1 }}>
@@ -177,7 +162,7 @@ function RecipeCard({
             variant='h3'
             sx={{
               display: '-webkit-box',
-              minHeight: 40,
+              minHeight: 48,
               overflow: 'hidden',
               fontSize: '1.05rem',
               lineHeight: 1.2,
@@ -192,7 +177,7 @@ function RecipeCard({
             color='text.secondary'
             sx={{
               display: '-webkit-box',
-              minHeight: 44,
+              minHeight: 54,
               overflow: 'hidden',
               WebkitBoxOrient: 'vertical',
               WebkitLineClamp: 2,
@@ -204,7 +189,7 @@ function RecipeCard({
             direction='row'
             spacing={1.5}
             alignItems='center'
-            sx={{ mt: 'auto', pt: 1.5 }}
+            sx={{ mt: 'auto', pt: 2.25 }}
           >
             <Stack direction='row' spacing={0.5} alignItems='center'>
               <TimerOutlinedIcon fontSize='small' color='action' />
@@ -223,94 +208,7 @@ function RecipeCard({
   );
 }
 
-function RecipePreview({ recipe }: { recipe: Recipe }) {
-  return (
-    <>
-      <RecipeImage recipe={recipe} />
-      <Box sx={{ p: 2.25 }}>
-        <Stack direction='row' spacing={1} sx={{ mb: 1 }}>
-          <Chip size='small' color='secondary' label={recipe.category} />
-          <Chip size='small' variant='outlined' label={recipe.cuisine} />
-        </Stack>
-        <Typography variant='h2' sx={{ fontSize: '1.45rem', mb: 0.75 }}>
-          {recipe.title}
-        </Typography>
-        <Typography color='text.secondary' sx={{ mb: 2 }}>
-          {recipe.description}
-        </Typography>
-
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 1,
-            mb: 2,
-          }}
-        >
-          {[
-            ['Przygotowanie', `${recipe.prepTime} min`],
-            ['Gotowanie', `${recipe.cookTime} min`],
-            ['Porcje', recipe.servings],
-          ].map(([label, value]) => (
-            <Box
-              key={label}
-              sx={{ p: 1, bgcolor: 'app.surface', borderRadius: 2 }}
-            >
-              <Typography variant='caption' color='text.secondary'>
-                {label}
-              </Typography>
-              <Typography fontWeight={800}>{value}</Typography>
-            </Box>
-          ))}
-        </Box>
-
-        <Stack spacing={1.75}>
-          <Box>
-            <Typography variant='h3' sx={{ fontSize: '1rem', mb: 1 }}>
-              Składniki
-            </Typography>
-            <Stack component='ul' spacing={0.75} sx={{ pl: 2.5, m: 0 }}>
-              {recipe.ingredients.map((ingredient, index) => (
-                <Typography
-                  component='li'
-                  key={`${ingredient}-${index}`}
-                  color='text.secondary'
-                >
-                  {ingredient}
-                </Typography>
-              ))}
-            </Stack>
-          </Box>
-          <Divider />
-          <Box>
-            <Typography variant='h3' sx={{ fontSize: '1rem', mb: 1 }}>
-              Podgląd gotowania
-            </Typography>
-            <LinearProgress
-              variant='determinate'
-              value={25}
-              sx={{ mb: 1.5, height: 8, borderRadius: 4 }}
-            />
-            <Typography fontWeight={800} sx={{ mb: 0.75 }}>
-              Krok 1 z {recipe.steps.length}
-            </Typography>
-            <Typography color='text.secondary'>{recipe.steps[0]}</Typography>
-          </Box>
-          <Paper variant='outlined' sx={{ p: 1.5, bgcolor: 'app.note' }}>
-            <Typography variant='caption' color='text.secondary'>
-              Notatka
-            </Typography>
-            <Typography>{recipe.note}</Typography>
-          </Paper>
-        </Stack>
-      </Box>
-    </>
-  );
-}
-
 export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
-  const theme = useTheme();
-  const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const categoryOptions = useMemo(
     () => [
       ALL,
@@ -326,8 +224,6 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const [category, setCategory] = useState(ALL);
   const [activeTag, setActiveTag] = useState(ALL);
   const [sort, setSort] = useState('newest');
-  const [selectedSlug, setSelectedSlug] = useState(recipes[0]?.slug ?? '');
-  const [isRecipeDialogOpen, setIsRecipeDialogOpen] = useState(false);
 
   const filteredRecipes = useMemo(() => {
     return recipes
@@ -346,19 +242,6 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
         return secondRecipe.addedDate.localeCompare(firstRecipe.addedDate);
       });
   }, [activeTag, category, searchTerm, sort]);
-
-  const selectedRecipe =
-    filteredRecipes.find((recipe) => recipe.slug === selectedSlug) ||
-    filteredRecipes[0] ||
-    recipes[0];
-
-  function openRecipe(recipe: Recipe) {
-    setSelectedSlug(recipe.slug);
-
-    if (!isLargeScreen) {
-      setIsRecipeDialogOpen(true);
-    }
-  }
 
   const stats = [
     { label: 'Przepisy', value: recipes.length },
@@ -472,7 +355,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
             display: 'grid',
             gridTemplateColumns: {
               xs: '1fr',
-              lg: '280px minmax(0, 1fr) 380px',
+              lg: '280px minmax(0, 1fr)',
             },
             gap: 2.5,
             alignItems: 'start',
@@ -625,8 +508,6 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                   <RecipeCard
                     key={recipe.slug}
                     recipe={recipe}
-                    selected={selectedRecipe.slug === recipe.slug}
-                    onOpen={() => openRecipe(recipe)}
                   />
                 ))}
               </Box>
@@ -649,55 +530,8 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
             )}
           </Box>
 
-          <Paper
-            variant='outlined'
-            sx={{
-              display: { xs: 'none', lg: 'block' },
-              overflow: 'hidden',
-              bgcolor: 'background.paper',
-              position: { lg: 'sticky' },
-              top: { lg: 96 },
-            }}
-          >
-            {selectedRecipe ? <RecipePreview recipe={selectedRecipe} /> : null}
-          </Paper>
         </Box>
       </Container>
-
-      <Dialog
-        fullScreen={!isLargeScreen}
-        fullWidth
-        maxWidth='sm'
-        open={isRecipeDialogOpen}
-        onClose={() => setIsRecipeDialogOpen(false)}
-        sx={{ display: { xs: 'block', lg: 'none' } }}
-      >
-        <DialogTitle
-          sx={{ p: 1, borderBottom: '1px solid', borderColor: 'app.border' }}
-        >
-          <Stack
-            direction='row'
-            alignItems='center'
-            justifyContent='space-between'
-            spacing={1}
-          >
-            <Typography variant='h2' sx={{ fontSize: '1rem' }}>
-              Podgląd przepisu
-            </Typography>
-            <Tooltip title='Zamknij przepis'>
-              <IconButton
-                aria-label='Zamknij przepis'
-                onClick={() => setIsRecipeDialogOpen(false)}
-              >
-                <CloseIcon />
-              </IconButton>
-            </Tooltip>
-          </Stack>
-        </DialogTitle>
-        <DialogContent sx={{ p: 0 }}>
-          {selectedRecipe ? <RecipePreview recipe={selectedRecipe} /> : null}
-        </DialogContent>
-      </Dialog>
     </Box>
   );
 }

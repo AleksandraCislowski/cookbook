@@ -231,3 +231,11 @@ export function getRecipes() {
       secondRecipe.addedDate.localeCompare(firstRecipe.addedDate),
     );
 }
+
+export function getRecipeSlugs() {
+  return getRecipes().map((recipe) => recipe.slug);
+}
+
+export function getRecipeBySlug(slug: string) {
+  return getRecipes().find((recipe) => recipe.slug === slug);
+}
