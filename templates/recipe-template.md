@@ -12,7 +12,7 @@ prepTime: 15
 cookTime: 30
 restTime: 0
 servings: 4
-image: recipe-name.jpg
+image: recipe-name.png
 source:
   name: Notatki własne
   url:

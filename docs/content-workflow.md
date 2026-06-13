@@ -29,14 +29,14 @@ The recipe file is generated from `templates/recipe-template.md`.
 Each recipe uses one image. Add it here:
 
 ```txt
-public/images/recipes/poke-bowl-z-szarpana-wolowina.jpg
+public/images/recipes/poke-bowl-z-szarpana-wolowina.png
 ```
 
-The image filename should match the recipe slug. Use `.jpg`, `.png`, or `.webp`,
-then make sure the `image` field in frontmatter matches the real filename:
+The image filename should match the recipe slug and always use `.png`.
+Make sure the `image` field in frontmatter matches the real filename:
 
 ```yaml
-image: poke-bowl-z-szarpana-wolowina.jpg
+image: poke-bowl-z-szarpana-wolowina.png
 ```
 
 Recommended image size:
@@ -82,7 +82,7 @@ prepTime: 25
 cookTime: 180
 restTime: 0
 servings: 4
-image: poke-bowl-z-szarpana-wolowina.jpg
+image: poke-bowl-z-szarpana-wolowina.png
 source:
   name: Notatki własne
   url:
@@ -102,7 +102,7 @@ updatedAt: "2026-06-12"
 - `difficulty`: expected values for now: `easy`, `medium`, or `slow`; the UI maps these to Polish labels.
 - `prepTime`, `cookTime`, `restTime`: numbers in minutes.
 - `servings`: default serving count.
-- `image`: single recipe image from `public/images/recipes/`.
+- `image`: single PNG recipe image from `public/images/recipes/`.
 - `source.name`, `source.url`: where the recipe came from, if useful.
 - `publishedAt`, `updatedAt`: dates in `YYYY-MM-DD` format.
 
