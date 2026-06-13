@@ -1,5 +1,8 @@
-import { CookbookHome } from "@/components/CookbookHome";
+import { CookbookHome } from '@/components/CookbookHome';
+import { getRecipes } from '@/data/recipes';
 
 export default function HomePage() {
-  return <CookbookHome />;
+  const recipes = getRecipes();
+
+  return <CookbookHome recipes={recipes} />;
 }

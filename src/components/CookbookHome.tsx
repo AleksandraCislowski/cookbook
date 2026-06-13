@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -36,16 +36,10 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import { alpha, useTheme } from '@mui/material/styles';
-import { recipes, type Recipe } from '@/data/recipes';
+import type { Recipe } from '@/data/recipes';
 
 const ALL = 'all';
 const LOGO_SRC = '/images/recipes/logo.png';
-
-const categoryOptions = [
-  ALL,
-  ...Array.from(new Set(recipes.map((recipe) => recipe.category))),
-];
-const tagOptions = Array.from(new Set(recipes.flatMap((recipe) => recipe.tags)));
 
 const difficultyLabels: Record<Recipe['difficulty'], string> = {
   easy: 'łatwe',
@@ -78,6 +72,49 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
     .includes(normalizedSearch);
 }
 
+function RecipeImage({ recipe }: { recipe: Recipe }) {
+  const [imageSource, setImageSource] = useState(recipe.image);
+
+  useEffect(() => {
+    setImageSource(recipe.image);
+  }, [recipe.image]);
+
+  return (
+    <Box
+      sx={{
+        position: 'relative',
+        width: '100%',
+        aspectRatio: '4 / 3',
+        overflow: 'hidden',
+        backgroundColor: 'app.imageFallback',
+        lineHeight: 0,
+      }}
+    >
+      <Box
+        component='img'
+        src={imageSource}
+        alt=''
+        draggable={false}
+        onError={() => {
+          if (imageSource !== LOGO_SRC) {
+            setImageSource(LOGO_SRC);
+          }
+        }}
+        sx={{
+          display: 'block',
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transform: 'scale(1.04)',
+          transformOrigin: 'center',
+        }}
+      />
+    </Box>
+  );
+}
+
 function RecipeCard({
   recipe,
   selected,
@@ -91,6 +128,7 @@ function RecipeCard({
     <Card
       variant='outlined'
       sx={{
+        height: '100%',
         overflow: 'hidden',
         borderColor: selected ? 'primary.main' : 'app.border',
         boxShadow: (theme) =>
@@ -99,20 +137,29 @@ function RecipeCard({
             : 'none',
       }}
     >
-      <CardActionArea onClick={onOpen} sx={{ height: '100%' }}>
+      <CardActionArea
+        onClick={onOpen}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'stretch',
+          height: '100%',
+          '& .MuiCardActionArea-focusHighlight': {
+            display: 'none',
+          },
+        }}
+      >
+        <Box sx={{ flexShrink: 0 }}>
+          <RecipeImage recipe={recipe} />
+        </Box>
         <Box
-          component='img'
-          src={recipe.image}
-          alt=''
           sx={{
-            display: 'block',
-            width: '100%',
-            aspectRatio: '4 / 3',
-            objectFit: 'contain',
-            backgroundColor: 'app.imageFallback',
+            display: 'flex',
+            flex: 1,
+            flexDirection: 'column',
+            p: 2,
           }}
-        />
-        <Box sx={{ p: 2 }}>
+        >
           <Stack direction='row' spacing={1} alignItems='center' sx={{ mb: 1 }}>
             <Chip
               size='small'
@@ -128,18 +175,36 @@ function RecipeCard({
           </Stack>
           <Typography
             variant='h3'
-            sx={{ fontSize: '1.05rem', lineHeight: 1.2, mb: 0.75 }}
+            sx={{
+              display: '-webkit-box',
+              minHeight: 40,
+              overflow: 'hidden',
+              fontSize: '1.05rem',
+              lineHeight: 1.2,
+              mb: 0.75,
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 2,
+            }}
           >
             {recipe.title}
           </Typography>
-          <Typography color='text.secondary' sx={{ minHeight: 44 }}>
+          <Typography
+            color='text.secondary'
+            sx={{
+              display: '-webkit-box',
+              minHeight: 44,
+              overflow: 'hidden',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 2,
+            }}
+          >
             {recipe.description}
           </Typography>
           <Stack
             direction='row'
             spacing={1.5}
             alignItems='center'
-            sx={{ mt: 1.5 }}
+            sx={{ mt: 'auto', pt: 1.5 }}
           >
             <Stack direction='row' spacing={0.5} alignItems='center'>
               <TimerOutlinedIcon fontSize='small' color='action' />
@@ -161,18 +226,7 @@ function RecipeCard({
 function RecipePreview({ recipe }: { recipe: Recipe }) {
   return (
     <>
-      <Box
-        component='img'
-        src={recipe.image}
-        alt=''
-        sx={{
-          width: '100%',
-          aspectRatio: '4 / 3',
-          objectFit: 'contain',
-          display: 'block',
-          backgroundColor: 'app.imageFallback',
-        }}
-      />
+      <RecipeImage recipe={recipe} />
       <Box sx={{ p: 2.25 }}>
         <Stack direction='row' spacing={1} sx={{ mb: 1 }}>
           <Chip size='small' color='secondary' label={recipe.category} />
@@ -216,10 +270,10 @@ function RecipePreview({ recipe }: { recipe: Recipe }) {
               Składniki
             </Typography>
             <Stack component='ul' spacing={0.75} sx={{ pl: 2.5, m: 0 }}>
-              {recipe.ingredients.map((ingredient) => (
+              {recipe.ingredients.map((ingredient, index) => (
                 <Typography
                   component='li'
-                  key={ingredient}
+                  key={`${ingredient}-${index}`}
                   color='text.secondary'
                 >
                   {ingredient}
@@ -254,14 +308,25 @@ function RecipePreview({ recipe }: { recipe: Recipe }) {
   );
 }
 
-export function CookbookHome() {
+export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
+  const categoryOptions = useMemo(
+    () => [
+      ALL,
+      ...Array.from(new Set(recipes.map((recipe) => recipe.category))),
+    ],
+    [recipes],
+  );
+  const tagOptions = useMemo(
+    () => Array.from(new Set(recipes.flatMap((recipe) => recipe.tags))),
+    [recipes],
+  );
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState(ALL);
   const [activeTag, setActiveTag] = useState(ALL);
   const [sort, setSort] = useState('newest');
-  const [selectedSlug, setSelectedSlug] = useState(recipes[0].slug);
+  const [selectedSlug, setSelectedSlug] = useState(recipes[0]?.slug ?? '');
   const [isRecipeDialogOpen, setIsRecipeDialogOpen] = useState(false);
 
   const filteredRecipes = useMemo(() => {
@@ -520,6 +585,7 @@ export function CookbookHome() {
                     xl: 'repeat(3, minmax(0, 1fr))',
                   },
                   gap: 2,
+                  gridAutoRows: '1fr',
                 }}
               >
                 {filteredRecipes.map((recipe) => (
@@ -560,7 +626,7 @@ export function CookbookHome() {
               top: { lg: 96 },
             }}
           >
-            <RecipePreview recipe={selectedRecipe} />
+            {selectedRecipe ? <RecipePreview recipe={selectedRecipe} /> : null}
           </Paper>
         </Box>
       </Container>
@@ -596,7 +662,7 @@ export function CookbookHome() {
           </Stack>
         </DialogTitle>
         <DialogContent sx={{ p: 0 }}>
-          <RecipePreview recipe={selectedRecipe} />
+          {selectedRecipe ? <RecipePreview recipe={selectedRecipe} /> : null}
         </DialogContent>
       </Dialog>
     </Box>

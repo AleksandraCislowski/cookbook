@@ -32,7 +32,7 @@ if (!slug) {
 const projectRoot = process.cwd();
 const recipePath = path.join(projectRoot, "recipes", `${slug}.md`);
 const imageRoot = path.join(projectRoot, "public", "images", "recipes");
-const imagePath = path.join(imageRoot, `${slug}.jpg`);
+const imagePath = path.join(imageRoot, `${slug}.png`);
 const templatePath = path.join(projectRoot, "templates", "recipe-template.md");
 
 if (fs.existsSync(recipePath)) {
@@ -41,7 +41,7 @@ if (fs.existsSync(recipePath)) {
 }
 
 if (fs.existsSync(imagePath)) {
-  console.error(`Zdjęcie już istnieje: public/images/recipes/${slug}.jpg`);
+  console.error(`Zdjęcie już istnieje: public/images/recipes/${slug}.png`);
   process.exit(1);
 }
 
@@ -51,7 +51,7 @@ const today = new Date().toISOString().slice(0, 10);
 const recipeContent = template
   .replace('title: "Nazwa przepisu"', `title: "${title}"`)
   .replace("slug: recipe-name", `slug: ${slug}`)
-  .replace("image: recipe-name.jpg", `image: ${slug}.jpg`)
+  .replace("image: recipe-name.png", `image: ${slug}.png`)
   .replace('publishedAt: "YYYY-MM-DD"', `publishedAt: "${today}"`)
   .replace('updatedAt: "YYYY-MM-DD"', `updatedAt: "${today}"`);
 
@@ -61,6 +61,6 @@ fs.writeFileSync(recipePath, recipeContent);
 console.log(`Utworzono recipes/${slug}.md`);
 console.log("");
 console.log("Następne kroki:");
-console.log(`1. Dodaj zdjęcie public/images/recipes/${slug}.jpg`);
+console.log(`1. Dodaj zdjęcie public/images/recipes/${slug}.png`);
 console.log("2. Uzupełnij kategorie, tagi, czasy, składniki i przygotowanie.");
 console.log("3. Przed publikacją odpal npm run build.");

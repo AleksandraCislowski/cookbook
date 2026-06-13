@@ -1,10 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
 export type Recipe = {
   slug: string;
   title: string;
   description: string;
   category: string;
   cuisine: string;
-  difficulty: "easy" | "medium" | "slow";
+  difficulty: 'easy' | 'medium' | 'slow';
   prepTime: number;
   cookTime: number;
   servings: number;
@@ -16,47 +19,215 @@ export type Recipe = {
   addedDate: string;
 };
 
-export const recipes: Recipe[] = [
-  {
-    slug: "poke-bowl-z-szarpana-wolowina",
-    title: "Poke bowl z szarpaną wołowiną",
-    description:
-      "Kolorowa miska z ryżem, soczystą szarpaną wołowiną, chrupiącymi warzywami, mango i sojowo-limonkowym sosem.",
-    category: "Obiad",
-    cuisine: "Nowoczesna domowa",
-    difficulty: "medium",
-    prepTime: 25,
-    cookTime: 180,
-    servings: 4,
-    image: "/images/recipes/poke-bowl-z-szarpana-wolowina.png",
-    tags: ["miska", "wołowina", "ryż", "przygotowanie posiłków", "świeże warzywa"],
-    ingredients: [
-      "800 g łopatki wołowej, mostka albo pręgi wołowej",
-      "1 łyżka oleju neutralnego",
-      "1 cebula",
-      "3 ząbki czosnku",
-      "3 łyżki sosu sojowego",
-      "2 łyżki sosu hoisin",
-      "1 łyżka octu ryżowego albo soku z limonki",
-      "1 łyżka miodu albo brązowego cukru",
-      "1 łyżeczka startego imbiru",
-      "1/2 łyżeczki płatków chili",
-      "250 ml bulionu wołowego albo wody",
-      "300 g ryżu jaśminowego albo sushi",
-      "Ogórek, marchewka, mango, awokado, edamame i czerwona kapusta",
-      "Dymka, sezam, kolendra albo mięta do podania",
-    ],
-    steps: [
-      "Osusz wołowinę, dopraw solą i pieprzem, a potem obsmaż ją w ciężkim garnku.",
-      "Dodaj cebulę, czosnek, imbir, chili, sos sojowy, hoisin, ocet ryżowy, miód i bulion.",
-      "Duś pod przykryciem przez 2,5-3 godziny, aż mięso będzie bardzo miękkie.",
-      "Poszarp mięso widelcami i wymieszaj je z sosem z garnka.",
-      "Ugotuj ryż i wymieszaj sos do podania z sosu sojowego, oleju sezamowego, limonki, miodu i srirachy.",
-      "Pokrój warzywa, mango i awokado, a edamame podgrzej albo przepłucz gorącą wodą.",
-      "Złóż miski z ryżu, wołowiny i dodatków, polej sosem i posyp sezamem oraz ziołami.",
-    ],
-    note:
-      "Wołowina powinna być miękka, lepka i dobrze pokryta sosem. Jeśli po 3 godzinach dalej stawia opór, duś ją dłużej.",
-    addedDate: "2026-06-12",
-  },
-];
+type RecipeFrontmatter = {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  cuisine: string;
+  difficulty: Recipe['difficulty'];
+  prepTime: number;
+  cookTime: number;
+  servings: number;
+  tags: string[];
+  publishedAt: string;
+};
+
+const RECIPES_DIRECTORY = path.join(process.cwd(), 'recipes');
+const RECIPE_IMAGE_DIRECTORY = '/images/recipes';
+
+function parseScalar(value: string) {
+  const trimmedValue = value.trim();
+
+  if (
+    (trimmedValue.startsWith('"') && trimmedValue.endsWith('"')) ||
+    (trimmedValue.startsWith("'") && trimmedValue.endsWith("'"))
+  ) {
+    return trimmedValue.slice(1, -1);
+  }
+
+  return trimmedValue;
+}
+
+function parseFrontmatter(rawFrontmatter: string) {
+  const frontmatter: Record<string, string | string[]> = {};
+  const lines = rawFrontmatter.split('\n');
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+
+    if (!line.trim() || line.startsWith(' ')) {
+      continue;
+    }
+
+    const match = line.match(/^([A-Za-z][A-Za-z0-9]*):\s*(.*)$/);
+
+    if (!match) {
+      continue;
+    }
+
+    const [, key, rawValue] = match;
+
+    if (rawValue === '') {
+      const values: string[] = [];
+      let nextIndex = index + 1;
+
+      while (nextIndex < lines.length) {
+        const nextLine = lines[nextIndex];
+        const listItem = nextLine.match(/^\s+-\s+(.*)$/);
+
+        if (listItem) {
+          values.push(parseScalar(listItem[1]));
+          nextIndex += 1;
+          continue;
+        }
+
+        if (nextLine.startsWith(' ') || !nextLine.trim()) {
+          nextIndex += 1;
+          continue;
+        }
+
+        break;
+      }
+
+      if (values.length > 0) {
+        frontmatter[key] = values;
+        index = nextIndex - 1;
+      }
+
+      continue;
+    }
+
+    frontmatter[key] = parseScalar(rawValue);
+  }
+
+  return frontmatter;
+}
+
+function readRequiredString(
+  frontmatter: Record<string, string | string[]>,
+  key: keyof RecipeFrontmatter,
+) {
+  const value = frontmatter[key];
+
+  if (typeof value !== 'string' || !value) {
+    throw new Error(`Missing required recipe field: ${key}`);
+  }
+
+  return value;
+}
+
+function readRequiredNumber(
+  frontmatter: Record<string, string | string[]>,
+  key: keyof RecipeFrontmatter,
+) {
+  const value = Number(readRequiredString(frontmatter, key));
+
+  if (!Number.isFinite(value)) {
+    throw new Error(`Recipe field must be a number: ${key}`);
+  }
+
+  return value;
+}
+
+function readDifficulty(
+  frontmatter: Record<string, string | string[]>,
+): Recipe['difficulty'] {
+  const difficulty = readRequiredString(frontmatter, 'difficulty');
+
+  if (
+    difficulty !== 'easy' &&
+    difficulty !== 'medium' &&
+    difficulty !== 'slow'
+  ) {
+    throw new Error(`Unsupported recipe difficulty: ${difficulty}`);
+  }
+
+  return difficulty;
+}
+
+function readTags(frontmatter: Record<string, string | string[]>) {
+  const tags = frontmatter.tags;
+
+  if (!Array.isArray(tags)) {
+    return [];
+  }
+
+  return tags;
+}
+
+function getSection(markdown: string, heading: string) {
+  const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const sectionMatch = markdown.match(
+    new RegExp(
+      `^##\\s+${escapedHeading}\\s*$([\\s\\S]*?)(?=^##\\s+|(?![\\s\\S]))`,
+      'm',
+    ),
+  );
+
+  return sectionMatch?.[1].trim() ?? '';
+}
+
+function readListItems(section: string) {
+  return section
+    .split('\n')
+    .map((line) => line.match(/^\s*(?:[-*]|\d+\.)\s+(.*)$/)?.[1]?.trim())
+    .filter((value): value is string => Boolean(value));
+}
+
+function readNote(markdown: string) {
+  const noteSection = getSection(markdown, 'Notatki');
+  const listItems = readListItems(noteSection);
+
+  if (listItems.length > 0) {
+    return listItems[0];
+  }
+
+  return noteSection
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join(' ');
+}
+
+function parseRecipeFile(filename: string): Recipe {
+  const filePath = path.join(RECIPES_DIRECTORY, filename);
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const frontmatterMatch = fileContent.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
+
+  if (!frontmatterMatch) {
+    throw new Error(`Recipe is missing frontmatter: ${filename}`);
+  }
+
+  const frontmatter = parseFrontmatter(frontmatterMatch[1]);
+  const markdown = fileContent.slice(frontmatterMatch[0].length);
+  const slug = readRequiredString(frontmatter, 'slug');
+
+  return {
+    slug,
+    title: readRequiredString(frontmatter, 'title'),
+    description: readRequiredString(frontmatter, 'description'),
+    category: readRequiredString(frontmatter, 'category'),
+    cuisine: readRequiredString(frontmatter, 'cuisine'),
+    difficulty: readDifficulty(frontmatter),
+    prepTime: readRequiredNumber(frontmatter, 'prepTime'),
+    cookTime: readRequiredNumber(frontmatter, 'cookTime'),
+    servings: readRequiredNumber(frontmatter, 'servings'),
+    image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
+    tags: readTags(frontmatter),
+    ingredients: readListItems(getSection(markdown, 'Składniki')),
+    steps: readListItems(getSection(markdown, 'Przygotowanie')),
+    note: readNote(markdown),
+    addedDate: readRequiredString(frontmatter, 'publishedAt'),
+  };
+}
+
+export function getRecipes() {
+  return fs
+    .readdirSync(RECIPES_DIRECTORY)
+    .filter((filename) => filename.endsWith('.md'))
+    .map(parseRecipeFile)
+    .sort((firstRecipe, secondRecipe) =>
+      secondRecipe.addedDate.localeCompare(firstRecipe.addedDate),
+    );
+}
