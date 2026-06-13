@@ -17,7 +17,7 @@ recipes/recipe-name.md
 Each recipe should have one matching image:
 
 ```txt
-public/images/recipes/recipe-name.jpg
+public/images/recipes/recipe-name.png
 ```
 
 The script is safer than copying the template manually because it keeps the slug
