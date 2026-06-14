@@ -48,6 +48,7 @@ publishedAt: '2026-06-12'
 - sos sojowy
 - ocet ryżowy
 - miód
+- cukier
 
 ## Przygotowanie
 
@@ -55,7 +56,8 @@ publishedAt: '2026-06-12'
 2. Gotowe mięso poszarp widelcem i podziel na porcje. Jeśli jest zbyt suche, wymieszaj je z sosem sojowym, wodą i miodem w proporcji 1:1:0,5.
 3. Ryż ugotuj zgodnie z instrukcją na opakowaniu.
 4. Ogórka, marchewkę, owoce, awokado i kapustę pokrój na kawałki wygodne do jedzenia.
-5. W miskach ułóż ryż, szarpaną wołowinę i dodatki. Polej wybranymi sosami tuż przed podaniem.
+5. Czerwoną kapustę dopraw 2 łyżkami octu ryżowego i 1 łyżeczką cukru.
+6. W miskach ułóż ryż, szarpaną wołowinę i dodatki. Polej wybranymi sosami tuż przed podaniem.
 
 ## Notatki
 
