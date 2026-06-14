@@ -15,11 +15,8 @@ import {
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { RecipeActions } from '@/components/RecipeActions';
-import {
-  getRecipeBySlug,
-  getRecipeSlugs,
-  type Recipe,
-} from '@/data/recipes';
+import { getRecipeBySlug, getRecipeSlugs, type Recipe } from '@/data/recipes';
+import { formatRecipeTime } from '@/utils/formatRecipeTime';
 
 type RecipePageProps = {
   params: Promise<{
@@ -38,9 +35,37 @@ function getBakingLabel(recipe: Recipe) {
     return null;
   }
 
-  return [recipe.bakeTemperature, recipe.bakeTime ? `${recipe.bakeTime} min` : '']
+  return [
+    recipe.bakeTemperature,
+    recipe.bakeTime ? formatRecipeTime(recipe.bakeTime) : '',
+  ]
     .filter(Boolean)
     .join(' / ');
+}
+
+function getPassiveTimeLabel(recipe: Recipe) {
+  const timeLabel = recipe.passiveTime
+    ? formatRecipeTime(recipe.passiveTime)
+    : '';
+
+  if (timeLabel && recipe.passiveTimeLabel) {
+    return `${timeLabel} · ${recipe.passiveTimeLabel}`;
+  }
+
+  if (timeLabel) {
+    return timeLabel;
+  }
+
+  return recipe.passiveTimeLabel;
+}
+
+function getTotalTime(recipe: Recipe) {
+  return (
+    (recipe.prepTime ?? 0) +
+    (recipe.cookTime ?? 0) +
+    (recipe.bakeTime ?? 0) +
+    (recipe.restTime ?? 0)
+  );
 }
 
 function getStatIcon(label: string) {
@@ -86,11 +111,20 @@ export default async function RecipePage({ params }: RecipePageProps) {
   }
 
   const bakingLabel = getBakingLabel(recipe);
+  const totalTime = getTotalTime(recipe);
+  const passiveTimeLabel = getPassiveTimeLabel(recipe);
   const recipeStats = [
-    recipe.prepTime ? ['Przygotowanie', `${recipe.prepTime} min`] : null,
-    recipe.cookTime ? ['Gotowanie', `${recipe.cookTime} min`] : null,
+    totalTime ? ['Razem', formatRecipeTime(totalTime)] : null,
+    recipe.prepTime
+      ? ['Przygotowanie', formatRecipeTime(recipe.prepTime)]
+      : null,
+    recipe.cookTime ? ['Gotowanie', formatRecipeTime(recipe.cookTime)] : null,
     bakingLabel ? ['Pieczenie', bakingLabel] : null,
-    recipe.restTime ? ['Odpoczynek', `${recipe.restTime} min`] : null,
+    recipe.restTime
+      ? ['Odpoczynek', formatRecipeTime(recipe.restTime)]
+      : null,
+    passiveTimeLabel ? ['Czas pasywny', passiveTimeLabel] : null,
+    recipe.advanceNotice ? ['Zacznij', recipe.advanceNotice] : null,
     recipe.servings ? ['Porcje', recipe.servings] : null,
   ].filter((stat): stat is [string, string | number] => Boolean(stat));
 
@@ -188,46 +222,85 @@ export default async function RecipePage({ params }: RecipePageProps) {
               <Box
                 sx={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-                  gap: 1,
+                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+                  gap: 1.25,
                   mt: 2.5,
                 }}
               >
-                {recipeStats.map(([label, value]) => (
-                  <Box
-                    key={label}
-                    sx={{
-                      minWidth: 0,
-                      p: 1.15,
-                      bgcolor: 'app.surface',
-                      borderRadius: 2,
-                      textAlign: 'center',
-                    }}
-                  >
-                    <Typography
-                      variant='caption'
-                      color='text.secondary'
-                      sx={{ display: 'block', lineHeight: 1.1, mb: 0.5 }}
+                {recipeStats.map(([label, value], index) => {
+                  const wideStat =
+                    label === 'Czas pasywny' || label === 'Zacznij';
+                  const isLastSingleStat =
+                    !wideStat && index === recipeStats.length - 1;
+
+                  return (
+                    <Box
+                      key={label}
+                      sx={{
+                        display: 'flex',
+                        gridColumn:
+                          wideStat || isLastSingleStat ? '1 / -1' : 'auto',
+                        justifySelf: isLastSingleStat ? 'center' : 'stretch',
+                        minHeight: wideStat ? 82 : 92,
+                        minWidth: 0,
+                        width: isLastSingleStat ? 'calc(50% - 5px)' : '100%',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        px: { xs: 1.75, sm: 2 },
+                        py: 1.6,
+                        bgcolor: 'app.surface',
+                        borderRadius: 2,
+                        textAlign: 'center',
+                        overflow: 'hidden',
+                      }}
                     >
-                      {label}
-                    </Typography>
-                    <Stack
-                      direction='row'
-                      spacing={0.5}
-                      alignItems='center'
-                      justifyContent='center'
-                      sx={{ minWidth: 0 }}
-                    >
-                      {getStatIcon(label)}
-                      <Typography
-                        fontWeight={800}
-                        sx={{ lineHeight: 1.15, overflowWrap: 'anywhere' }}
+                      <Stack
+                        direction='row'
+                        spacing={0.5}
+                        alignItems='center'
+                        justifyContent='center'
+                        sx={{
+                          minWidth: 0,
+                          maxWidth: '100%',
+                          color: 'text.secondary',
+                          mb: 0.8,
+                        }}
                       >
-                        {value}
-                      </Typography>
-                    </Stack>
-                  </Box>
-                ))}
+                        {getStatIcon(label)}
+                        <Typography
+                          variant='caption'
+                          color='text.secondary'
+                          sx={{
+                            display: 'block',
+                            lineHeight: 1.1,
+                            overflowWrap: 'break-word',
+                          }}
+                        >
+                          {label}:
+                        </Typography>
+                      </Stack>
+                      <Box
+                        sx={{
+                          minWidth: 0,
+                          width: '100%',
+                          maxWidth: wideStat ? 280 : 128,
+                        }}
+                      >
+                        <Typography
+                          fontWeight={650}
+                          sx={{
+                            fontSize: '0.92rem',
+                            lineHeight: 1.28,
+                            overflowWrap: 'break-word',
+                          }}
+                        >
+                          {value}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  );
+                })}
               </Box>
             </Paper>
 

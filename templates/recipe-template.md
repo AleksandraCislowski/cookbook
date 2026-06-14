@@ -13,6 +13,9 @@ cookTime:
 bakeTime:
 bakeTemperature:
 restTime:
+passiveTime:
+passiveTimeLabel:
+advanceNotice:
 servings:
 image: recipe-name.png
 publishedAt: "YYYY-MM-DD"

@@ -13,6 +13,9 @@ export type Recipe = {
   bakeTime?: number;
   bakeTemperature?: string;
   restTime?: number;
+  passiveTime?: number;
+  passiveTimeLabel?: string;
+  advanceNotice?: string;
   servings?: number;
   image: string;
   tags: string[];
@@ -35,6 +38,9 @@ type RecipeFrontmatter = {
   bakeTime: number;
   bakeTemperature: string;
   restTime: number;
+  passiveTime: number;
+  passiveTimeLabel: string;
+  advanceNotice: string;
   servings: number;
   tags: string[];
   publishedAt: string;
@@ -258,6 +264,9 @@ function parseRecipeFile(filename: string): Recipe {
     bakeTime: readOptionalNumber(frontmatter, 'bakeTime'),
     bakeTemperature: readOptionalString(frontmatter, 'bakeTemperature'),
     restTime: readOptionalNumber(frontmatter, 'restTime'),
+    passiveTime: readOptionalNumber(frontmatter, 'passiveTime'),
+    passiveTimeLabel: readOptionalString(frontmatter, 'passiveTimeLabel'),
+    advanceNotice: readOptionalString(frontmatter, 'advanceNotice'),
     servings: readOptionalNumber(frontmatter, 'servings'),
     image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
     tags: readTags(frontmatter),

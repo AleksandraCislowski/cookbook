@@ -27,6 +27,7 @@ import {
 import { alpha } from '@mui/material/styles';
 import Link from 'next/link';
 import type { Recipe } from '@/data/recipes';
+import { formatRecipeTime } from '@/utils/formatRecipeTime';
 
 const ALL = 'all';
 const LOGO_SRC = '/images/recipes/logo.png';
@@ -46,6 +47,22 @@ function getTotalTime(recipe: Recipe) {
   );
 }
 
+function getPassiveTimeLabel(recipe: Recipe) {
+  const timeLabel = recipe.passiveTime
+    ? formatRecipeTime(recipe.passiveTime)
+    : '';
+
+  if (timeLabel && recipe.passiveTimeLabel) {
+    return `${timeLabel} · ${recipe.passiveTimeLabel}`;
+  }
+
+  if (timeLabel) {
+    return timeLabel;
+  }
+
+  return recipe.passiveTimeLabel;
+}
+
 function getBakingLabel(recipe: Recipe) {
   if (!recipe.bakeTime && !recipe.bakeTemperature) {
     return null;
@@ -53,7 +70,7 @@ function getBakingLabel(recipe: Recipe) {
 
   return [
     recipe.bakeTemperature,
-    recipe.bakeTime ? `${recipe.bakeTime} min` : '',
+    recipe.bakeTime ? formatRecipeTime(recipe.bakeTime) : '',
   ]
     .filter(Boolean)
     .join(' / ');
@@ -125,6 +142,7 @@ function RecipeImage({ recipe }: { recipe: Recipe }) {
 function RecipeCard({ recipe }: { recipe: Recipe }) {
   const bakingLabel = getBakingLabel(recipe);
   const totalTime = getTotalTime(recipe);
+  const passiveTimeLabel = getPassiveTimeLabel(recipe);
 
   return (
     <Card
@@ -207,7 +225,21 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
             {totalTime > 0 ? (
               <Stack direction='row' spacing={0.5} alignItems='center'>
                 <TimerOutlinedIcon fontSize='small' color='action' />
-                <Typography variant='body2'>Razem {totalTime} min</Typography>
+                <Typography variant='body2'>
+                  Razem {formatRecipeTime(totalTime)}
+                </Typography>
+              </Stack>
+            ) : null}
+            {recipe.advanceNotice ? (
+              <Stack direction='row' spacing={0.5} alignItems='center'>
+                <TimerOutlinedIcon fontSize='small' color='action' />
+                <Typography variant='body2'>{recipe.advanceNotice}</Typography>
+              </Stack>
+            ) : null}
+            {passiveTimeLabel ? (
+              <Stack direction='row' spacing={0.5} alignItems='center'>
+                <TimerOutlinedIcon fontSize='small' color='action' />
+                <Typography variant='body2'>{passiveTimeLabel}</Typography>
               </Stack>
             ) : null}
             {recipe.servings ? (
