@@ -1,4 +1,6 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
@@ -75,6 +77,14 @@ function getStatIcon(label: string) {
 
   if (label === 'Porcje') {
     return <RestaurantMenuIcon fontSize='small' color='action' />;
+  }
+
+  if (label === 'Czas pasywny') {
+    return <HourglassBottomIcon fontSize='small' color='action' />;
+  }
+
+  if (label === 'Zacznij') {
+    return <CalendarMonthIcon fontSize='small' color='action' />;
   }
 
   return <TimerOutlinedIcon fontSize='small' color='action' />;
@@ -227,23 +237,19 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   mt: 2.5,
                 }}
               >
-                {recipeStats.map(([label, value], index) => {
+                {recipeStats.map(([label, value]) => {
                   const wideStat =
                     label === 'Czas pasywny' || label === 'Zacznij';
-                  const isLastSingleStat =
-                    !wideStat && index === recipeStats.length - 1;
 
                   return (
                     <Box
                       key={label}
                       sx={{
                         display: 'flex',
-                        gridColumn:
-                          wideStat || isLastSingleStat ? '1 / -1' : 'auto',
-                        justifySelf: isLastSingleStat ? 'center' : 'stretch',
+                        gridColumn: wideStat ? '1 / -1' : 'auto',
                         minHeight: wideStat ? 82 : 92,
                         minWidth: 0,
-                        width: isLastSingleStat ? 'calc(50% - 5px)' : '100%',
+                        width: '100%',
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -308,15 +314,37 @@ export default async function RecipePage({ params }: RecipePageProps) {
               <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
                 Składniki
               </Typography>
-              <Stack component='ul' spacing={0.75} sx={{ m: 0, pl: 2.5 }}>
-                {recipe.ingredients.map((ingredient, index) => (
-                  <Typography
-                    component='li'
-                    key={`${ingredient}-${index}`}
-                    color='text.secondary'
-                  >
-                    {ingredient}
-                  </Typography>
+              <Stack spacing={recipe.ingredientGroups.length > 1 ? 1.75 : 0}>
+                {recipe.ingredientGroups.map((group, groupIndex) => (
+                  <Box key={`${group.title}-${groupIndex}`}>
+                    {group.title ? (
+                      <Typography
+                        variant='h3'
+                        sx={{
+                          fontSize: '0.96rem',
+                          lineHeight: 1.2,
+                          mb: 0.75,
+                        }}
+                      >
+                        {group.title}
+                      </Typography>
+                    ) : null}
+                    <Stack
+                      component='ul'
+                      spacing={0.75}
+                      sx={{ m: 0, pl: 2.5 }}
+                    >
+                      {group.items.map((ingredient, index) => (
+                        <Typography
+                          component='li'
+                          key={`${ingredient}-${index}`}
+                          color='text.secondary'
+                        >
+                          {ingredient}
+                        </Typography>
+                      ))}
+                    </Stack>
+                  </Box>
                 ))}
               </Stack>
             </Paper>

@@ -1,7 +1,9 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { type ReactNode, useEffect, useMemo, useState } from 'react';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import FilterListIcon from '@mui/icons-material/FilterList';
+import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import SearchIcon from '@mui/icons-material/Search';
@@ -139,6 +141,49 @@ function RecipeImage({ recipe }: { recipe: Recipe }) {
   );
 }
 
+function RecipeMetaItem({
+  icon,
+  children,
+}: {
+  icon: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <Box
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: '18px minmax(0, 1fr)',
+        columnGap: 0.5,
+        alignItems: 'start',
+        minWidth: 0,
+        width: '100%',
+        maxWidth: '100%',
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          minHeight: 20,
+        }}
+      >
+        {icon}
+      </Box>
+      <Typography
+        variant='body2'
+        sx={{
+          minWidth: 0,
+          lineHeight: 1.35,
+          overflowWrap: 'break-word',
+          textAlign: 'left',
+        }}
+      >
+        {children}
+      </Typography>
+    </Box>
+  );
+}
+
 function RecipeCard({ recipe }: { recipe: Recipe }) {
   const bakingLabel = getBakingLabel(recipe);
   const totalTime = getTotalTime(recipe);
@@ -178,7 +223,12 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
             p: 2.5,
           }}
         >
-          <Stack direction='row' spacing={1} alignItems='center' sx={{ mb: 1 }}>
+          <Stack
+            direction='row'
+            spacing={1}
+            alignItems='center'
+            sx={{ mb: 1.65 }}
+          >
             <Chip
               size='small'
               label={recipe.category}
@@ -214,47 +264,52 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
           >
             {recipe.description}
           </Typography>
-          <Stack
-            direction='row'
-            spacing={1.5}
-            alignItems='center'
-            flexWrap='wrap'
-            gap={1}
-            sx={{ mt: 'auto', pt: 2.25 }}
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+              columnGap: 1.5,
+              rowGap: 0.85,
+              mt: 'auto',
+              pt: 2.25,
+            }}
           >
             {totalTime > 0 ? (
-              <Stack direction='row' spacing={0.5} alignItems='center'>
-                <TimerOutlinedIcon fontSize='small' color='action' />
-                <Typography variant='body2'>
-                  Razem {formatRecipeTime(totalTime)}
-                </Typography>
-              </Stack>
+              <RecipeMetaItem
+                icon={<TimerOutlinedIcon fontSize='small' color='action' />}
+              >
+                Razem {formatRecipeTime(totalTime)}
+              </RecipeMetaItem>
             ) : null}
             {recipe.advanceNotice ? (
-              <Stack direction='row' spacing={0.5} alignItems='center'>
-                <TimerOutlinedIcon fontSize='small' color='action' />
-                <Typography variant='body2'>{recipe.advanceNotice}</Typography>
-              </Stack>
+              <RecipeMetaItem
+                icon={<CalendarMonthIcon fontSize='small' color='action' />}
+              >
+                {recipe.advanceNotice}
+              </RecipeMetaItem>
             ) : null}
             {passiveTimeLabel ? (
-              <Stack direction='row' spacing={0.5} alignItems='center'>
-                <TimerOutlinedIcon fontSize='small' color='action' />
-                <Typography variant='body2'>{passiveTimeLabel}</Typography>
-              </Stack>
+              <RecipeMetaItem
+                icon={<HourglassBottomIcon fontSize='small' color='action' />}
+              >
+                {passiveTimeLabel}
+              </RecipeMetaItem>
             ) : null}
             {recipe.servings ? (
-              <Stack direction='row' spacing={0.5} alignItems='center'>
-                <RestaurantMenuIcon fontSize='small' color='action' />
-                <Typography variant='body2'>{recipe.servings}</Typography>
-              </Stack>
+              <RecipeMetaItem
+                icon={<RestaurantMenuIcon fontSize='small' color='action' />}
+              >
+                {recipe.servings}
+              </RecipeMetaItem>
             ) : null}
             {bakingLabel ? (
-              <Stack direction='row' spacing={0.5} alignItems='center'>
-                <ThermostatIcon fontSize='small' color='action' />
-                <Typography variant='body2'>{bakingLabel}</Typography>
-              </Stack>
+              <RecipeMetaItem
+                icon={<ThermostatIcon fontSize='small' color='action' />}
+              >
+                {bakingLabel}
+              </RecipeMetaItem>
             ) : null}
-          </Stack>
+          </Box>
         </Box>
       </CardActionArea>
     </Card>

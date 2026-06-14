@@ -7,7 +7,7 @@ cuisine: Azjatycka
 tags:
   - mięso
   - świeże warzywa
-  - ninja
+  - Ninja
   - wolnowar
 difficulty: easy
 prepTime: 30

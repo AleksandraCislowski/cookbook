@@ -20,6 +20,10 @@ export type Recipe = {
   image: string;
   tags: string[];
   ingredients: string[];
+  ingredientGroups: {
+    title: string;
+    items: string[];
+  }[];
   spices: string[];
   steps: string[];
   note: string;
@@ -224,6 +228,43 @@ function readListItems(section: string) {
     .filter((value): value is string => Boolean(value));
 }
 
+function readGroupedListItems(section: string) {
+  const groups: Recipe['ingredientGroups'] = [];
+  let currentGroup: Recipe['ingredientGroups'][number] = {
+    title: '',
+    items: [],
+  };
+
+  section.split('\n').forEach((line) => {
+    const heading = line.match(/^###\s+(.+)$/)?.[1]?.trim();
+
+    if (heading) {
+      if (currentGroup.items.length > 0) {
+        groups.push(currentGroup);
+      }
+
+      currentGroup = {
+        title: heading,
+        items: [],
+      };
+
+      return;
+    }
+
+    const item = line.match(/^\s*(?:[-*]|\d+\.)\s+(.*)$/)?.[1]?.trim();
+
+    if (item) {
+      currentGroup.items.push(item);
+    }
+  });
+
+  if (currentGroup.items.length > 0) {
+    groups.push(currentGroup);
+  }
+
+  return groups;
+}
+
 function readNote(markdown: string) {
   const noteSection = getSection(markdown, 'Notatki');
   const listItems = readListItems(noteSection);
@@ -251,6 +292,7 @@ function parseRecipeFile(filename: string): Recipe {
   const frontmatter = parseFrontmatter(frontmatterMatch[1]);
   const markdown = fileContent.slice(frontmatterMatch[0].length);
   const slug = readRequiredString(frontmatter, 'slug');
+  const ingredientGroups = readGroupedListItems(getSection(markdown, 'Składniki'));
 
   return {
     slug,
@@ -270,7 +312,8 @@ function parseRecipeFile(filename: string): Recipe {
     servings: readOptionalNumber(frontmatter, 'servings'),
     image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
     tags: readTags(frontmatter),
-    ingredients: readListItems(getSection(markdown, 'Składniki')),
+    ingredients: ingredientGroups.flatMap((group) => group.items),
+    ingredientGroups,
     spices: readListItems(getSection(markdown, 'Przyprawy')),
     steps: readListItems(getSection(markdown, 'Przygotowanie')),
     note: readNote(markdown),
