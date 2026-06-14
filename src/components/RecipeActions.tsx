@@ -4,14 +4,32 @@ import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import PrintIcon from '@mui/icons-material/Print';
 import { IconButton, Stack, Tooltip } from '@mui/material';
 
-export function RecipeActions() {
+type RecipeActionsProps = {
+  printTitle?: string;
+};
+
+export function RecipeActions({ printTitle }: RecipeActionsProps) {
+  function printRecipe() {
+    const originalTitle = document.title;
+
+    if (printTitle) {
+      document.title = printTitle;
+    }
+
+    window.print();
+
+    window.setTimeout(() => {
+      document.title = originalTitle;
+    }, 500);
+  }
+
   return (
     <Stack direction='row' spacing={0.5} alignItems='center'>
-      <Tooltip title='Drukuj menu'>
+      <Tooltip title='Drukuj przepis'>
         <IconButton
-          aria-label='Drukuj menu'
+          aria-label='Drukuj przepis'
           size='small'
-          onClick={() => window.print()}
+          onClick={printRecipe}
         >
           <PrintIcon fontSize='small' />
         </IconButton>

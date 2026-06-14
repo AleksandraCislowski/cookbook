@@ -25,3 +25,181 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    min-width: 0;
+    background: #fff !important;
+  }
+
+  body {
+    color: #111 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .recipe-page {
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+    background: #fff !important;
+  }
+
+  .recipe-page .MuiContainer-root {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .recipe-print {
+    display: grid !important;
+    grid-template-columns: 78mm minmax(0, 1fr) !important;
+    column-gap: 10mm !important;
+    row-gap: 7mm !important;
+    align-items: start !important;
+  }
+
+  .recipe-main,
+  .recipe-sidebar {
+    display: contents !important;
+  }
+
+  .print-card {
+    box-shadow: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    padding: 0 !important;
+    break-inside: avoid;
+  }
+
+  .recipe-summary-card {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .recipe-image-card {
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden !important;
+    border-radius: 5mm !important;
+    break-inside: avoid;
+  }
+
+  .recipe-image-card > div {
+    max-height: none !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  .recipe-image-card img {
+    object-fit: cover !important;
+  }
+
+  .recipe-ingredients-card {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .recipe-spices-card {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .recipe-steps-card {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+
+  .recipe-note-card {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .recipe-summary-card .MuiChip-root {
+    border-color: #aaa !important;
+    color: #111 !important;
+  }
+
+  .recipe-summary-card h1 {
+    font-size: 22pt !important;
+    line-height: 1.1 !important;
+    margin-top: 3mm !important;
+    margin-bottom: 2mm !important;
+  }
+
+  .recipe-summary-card p {
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .recipe-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2.5mm 5mm !important;
+    margin-top: 5mm !important;
+  }
+
+  .recipe-stats > div {
+    display: block !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    text-align: left !important;
+  }
+
+  .recipe-summary-card svg {
+    display: none !important;
+  }
+
+  .recipe-summary-card .MuiTypography-caption {
+    display: inline !important;
+    color: #555 !important;
+    font-size: 8pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .recipe-summary-card .MuiTypography-caption::after {
+    content: ' ';
+  }
+
+  .recipe-stats p {
+    display: inline !important;
+    font-size: 8.5pt !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+  }
+
+  .print-card h2 {
+    font-size: 14pt !important;
+    line-height: 1.15 !important;
+    margin-bottom: 4mm !important;
+  }
+
+  .print-card h3 {
+    font-size: 10pt !important;
+    margin-top: 3mm !important;
+    margin-bottom: 1.5mm !important;
+  }
+
+  .print-card p,
+  .print-card li,
+  .print-card span {
+    color: #111 !important;
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .print-card ul,
+  .print-card ol {
+    padding-left: 5mm !important;
+  }
+
+  .print-card li {
+    margin-bottom: 1.5mm !important;
+  }
+}
