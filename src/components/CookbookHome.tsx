@@ -33,6 +33,7 @@ import { formatRecipeTime } from '@/utils/formatRecipeTime';
 
 const ALL = 'all';
 const LOGO_SRC = '/images/recipes/logo.png';
+const QUICK_RECIPE_MAX_TIME = 30;
 
 const difficultyLabels: Record<Recipe['difficulty'], string> = {
   easy: 'łatwe',
@@ -368,7 +369,11 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
       value: recipes.filter((recipe) => {
         const totalTime = getTotalTime(recipe);
 
-        return totalTime > 0 && totalTime <= 30;
+        return (
+          totalTime > 0 &&
+          totalTime <= QUICK_RECIPE_MAX_TIME &&
+          !recipe.advanceNotice
+        );
       }).length,
     },
     { label: 'Kategorie', value: categoryOptions.length - 1 },
