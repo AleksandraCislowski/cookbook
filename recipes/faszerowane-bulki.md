@@ -5,15 +5,18 @@ description: Chrupiące kajzerki wypełnione farszem z kurczaka, papryki, cebuli
 category: Śniadanie
 cuisine: Domowa
 tags:
-  - zapiekane bułki
-  - kurczak
+  - zapiekane
+  - mięso
   - piekarnik
 difficulty: easy
-prepTime: 15
+prepTime: 20
 cookTime: 0
 bakeTime: 15
 bakeTemperature: 200°C
 restTime: 0
+passiveTime:
+passiveTimeLabel: ''
+advanceNotice: ''
 servings: 4
 image: faszerowane-bulki.png
 publishedAt: '2026-06-13'
