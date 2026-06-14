@@ -36,11 +36,11 @@ publishedAt: '2026-06-13'
 
 ## Przyprawy
 
-- Sól
-- Pieprz
-- Mieszanka do kurczaka
-- Majeranek
-- Papryka słodka
+- sól
+- pieprz
+- mieszanka do kurczaka
+- majeranek
+- papryka słodka
 
 ## Przygotowanie
 
