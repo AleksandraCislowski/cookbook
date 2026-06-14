@@ -152,7 +152,11 @@ export default async function RecipePage({ params }: RecipePageProps) {
           <Button href='/' startIcon={<ArrowBackIcon />}>
             Wróć do przepisów
           </Button>
-          <RecipeActions printTitle={recipe.title} />
+          <RecipeActions
+            ingredientGroups={recipe.ingredientGroups}
+            printTitle={recipe.title}
+            spices={recipe.spices}
+          />
         </Stack>
 
         <Box
@@ -164,11 +168,15 @@ export default async function RecipePage({ params }: RecipePageProps) {
             alignItems: 'start',
           }}
         >
-          <Stack className='recipe-main' spacing={2.5}>
+          <Stack
+            className='recipe-main'
+            spacing={2.5}
+            sx={{ display: { xs: 'contents', md: 'flex' } }}
+          >
             <Paper
               className='recipe-image-card print-card'
               variant='outlined'
-              sx={{ overflow: 'hidden' }}
+              sx={{ order: { xs: 2, md: 'initial' }, overflow: 'hidden' }}
             >
               <Box
                 sx={{
@@ -197,7 +205,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
             <Paper
               className='recipe-steps-card print-card'
               variant='outlined'
-              sx={{ p: { xs: 2, md: 3 } }}
+              sx={{ order: { xs: 5, md: 'initial' }, p: { xs: 2, md: 3 } }}
             >
               <Typography variant='h2' sx={{ fontSize: '1.35rem', mb: 2 }}>
                 Przygotowanie
@@ -220,12 +228,16 @@ export default async function RecipePage({ params }: RecipePageProps) {
           <Stack
             className='recipe-sidebar'
             spacing={2}
-            sx={{ position: { md: 'sticky' }, top: 120 }}
+            sx={{
+              display: { xs: 'contents', md: 'flex' },
+              position: { md: 'sticky' },
+              top: 120,
+            }}
           >
             <Paper
               className='recipe-summary-card print-card'
               variant='outlined'
-              sx={{ p: { xs: 2, md: 2.5 } }}
+              sx={{ order: { xs: 1, md: 'initial' }, p: { xs: 2, md: 2.5 } }}
             >
               <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mb: 1.5 }}>
                 <Chip size='small' color='primary' label={recipe.category} />
@@ -332,7 +344,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
             <Paper
               className='recipe-ingredients-card print-card'
               variant='outlined'
-              sx={{ p: { xs: 2, md: 2.5 } }}
+              sx={{ order: { xs: 3, md: 'initial' }, p: { xs: 2, md: 2.5 } }}
             >
               <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
                 Składniki
@@ -376,7 +388,10 @@ export default async function RecipePage({ params }: RecipePageProps) {
               <Paper
                 className='recipe-spices-card print-card'
                 variant='outlined'
-                sx={{ p: { xs: 2, md: 2.5 } }}
+                sx={{
+                  order: { xs: 4, md: 'initial' },
+                  p: { xs: 2, md: 2.5 },
+                }}
               >
                 <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
                   Przyprawy
@@ -399,7 +414,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
               <Paper
                 className='recipe-note-card print-card'
                 variant='outlined'
-                sx={{ p: 2, bgcolor: 'app.note' }}
+                sx={{ order: { xs: 6, md: 'initial' }, p: 2, bgcolor: 'app.note' }}
               >
                 <Typography variant='caption' color='text.secondary'>
                   Notatka
