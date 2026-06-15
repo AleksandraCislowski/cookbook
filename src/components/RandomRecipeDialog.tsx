@@ -1,12 +1,7 @@
 'use client';
 
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CasinoIcon from '@mui/icons-material/Casino';
 import CloseIcon from '@mui/icons-material/Close';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
-import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
-import ThermostatIcon from '@mui/icons-material/Thermostat';
-import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
 import {
   Box,
   Button,
@@ -21,15 +16,9 @@ import {
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { RecipeImage } from '@/components/RecipeImage';
-import { RecipeMetaItem } from '@/components/RecipeMetaItem';
+import { RecipeMetaList } from '@/components/RecipeMetaList';
 import type { Recipe } from '@/data/recipes';
-import { formatRecipeTime } from '@/utils/formatRecipeTime';
-import {
-  difficultyLabels,
-  getBakingLabel,
-  getPassiveTimeLabel,
-  getTotalTime,
-} from '@/utils/recipeDisplay';
+import { difficultyLabels } from '@/utils/recipeDisplay';
 
 type RandomRecipeDialogProps = {
   onClose: () => void;
@@ -43,13 +32,10 @@ export function RandomRecipeDialog({
   recipe,
 }: RandomRecipeDialogProps) {
   const router = useRouter();
-  const bakingLabel = recipe ? getBakingLabel(recipe) : null;
-  const passiveTimeLabel = recipe ? getPassiveTimeLabel(recipe) : null;
-  const totalTime = recipe ? getTotalTime(recipe) : 0;
 
   function openRecipe() {
     if (recipe) {
-      router.push(`/przepisy/${recipe.slug}`);
+      router.push(`/recipes/${recipe.slug}`);
     }
   }
 
@@ -88,54 +74,8 @@ export function RandomRecipeDialog({
                 {recipe.title}
               </Typography>
               <Typography color='text.secondary'>{recipe.description}</Typography>
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  columnGap: 2.25,
-                  rowGap: 1,
-                  mt: 2,
-                }}
-              >
-                {totalTime > 0 ? (
-                  <RecipeMetaItem
-                    icon={<TimerOutlinedIcon fontSize='small' color='action' />}
-                  >
-                    Razem {formatRecipeTime(totalTime)}
-                  </RecipeMetaItem>
-                ) : null}
-                {recipe.advanceNotice ? (
-                  <RecipeMetaItem
-                    icon={<CalendarMonthIcon fontSize='small' color='action' />}
-                  >
-                    {recipe.advanceNotice}
-                  </RecipeMetaItem>
-                ) : null}
-                {passiveTimeLabel ? (
-                  <RecipeMetaItem
-                    icon={
-                      <HourglassBottomIcon fontSize='small' color='action' />
-                    }
-                  >
-                    {passiveTimeLabel}
-                  </RecipeMetaItem>
-                ) : null}
-                {recipe.servings ? (
-                  <RecipeMetaItem
-                    icon={
-                      <RestaurantMenuIcon fontSize='small' color='action' />
-                    }
-                  >
-                    {recipe.servings}
-                  </RecipeMetaItem>
-                ) : null}
-                {bakingLabel ? (
-                  <RecipeMetaItem
-                    icon={<ThermostatIcon fontSize='small' color='action' />}
-                  >
-                    {bakingLabel}
-                  </RecipeMetaItem>
-                ) : null}
+              <Box sx={{ mt: 2 }}>
+                <RecipeMetaList recipe={recipe} rowGap={1} />
               </Box>
               {recipe.tags.length > 0 ? (
                 <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mt: 2 }}>
