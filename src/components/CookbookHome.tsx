@@ -1,19 +1,13 @@
 'use client';
 
-import { type ReactNode, useEffect, useMemo, useState } from 'react';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import { useMemo, useState } from 'react';
+import CasinoIcon from '@mui/icons-material/Casino';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
-import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import SearchIcon from '@mui/icons-material/Search';
-import ThermostatIcon from '@mui/icons-material/Thermostat';
-import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
 import {
   Box,
   Button,
-  Card,
-  CardActionArea,
   Chip,
   Container,
   FormControl,
@@ -27,57 +21,14 @@ import {
   Typography,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-import Link from 'next/link';
+import { RandomRecipeDialog } from '@/components/RandomRecipeDialog';
+import { RecipeCard } from '@/components/RecipeCard';
+import { RECIPE_LOGO_SRC } from '@/components/RecipeImage';
 import type { Recipe } from '@/data/recipes';
-import { formatRecipeTime } from '@/utils/formatRecipeTime';
+import { getTotalTime } from '@/utils/recipeDisplay';
 
 const ALL = 'all';
-const LOGO_SRC = '/images/recipes/logo.png';
 const QUICK_RECIPE_MAX_TIME = 30;
-
-const difficultyLabels: Record<Recipe['difficulty'], string> = {
-  easy: 'łatwe',
-  medium: 'średnie',
-  slow: 'powolne',
-};
-
-function getTotalTime(recipe: Recipe) {
-  return (
-    (recipe.prepTime ?? 0) +
-    (recipe.cookTime ?? 0) +
-    (recipe.bakeTime ?? 0) +
-    (recipe.restTime ?? 0)
-  );
-}
-
-function getPassiveTimeLabel(recipe: Recipe) {
-  const timeLabel = recipe.passiveTime
-    ? formatRecipeTime(recipe.passiveTime)
-    : '';
-
-  if (timeLabel && recipe.passiveTimeLabel) {
-    return `${timeLabel} · ${recipe.passiveTimeLabel}`;
-  }
-
-  if (timeLabel) {
-    return timeLabel;
-  }
-
-  return recipe.passiveTimeLabel;
-}
-
-function getBakingLabel(recipe: Recipe) {
-  if (!recipe.bakeTime && !recipe.bakeTemperature) {
-    return null;
-  }
-
-  return [
-    recipe.bakeTemperature,
-    recipe.bakeTime ? formatRecipeTime(recipe.bakeTime) : '',
-  ]
-    .filter(Boolean)
-    .join(' / ');
-}
 
 function matchesSearch(recipe: Recipe, searchTerm: string) {
   const normalizedSearch = searchTerm.trim().toLowerCase();
@@ -101,222 +52,6 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
     .includes(normalizedSearch);
 }
 
-function RecipeImage({ recipe }: { recipe: Recipe }) {
-  const [imageSource, setImageSource] = useState(recipe.image);
-
-  useEffect(() => {
-    setImageSource(recipe.image);
-  }, [recipe.image]);
-
-  return (
-    <Box
-      sx={{
-        position: 'relative',
-        width: '100%',
-        aspectRatio: '4 / 3',
-        overflow: 'hidden',
-        backgroundColor: 'app.imageFallback',
-        lineHeight: 0,
-      }}
-    >
-      <Box
-        component='img'
-        src={imageSource}
-        alt=''
-        draggable={false}
-        onError={() => {
-          if (imageSource !== LOGO_SRC) {
-            setImageSource(LOGO_SRC);
-          }
-        }}
-        sx={{
-          display: 'block',
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'contain',
-        }}
-      />
-    </Box>
-  );
-}
-
-function RecipeMetaItem({
-  icon,
-  children,
-}: {
-  icon: ReactNode;
-  children: ReactNode;
-}) {
-  return (
-    <Box
-      sx={{
-        display: 'inline-flex',
-        alignItems: 'flex-start',
-        gap: 0.45,
-        minWidth: 0,
-        maxWidth: 150,
-      }}
-    >
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          flexShrink: 0,
-          minHeight: 20,
-        }}
-      >
-        {icon}
-      </Box>
-      <Typography
-        variant='body2'
-        sx={{
-          minWidth: 0,
-          lineHeight: 1.35,
-          overflowWrap: 'normal',
-          textAlign: 'left',
-        }}
-      >
-        {children}
-      </Typography>
-    </Box>
-  );
-}
-
-function RecipeCard({ recipe }: { recipe: Recipe }) {
-  const bakingLabel = getBakingLabel(recipe);
-  const totalTime = getTotalTime(recipe);
-  const passiveTimeLabel = getPassiveTimeLabel(recipe);
-
-  return (
-    <Card
-      variant='outlined'
-      sx={{
-        height: '100%',
-        overflow: 'hidden',
-        borderColor: 'app.border',
-      }}
-    >
-      <CardActionArea
-        component={Link}
-        href={`/przepisy/${recipe.slug}`}
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'stretch',
-          height: '100%',
-          '& .MuiCardActionArea-focusHighlight': {
-            display: 'none',
-          },
-        }}
-      >
-        <Box sx={{ flexShrink: 0 }}>
-          <RecipeImage recipe={recipe} />
-        </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'column',
-            minHeight: 260,
-            p: 2.5,
-          }}
-        >
-          <Stack
-            direction='row'
-            spacing={1}
-            alignItems='center'
-            sx={{ mb: 1.65 }}
-          >
-            <Chip
-              size='small'
-              label={recipe.category}
-              color='primary'
-              variant='outlined'
-            />
-            <Chip
-              size='small'
-              label={difficultyLabels[recipe.difficulty]}
-              variant='outlined'
-            />
-          </Stack>
-          <Typography
-            variant='h3'
-            sx={{
-              display: '-webkit-box',
-              minHeight: 48,
-              overflow: 'hidden',
-              fontSize: '1.05rem',
-              lineHeight: 1.2,
-              mb: 0.75,
-              WebkitBoxOrient: 'vertical',
-              WebkitLineClamp: 2,
-            }}
-          >
-            {recipe.title}
-          </Typography>
-          <Typography
-            color='text.secondary'
-            sx={{
-              minHeight: 76,
-            }}
-          >
-            {recipe.description}
-          </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              alignItems: 'flex-start',
-              columnGap: 2.25,
-              rowGap: 0.85,
-              mt: 'auto',
-              pt: 2.25,
-            }}
-          >
-            {totalTime > 0 ? (
-              <RecipeMetaItem
-                icon={<TimerOutlinedIcon fontSize='small' color='action' />}
-              >
-                Razem {formatRecipeTime(totalTime)}
-              </RecipeMetaItem>
-            ) : null}
-            {recipe.advanceNotice ? (
-              <RecipeMetaItem
-                icon={<CalendarMonthIcon fontSize='small' color='action' />}
-              >
-                {recipe.advanceNotice}
-              </RecipeMetaItem>
-            ) : null}
-            {passiveTimeLabel ? (
-              <RecipeMetaItem
-                icon={<HourglassBottomIcon fontSize='small' color='action' />}
-              >
-                {passiveTimeLabel}
-              </RecipeMetaItem>
-            ) : null}
-            {recipe.servings ? (
-              <RecipeMetaItem
-                icon={<RestaurantMenuIcon fontSize='small' color='action' />}
-              >
-                {recipe.servings}
-              </RecipeMetaItem>
-            ) : null}
-            {bakingLabel ? (
-              <RecipeMetaItem
-                icon={<ThermostatIcon fontSize='small' color='action' />}
-              >
-                {bakingLabel}
-              </RecipeMetaItem>
-            ) : null}
-          </Box>
-        </Box>
-      </CardActionArea>
-    </Card>
-  );
-}
-
 export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const categoryOptions = useMemo(
     () => [
@@ -332,6 +67,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState(ALL);
   const [activeTag, setActiveTag] = useState(ALL);
+  const [randomRecipe, setRandomRecipe] = useState<Recipe | null>(null);
   const [sort, setSort] = useState('newest');
   const hasActiveFilters =
     searchTerm !== '' ||
@@ -360,7 +96,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
 
         return secondRecipe.addedDate.localeCompare(firstRecipe.addedDate);
       });
-  }, [activeTag, category, searchTerm, sort]);
+  }, [activeTag, category, recipes, searchTerm, sort]);
 
   const stats = [
     { label: 'Przepisy', value: recipes.length },
@@ -384,6 +120,24 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     setCategory(ALL);
     setActiveTag(ALL);
     setSort('newest');
+  }
+
+  function pickRandomRecipe() {
+    if (filteredRecipes.length === 0) {
+      return;
+    }
+
+    let nextRecipe =
+      filteredRecipes[Math.floor(Math.random() * filteredRecipes.length)];
+
+    if (filteredRecipes.length > 1) {
+      while (nextRecipe.slug === randomRecipe?.slug) {
+        nextRecipe =
+          filteredRecipes[Math.floor(Math.random() * filteredRecipes.length)];
+      }
+    }
+
+    setRandomRecipe(nextRecipe);
   }
 
   return (
@@ -426,7 +180,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
               >
                 <Box
                   component='img'
-                  src={LOGO_SRC}
+                  src={RECIPE_LOGO_SRC}
                   alt='Logo domowej książki kucharskiej'
                   sx={{
                     position: 'absolute',
@@ -594,7 +348,13 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
           </Stack>
 
           <Box>
-            <Stack sx={{ mb: 2 }}>
+            <Stack
+              direction={{ xs: 'column', sm: 'row' }}
+              spacing={1.5}
+              alignItems={{ xs: 'stretch', sm: 'center' }}
+              justifyContent='space-between'
+              sx={{ mb: 2 }}
+            >
               <Box>
                 <Typography
                   variant='h2'
@@ -606,6 +366,15 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
                   Pokazano {filteredRecipes.length} z Twojej biblioteki
                 </Typography>
               </Box>
+              <Button
+                variant='contained'
+                startIcon={<CasinoIcon />}
+                disabled={filteredRecipes.length === 0}
+                onClick={pickRandomRecipe}
+                sx={{ flexShrink: 0 }}
+              >
+                Losuj przepis
+              </Button>
             </Stack>
 
             {filteredRecipes.length > 0 ? (
@@ -638,6 +407,12 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
           </Box>
         </Box>
       </Container>
+
+      <RandomRecipeDialog
+        recipe={randomRecipe}
+        onClose={() => setRandomRecipe(null)}
+        onPickAgain={pickRandomRecipe}
+      />
     </Box>
   );
 }

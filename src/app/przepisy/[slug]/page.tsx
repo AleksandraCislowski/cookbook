@@ -17,58 +17,20 @@ import {
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { RecipeActions } from '@/components/RecipeActions';
-import { getRecipeBySlug, getRecipeSlugs, type Recipe } from '@/data/recipes';
+import { getRecipeBySlug, getRecipeSlugs } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
+import {
+  difficultyLabels,
+  getBakingLabel,
+  getPassiveTimeLabel,
+  getTotalTime,
+} from '@/utils/recipeDisplay';
 
 type RecipePageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
-
-const difficultyLabels: Record<Recipe['difficulty'], string> = {
-  easy: 'łatwe',
-  medium: 'średnie',
-  slow: 'powolne',
-};
-
-function getBakingLabel(recipe: Recipe) {
-  if (!recipe.bakeTime && !recipe.bakeTemperature) {
-    return null;
-  }
-
-  return [
-    recipe.bakeTemperature,
-    recipe.bakeTime ? formatRecipeTime(recipe.bakeTime) : '',
-  ]
-    .filter(Boolean)
-    .join(' / ');
-}
-
-function getPassiveTimeLabel(recipe: Recipe) {
-  const timeLabel = recipe.passiveTime
-    ? formatRecipeTime(recipe.passiveTime)
-    : '';
-
-  if (timeLabel && recipe.passiveTimeLabel) {
-    return `${timeLabel} · ${recipe.passiveTimeLabel}`;
-  }
-
-  if (timeLabel) {
-    return timeLabel;
-  }
-
-  return recipe.passiveTimeLabel;
-}
-
-function getTotalTime(recipe: Recipe) {
-  return (
-    (recipe.prepTime ?? 0) +
-    (recipe.cookTime ?? 0) +
-    (recipe.bakeTime ?? 0) +
-    (recipe.restTime ?? 0)
-  );
-}
 
 function getStatIcon(label: string) {
   if (label === 'Pieczenie') {
