@@ -152,19 +152,18 @@ function RecipeMetaItem({
   return (
     <Box
       sx={{
-        display: 'grid',
-        gridTemplateColumns: '18px minmax(0, 1fr)',
-        columnGap: 0.5,
-        alignItems: 'start',
+        display: 'inline-flex',
+        alignItems: 'flex-start',
+        gap: 0.45,
         minWidth: 0,
-        width: '100%',
-        maxWidth: '100%',
+        maxWidth: 150,
       }}
     >
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
+          flexShrink: 0,
           minHeight: 20,
         }}
       >
@@ -175,7 +174,7 @@ function RecipeMetaItem({
         sx={{
           minWidth: 0,
           lineHeight: 1.35,
-          overflowWrap: 'break-word',
+          overflowWrap: 'normal',
           textAlign: 'left',
         }}
       >
@@ -267,9 +266,10 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
           </Typography>
           <Box
             sx={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-              columnGap: 1.5,
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'flex-start',
+              columnGap: 2.25,
               rowGap: 0.85,
               mt: 'auto',
               pt: 2.25,
