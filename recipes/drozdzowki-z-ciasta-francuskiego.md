@@ -42,7 +42,7 @@ publishedAt: '2026-06-15'
 3. Owoce umyj, truskawki obierz z szypułek, pokrój na mniejsze części.
 4. Wyłóż owoce na ciasto francuskie.
 5. Z podanych składników zagnieć kruszonkę, posyp wierzch drożdżówek.
-6. Piec w temperaturze 200°C przez 20 minut.
+6. Piecz w temperaturze 200°C przez 20 minut.
 
 ## Notatki
 
