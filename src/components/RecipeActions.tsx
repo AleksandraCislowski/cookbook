@@ -238,6 +238,7 @@ export function RecipeActions({
         <Tooltip title='Drukuj przepis'>
           <IconButton
             aria-label='Drukuj przepis'
+            color='primary'
             size='small'
             onClick={printRecipe}
           >
@@ -247,6 +248,7 @@ export function RecipeActions({
         <Tooltip title='Lista zakupów'>
           <IconButton
             aria-label='Lista zakupów'
+            color='primary'
             size='small'
             onClick={openShoppingList}
           >

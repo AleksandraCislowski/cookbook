@@ -69,6 +69,7 @@ export function CookingMode({
       <Tooltip title='Tryb gotowania'>
         <IconButton
           aria-label='Otwórz tryb gotowania'
+          color='primary'
           size='small'
           disabled={steps.length === 0}
           onClick={() => setOpen(true)}
