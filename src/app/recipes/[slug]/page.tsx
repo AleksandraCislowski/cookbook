@@ -118,6 +118,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
             ingredientGroups={recipe.ingredientGroups}
             printTitle={recipe.title}
             spices={recipe.spices}
+            steps={recipe.steps}
           />
         </Stack>
 

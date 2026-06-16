@@ -20,12 +20,14 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
+import { CookingMode } from '@/components/CookingMode';
 import type { Recipe } from '@/data/recipes';
 
 type RecipeActionsProps = {
   ingredientGroups?: Recipe['ingredientGroups'];
   printTitle?: string;
   spices?: string[];
+  steps?: string[];
 };
 
 type ShoppingListItem = {
@@ -93,6 +95,7 @@ export function RecipeActions({
   ingredientGroups = [],
   printTitle,
   spices = [],
+  steps = [],
 }: RecipeActionsProps) {
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [copyMessageOpen, setCopyMessageOpen] = useState(false);
@@ -226,6 +229,12 @@ export function RecipeActions({
   return (
     <>
       <Stack direction='row' spacing={0.5} alignItems='center'>
+        <CookingMode
+          ingredientGroups={ingredientGroups}
+          recipeTitle={printTitle ?? 'Przepis'}
+          spices={spices}
+          steps={steps}
+        />
         <Tooltip title='Drukuj przepis'>
           <IconButton
             aria-label='Drukuj przepis'
