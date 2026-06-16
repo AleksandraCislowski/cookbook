@@ -6,6 +6,8 @@ do codziennego gotowania.
 
 ## 1. Tryb gotowania
 
+Status: zrobione.
+
 Widok krok po kroku z duzym tekstem, przyciskami dalej/wstecz i skladnikami pod
 reka. Idealny na telefon w kuchni.
 
@@ -45,6 +47,8 @@ Dodatkowe tagi typu lato, comfort food, meal prep, dla gosci, szybki obiad,
 wolnowar. Pozwoli to robic ciekawsze filtry i sekcje na stronie glownej.
 
 ## 9. Losuj obiad
+
+Status: zrobione.
 
 Przycisk wybierajacy losowy przepis, najlepiej z aktualnych filtrow. Proste,
 ale bardzo pomocne, kiedy nie chce sie podejmowac decyzji.
