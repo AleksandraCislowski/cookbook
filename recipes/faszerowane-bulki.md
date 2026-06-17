@@ -26,7 +26,7 @@ publishedAt: '2026-06-13'
 
 - 4 bułki kajzerki
 - 1 pierś z kurczaka
-- 1/2 czerwonej cebuli
+- 0,5 czerwonej cebuli
 - 1 papryka czerwona
 - 1 jajko
 - mozarella w wiórkach

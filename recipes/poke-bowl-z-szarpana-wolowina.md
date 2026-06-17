@@ -29,7 +29,7 @@ publishedAt: '2026-06-12'
 - 240 g ryżu
 - 1 ogórek
 - 1 marchewka
-- 1 mango albo 1/2 ananasa
+- 1 mango
 - 2 awokado, pokrojone w plastry
 - 4 garście czerwonej kapusty
 - 2 garście białej kapusty
@@ -61,4 +61,4 @@ publishedAt: '2026-06-12'
 
 ## Notatki
 
-Zamiast wołowiny można użyć kurczaka lub łososia.
+Zamiast wołowiny można użyć kurczaka lub łososia, a zamiast mango - ananasa.
