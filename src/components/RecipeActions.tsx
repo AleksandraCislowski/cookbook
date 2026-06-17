@@ -21,6 +21,7 @@ import {
   Typography,
 } from '@mui/material';
 import { CookingMode } from '@/components/CookingMode';
+import { useRecipeServings } from '@/components/RecipeServingsContext';
 import type { Recipe } from '@/data/recipes';
 
 type RecipeActionsProps = {
@@ -99,9 +100,12 @@ export function RecipeActions({
 }: RecipeActionsProps) {
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [copyMessageOpen, setCopyMessageOpen] = useState(false);
+  const servings = useRecipeServings();
+  const visibleIngredientGroups =
+    servings?.scaledIngredientGroups ?? ingredientGroups;
   const shoppingListItems = useMemo(
-    () => getShoppingListItems(ingredientGroups, spices),
-    [ingredientGroups, spices],
+    () => getShoppingListItems(visibleIngredientGroups, spices),
+    [visibleIngredientGroups, spices],
   );
   const [selectedItemIds, setSelectedItemIds] = useState<string[]>(() =>
     shoppingListItems.map((item) => item.id),
@@ -230,7 +234,7 @@ export function RecipeActions({
     <>
       <Stack direction='row' spacing={0.5} alignItems='center'>
         <CookingMode
-          ingredientGroups={ingredientGroups}
+          ingredientGroups={visibleIngredientGroups}
           recipeTitle={printTitle ?? 'Przepis'}
           spices={spices}
           steps={steps}

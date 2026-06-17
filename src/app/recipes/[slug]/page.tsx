@@ -17,6 +17,9 @@ import {
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { RecipeActions } from '@/components/RecipeActions';
+import { RecipeIngredients } from '@/components/RecipeIngredients';
+import { RecipeServingsProvider } from '@/components/RecipeServingsContext';
+import { RecipeServingsValue } from '@/components/RecipeServingsValue';
 import { getRecipeBySlug, getRecipeSlugs } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
 import {
@@ -103,6 +106,10 @@ export default async function RecipePage({ params }: RecipePageProps) {
   return (
     <Box className='recipe-page' sx={{ minHeight: '100vh', pb: 6 }}>
       <Container maxWidth='lg' sx={{ pt: { xs: 2.5, md: 4 } }}>
+        <RecipeServingsProvider
+          baseServings={recipe.servings ?? 1}
+          ingredientGroups={recipe.ingredientGroups}
+        >
         <Stack
           className='no-print'
           direction='row'
@@ -295,7 +302,11 @@ export default async function RecipePage({ params }: RecipePageProps) {
                             overflowWrap: 'break-word',
                           }}
                         >
-                          {value}
+                          {label === 'Porcje' ? (
+                            <RecipeServingsValue fallback={value} />
+                          ) : (
+                            value
+                          )}
                         </Typography>
                       </Box>
                     </Box>
@@ -304,48 +315,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
               </Box>
             </Paper>
 
-            <Paper
-              className='recipe-ingredients-card print-card'
-              variant='outlined'
-              sx={{ order: { xs: 3, md: 'initial' }, p: { xs: 2, md: 2.5 } }}
-            >
-              <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
-                Składniki
-              </Typography>
-              <Stack spacing={recipe.ingredientGroups.length > 1 ? 1.75 : 0}>
-                {recipe.ingredientGroups.map((group, groupIndex) => (
-                  <Box key={`${group.title}-${groupIndex}`}>
-                    {group.title ? (
-                      <Typography
-                        variant='h3'
-                        sx={{
-                          fontSize: '0.96rem',
-                          lineHeight: 1.2,
-                          mb: 0.75,
-                        }}
-                      >
-                        {group.title}
-                      </Typography>
-                    ) : null}
-                    <Stack
-                      component='ul'
-                      spacing={0.75}
-                      sx={{ m: 0, pl: 2.5 }}
-                    >
-                      {group.items.map((ingredient, index) => (
-                        <Typography
-                          component='li'
-                          key={`${ingredient}-${index}`}
-                          color='text.secondary'
-                        >
-                          {ingredient}
-                        </Typography>
-                      ))}
-                    </Stack>
-                  </Box>
-                ))}
-              </Stack>
-            </Paper>
+            <RecipeIngredients ingredientGroups={recipe.ingredientGroups} />
 
             {recipe.spices.length > 0 ? (
               <Paper
@@ -388,6 +358,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
             ) : null}
           </Stack>
         </Box>
+        </RecipeServingsProvider>
       </Container>
     </Box>
   );
