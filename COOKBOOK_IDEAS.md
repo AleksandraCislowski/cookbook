@@ -25,6 +25,8 @@ przepisy mozliwe do zrobienia albo takie, do ktorych brakuje tylko kilku rzeczy.
 
 ## 4. Plan tygodnia
 
+Status: MVP zrobione.
+
 Widok dni tygodnia, do ktorych mozna przypisac przepisy. Naturalnym kolejnym
 krokiem bylaby jedna lista zakupow z calego planu.
 
