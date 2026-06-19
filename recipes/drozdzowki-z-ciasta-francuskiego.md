@@ -2,7 +2,7 @@
 title: 'Drożdżówki z ciasta francuskiego'
 slug: drozdzowki-z-ciasta-francuskiego
 description: Ekspresowe drożdżówki z ciasta francuskiego z waniliowym serkiem, owocami i maślaną kruszonką.
-category: Deser
+category: Deser, Świeże owoce
 cuisine: Domowa
 prepTime: 10
 cookTime:
