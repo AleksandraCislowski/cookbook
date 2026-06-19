@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 
 export const ALL_RECIPES_FILTER = 'all';
+export const ALL_CUISINES_FILTER = 'all';
 
 type CookbookStat = {
   label: string;
@@ -24,8 +25,11 @@ type CookbookStat = {
 type CookbookSidebarProps = {
   category: string;
   categoryOptions: string[];
+  cuisine: string;
+  cuisineOptions: string[];
   hasActiveFilters: boolean;
   onCategoryChange: (category: string) => void;
+  onCuisineChange: (cuisine: string) => void;
   onResetFilters: () => void;
   onSearchTermChange: (searchTerm: string) => void;
   onSortChange: (sort: string) => void;
@@ -37,8 +41,11 @@ type CookbookSidebarProps = {
 export function CookbookSidebar({
   category,
   categoryOptions,
+  cuisine,
+  cuisineOptions,
   hasActiveFilters,
   onCategoryChange,
+  onCuisineChange,
   onResetFilters,
   onSearchTermChange,
   onSortChange,
@@ -82,6 +89,23 @@ export function CookbookSidebar({
                 <MenuItem key={option} value={option}>
                   {option === ALL_RECIPES_FILTER
                     ? 'Wszystkie kategorie'
+                    : option}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <FormControl size='small' fullWidth>
+            <InputLabel id='cuisine-filter-label'>Kuchnia</InputLabel>
+            <Select
+              labelId='cuisine-filter-label'
+              value={cuisine}
+              label='Kuchnia'
+              onChange={(event) => onCuisineChange(event.target.value)}
+            >
+              {cuisineOptions.map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option === ALL_CUISINES_FILTER
+                    ? 'Wszystkie kuchnie'
                     : option}
                 </MenuItem>
               ))}

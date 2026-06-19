@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { Box, Container } from '@mui/material';
 import { CookbookHeader } from '@/components/CookbookHeader';
 import {
+  ALL_CUISINES_FILTER,
   ALL_RECIPES_FILTER,
   CookbookSidebar,
 } from '@/components/CookbookSidebar';
@@ -45,13 +46,25 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     ],
     [recipes],
   );
+  const cuisineOptions = useMemo(
+    () => [
+      ALL_CUISINES_FILTER,
+      ...Array.from(new Set(recipes.map((recipe) => recipe.cuisine))).sort(
+        (firstCuisine, secondCuisine) =>
+          firstCuisine.localeCompare(secondCuisine, 'pl'),
+      ),
+    ],
+    [recipes],
+  );
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState(ALL_RECIPES_FILTER);
+  const [cuisine, setCuisine] = useState(ALL_CUISINES_FILTER);
   const [randomRecipe, setRandomRecipe] = useState<Recipe | null>(null);
   const [sort, setSort] = useState('newest');
   const hasActiveFilters =
     searchTerm !== '' ||
     category !== ALL_RECIPES_FILTER ||
+    cuisine !== ALL_CUISINES_FILTER ||
     sort !== 'newest';
 
   const filteredRecipes = useMemo(() => {
@@ -60,6 +73,10 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
         (recipe) =>
           category === ALL_RECIPES_FILTER ||
           recipe.categories.includes(category),
+      )
+      .filter(
+        (recipe) =>
+          cuisine === ALL_CUISINES_FILTER || recipe.cuisine === cuisine,
       )
       .filter((recipe) => matchesSearch(recipe, searchTerm))
       .sort((firstRecipe, secondRecipe) => {
@@ -78,7 +95,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
 
         return secondRecipe.addedDate.localeCompare(firstRecipe.addedDate);
       });
-  }, [category, recipes, searchTerm, sort]);
+  }, [category, cuisine, recipes, searchTerm, sort]);
 
   const stats = [
     { label: 'Przepisy', value: recipes.length },
@@ -95,11 +112,13 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
       }).length,
     },
     { label: 'Kategorie', value: categoryOptions.length - 1 },
+    { label: 'Kuchnie', value: cuisineOptions.length - 1 },
   ];
 
   function resetFilters() {
     setSearchTerm('');
     setCategory(ALL_RECIPES_FILTER);
+    setCuisine(ALL_CUISINES_FILTER);
     setSort('newest');
   }
 
@@ -140,11 +159,14 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
           <CookbookSidebar
             category={category}
             categoryOptions={categoryOptions}
+            cuisine={cuisine}
+            cuisineOptions={cuisineOptions}
             hasActiveFilters={hasActiveFilters}
             searchTerm={searchTerm}
             sort={sort}
             stats={stats}
             onCategoryChange={setCategory}
+            onCuisineChange={setCuisine}
             onResetFilters={resetFilters}
             onSearchTermChange={setSearchTerm}
             onSortChange={setSort}

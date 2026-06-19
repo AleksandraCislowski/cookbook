@@ -1,17 +1,11 @@
 'use client';
 
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Box, Container, Stack, Typography } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { RECIPE_LOGO_SRC } from '@/components/RecipeImage';
 
 export function CookbookHeader() {
-  const pathname = usePathname();
-  const isMealPlanPage = pathname === '/plan-tygodnia';
-
   return (
     <Box
       component='header'
@@ -28,7 +22,7 @@ export function CookbookHeader() {
           direction='row'
           spacing={{ xs: 1, md: 1.75 }}
           alignItems='center'
-          justifyContent='space-between'
+          justifyContent='flex-start'
           sx={{
             minHeight: { xs: 70, sm: 82, md: 96 },
             py: { xs: 0.75, md: 1 },
@@ -93,50 +87,6 @@ export function CookbookHeader() {
                 Prywatna książka kucharska z przepisami, zdjęciami i notatkami.
               </Typography>
             </Box>
-          </Stack>
-          <Stack
-            component='nav'
-            direction='row'
-            spacing={1}
-            alignItems='center'
-            sx={{ flexShrink: 0 }}
-          >
-            <Button
-              component={Link}
-              href='/'
-              variant={isMealPlanPage ? 'outlined' : 'contained'}
-              startIcon={<MenuBookIcon />}
-              sx={{
-                minWidth: { xs: 44, sm: 0 },
-                px: { xs: 1, sm: 2 },
-                '& .MuiButton-startIcon': { mr: { xs: 0, sm: 1 } },
-              }}
-            >
-              <Box
-                component='span'
-                sx={{ display: { xs: 'none', sm: 'inline' } }}
-              >
-                Przepisy
-              </Box>
-            </Button>
-            <Button
-              component={Link}
-              href='/plan-tygodnia'
-              variant={isMealPlanPage ? 'contained' : 'outlined'}
-              startIcon={<CalendarMonthIcon />}
-              sx={{
-                minWidth: { xs: 44, sm: 0 },
-                px: { xs: 1, sm: 2 },
-                '& .MuiButton-startIcon': { mr: { xs: 0, sm: 1 } },
-              }}
-            >
-              <Box
-                component='span'
-                sx={{ display: { xs: 'none', sm: 'inline' } }}
-              >
-                Plan tygodnia
-              </Box>
-            </Button>
           </Stack>
         </Stack>
       </Container>
