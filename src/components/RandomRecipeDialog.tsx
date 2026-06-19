@@ -47,7 +47,7 @@ export function RandomRecipeDialog({
       slotProps={{
         paper: {
           sx: {
-            height: { xs: 'calc(100dvh - 32px)', sm: 720 },
+            height: { xs: 'calc(100dvh - 32px)', sm: 820 },
             maxHeight: 'calc(100dvh - 32px)',
           },
         },
@@ -78,12 +78,14 @@ export function RandomRecipeDialog({
               p: 0,
             }}
           >
-            <RecipeImage recipe={recipe} />
+            <Box sx={{ flexShrink: 0 }}>
+              <RecipeImage recipe={recipe} />
+            </Box>
             <Box
               sx={{
                 flex: 1,
                 minHeight: 0,
-                overflow: 'auto',
+                overflowY: 'auto',
                 p: { xs: 2, sm: 2.5 },
               }}
             >
