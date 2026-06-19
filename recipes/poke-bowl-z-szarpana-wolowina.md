@@ -2,7 +2,7 @@
 title: 'Poke bowl z szarpaną wołowiną'
 slug: poke-bowl-z-szarpana-wolowina
 description: Kolorowa miska z ryżem, soczystą szarpaną wołowiną, chrupiącymi warzywami, mango i sojowo-limonkowym sosem.
-category: Obiad , Ninja, Z mięsem
+category: Obiad , Ninja Cooker, Z mięsem
 cuisine: Azjatycka
 prepTime: 30
 cookTime: 15
