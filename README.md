@@ -17,7 +17,7 @@ The application will focus on:
 
 - fast browsing across categories, cuisines, seasons, and occasions,
 - rich recipe pages with photos, ingredients, steps, notes, and variations,
-- powerful filtering by time, difficulty, tags, dietary notes, and ingredients,
+- powerful filtering by time, tags, dietary notes, and ingredients,
 - a comfortable cooking mode for reading steps in the kitchen,
 - Markdown-based content that can grow naturally over time,
 - reusable templates that make every new recipe consistent,
@@ -41,7 +41,6 @@ tags:
   - sweet
   - weekend
   - vegetarian
-difficulty: easy
 prepTime: 10
 cookTime: 15
 servings: 4

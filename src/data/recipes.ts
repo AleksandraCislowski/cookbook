@@ -7,7 +7,6 @@ export type Recipe = {
   description: string;
   category: string;
   cuisine: string;
-  difficulty: 'easy' | 'medium' | 'slow';
   prepTime?: number;
   cookTime?: number;
   bakeTime?: number;
@@ -36,7 +35,6 @@ type RecipeFrontmatter = {
   description: string;
   category: string;
   cuisine: string;
-  difficulty: Recipe['difficulty'];
   prepTime: number;
   cookTime: number;
   bakeTime: number;
@@ -183,22 +181,6 @@ function readOptionalNumber(
   return value;
 }
 
-function readDifficulty(
-  frontmatter: Record<string, string | string[]>,
-): Recipe['difficulty'] {
-  const difficulty = readRequiredString(frontmatter, 'difficulty');
-
-  if (
-    difficulty !== 'easy' &&
-    difficulty !== 'medium' &&
-    difficulty !== 'slow'
-  ) {
-    throw new Error(`Unsupported recipe difficulty: ${difficulty}`);
-  }
-
-  return difficulty;
-}
-
 function readTags(frontmatter: Record<string, string | string[]>) {
   const tags = frontmatter.tags;
 
@@ -300,7 +282,6 @@ function parseRecipeFile(filename: string): Recipe {
     description: readOptionalString(frontmatter, 'description'),
     category: readRequiredString(frontmatter, 'category'),
     cuisine: readOptionalString(frontmatter, 'cuisine'),
-    difficulty: readDifficulty(frontmatter),
     prepTime: readOptionalNumber(frontmatter, 'prepTime'),
     cookTime: readOptionalNumber(frontmatter, 'cookTime'),
     bakeTime: readOptionalNumber(frontmatter, 'bakeTime'),

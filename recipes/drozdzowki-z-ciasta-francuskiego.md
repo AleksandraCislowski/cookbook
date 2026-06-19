@@ -8,7 +8,6 @@ tags:
   - szybko
   - słodkie
   - piekarnik
-difficulty: easy
 prepTime: 10
 cookTime:
 bakeTime: 20

@@ -8,7 +8,8 @@ tags:
   - zapiekane
   - mięso
   - piekarnik
-difficulty: easy
+  - kurczak
+  - pieczywo
 prepTime: 20
 cookTime: 0
 bakeTime: 15

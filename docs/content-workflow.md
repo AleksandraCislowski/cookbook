@@ -77,7 +77,6 @@ cuisine: Nowoczesna domowa
 tags:
   - miska
   - wołowina
-difficulty: medium
 prepTime: 25
 cookTime:
 bakeTime:
@@ -97,7 +96,6 @@ publishedAt: "2026-06-12"
 - `category`: used for browsing and filtering.
 - `cuisine`: adds context and can become a filter later.
 - `tags`: used for search, chips, related recipes, and filtering.
-- `difficulty`: expected values for now: `easy`, `medium`, or `slow`; the UI maps these to Polish labels.
 - `prepTime`, `cookTime`, `restTime`: optional numbers in minutes. Empty or `0` values are not shown.
 - `bakeTime`: optional baking time in minutes.
 - `bakeTemperature`: optional oven temperature, for example `180°C`.

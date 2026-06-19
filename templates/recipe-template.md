@@ -7,7 +7,6 @@ cuisine: Domowa
 tags:
   - szybki obiad
   - domowe
-difficulty: easy
 prepTime:
 cookTime:
 bakeTime:

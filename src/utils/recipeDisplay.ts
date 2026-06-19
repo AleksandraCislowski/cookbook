@@ -1,12 +1,6 @@
 import type { Recipe } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
 
-export const difficultyLabels: Record<Recipe['difficulty'], string> = {
-  easy: 'łatwe',
-  medium: 'średnie',
-  slow: 'powolne',
-};
-
 export function getTotalTime(recipe: Recipe) {
   return (
     (recipe.prepTime ?? 0) +

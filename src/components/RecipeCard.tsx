@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { RecipeImage } from '@/components/RecipeImage';
 import { RecipeMetaList } from '@/components/RecipeMetaList';
 import type { Recipe } from '@/data/recipes';
-import { difficultyLabels } from '@/utils/recipeDisplay';
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
@@ -50,11 +49,6 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
               size='small'
               label={recipe.category}
               color='primary'
-              variant='outlined'
-            />
-            <Chip
-              size='small'
-              label={difficultyLabels[recipe.difficulty]}
               variant='outlined'
             />
           </Stack>

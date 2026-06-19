@@ -18,7 +18,6 @@ import { useRouter } from 'next/navigation';
 import { RecipeImage } from '@/components/RecipeImage';
 import { RecipeMetaList } from '@/components/RecipeMetaList';
 import type { Recipe } from '@/data/recipes';
-import { difficultyLabels } from '@/utils/recipeDisplay';
 
 type RandomRecipeDialogProps = {
   onClose: () => void;
@@ -61,11 +60,6 @@ export function RandomRecipeDialog({
               <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mb: 1.5 }}>
                 <Chip size='small' color='primary' label={recipe.category} />
                 <Chip size='small' variant='outlined' label={recipe.cuisine} />
-                <Chip
-                  size='small'
-                  variant='outlined'
-                  label={difficultyLabels[recipe.difficulty]}
-                />
               </Stack>
               <Typography
                 variant='h2'

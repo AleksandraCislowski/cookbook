@@ -26,7 +26,6 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
     recipe.description,
     recipe.category,
     recipe.cuisine,
-    recipe.difficulty,
     ...recipe.tags,
     ...recipe.ingredients,
     ...recipe.spices,

@@ -9,7 +9,7 @@ tags:
   - świeże warzywa
   - Ninja
   - wolnowar
-difficulty: easy
+  - wołowina
 prepTime: 30
 cookTime: 15
 bakeTime: 0

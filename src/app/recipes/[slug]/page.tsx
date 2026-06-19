@@ -23,7 +23,6 @@ import { RecipeServingsValue } from '@/components/RecipeServingsValue';
 import { getRecipeBySlug, getRecipeSlugs } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
 import {
-  difficultyLabels,
   getBakingLabel,
   getPassiveTimeLabel,
   getTotalTime,
@@ -212,11 +211,6 @@ export default async function RecipePage({ params }: RecipePageProps) {
               <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mb: 1.5 }}>
                 <Chip size='small' color='primary' label={recipe.category} />
                 <Chip size='small' variant='outlined' label={recipe.cuisine} />
-                <Chip
-                  size='small'
-                  variant='outlined'
-                  label={difficultyLabels[recipe.difficulty]}
-                />
               </Stack>
 
               <Typography
