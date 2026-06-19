@@ -143,14 +143,14 @@ export function scaleIngredientText(
   }
 
   const amountMatch = ingredient.match(
-    /^(\d+(?:[,.]\d+)?)(\s*)(.+)$/,
+    /^(\D*?)(\d+(?:[,.]\d+)?)(\s*)(.+)$/,
   );
 
   if (!amountMatch) {
     return ingredient;
   }
 
-  const [, rawAmount, spacing, rest] = amountMatch;
+  const [, prefix, rawAmount, spacing, rest] = amountMatch;
   const amount = parseAmount(rawAmount);
 
   if (amount === undefined) {
@@ -158,9 +158,13 @@ export function scaleIngredientText(
   }
 
   const scaledAmount = amount * multiplier;
-  const separator = shouldUseCountPrefix(rest) ? 'x ' : spacing;
+  const separator = prefix
+    ? spacing
+    : shouldUseCountPrefix(rest)
+      ? 'x '
+      : spacing;
 
-  return `${formatAmount(scaledAmount, rest)}${separator}${getInflectedRest(
+  return `${prefix}${formatAmount(scaledAmount, rest)}${separator}${getInflectedRest(
     rest,
     scaledAmount,
   )}`;
