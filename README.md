@@ -71,7 +71,7 @@ Add blueberries directly to the pan for a fruitier version.
 - recipe templates for meals, baking, sauces, drinks, preserves, and menu ideas,
 - `npm run new-recipe` for creating matching Markdown files and image folders,
 - a clear content workflow so recipes and images stay consistent,
-- favorites, collections, and planned menus,
+- favorites and collections,
 - shopping list generation from selected recipes,
 - responsive design that works well on desktop, tablet, and phone.
 
