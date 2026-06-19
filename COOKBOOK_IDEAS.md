@@ -35,19 +35,14 @@ krokiem bylaby jedna lista zakupow z calego planu.
 Lista zakupow laczona z wielu przepisow, z grupowaniem po sekcjach sklepu:
 warzywa, mieso, nabial, suche produkty, przyprawy.
 
-## 6. Tagi sezonowe i okazje
-
-Dodatkowe tagi typu lato, comfort food, meal prep, dla gosci, szybki obiad,
-wolnowar. Pozwoli to robic ciekawsze filtry i sekcje na stronie glownej.
-
-## 7. Losuj obiad
+## 6. Losuj obiad
 
 Status: zrobione.
 
 Przycisk wybierajacy losowy przepis, najlepiej z aktualnych filtrow. Proste,
 ale bardzo pomocne, kiedy nie chce sie podejmowac decyzji.
 
-## 8. Galerie i zdjecia etapow
+## 7. Galerie i zdjecia etapow
 
 Oprocz glownego zdjecia mozna dodac galerie albo zdjecia krokow, szczegolnie
 dla przepisow, gdzie wazna jest konsystencja, zawijanie, krojenie albo etap
