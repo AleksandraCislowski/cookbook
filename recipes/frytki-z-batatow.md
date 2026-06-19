@@ -1,9 +1,9 @@
 ---
 title: 'Frytki z batatów'
 slug: frytki-z-batatow
-description: Szybkie frytki z batatów z Ninja, chrupiące z zewnątrz i miękkie w środku, dobre jako dodatek albo przekąska.
-category: Obiad, Ninja, Vege, Przekąska
-cuisine: Domowa
+description: Szybkie frytki z batatów z Ninja Cooker, chrupiące z zewnątrz i miękkie w środku, dobre jako dodatek albo przekąska.
+category: Obiad, Ninja Cooker, Vege, Przekąska
+cuisine: Fast food
 prepTime:
 cookTime:
 bakeTime: 16
@@ -28,7 +28,7 @@ publishedAt: '2026-06-19'
 
 ## Przygotowanie
 
-1. Rozgrzej Ninja przez 5 minut na 200°C na programie Air Crisp.
+1. Rozgrzej Ninja Cooker przez 5 minut na 200°C na programie Air Crisp.
 2. Zamrożone frytki wsyp do koszyczka, skrop oliwą.
 3. Ustawić Air Crisp na tej samej temperaturze na 16 minut.
 4. W połowie programu, otworzyć i przemieszać frytki.
