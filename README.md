@@ -17,7 +17,7 @@ The application will focus on:
 
 - fast browsing across categories, cuisines, seasons, and occasions,
 - rich recipe pages with photos, ingredients, steps, notes, and variations,
-- powerful filtering by time, tags, dietary notes, and ingredients,
+- powerful filtering by time, dietary notes, and ingredients,
 - a comfortable cooking mode for reading steps in the kitchen,
 - Markdown-based content that can grow naturally over time,
 - reusable templates that make every new recipe consistent,
@@ -35,12 +35,8 @@ Example:
 title: Lemon Ricotta Pancakes
 slug: lemon-ricotta-pancakes
 description: Fluffy pancakes with lemon zest and creamy ricotta.
-category: breakfast
+category: breakfast, weekend
 cuisine: modern
-tags:
-  - sweet
-  - weekend
-  - vegetarian
 prepTime: 10
 cookTime: 15
 servings: 4
@@ -67,7 +63,7 @@ Add blueberries directly to the pan for a fruitier version.
 ## Planned Features
 
 - home view with featured recipes, quick filters, and recently added meals,
-- recipe index with search, sorting, tags, and visual recipe cards,
+- recipe index with search, sorting, categories, and visual recipe cards,
 - recipe detail page with hero image, metadata, ingredients, steps, notes, and
   related recipes,
 - cooking mode with large step text, timers, servings scaling, and sticky
