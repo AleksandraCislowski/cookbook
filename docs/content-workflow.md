@@ -53,7 +53,7 @@ User-facing cookbook content should be in Polish:
 
 - recipe titles,
 - recipe descriptions,
-- categories and tags,
+- categories,
 - ingredients,
 - instructions,
 - notes,
@@ -72,11 +72,8 @@ Every recipe should include:
 title: "Poke bowl z szarpaną wołowiną"
 slug: poke-bowl-z-szarpana-wolowina
 description: Kolorowa miska z ryżem, soczystą szarpaną wołowiną i warzywami.
-category: Obiad
+category: Obiad, Szybkie
 cuisine: Nowoczesna domowa
-tags:
-  - miska
-  - wołowina
 prepTime: 25
 cookTime:
 bakeTime:
@@ -93,9 +90,8 @@ publishedAt: "2026-06-12"
 - `title`: shown on recipe pages, cards, and search results.
 - `slug`: must match the markdown filename and image filename.
 - `description`: short summary for cards and previews.
-- `category`: used for browsing and filtering.
+- `category`: one or more categories used for browsing and filtering. Separate multiple categories with commas, for example `Obiad, Szybkie`.
 - `cuisine`: adds context and can become a filter later.
-- `tags`: used for search, chips, related recipes, and filtering.
 - `prepTime`, `cookTime`, `restTime`: optional numbers in minutes. Empty or `0` values are not shown.
 - `bakeTime`: optional baking time in minutes.
 - `bakeTemperature`: optional oven temperature, for example `180°C`.
