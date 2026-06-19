@@ -198,7 +198,10 @@ function readRequiredCategories(
     throw new Error(`Missing required recipe field: ${key}`);
   }
 
-  return Array.from(new Set(normalizedCategories));
+  return Array.from(new Set(normalizedCategories)).sort(
+    (firstCategory, secondCategory) =>
+      firstCategory.localeCompare(secondCategory, 'pl'),
+  );
 }
 
 function getSection(markdown: string, heading: string) {
