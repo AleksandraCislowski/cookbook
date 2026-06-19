@@ -3,7 +3,6 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import SearchIcon from '@mui/icons-material/Search';
 import {
   Button,
-  Chip,
   FormControl,
   InputAdornment,
   InputLabel,
@@ -23,11 +22,9 @@ type CookbookStat = {
 };
 
 type CookbookSidebarProps = {
-  activeTag: string;
   category: string;
   categoryOptions: string[];
   hasActiveFilters: boolean;
-  onActiveTagChange: (tag: string) => void;
   onCategoryChange: (category: string) => void;
   onResetFilters: () => void;
   onSearchTermChange: (searchTerm: string) => void;
@@ -35,15 +32,12 @@ type CookbookSidebarProps = {
   searchTerm: string;
   sort: string;
   stats: CookbookStat[];
-  tagOptions: string[];
 };
 
 export function CookbookSidebar({
-  activeTag,
   category,
   categoryOptions,
   hasActiveFilters,
-  onActiveTagChange,
   onCategoryChange,
   onResetFilters,
   onSearchTermChange,
@@ -51,7 +45,6 @@ export function CookbookSidebar({
   searchTerm,
   sort,
   stats,
-  tagOptions,
 }: CookbookSidebarProps) {
   return (
     <Stack spacing={2}>
@@ -115,28 +108,6 @@ export function CookbookSidebar({
           >
             Resetuj filtry
           </Button>
-        </Stack>
-      </Paper>
-
-      <Paper variant='outlined' sx={{ p: 2, bgcolor: 'background.paper' }}>
-        <Typography variant='h2' sx={{ fontSize: '1rem', mb: 1.5 }}>
-          Tagi
-        </Typography>
-        <Stack direction='row' flexWrap='wrap' gap={1}>
-          <Chip
-            label='wszystkie'
-            color={activeTag === ALL_RECIPES_FILTER ? 'primary' : 'default'}
-            onClick={() => onActiveTagChange(ALL_RECIPES_FILTER)}
-          />
-          {tagOptions.map((tag) => (
-            <Chip
-              key={tag}
-              label={tag}
-              color={activeTag === tag ? 'primary' : 'default'}
-              variant={activeTag === tag ? 'filled' : 'outlined'}
-              onClick={() => onActiveTagChange(tag)}
-            />
-          ))}
         </Stack>
       </Paper>
 

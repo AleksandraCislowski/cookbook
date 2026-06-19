@@ -209,7 +209,14 @@ export default async function RecipePage({ params }: RecipePageProps) {
               sx={{ order: { xs: 1, md: 'initial' }, p: { xs: 2, md: 2.5 } }}
             >
               <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mb: 1.5 }}>
-                <Chip size='small' color='primary' label={recipe.category} />
+                {recipe.categories.map((category) => (
+                  <Chip
+                    key={category}
+                    size='small'
+                    color='primary'
+                    label={category}
+                  />
+                ))}
                 <Chip size='small' variant='outlined' label={recipe.cuisine} />
               </Stack>
 

@@ -2,14 +2,8 @@
 title: 'Faszerowane bułki'
 slug: faszerowane-bulki
 description: Chrupiące kajzerki wypełnione farszem z kurczaka, papryki, cebuli i mozzarelli, zapiekane do roztopienia sera.
-category: Śniadanie
+category: Śniadanie, Z mięsem
 cuisine: Domowa
-tags:
-  - zapiekane
-  - mięso
-  - piekarnik
-  - kurczak
-  - pieczywo
 prepTime: 20
 cookTime: 0
 bakeTime: 15

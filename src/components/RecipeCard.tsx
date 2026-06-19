@@ -39,18 +39,16 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
             p: 2.5,
           }}
         >
-          <Stack
-            direction='row'
-            spacing={1}
-            alignItems='center'
-            sx={{ mb: 1.65 }}
-          >
-            <Chip
-              size='small'
-              label={recipe.category}
-              color='primary'
-              variant='outlined'
-            />
+          <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mb: 1.65 }}>
+            {recipe.categories.map((category) => (
+              <Chip
+                key={category}
+                size='small'
+                label={category}
+                color='primary'
+                variant='outlined'
+              />
+            ))}
           </Stack>
           <Typography
             variant='h3'

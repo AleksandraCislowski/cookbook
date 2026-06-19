@@ -4,9 +4,6 @@ slug: recipe-name
 description: Krótki, konkretny opis do kart, wyszukiwarki i podglądu przepisu.
 category: Obiad
 cuisine: Domowa
-tags:
-  - szybki obiad
-  - domowe
 prepTime:
 cookTime:
 bakeTime:

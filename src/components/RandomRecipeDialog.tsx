@@ -39,7 +39,20 @@ export function RandomRecipeDialog({
   }
 
   return (
-    <Dialog open={Boolean(recipe)} onClose={onClose} fullWidth maxWidth='sm'>
+    <Dialog
+      open={Boolean(recipe)}
+      onClose={onClose}
+      fullWidth
+      maxWidth='sm'
+      slotProps={{
+        paper: {
+          sx: {
+            height: { xs: 'calc(100dvh - 32px)', sm: 720 },
+            maxHeight: 'calc(100dvh - 32px)',
+          },
+        },
+      }}
+    >
       {recipe ? (
         <>
           <DialogTitle sx={{ pr: 6 }}>Wylosowany przepis</DialogTitle>
@@ -54,11 +67,35 @@ export function RandomRecipeDialog({
           >
             <CloseIcon />
           </IconButton>
-          <DialogContent dividers sx={{ p: 0 }}>
+          <DialogContent
+            dividers
+            sx={{
+              display: 'flex',
+              minHeight: 0,
+              flex: 1,
+              flexDirection: 'column',
+              overflow: 'hidden',
+              p: 0,
+            }}
+          >
             <RecipeImage recipe={recipe} />
-            <Box sx={{ p: { xs: 2, sm: 2.5 } }}>
+            <Box
+              sx={{
+                flex: 1,
+                minHeight: 0,
+                overflow: 'auto',
+                p: { xs: 2, sm: 2.5 },
+              }}
+            >
               <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mb: 1.5 }}>
-                <Chip size='small' color='primary' label={recipe.category} />
+                {recipe.categories.map((category) => (
+                  <Chip
+                    key={category}
+                    size='small'
+                    color='primary'
+                    label={category}
+                  />
+                ))}
                 <Chip size='small' variant='outlined' label={recipe.cuisine} />
               </Stack>
               <Typography
@@ -71,13 +108,6 @@ export function RandomRecipeDialog({
               <Box sx={{ mt: 2 }}>
                 <RecipeMetaList recipe={recipe} rowGap={1} />
               </Box>
-              {recipe.tags.length > 0 ? (
-                <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mt: 2 }}>
-                  {recipe.tags.map((tag) => (
-                    <Chip key={tag} size='small' variant='outlined' label={tag} />
-                  ))}
-                </Stack>
-              ) : null}
             </Box>
           </DialogContent>
           <DialogActions sx={{ px: { xs: 2, sm: 2.5 }, py: 1.5 }}>

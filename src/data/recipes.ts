@@ -5,7 +5,7 @@ export type Recipe = {
   slug: string;
   title: string;
   description: string;
-  category: string;
+  categories: string[];
   cuisine: string;
   prepTime?: number;
   cookTime?: number;
@@ -17,7 +17,6 @@ export type Recipe = {
   advanceNotice?: string;
   servings?: number;
   image: string;
-  tags: string[];
   ingredients: string[];
   ingredientGroups: {
     title: string;
@@ -44,7 +43,6 @@ type RecipeFrontmatter = {
   passiveTimeLabel: string;
   advanceNotice: string;
   servings: number;
-  tags: string[];
   publishedAt: string;
 };
 
@@ -181,14 +179,26 @@ function readOptionalNumber(
   return value;
 }
 
-function readTags(frontmatter: Record<string, string | string[]>) {
-  const tags = frontmatter.tags;
+function readRequiredCategories(
+  frontmatter: Record<string, string | string[]>,
+  key: keyof RecipeFrontmatter,
+) {
+  const value = frontmatter[key];
+  const categories =
+    typeof value === 'string'
+      ? value.split(',')
+      : Array.isArray(value)
+        ? value
+        : [];
+  const normalizedCategories = categories
+    .map((category) => category.trim())
+    .filter(Boolean);
 
-  if (!Array.isArray(tags)) {
-    return [];
+  if (normalizedCategories.length === 0) {
+    throw new Error(`Missing required recipe field: ${key}`);
   }
 
-  return tags;
+  return Array.from(new Set(normalizedCategories));
 }
 
 function getSection(markdown: string, heading: string) {
@@ -280,7 +290,7 @@ function parseRecipeFile(filename: string): Recipe {
     slug,
     title: readRequiredString(frontmatter, 'title'),
     description: readOptionalString(frontmatter, 'description'),
-    category: readRequiredString(frontmatter, 'category'),
+    categories: readRequiredCategories(frontmatter, 'category'),
     cuisine: readOptionalString(frontmatter, 'cuisine'),
     prepTime: readOptionalNumber(frontmatter, 'prepTime'),
     cookTime: readOptionalNumber(frontmatter, 'cookTime'),
@@ -292,7 +302,6 @@ function parseRecipeFile(filename: string): Recipe {
     advanceNotice: readOptionalString(frontmatter, 'advanceNotice'),
     servings: readOptionalNumber(frontmatter, 'servings'),
     image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
-    tags: readTags(frontmatter),
     ingredients: ingredientGroups.flatMap((group) => group.items),
     ingredientGroups,
     spices: readListItems(getSection(markdown, 'Przyprawy')),

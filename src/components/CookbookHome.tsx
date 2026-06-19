@@ -24,9 +24,8 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
   return [
     recipe.title,
     recipe.description,
-    recipe.category,
+    ...recipe.categories,
     recipe.cuisine,
-    ...recipe.tags,
     ...recipe.ingredients,
     ...recipe.spices,
   ]
@@ -39,34 +38,28 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const categoryOptions = useMemo(
     () => [
       ALL_RECIPES_FILTER,
-      ...Array.from(new Set(recipes.map((recipe) => recipe.category))),
+      ...Array.from(new Set(recipes.flatMap((recipe) => recipe.categories))).sort(
+        (firstCategory, secondCategory) =>
+          firstCategory.localeCompare(secondCategory, 'pl'),
+      ),
     ],
-    [recipes],
-  );
-  const tagOptions = useMemo(
-    () => Array.from(new Set(recipes.flatMap((recipe) => recipe.tags))),
     [recipes],
   );
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState(ALL_RECIPES_FILTER);
-  const [activeTag, setActiveTag] = useState(ALL_RECIPES_FILTER);
   const [randomRecipe, setRandomRecipe] = useState<Recipe | null>(null);
   const [sort, setSort] = useState('newest');
   const hasActiveFilters =
     searchTerm !== '' ||
     category !== ALL_RECIPES_FILTER ||
-    activeTag !== ALL_RECIPES_FILTER ||
     sort !== 'newest';
 
   const filteredRecipes = useMemo(() => {
     return recipes
       .filter(
         (recipe) =>
-          category === ALL_RECIPES_FILTER || recipe.category === category,
-      )
-      .filter(
-        (recipe) =>
-          activeTag === ALL_RECIPES_FILTER || recipe.tags.includes(activeTag),
+          category === ALL_RECIPES_FILTER ||
+          recipe.categories.includes(category),
       )
       .filter((recipe) => matchesSearch(recipe, searchTerm))
       .sort((firstRecipe, secondRecipe) => {
@@ -85,7 +78,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
 
         return secondRecipe.addedDate.localeCompare(firstRecipe.addedDate);
       });
-  }, [activeTag, category, recipes, searchTerm, sort]);
+  }, [category, recipes, searchTerm, sort]);
 
   const stats = [
     { label: 'Przepisy', value: recipes.length },
@@ -107,7 +100,6 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   function resetFilters() {
     setSearchTerm('');
     setCategory(ALL_RECIPES_FILTER);
-    setActiveTag(ALL_RECIPES_FILTER);
     setSort('newest');
   }
 
@@ -146,15 +138,12 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
           }}
         >
           <CookbookSidebar
-            activeTag={activeTag}
             category={category}
             categoryOptions={categoryOptions}
             hasActiveFilters={hasActiveFilters}
             searchTerm={searchTerm}
             sort={sort}
             stats={stats}
-            tagOptions={tagOptions}
-            onActiveTagChange={setActiveTag}
             onCategoryChange={setCategory}
             onResetFilters={resetFilters}
             onSearchTermChange={setSearchTerm}

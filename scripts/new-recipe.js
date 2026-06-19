@@ -61,5 +61,5 @@ console.log(`Utworzono recipes/${slug}.md`);
 console.log("");
 console.log("Następne kroki:");
 console.log(`1. Dodaj zdjęcie public/images/recipes/${slug}.png`);
-console.log("2. Uzupełnij kategorie, tagi, czasy, składniki i przygotowanie.");
+console.log("2. Uzupełnij kategorię, czasy, składniki i przygotowanie.");
 console.log("3. Przed publikacją odpal npm run build.");
