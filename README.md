@@ -1,88 +1,121 @@
 # Personal Cookbook
 
-Personal Cookbook is a React and MUI application for collecting, browsing, and
-cooking from a private recipe library. Recipes are stored as Markdown files, so
-new meals can be added without touching application code: create a recipe file,
-add frontmatter, place photos in the matching image folder, and the app turns it
-into a polished, searchable cookbook.
+A personal recipe library built with Next.js, React, TypeScript, and MUI.
 
-## Product Goal
+This project grew out of a very practical problem: I love cooking, but I was
+tired of losing recipes across websites, saved posts, TikToks, notes, screenshots,
+and messages. Personal Cookbook brings everything into one focused place, shaped
+around the way I actually cook.
 
-The project should feel like a real kitchen companion rather than a static recipe
-archive. It should make it easy to save everyday meals, family favorites,
-seasonal ideas, baking notes, quick lunches, party menus, and recipes worth
-returning to.
+It is part kitchen companion, part content system, and part UI project. The goal
+is not only to store recipes, but to make them easy to find, read, scale, and use
+while cooking.
 
-The application will focus on:
+## Why I Built It
 
-- fast browsing across categories, cuisines, seasons, and occasions,
-- rich recipe pages with photos, ingredients, steps, notes, and variations,
-- powerful filtering by time, dietary notes, and ingredients,
-- a comfortable cooking mode for reading steps in the kitchen,
-- Markdown-based content that can grow naturally over time,
-- reusable templates that make every new recipe consistent,
-- a beautiful interface built with React, TypeScript, and MUI.
+Cooking is one of my favourite things to do, and over time my recipes became
+scattered across too many sources. I wanted a small product that solves that
+everyday friction for me:
 
-## Content Model
+- one place for trusted recipes,
+- a structure that fits my cooking habits,
+- fast search and filtering when I do not know what to make,
+- clean recipe pages that are comfortable to use in the kitchen,
+- a workflow that makes adding new recipes simple and repeatable.
 
-Each recipe will live in `content/recipes` as a Markdown file with frontmatter.
-Images will live in a matching folder under `public/images/recipes`.
+The project is intentionally personal, but built like a real application: typed
+data, reusable components, a documented content workflow, and a UI designed for
+actual use rather than a static portfolio screenshot.
 
-Example:
+## What It Does
 
-```md
----
-title: Lemon Ricotta Pancakes
-slug: lemon-ricotta-pancakes
-description: Fluffy pancakes with lemon zest and creamy ricotta.
-category: breakfast, weekend
-cuisine: modern
-prepTime: 10
-cookTime: 15
-servings: 4
-image: hero.jpg
----
+- Browses recipes from local Markdown files.
+- Supports recipe search across titles, descriptions, categories, cuisines,
+  ingredients, and spices.
+- Filters by category and cuisine.
+- Sorts recipes by newest, fastest, or title.
+- Shows recipe cards, recipe detail pages, metadata, ingredients, spices,
+  instructions, notes, and images.
+- Includes a cooking mode with large step-by-step instructions and progress.
+- Supports serving-size scaling for ingredients.
+- Provides a `new-recipe` script for generating consistent recipe files.
+- Uses AI-assisted image styling to transform my own food photos into a cohesive
+  kawaii-inspired visual style.
 
-## Ingredients
+## AI Image Workflow
 
-- 250 g ricotta
-- 2 eggs
-- 180 ml milk
+The recipe images start from my own food photos. I use AI as a creative tool to
+adapt those photos into a playful kawaii style, so the cookbook feels consistent,
+personal, and more visually distinctive than a folder of raw phone pictures.
 
-## Instructions
+This is not used to replace the cooking itself. It is used as a design layer:
+real meals, real recipes, styled into a coherent visual language for the app.
 
-1. Whisk the wet ingredients.
-2. Fold in the dry ingredients.
-3. Cook on a lightly buttered pan.
+## Tech Stack
 
-## Notes
+- Next.js
+- React
+- TypeScript
+- MUI
+- Markdown recipe files with frontmatter
+- Local content loader using Node.js file-system APIs
 
-Add blueberries directly to the pan for a fruitier version.
+## Project Structure
+
+```txt
+recipes/                       Markdown recipe source files
+public/images/recipes/          Recipe images
+src/app/                        Next.js app routes
+src/components/                 Reusable cookbook UI components
+src/data/recipes.ts             Recipe loader and parser
+src/utils/                      Recipe formatting and scaling helpers
+scripts/new-recipe.js           Recipe scaffolding script
+templates/recipe-template.md    Markdown recipe template
+docs/content-workflow.md        Content authoring guide
 ```
 
-## Planned Features
+## Running Locally
 
-- home view with featured recipes, quick filters, and recently added meals,
-- recipe index with search, sorting, categories, and visual recipe cards,
-- recipe detail page with hero image, metadata, ingredients, steps, notes, and
-  related recipes,
-- cooking mode with large step text, timers, servings scaling, and sticky
-  progress,
-- recipe templates for meals, baking, sauces, drinks, preserves, and menu ideas,
-- `npm run new-recipe` for creating matching Markdown files and image folders,
-- a clear content workflow so recipes and images stay consistent,
-- favorites and collections,
-- shopping list generation from selected recipes,
-- responsive design that works well on desktop, tablet, and phone.
+```bash
+npm install
+npm run dev
+```
 
-## Technology Direction
+The app runs on:
 
-- React with TypeScript
-- MUI for the component system and theme
-- Markdown with frontmatter for recipe content
-- A local content loader that converts recipe files into typed data
-- Playwright for the most important flows once the app shell exists
+```txt
+http://localhost:3000
+```
 
-See [ROADMAP.md](./ROADMAP.md) for the broader roadmap,
-[PROGRAMMING_PLAN.md](./PROGRAMMING_PLAN.md) for the practical build plan, and
-[docs/content-workflow.md](./docs/content-workflow.md) for adding recipes.
+To check the project:
+
+```bash
+npm run typecheck
+npm run build
+```
+
+## Adding A Recipe
+
+```bash
+npm run new-recipe -- "Recipe Name"
+```
+
+This creates a new Markdown file in `recipes/` using the shared template. Recipe
+content is written in Polish because the app is made for my personal everyday
+use, while the code and project documentation stay in English.
+
+More details are documented in [docs/content-workflow.md](./docs/content-workflow.md).
+
+## What This Project Shows
+
+This project demonstrates how I approach product-minded frontend work:
+
+- turning a real personal need into a focused application,
+- designing reusable UI around practical user flows,
+- keeping content editable without touching application code,
+- using TypeScript to make local content safer to consume,
+- combining engineering, visual design, and AI-assisted creative tooling,
+- documenting the workflow so the project can grow without becoming messy.
+
+It is a small project by scope, but it reflects the kind of software I like to
+build: useful, personal, maintainable, and designed around real behaviour.
