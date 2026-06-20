@@ -1,7 +1,7 @@
 # Personal Cookbook
 
 A personal recipe library built with Next.js, React, TypeScript, and MUI.
-Live site: [cookbook.aleksandracislowski.com](cookbook.aleksandracislowski.com)
+Live site: [cookbook.aleksandracislowski.com](https://cookbook.aleksandracislowski.com/)
 
 This project grew out of a very practical problem: I love cooking, but I was
 tired of losing recipes across websites, saved posts, TikToks, notes, screenshots,
