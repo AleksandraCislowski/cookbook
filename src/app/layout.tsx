@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     images: [getAbsoluteUrl('/images/recipes/logo.png')],
   },
   icons: {
-    icon: '/images/recipes/logo.png',
-    apple: '/images/recipes/logo.png',
+    icon: '/favicon-transparent.png',
+    apple: '/favicon-transparent.png',
   },
 };
 
