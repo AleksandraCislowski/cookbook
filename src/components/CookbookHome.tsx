@@ -144,7 +144,11 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     <Box sx={{ minHeight: '100vh', pb: 6 }}>
       <CookbookHeader />
 
-      <Container maxWidth='xl' sx={{ pt: { xs: 3, md: 4 } }}>
+      <Container
+        component='main'
+        maxWidth='xl'
+        sx={{ pt: { xs: 3, md: 4 } }}
+      >
         <Box
           sx={{
             display: 'grid',

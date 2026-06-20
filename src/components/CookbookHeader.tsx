@@ -28,28 +28,31 @@ export function CookbookHeader() {
             py: { xs: 0.75, md: 1 },
           }}
         >
-          <Stack
-            direction='row'
-            spacing={{ xs: 0.75, sm: 1.25 }}
-            alignItems='center'
-            sx={{ minWidth: 0 }}
+          <Box
+            component={Link}
+            href='/'
+            aria-label='Przejdź do strony głównej'
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              minWidth: 0,
+              gap: { xs: 0.75, sm: 1.25 },
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
           >
             <Box
-              component={Link}
-              href='/'
               sx={{
                 position: 'relative',
                 width: { xs: 72, sm: 96, md: 132 },
                 height: { xs: 58, sm: 72, md: 84 },
                 flexShrink: 0,
-                color: 'inherit',
-                textDecoration: 'none',
               }}
             >
               <Box
                 component='img'
                 src={RECIPE_LOGO_SRC}
-                alt='Logo domowej książki kucharskiej'
+                alt=''
                 sx={{
                   position: 'absolute',
                   top: { xs: -16, sm: -22, md: -32 },
@@ -61,14 +64,12 @@ export function CookbookHeader() {
                 }}
               />
             </Box>
-            <Box
-              component={Link}
-              href='/'
-              sx={{ minWidth: 0, color: 'inherit', textDecoration: 'none' }}
-            >
+            <Box sx={{ minWidth: 0 }}>
               <Typography
+                component='span'
                 variant='h1'
                 sx={{
+                  display: 'block',
                   fontSize: { xs: '1.05rem', sm: '1.25rem', md: '1.55rem' },
                   lineHeight: { xs: 1, sm: 1.05 },
                   overflowWrap: 'anywhere',
@@ -87,7 +88,7 @@ export function CookbookHeader() {
                 Prywatna książka kucharska z przepisami, zdjęciami i notatkami.
               </Typography>
             </Box>
-          </Stack>
+          </Box>
         </Stack>
       </Container>
     </Box>

@@ -6,7 +6,13 @@ import type { Recipe } from '@/data/recipes';
 
 export const RECIPE_LOGO_SRC = '/images/recipes/logo.png';
 
-export function RecipeImage({ recipe }: { recipe: Recipe }) {
+export function RecipeImage({
+  alt,
+  recipe,
+}: {
+  alt?: string;
+  recipe: Recipe;
+}) {
   const [imageSource, setImageSource] = useState(recipe.image);
 
   useEffect(() => {
@@ -27,7 +33,7 @@ export function RecipeImage({ recipe }: { recipe: Recipe }) {
       <Box
         component='img'
         src={imageSource}
-        alt=''
+        alt={alt ?? `Zdjęcie dania: ${recipe.title}`}
         draggable={false}
         onError={() => {
           if (imageSource !== RECIPE_LOGO_SRC) {

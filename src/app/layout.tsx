@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Fraunces } from 'next/font/google';
+import {
+  getAbsoluteUrl,
+  getSiteUrl,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+} from '@/utils/site';
 import { Providers } from './providers';
 import './globals.css';
 
@@ -15,9 +21,37 @@ const headingFont = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: 'Kącik Kulinarny Aleksandry',
-  description:
-    'Prywatna książka kucharska z przepisami, zdjęciami i notatkami.',
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: '/',
+    siteName: SITE_NAME,
+    locale: 'pl_PL',
+    type: 'website',
+    images: [
+      {
+        url: getAbsoluteUrl('/images/recipes/logo.png'),
+        width: 1200,
+        height: 900,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [getAbsoluteUrl('/images/recipes/logo.png')],
+  },
   icons: {
     icon: '/images/recipes/logo.png',
     apple: '/images/recipes/logo.png',

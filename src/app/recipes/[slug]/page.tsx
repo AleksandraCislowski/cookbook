@@ -20,13 +20,14 @@ import { RecipeActions } from '@/components/RecipeActions';
 import { RecipeIngredients } from '@/components/RecipeIngredients';
 import { RecipeServingsProvider } from '@/components/RecipeServingsContext';
 import { RecipeServingsValue } from '@/components/RecipeServingsValue';
-import { getRecipeBySlug, getRecipeSlugs } from '@/data/recipes';
+import { getRecipeBySlug, getRecipeSlugs, type Recipe } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
 import {
   getBakingLabel,
   getPassiveTimeLabel,
   getTotalTime,
 } from '@/utils/recipeDisplay';
+import { getAbsoluteUrl, SITE_NAME } from '@/utils/site';
 
 type RecipePageProps = {
   params: Promise<{
@@ -54,6 +55,40 @@ function getStatIcon(label: string) {
   return <TimerOutlinedIcon fontSize='small' color='action' />;
 }
 
+function getIsoDuration(minutes?: number) {
+  if (!minutes) {
+    return undefined;
+  }
+
+  return `PT${minutes}M`;
+}
+
+function getRecipeJsonLd(recipe: Recipe) {
+  const recipeUrl = getAbsoluteUrl(`/recipes/${recipe.slug}`);
+  const totalTime = getTotalTime(recipe);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: recipe.title,
+    description: recipe.description,
+    image: [getAbsoluteUrl(recipe.image)],
+    url: recipeUrl,
+    datePublished: recipe.addedDate,
+    recipeCategory: recipe.categories.join(', '),
+    recipeCuisine: recipe.cuisine,
+    recipeYield: recipe.servings ? `${recipe.servings} porcje` : undefined,
+    prepTime: getIsoDuration(recipe.prepTime),
+    cookTime: getIsoDuration((recipe.cookTime ?? 0) + (recipe.bakeTime ?? 0)),
+    totalTime: getIsoDuration(totalTime),
+    recipeIngredient: [...recipe.ingredients, ...recipe.spices],
+    recipeInstructions: recipe.steps.map((step) => ({
+      '@type': 'HowToStep',
+      text: step,
+    })),
+  };
+}
+
 export function generateStaticParams() {
   return getRecipeSlugs().map((slug) => ({ slug }));
 }
@@ -71,8 +106,33 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${recipe.title} | Kącik Kulinarny Aleksandry`,
+    title: recipe.title,
     description: recipe.description,
+    alternates: {
+      canonical: `/recipes/${recipe.slug}`,
+    },
+    openGraph: {
+      title: recipe.title,
+      description: recipe.description,
+      url: `/recipes/${recipe.slug}`,
+      siteName: SITE_NAME,
+      locale: 'pl_PL',
+      type: 'article',
+      images: [
+        {
+          url: getAbsoluteUrl(recipe.image),
+          width: 1200,
+          height: 900,
+          alt: `Zdjęcie dania: ${recipe.title}`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: recipe.title,
+      description: recipe.description,
+      images: [getAbsoluteUrl(recipe.image)],
+    },
   };
 }
 
@@ -87,6 +147,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
   const bakingLabel = getBakingLabel(recipe);
   const totalTime = getTotalTime(recipe);
   const passiveTimeLabel = getPassiveTimeLabel(recipe);
+  const recipeJsonLd = getRecipeJsonLd(recipe);
   const recipeStats = [
     totalTime ? ['Razem', formatRecipeTime(totalTime)] : null,
     recipe.prepTime
@@ -103,7 +164,15 @@ export default async function RecipePage({ params }: RecipePageProps) {
   ].filter((stat): stat is [string, string | number] => Boolean(stat));
 
   return (
-    <Box className='recipe-page' sx={{ minHeight: '100vh', pb: 6 }}>
+    <Box
+      component='main'
+      className='recipe-page'
+      sx={{ minHeight: '100vh', pb: 6 }}
+    >
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeJsonLd) }}
+      />
       <Container maxWidth='lg' sx={{ pt: { xs: 2.5, md: 4 } }}>
         <RecipeServingsProvider
           baseServings={recipe.servings ?? 1}
@@ -160,7 +229,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
                 <Box
                   component='img'
                   src={recipe.image}
-                  alt=''
+                  alt={`Zdjęcie dania: ${recipe.title}`}
                   sx={{
                     display: 'block',
                     height: '100%',

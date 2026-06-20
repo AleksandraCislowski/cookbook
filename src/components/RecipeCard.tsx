@@ -22,8 +22,10 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
           flexDirection: 'column',
           alignItems: 'stretch',
           height: '100%',
-          '& .MuiCardActionArea-focusHighlight': {
-            display: 'none',
+          '&.Mui-focusVisible': {
+            outline: '3px solid',
+            outlineColor: 'primary.main',
+            outlineOffset: -3,
           },
         }}
       >

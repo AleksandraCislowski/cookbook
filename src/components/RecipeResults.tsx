@@ -25,7 +25,7 @@ export function RecipeResults({
       >
         <Box>
           <Typography
-            variant='h2'
+            variant='h1'
             sx={{ fontSize: { xs: '1.45rem', md: '1.85rem' } }}
           >
             Przepisy gotowe do gotowania
