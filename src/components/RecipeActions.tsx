@@ -27,7 +27,7 @@ import type { Recipe } from '@/data/recipes';
 type RecipeActionsProps = {
   ingredientGroups?: Recipe['ingredientGroups'];
   printTitle?: string;
-  spices?: string[];
+  spiceGroups?: Recipe['spiceGroups'];
   steps?: string[];
 };
 
@@ -46,7 +46,7 @@ function escapeHtml(value: string) {
 
 function getShoppingListItems(
   ingredientGroups: Recipe['ingredientGroups'],
-  spices: string[],
+  spiceGroups: Recipe['spiceGroups'],
 ) {
   return [
     ...ingredientGroups.flatMap((group, groupIndex) =>
@@ -56,11 +56,13 @@ function getShoppingListItems(
         label: item,
       })),
     ),
-    ...spices.map((spice, index) => ({
-      groupTitle: 'Przyprawy',
-      id: `spice-${index}`,
-      label: spice,
-    })),
+    ...spiceGroups.flatMap((group, groupIndex) =>
+      group.items.map((spice, spiceIndex) => ({
+        groupTitle: group.title ? `Przyprawy: ${group.title}` : 'Przyprawy',
+        id: `spice-${groupIndex}-${spiceIndex}`,
+        label: spice,
+      })),
+    ),
   ];
 }
 
@@ -95,7 +97,7 @@ function getShoppingListText(
 export function RecipeActions({
   ingredientGroups = [],
   printTitle,
-  spices = [],
+  spiceGroups = [],
   steps = [],
 }: RecipeActionsProps) {
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
@@ -103,9 +105,14 @@ export function RecipeActions({
   const servings = useRecipeServings();
   const visibleIngredientGroups =
     servings?.scaledIngredientGroups ?? ingredientGroups;
+  const visibleSpiceGroups = servings?.scaledSpiceGroups ?? spiceGroups;
+  const visibleSpices = useMemo(
+    () => visibleSpiceGroups.flatMap((group) => group.items),
+    [visibleSpiceGroups],
+  );
   const shoppingListItems = useMemo(
-    () => getShoppingListItems(visibleIngredientGroups, spices),
-    [visibleIngredientGroups, spices],
+    () => getShoppingListItems(visibleIngredientGroups, visibleSpiceGroups),
+    [visibleIngredientGroups, visibleSpiceGroups],
   );
   const [selectedItemIds, setSelectedItemIds] = useState<string[]>(() =>
     shoppingListItems.map((item) => item.id),
@@ -236,7 +243,7 @@ export function RecipeActions({
         <CookingMode
           ingredientGroups={visibleIngredientGroups}
           recipeTitle={printTitle ?? 'Przepis'}
-          spices={spices}
+          spices={visibleSpices}
           steps={steps}
         />
         <Tooltip title='Drukuj przepis'>

@@ -170,11 +170,13 @@ export function scaleIngredientText(
   )}`;
 }
 
-export function scaleIngredientGroups(
-  ingredientGroups: Recipe['ingredientGroups'],
+type RecipeItemGroups = Recipe['ingredientGroups'];
+
+export function scaleIngredientGroups<TGroups extends RecipeItemGroups>(
+  ingredientGroups: TGroups,
   baseServings: number,
   targetServings: number,
-): Recipe['ingredientGroups'] {
+): TGroups {
   if (baseServings <= 0 || targetServings <= 0) {
     return ingredientGroups;
   }
@@ -186,5 +188,5 @@ export function scaleIngredientGroups(
     items: group.items.map((ingredient) =>
       scaleIngredientText(ingredient, multiplier),
     ),
-  }));
+  })) as TGroups;
 }

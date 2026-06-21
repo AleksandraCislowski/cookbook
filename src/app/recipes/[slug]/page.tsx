@@ -20,6 +20,7 @@ import { RecipeActions } from '@/components/RecipeActions';
 import { RecipeIngredients } from '@/components/RecipeIngredients';
 import { RecipeServingsProvider } from '@/components/RecipeServingsContext';
 import { RecipeServingsValue } from '@/components/RecipeServingsValue';
+import { RecipeSpices } from '@/components/RecipeSpices';
 import { getRecipeBySlug, getRecipeSlugs, type Recipe } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
 import {
@@ -177,6 +178,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
         <RecipeServingsProvider
           baseServings={recipe.servings ?? 1}
           ingredientGroups={recipe.ingredientGroups}
+          spiceGroups={recipe.spiceGroups}
         >
         <Stack
           className='no-print'
@@ -192,7 +194,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
           <RecipeActions
             ingredientGroups={recipe.ingredientGroups}
             printTitle={recipe.title}
-            spices={recipe.spices}
+            spiceGroups={recipe.spiceGroups}
             steps={recipe.steps}
           />
         </Stack>
@@ -387,49 +389,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
             <RecipeIngredients ingredientGroups={recipe.ingredientGroups} />
 
-            {recipe.spiceGroups.length > 0 ? (
-              <Paper
-                className='recipe-spices-card print-card'
-                variant='outlined'
-                sx={{
-                  order: { xs: 4, md: 'initial' },
-                  p: { xs: 2, md: 2.5 },
-                }}
-              >
-                <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
-                  Przyprawy
-                </Typography>
-                <Stack spacing={recipe.spiceGroups.length > 1 ? 1.75 : 0}>
-                  {recipe.spiceGroups.map((group, groupIndex) => (
-                    <Box key={`${group.title}-${groupIndex}`}>
-                      {group.title ? (
-                        <Typography
-                          variant='h3'
-                          sx={{
-                            fontSize: '0.96rem',
-                            lineHeight: 1.2,
-                            mb: 0.75,
-                          }}
-                        >
-                          {group.title}
-                        </Typography>
-                      ) : null}
-                      <Stack component='ul' spacing={0.75} sx={{ m: 0, pl: 2.5 }}>
-                        {group.items.map((spice, index) => (
-                          <Typography
-                            component='li'
-                            key={`${spice}-${index}`}
-                            color='text.secondary'
-                          >
-                            {spice}
-                          </Typography>
-                        ))}
-                      </Stack>
-                    </Box>
-                  ))}
-                </Stack>
-              </Paper>
-            ) : null}
+            <RecipeSpices spiceGroups={recipe.spiceGroups} />
 
             {recipe.note ? (
               <Paper
