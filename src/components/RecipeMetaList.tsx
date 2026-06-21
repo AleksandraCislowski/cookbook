@@ -47,13 +47,6 @@ export function RecipeMetaList({ recipe, rowGap = 0.85 }: RecipeMetaListProps) {
           {recipe.advanceNotice}
         </RecipeMetaItem>
       ) : null}
-      {passiveTimeLabel ? (
-        <RecipeMetaItem
-          icon={<HourglassBottomIcon fontSize='small' color='action' />}
-        >
-          {passiveTimeLabel}
-        </RecipeMetaItem>
-      ) : null}
       {recipe.servings ? (
         <RecipeMetaItem
           icon={<RestaurantMenuIcon fontSize='small' color='action' />}
@@ -66,6 +59,13 @@ export function RecipeMetaList({ recipe, rowGap = 0.85 }: RecipeMetaListProps) {
           icon={<ThermostatIcon fontSize='small' color='action' />}
         >
           {bakingLabel}
+        </RecipeMetaItem>
+      ) : null}
+      {passiveTimeLabel ? (
+        <RecipeMetaItem
+          icon={<HourglassBottomIcon fontSize='small' color='action' />}
+        >
+          {passiveTimeLabel}
         </RecipeMetaItem>
       ) : null}
     </Box>

@@ -23,6 +23,10 @@ export type Recipe = {
     items: string[];
   }[];
   spices: string[];
+  spiceGroups: {
+    title: string;
+    items: string[];
+  }[];
   steps: string[];
   note: string;
   addedDate: string;
@@ -288,6 +292,7 @@ function parseRecipeFile(filename: string): Recipe {
   const markdown = fileContent.slice(frontmatterMatch[0].length);
   const slug = readRequiredString(frontmatter, 'slug');
   const ingredientGroups = readGroupedListItems(getSection(markdown, 'Składniki'));
+  const spiceGroups = readGroupedListItems(getSection(markdown, 'Przyprawy'));
 
   return {
     slug,
@@ -307,7 +312,8 @@ function parseRecipeFile(filename: string): Recipe {
     image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
     ingredients: ingredientGroups.flatMap((group) => group.items),
     ingredientGroups,
-    spices: readListItems(getSection(markdown, 'Przyprawy')),
+    spices: spiceGroups.flatMap((group) => group.items),
+    spiceGroups,
     steps: readListItems(getSection(markdown, 'Przygotowanie')),
     note: readNote(markdown),
     addedDate: readRequiredString(frontmatter, 'publishedAt'),

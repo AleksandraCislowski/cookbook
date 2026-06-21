@@ -387,7 +387,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
             <RecipeIngredients ingredientGroups={recipe.ingredientGroups} />
 
-            {recipe.spices.length > 0 ? (
+            {recipe.spiceGroups.length > 0 ? (
               <Paper
                 className='recipe-spices-card print-card'
                 variant='outlined'
@@ -399,15 +399,33 @@ export default async function RecipePage({ params }: RecipePageProps) {
                 <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
                   Przyprawy
                 </Typography>
-                <Stack component='ul' spacing={0.75} sx={{ m: 0, pl: 2.5 }}>
-                  {recipe.spices.map((spice, index) => (
-                    <Typography
-                      component='li'
-                      key={`${spice}-${index}`}
-                      color='text.secondary'
-                    >
-                      {spice}
-                    </Typography>
+                <Stack spacing={recipe.spiceGroups.length > 1 ? 1.75 : 0}>
+                  {recipe.spiceGroups.map((group, groupIndex) => (
+                    <Box key={`${group.title}-${groupIndex}`}>
+                      {group.title ? (
+                        <Typography
+                          variant='h3'
+                          sx={{
+                            fontSize: '0.96rem',
+                            lineHeight: 1.2,
+                            mb: 0.75,
+                          }}
+                        >
+                          {group.title}
+                        </Typography>
+                      ) : null}
+                      <Stack component='ul' spacing={0.75} sx={{ m: 0, pl: 2.5 }}>
+                        {group.items.map((spice, index) => (
+                          <Typography
+                            component='li'
+                            key={`${spice}-${index}`}
+                            color='text.secondary'
+                          >
+                            {spice}
+                          </Typography>
+                        ))}
+                      </Stack>
+                    </Box>
                   ))}
                 </Stack>
               </Paper>
