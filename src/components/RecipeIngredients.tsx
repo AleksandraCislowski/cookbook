@@ -28,11 +28,10 @@ export function RecipeIngredients({ ingredientGroups }: RecipeIngredientsProps) 
       sx={{ order: { xs: 3, md: 'initial' }, p: { xs: 2, md: 2.5 } }}
     >
       <Stack
-        direction={{ xs: 'column', sm: 'row' }}
+        direction='column'
         spacing={1.25}
-        alignItems={{ xs: 'stretch', sm: 'center' }}
-        justifyContent='space-between'
-        sx={{ mb: 1.5 }}
+        alignItems='flex-start'
+        sx={{ mb: 2 }}
       >
         <Typography variant='h2' sx={{ fontSize: '1.25rem' }}>
           Składniki
@@ -50,7 +49,8 @@ export function RecipeIngredients({ ingredientGroups }: RecipeIngredientsProps) 
               }
             }}
             sx={{
-              alignSelf: { xs: 'flex-start', sm: 'center' },
+              maxWidth: '100%',
+              overflowX: 'auto',
               '& .MuiToggleButton-root': {
                 minWidth: 42,
                 px: 1,
