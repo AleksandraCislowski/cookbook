@@ -39,10 +39,14 @@ publishedAt: '2026-06-12'
 
 - sól
 - pieprz
-- sos sojowy
-- ocet ryżowy
-- miód
-- cukier
+- sos sojowy wg potrzeby
+- woda wg potrzeby
+- miód wg potrzeby
+
+### Marynata do kapusty
+
+- 2 łyżki octu ryżowego
+- 1 łyżeczka cukru
 
 ## Przygotowanie
 
