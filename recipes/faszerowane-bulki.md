@@ -39,7 +39,7 @@ publishedAt: '2026-06-13'
 
 ## Przygotowanie
 
-1. Mięso pokrój w drobną kostkę, dodaj przyprawy, posiekany czosnek i podsmaż na odrobinie oliwy, następnie przełóż do miseczki.
+1. Mięso pokrój w drobną kostkę, dodaj przyprawy wg uznania, posiekany czosnek i podsmaż na odrobinie oliwy, następnie przełóż do miseczki.
 2. Pokrój paprykę i cebulę w drobną kostkę i dodaj do mięsa.
 3. Dodaj jajko i trochę startego sera, całość wymieszaj.
 4. Bułki przekrój zgodnie z liniami wypieku, żeby utworzyć gniazdo w środku każdej z nich.
