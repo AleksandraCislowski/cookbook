@@ -15,6 +15,11 @@ import { getTotalTime } from '@/utils/recipeDisplay';
 
 const QUICK_RECIPE_MAX_TIME = 30;
 
+type RandomRecipePool = {
+  key: string;
+  remainingSlugs: string[];
+};
+
 function matchesSearch(recipe: Recipe, searchTerm: string) {
   const normalizedSearch = searchTerm.trim().toLowerCase();
 
@@ -33,6 +38,10 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
     .join(' ')
     .toLowerCase()
     .includes(normalizedSearch);
+}
+
+function getRandomItem<T>(items: T[]) {
+  return items[Math.floor(Math.random() * items.length)];
 }
 
 export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
@@ -60,6 +69,8 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const [category, setCategory] = useState(ALL_RECIPES_FILTER);
   const [cuisine, setCuisine] = useState(ALL_CUISINES_FILTER);
   const [randomRecipe, setRandomRecipe] = useState<Recipe | null>(null);
+  const [randomRecipePool, setRandomRecipePool] =
+    useState<RandomRecipePool | null>(null);
   const [sort, setSort] = useState('newest');
   const hasActiveFilters =
     searchTerm !== '' ||
@@ -127,16 +138,36 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
       return;
     }
 
-    let nextRecipe =
-      filteredRecipes[Math.floor(Math.random() * filteredRecipes.length)];
+    const filteredRecipeSlugs = filteredRecipes.map((recipe) => recipe.slug);
+    const filteredRecipeSlugSet = new Set(filteredRecipeSlugs);
+    const poolKey = filteredRecipeSlugs.join('|');
+    const remainingSlugs =
+      randomRecipePool?.key === poolKey
+        ? randomRecipePool.remainingSlugs.filter((slug) =>
+            filteredRecipeSlugSet.has(slug),
+          )
+        : filteredRecipeSlugs;
+    const isContinuingPool =
+      randomRecipePool?.key === poolKey && remainingSlugs.length > 0;
+    const nextCycleSlugs = filteredRecipeSlugs.filter(
+      (slug) => filteredRecipes.length === 1 || slug !== randomRecipe?.slug,
+    );
+    const pickableSlugs = isContinuingPool ? remainingSlugs : nextCycleSlugs;
+    const nextRecipeSlug = getRandomItem(pickableSlugs);
+    const nextRecipe = filteredRecipes.find(
+      (recipe) => recipe.slug === nextRecipeSlug,
+    );
 
-    if (filteredRecipes.length > 1) {
-      while (nextRecipe.slug === randomRecipe?.slug) {
-        nextRecipe =
-          filteredRecipes[Math.floor(Math.random() * filteredRecipes.length)];
-      }
+    if (!nextRecipe) {
+      return;
     }
 
+    setRandomRecipePool({
+      key: poolKey,
+      remainingSlugs: (
+        isContinuingPool ? remainingSlugs : filteredRecipeSlugs
+      ).filter((slug) => slug !== nextRecipe.slug),
+    });
     setRandomRecipe(nextRecipe);
   }
 
