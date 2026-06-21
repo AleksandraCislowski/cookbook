@@ -34,11 +34,12 @@ publishedAt: '2026-06-19'
 
 ## Przygotowanie
 
-1. Na patelni rozpuścić masło.
-2. Dodać mąkę i podsmażyć chwilę.
-3. Dolać rosół i dokładnie mieszać, aż sos zgęstnieje.
-4. Dodać rodzynki, sok z cytryny i cukier, pogotować jeszcze chwilę.
-5. Dodać śmietankę.
+1. Ryż ugotuj wg instrukcji na opakowaniu.
+2. Na patelni rozpuścić masło.
+3. Dodać mąkę i podsmażyć chwilę.
+4. Dolać rosół i dokładnie mieszać, aż sos zgęstnieje.
+5. Dodać rodzynki, sok z cytryny i cukier, pogotować jeszcze chwilę.
+6. Dodać śmietankę.
 
 ## Notatki
 
