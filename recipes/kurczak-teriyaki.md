@@ -14,7 +14,7 @@ passiveTimeLabel:
 advanceNotice:
 servings: 4
 image: kurczak-teriyaki.png
-publishedAt: '2026-06-21'
+publishedAt: '2026-06-21T11:52:00+02:00'
 ---
 
 ## Składniki

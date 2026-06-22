@@ -14,7 +14,7 @@ passiveTimeLabel:
 advanceNotice:
 servings: 12
 image: kluski-twarogowo-szpinakowe.png
-publishedAt: '2026-06-21'
+publishedAt: '2026-06-21T12:38:00+02:00'
 ---
 
 ## Składniki

@@ -2,7 +2,7 @@
 title: 'Kurczak gochujang z sosem bazyliowym'
 slug: kurczak-gochujang-z-sosem-bazyliowym
 description: Pikantno-słodki kurczak z pastą gochujang, podany na makaronie lub kluskach w kremowym sosie bazyliowym.
-category: Obiad, Z mięsem
+category: Obiad, Z mięsem, Proteinowe
 cuisine: Azjatycka
 prepTime:
 cookTime: 15
@@ -14,7 +14,7 @@ passiveTimeLabel:
 advanceNotice:
 servings: 4
 image: kurczak-gochujang-z-sosem-bazyliowym.png
-publishedAt: '2026-06-21'
+publishedAt: '2026-06-21T20:34:00+02:00'
 ---
 
 ## Składniki
@@ -54,4 +54,4 @@ publishedAt: '2026-06-21'
 
 ## Notatki
 
-Podawać z makaronem lub kluskami.
+Podawać z makaronem lub kluskami. Jeśli sos jest za rzadki, zagęść go mąką.
