@@ -14,7 +14,7 @@ passiveTimeLabel:
 advanceNotice:
 servings:
 image: recipe-name.png
-publishedAt: "YYYY-MM-DD"
+publishedAt: "YYYY-MM-DDTHH:mm:ss+02:00"
 ---
 
 ## Składniki

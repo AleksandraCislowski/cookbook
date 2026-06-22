@@ -1,7 +1,10 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
+import KitchenIcon from '@mui/icons-material/Kitchen';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
 import {
@@ -37,6 +40,14 @@ type RecipePageProps = {
 };
 
 function getStatIcon(label: string) {
+  if (label === 'Przygotowanie') {
+    return <KitchenIcon fontSize='small' color='action' />;
+  }
+
+  if (label === 'Gotowanie') {
+    return <SoupKitchenIcon fontSize='small' color='action' />;
+  }
+
   if (label === 'Pieczenie') {
     return <ThermostatIcon fontSize='small' color='action' />;
   }
@@ -47,6 +58,10 @@ function getStatIcon(label: string) {
 
   if (label === 'Czas pasywny') {
     return <HourglassBottomIcon fontSize='small' color='action' />;
+  }
+
+  if (label === 'Odpoczynek') {
+    return <HourglassEmptyIcon fontSize='small' color='action' />;
   }
 
   if (label === 'Zacznij') {

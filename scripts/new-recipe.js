@@ -17,6 +17,27 @@ function normalizeTitle(value) {
   return `${value.charAt(0).toUpperCase()}${value.slice(1)}`;
 }
 
+function formatTimezoneOffset(date) {
+  const offsetMinutes = -date.getTimezoneOffset();
+  const sign = offsetMinutes >= 0 ? "+" : "-";
+  const absoluteOffsetMinutes = Math.abs(offsetMinutes);
+  const hours = String(Math.floor(absoluteOffsetMinutes / 60)).padStart(2, "0");
+  const minutes = String(absoluteOffsetMinutes % 60).padStart(2, "0");
+
+  return `${sign}${hours}:${minutes}`;
+}
+
+function formatLocalIsoDateTime(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${formatTimezoneOffset(date)}`;
+}
+
 if (!titleInput) {
   console.error('Użycie: npm run new-recipe -- "Nazwa przepisu"');
   process.exit(1);
@@ -47,12 +68,12 @@ if (fs.existsSync(imagePath)) {
 
 const template = fs.readFileSync(templatePath, "utf8");
 const title = normalizeTitle(titleInput);
-const today = new Date().toISOString().slice(0, 10);
+const publishedAt = formatLocalIsoDateTime(new Date());
 const recipeContent = template
   .replace('title: "Nazwa przepisu"', `title: "${title}"`)
   .replace("slug: recipe-name", `slug: ${slug}`)
   .replace("image: recipe-name.png", `image: ${slug}.png`)
-  .replace('publishedAt: "YYYY-MM-DD"', `publishedAt: "${today}"`);
+  .replace('publishedAt: "YYYY-MM-DDTHH:mm:ss+02:00"', `publishedAt: "${publishedAt}"`);
 
 fs.mkdirSync(imageRoot, { recursive: true });
 fs.writeFileSync(recipePath, recipeContent);

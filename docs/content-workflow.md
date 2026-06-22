@@ -81,7 +81,7 @@ bakeTemperature:
 restTime:
 servings: 4
 image: poke-bowl-z-szarpana-wolowina.png
-publishedAt: "2026-06-12"
+publishedAt: "2026-06-12T11:57:00+02:00"
 ---
 ```
 
@@ -97,7 +97,7 @@ publishedAt: "2026-06-12"
 - `bakeTemperature`: optional oven temperature, for example `180°C`.
 - `servings`: optional serving count. Empty or `0` values are not shown.
 - `image`: single PNG recipe image from `public/images/recipes/`.
-- `publishedAt`: date in `YYYY-MM-DD` format.
+- `publishedAt`: publication date and time in ISO format, for example `YYYY-MM-DDTHH:mm:ss+02:00`. The time keeps newest-first sorting predictable when multiple recipes are added on the same day.
 
 ## Writing Guidelines
 

@@ -14,7 +14,7 @@ export function RecipeMetaItem({ icon, children }: RecipeMetaItemProps) {
         alignItems: 'flex-start',
         gap: 0.45,
         minWidth: 0,
-        maxWidth: 150,
+        maxWidth: '100%',
       }}
     >
       <Box
@@ -34,6 +34,7 @@ export function RecipeMetaItem({ icon, children }: RecipeMetaItemProps) {
           lineHeight: 1.35,
           overflowWrap: 'normal',
           textAlign: 'left',
+          whiteSpace: 'nowrap',
         }}
       >
         {children}
