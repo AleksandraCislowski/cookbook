@@ -73,7 +73,8 @@ const recipeContent = template
   .replace('title: "Nazwa przepisu"', `title: "${title}"`)
   .replace("slug: recipe-name", `slug: ${slug}`)
   .replace("image: recipe-name.png", `image: ${slug}.png`)
-  .replace('publishedAt: "YYYY-MM-DDTHH:mm:ss+02:00"', `publishedAt: "${publishedAt}"`);
+  .replace('publishedAt: "YYYY-MM-DDTHH:mm:ss+02:00"', `publishedAt: "${publishedAt}"`)
+  .replace(/[ \t]+$/gm, "");
 
 fs.mkdirSync(imageRoot, { recursive: true });
 fs.writeFileSync(recipePath, recipeContent);
