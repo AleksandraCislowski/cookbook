@@ -1,5 +1,5 @@
 ---
-title: 'Grilowane kielbaski z serem feta'
+title: 'Grilowane kiełbaski z serem feta'
 slug: grilowane-kielbaski-z-serem-feta
 description: Grillowane kiełbaski nacinane i nadziewane fetą, zapiekane w Ninja Cooker z przyprawą do dań z grilla.
 category: Obiad, Ninja Cooker, Z mięsem,
