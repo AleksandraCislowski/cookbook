@@ -47,6 +47,7 @@ type RecipeFrontmatter = {
   passiveTimeLabel: string;
   advanceNotice: string;
   servings: number;
+  image: string;
   publishedAt: string;
 };
 
@@ -291,6 +292,7 @@ function parseRecipeFile(filename: string): Recipe {
   const frontmatter = parseFrontmatter(frontmatterMatch[1]);
   const markdown = fileContent.slice(frontmatterMatch[0].length);
   const slug = readRequiredString(frontmatter, 'slug');
+  const imageFilename = readOptionalString(frontmatter, 'image') || `${slug}.jpg`;
   const ingredientGroups = readGroupedListItems(getSection(markdown, 'Składniki'));
   const spiceGroups = readGroupedListItems(getSection(markdown, 'Przyprawy'));
 
@@ -309,7 +311,7 @@ function parseRecipeFile(filename: string): Recipe {
     passiveTimeLabel: readOptionalString(frontmatter, 'passiveTimeLabel'),
     advanceNotice: readOptionalString(frontmatter, 'advanceNotice'),
     servings: readOptionalNumber(frontmatter, 'servings'),
-    image: `${RECIPE_IMAGE_DIRECTORY}/${slug}.png`,
+    image: `${RECIPE_IMAGE_DIRECTORY}/${imageFilename}`,
     ingredients: ingredientGroups.flatMap((group) => group.items),
     ingredientGroups,
     spices: spiceGroups.flatMap((group) => group.items),

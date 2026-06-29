@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel:
 advanceNotice:
 servings:
-image: recipe-name.png
+image: recipe-name.jpg
 publishedAt: "YYYY-MM-DDTHH:mm:ss+02:00"
 ---
 

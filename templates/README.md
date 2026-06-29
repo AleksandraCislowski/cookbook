@@ -17,8 +17,14 @@ recipes/recipe-name.md
 Each recipe should have one matching image:
 
 ```txt
-public/images/recipes/recipe-name.png
+public/images/recipes/recipe-name.jpg
 ```
 
 The script is safer than copying the template manually because it keeps the slug
 and markdown filename aligned.
+
+After adding the source image, optimize it:
+
+```bash
+npm run optimize-recipe-image -- recipe-name
+```
