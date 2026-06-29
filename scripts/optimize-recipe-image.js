@@ -16,7 +16,7 @@ function printUsage() {
 Opcje:
   --max-width 1200   Maksymalny dłuższy bok obrazu.
   --quality 82       Jakość JPEG dla sips.
-  --delete-source    Usuń oryginał po utworzeniu .jpg, jeśli miał inny format.`);
+  --keep-source      Zachowaj oryginał po utworzeniu .jpg.`);
 }
 
 function getOptionValue(args, optionName, fallback) {
@@ -113,7 +113,7 @@ function formatBytes(bytes) {
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
 }
 
-function optimizeImage({ deleteSource, imageRoot, input, maxWidth, projectRoot, quality }) {
+function optimizeImage({ imageRoot, input, keepSource, maxWidth, projectRoot, quality }) {
   const slug = getSlugFromInput(input);
 
   if (!slug) {
@@ -161,7 +161,9 @@ function optimizeImage({ deleteSource, imageRoot, input, maxWidth, projectRoot, 
   const afterSize = fs.statSync(outputPath).size;
   const afterDimensions = getImageDimensions(outputPath);
 
-  if (deleteSource && path.resolve(sourcePath) !== path.resolve(outputPath)) {
+  const sourceRemoved = !keepSource && path.resolve(sourcePath) !== path.resolve(outputPath);
+
+  if (sourceRemoved) {
     fs.rmSync(sourcePath);
   }
 
@@ -172,6 +174,7 @@ function optimizeImage({ deleteSource, imageRoot, input, maxWidth, projectRoot, 
       `${formatBytes(beforeSize)} -> ${formatBytes(afterSize)}`,
       afterDimensions ? `(${afterDimensions})` : null,
       recipeUpdated ? "markdown zaktualizowany" : "brak markdown",
+      sourceRemoved ? "oryginał usunięty" : null,
     ]
       .filter(Boolean)
       .join(" "),
@@ -191,7 +194,7 @@ function main() {
   const recipeRoot = path.join(projectRoot, "recipes");
   const maxWidth = getOptionValue(args, "--max-width", DEFAULT_MAX_WIDTH);
   const quality = getOptionValue(args, "--quality", DEFAULT_QUALITY);
-  const deleteSource = args.includes("--delete-source");
+  const keepSource = args.includes("--keep-source");
   const positionalArgs = args.filter(
     (arg, index) =>
       !arg.startsWith("--") &&
@@ -209,9 +212,9 @@ function main() {
       .map((filename) => filename.slice(0, -".md".length))
       .forEach((slug) =>
         optimizeImage({
-          deleteSource,
           imageRoot,
           input: slug,
+          keepSource,
           maxWidth,
           projectRoot,
           quality,
@@ -229,9 +232,9 @@ function main() {
 
   positionalArgs.forEach((input) =>
     optimizeImage({
-      deleteSource,
       imageRoot,
       input,
+      keepSource,
       maxWidth,
       projectRoot,
       quality,

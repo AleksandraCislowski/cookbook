@@ -39,6 +39,10 @@ JPG, HEIC, WebP, or AVIF, then optimize it:
 npm run optimize-recipe-image -- poke-bowl-z-szarpana-wolowina
 ```
 
+The optimizer writes `[slug].jpg`, updates the recipe frontmatter, and removes
+the source image after a successful conversion. Use `--keep-source` only when
+you intentionally want to keep the original file.
+
 To optimize a few newly added recipes before committing, pass all their slugs:
 
 ```bash
