@@ -13,7 +13,7 @@ passiveTime: 5
 passiveTimeLabel: Rozgrzej na - Air Crisp 200°C
 advanceNotice:
 servings: 4
-image: pieczone-pulpety.png
+image: pieczone-pulpety.jpg
 publishedAt: '2026-06-23T07:33:47+02:00'
 ---
 

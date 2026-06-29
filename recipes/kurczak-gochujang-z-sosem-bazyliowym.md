@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel:
 advanceNotice:
 servings: 4
-image: kurczak-gochujang-z-sosem-bazyliowym.png
+image: kurczak-gochujang-z-sosem-bazyliowym.jpg
 publishedAt: '2026-06-21T20:34:00+02:00'
 ---
 

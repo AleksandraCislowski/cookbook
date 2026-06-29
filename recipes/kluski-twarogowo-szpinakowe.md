@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel:
 advanceNotice:
 servings: 12
-image: kluski-twarogowo-szpinakowe.png
+image: kluski-twarogowo-szpinakowe.jpg
 publishedAt: '2026-06-21T12:38:00+02:00'
 ---
 

@@ -13,7 +13,7 @@ passiveTime: 5
 passiveTimeLabel: Rozgrzej na - Air Crisp 180°C
 advanceNotice:
 servings: 4
-image: chipsy-z-jarmuzu.png
+image: chipsy-z-jarmuzu.jpg
 publishedAt: '2026-06-23T07:47:30+02:00'
 ---
 

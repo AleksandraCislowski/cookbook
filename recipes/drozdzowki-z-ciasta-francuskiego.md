@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel:
 advanceNotice:
 servings: 6
-image: drozdzowki-z-ciasta-francuskiego.png
+image: drozdzowki-z-ciasta-francuskiego.jpg
 publishedAt: '2026-06-15'
 ---
 

@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel:
 advanceNotice:
 servings: 4
-image: tiramisu.png
+image: tiramisu.jpg
 publishedAt: '2026-06-22T20:03:00+02:00'
 ---
 

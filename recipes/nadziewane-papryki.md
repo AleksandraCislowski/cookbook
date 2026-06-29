@@ -13,7 +13,7 @@ passiveTime: 5
 passiveTimeLabel: Rozgrzej na - Air Crisp 200°C
 advanceNotice:
 servings: 4
-image: nadziewane-papryki.png
+image: nadziewane-papryki.jpg
 publishedAt: '2026-06-23T07:09:57+02:00'
 ---
 

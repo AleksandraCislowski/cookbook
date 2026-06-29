@@ -13,7 +13,7 @@ passiveTime: 5
 passiveTimeLabel: Rozgrzej na - Air Crisp 200°C
 advanceNotice:
 servings: 2
-image: serowe-kaski.png
+image: serowe-kaski.jpg
 publishedAt: '2026-06-23T06:40:25+02:00'
 ---
 

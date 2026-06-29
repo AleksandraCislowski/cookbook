@@ -13,7 +13,7 @@ passiveTime: 5
 passiveTimeLabel: Rozgrzej na - Grill 240°C
 advanceNotice:
 servings: 2
-image: grilowane-kielbaski-z-serem-feta.png
+image: grilowane-kielbaski-z-serem-feta.jpg
 publishedAt: '2026-06-23T07:59:41+02:00'
 ---
 

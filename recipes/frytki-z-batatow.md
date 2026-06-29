@@ -13,7 +13,7 @@ passiveTime: 5
 passiveTimeLabel: Rozgrzej na - Air Crisp 200°C
 advanceNotice:
 servings: 2
-image: frytki-z-batatow.png
+image: frytki-z-batatow.jpg
 publishedAt: '2026-06-19'
 ---
 

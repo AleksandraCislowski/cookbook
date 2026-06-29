@@ -13,7 +13,7 @@ passiveTime: 480
 passiveTimeLabel: 'mięso w wolnowarze'
 advanceNotice: 'dzień wcześniej'
 servings: 4
-image: poke-bowl-z-szarpana-wolowina.png
+image: poke-bowl-z-szarpana-wolowina.jpg
 publishedAt: '2026-06-12'
 ---
 

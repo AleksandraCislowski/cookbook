@@ -29,20 +29,38 @@ The recipe file is generated from `templates/recipe-template.md`.
 Each recipe uses one image. Add it here:
 
 ```txt
-public/images/recipes/poke-bowl-z-szarpana-wolowina.png
+public/images/recipes/poke-bowl-z-szarpana-wolowina.jpg
 ```
 
-The image filename should match the recipe slug and always use `.png`.
+The image filename should match the recipe slug. Add the source image as PNG,
+JPG, HEIC, WebP, or AVIF, then optimize it:
+
+```bash
+npm run optimize-recipe-image -- poke-bowl-z-szarpana-wolowina
+```
+
+To optimize a few newly added recipes before committing, pass all their slugs:
+
+```bash
+npm run optimize-recipe-image -- poke-bowl-z-szarpana-wolowina tiramisu-matcha makaron-z-pesto
+```
+
+To regenerate every recipe image:
+
+```bash
+npm run optimize-recipe-image -- --all
+```
+
 Make sure the `image` field in frontmatter matches the real filename:
 
 ```yaml
-image: poke-bowl-z-szarpana-wolowina.png
+image: poke-bowl-z-szarpana-wolowina.jpg
 ```
 
 Recommended image size:
 
 ```txt
-1600 x 1200 px
+1200 x 900 px
 ```
 
 Aim for roughly `200-500 KB` per image when possible.
@@ -80,7 +98,7 @@ bakeTime:
 bakeTemperature:
 restTime:
 servings: 4
-image: poke-bowl-z-szarpana-wolowina.png
+image: poke-bowl-z-szarpana-wolowina.jpg
 publishedAt: "2026-06-12T11:57:00+02:00"
 ---
 ```
@@ -96,7 +114,7 @@ publishedAt: "2026-06-12T11:57:00+02:00"
 - `bakeTime`: optional baking time in minutes.
 - `bakeTemperature`: optional oven temperature, for example `180°C`.
 - `servings`: optional serving count. Empty or `0` values are not shown.
-- `image`: single PNG recipe image from `public/images/recipes/`.
+- `image`: optimized recipe image from `public/images/recipes/`, usually `[slug].jpg`.
 - `publishedAt`: publication date and time in ISO format, for example `YYYY-MM-DDTHH:mm:ss+02:00`. The time keeps newest-first sorting predictable when multiple recipes are added on the same day.
 
 ## Writing Guidelines
@@ -114,6 +132,7 @@ Before committing a new recipe:
 - The image exists in `public/images/recipes/[slug].[ext]`.
 - The markdown filename, `slug`, and image filename match.
 - The `image` field matches the real image file.
+- New images were optimized with `npm run optimize-recipe-image -- [slug]`.
 - Frontmatter fields are filled in intentionally.
 - Ingredients, spices, and instructions are not left as template placeholders.
 - `npm run build` passes.

@@ -13,7 +13,7 @@ passiveTime: 5
 passiveTimeLabel: Rozgrzej na - Air Crisp 200°C
 advanceNotice:
 servings: 2
-image: kurczakowe-kaski.png
+image: kurczakowe-kaski.jpg
 publishedAt: '2026-06-23T06:55:16+02:00'
 ---
 

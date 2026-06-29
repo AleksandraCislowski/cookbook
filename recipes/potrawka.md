@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel:
 advanceNotice:
 servings: 4
-image: potrawka.png
+image: potrawka.jpg
 publishedAt: '2026-06-19'
 ---
 

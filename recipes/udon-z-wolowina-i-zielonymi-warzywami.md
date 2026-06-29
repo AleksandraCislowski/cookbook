@@ -13,7 +13,7 @@ passiveTime: 30
 passiveTimeLabel: Marynowanie
 advanceNotice: Minimum pół godziny wcześniej
 servings: 4
-image: udon-z-wolowina-i-zielonymi-warzywami.png
+image: udon-z-wolowina-i-zielonymi-warzywami.jpg
 publishedAt: '2026-06-21T20:51:00+02:00'
 ---
 

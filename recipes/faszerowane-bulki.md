@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel: ''
 advanceNotice: ''
 servings: 4
-image: faszerowane-bulki.png
+image: faszerowane-bulki.jpg
 publishedAt: '2026-06-13'
 ---
 

@@ -13,7 +13,7 @@ passiveTime:
 passiveTimeLabel:
 advanceNotice:
 servings: 4
-image: kurczak-teriyaki.png
+image: kurczak-teriyaki.jpg
 publishedAt: '2026-06-21T11:52:00+02:00'
 ---
 
