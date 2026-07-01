@@ -29,7 +29,7 @@ publishedAt: '2026-06-19'
 - 0,5l rosołu lub bulionu
 - 50g rodzynek
 - 1 łyżka cukru
-- sok z 0,25 cytryny
+- sok z ćwiartki cytryny
 - 60ml śmietanki 30%
 
 ## Przygotowanie

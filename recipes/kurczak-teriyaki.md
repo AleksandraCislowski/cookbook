@@ -22,7 +22,7 @@ publishedAt: '2026-06-21T11:52:00+02:00'
 - 600g filetów z kurczaka
 - 200g ryżu
 - 1 limonka
-- 0.25 główki czerwonej kapusty
+- ćwierć główki czerwonej kapusty
 - 200g edamame
 - 1 ogórek
 - 2 łyżki czarnego sezamu
