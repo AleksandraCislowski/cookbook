@@ -1,7 +1,6 @@
 'use client';
 
 import { Box, Paper, Stack, Typography } from '@mui/material';
-import { useRecipeServings } from '@/components/RecipeServingsContext';
 import type { Recipe } from '@/data/recipes';
 
 type RecipeSpicesProps = {
@@ -9,10 +8,7 @@ type RecipeSpicesProps = {
 };
 
 export function RecipeSpices({ spiceGroups }: RecipeSpicesProps) {
-  const servings = useRecipeServings();
-  const visibleSpiceGroups = servings?.scaledSpiceGroups ?? spiceGroups;
-
-  if (visibleSpiceGroups.length === 0) {
+  if (spiceGroups.length === 0) {
     return null;
   }
 
@@ -28,8 +24,8 @@ export function RecipeSpices({ spiceGroups }: RecipeSpicesProps) {
       <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 1.5 }}>
         Przyprawy
       </Typography>
-      <Stack spacing={visibleSpiceGroups.length > 1 ? 1.75 : 0}>
-        {visibleSpiceGroups.map((group, groupIndex) => (
+      <Stack spacing={spiceGroups.length > 1 ? 1.75 : 0}>
+        {spiceGroups.map((group, groupIndex) => (
           <Box key={`${group.title}-${groupIndex}`}>
             {group.title ? (
               <Typography

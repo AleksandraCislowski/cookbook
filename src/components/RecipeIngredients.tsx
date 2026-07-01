@@ -1,78 +1,25 @@
 'use client';
 
-import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
-import {
-  Box,
-  Paper,
-  Stack,
-  ToggleButton,
-  ToggleButtonGroup,
-  Typography,
-} from '@mui/material';
+import { Box, Paper, Stack, Typography } from '@mui/material';
 import type { Recipe } from '@/data/recipes';
-import { useRecipeServings } from '@/components/RecipeServingsContext';
 
 type RecipeIngredientsProps = {
   ingredientGroups: Recipe['ingredientGroups'];
 };
 
 export function RecipeIngredients({ ingredientGroups }: RecipeIngredientsProps) {
-  const servings = useRecipeServings();
-  const visibleIngredientGroups =
-    servings?.scaledIngredientGroups ?? ingredientGroups;
-
   return (
     <Paper
       className='recipe-ingredients-card print-card'
       variant='outlined'
       sx={{ order: { xs: 3, md: 'initial' }, p: { xs: 2, md: 2.5 } }}
     >
-      <Stack
-        direction='column'
-        spacing={1.25}
-        alignItems='flex-start'
-        sx={{ mb: 2 }}
-      >
-        <Typography variant='h2' sx={{ fontSize: '1.25rem' }}>
-          Składniki
-        </Typography>
+      <Typography variant='h2' sx={{ fontSize: '1.25rem', mb: 2 }}>
+        Składniki
+      </Typography>
 
-        {servings ? (
-          <ToggleButtonGroup
-            exclusive
-            size='small'
-            value={servings.targetServings}
-            aria-label='Liczba porcji'
-            onChange={(_, nextServings: number | null) => {
-              if (nextServings) {
-                servings.setTargetServings(nextServings);
-              }
-            }}
-            sx={{
-              maxWidth: '100%',
-              overflowX: 'auto',
-              '& .MuiToggleButton-root': {
-                minWidth: 42,
-                px: 1,
-              },
-            }}
-          >
-            {servings.portionOptions.map((portionOption) => (
-              <ToggleButton
-                key={portionOption}
-                value={portionOption}
-                aria-label={`${portionOption} porcje`}
-              >
-                <RestaurantMenuIcon sx={{ mr: 0.5, fontSize: '1rem' }} />
-                {portionOption}
-              </ToggleButton>
-            ))}
-          </ToggleButtonGroup>
-        ) : null}
-      </Stack>
-
-      <Stack spacing={visibleIngredientGroups.length > 1 ? 1.75 : 0}>
-        {visibleIngredientGroups.map((group, groupIndex) => (
+      <Stack spacing={ingredientGroups.length > 1 ? 1.75 : 0}>
+        {ingredientGroups.map((group, groupIndex) => (
           <Box key={`${group.title}-${groupIndex}`}>
             {group.title ? (
               <Typography

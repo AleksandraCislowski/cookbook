@@ -21,8 +21,6 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { RecipeActions } from '@/components/RecipeActions';
 import { RecipeIngredients } from '@/components/RecipeIngredients';
-import { RecipeServingsProvider } from '@/components/RecipeServingsContext';
-import { RecipeServingsValue } from '@/components/RecipeServingsValue';
 import { RecipeSpices } from '@/components/RecipeSpices';
 import { getRecipeBySlug, getRecipeSlugs, type Recipe } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
@@ -190,11 +188,6 @@ export default async function RecipePage({ params }: RecipePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeJsonLd) }}
       />
       <Container maxWidth='lg' sx={{ pt: { xs: 2.5, md: 4 } }}>
-        <RecipeServingsProvider
-          baseServings={recipe.servings ?? 1}
-          ingredientGroups={recipe.ingredientGroups}
-          spiceGroups={recipe.spiceGroups}
-        >
         <Stack
           className='no-print'
           direction='row'
@@ -389,11 +382,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
                             overflowWrap: 'break-word',
                           }}
                         >
-                          {label === 'Porcje' ? (
-                            <RecipeServingsValue fallback={value} />
-                          ) : (
-                            value
-                          )}
+                          {value}
                         </Typography>
                       </Box>
                     </Box>
@@ -421,7 +410,6 @@ export default async function RecipePage({ params }: RecipePageProps) {
             ) : null}
           </Stack>
         </Box>
-        </RecipeServingsProvider>
       </Container>
     </Box>
   );
