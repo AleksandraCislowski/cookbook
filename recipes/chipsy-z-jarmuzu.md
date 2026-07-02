@@ -2,8 +2,8 @@
 title: 'Chipsy z jarmużu'
 slug: chipsy-z-jarmuzu
 description: Lekkie chipsy z jarmużu z Ninja Cooker, chrupiące, szybkie i doprawione tylko oliwą oraz solą.
-category: Ninja Cooker, Vege, Przekąska
-cuisine: Domowa
+category: Ninja Cooker, Vege
+cuisine: Nowoczesna
 prepTime:
 cookTime:
 bakeTime: 5

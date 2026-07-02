@@ -3,7 +3,7 @@ title: 'Tiramisu'
 slug: tiramisu
 description: Lekkie proteinowe tiramisu z kremem twarogowo-waniliowym, kakao i biszkoptami nasączonymi kawą.
 category: Deser, Proteinowe
-cuisine: Włoska
+cuisine: Nowoczesna
 prepTime: 15
 cookTime:
 bakeTime:
