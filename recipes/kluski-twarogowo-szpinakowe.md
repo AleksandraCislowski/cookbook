@@ -43,6 +43,7 @@ publishedAt: '2026-06-21T12:38:00+02:00'
 5. Ciasto podziel na części, podsyp blat mąką.
 6. Formuj wałeczki około 2cm grubości, następnie odkrawaj nożem kluski.
 7. Gotuj w osolonej wodzie 3 minuty.
+8. Gotowe, smacznego!
 
 ## Notatki
 

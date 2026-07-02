@@ -42,6 +42,7 @@ publishedAt: '2026-06-21T20:51:00+02:00'
 5. Rozgrzej patelnię i wlej na nią mięso wraz z marynatą.
 6. Podsmaż i poczekaj, aż sos się zredukuje.
 7. Dodaj warzywa i makaron. Całość wymieszaj.
+8. Gotowe, smacznego!
 
 ## Notatki
 

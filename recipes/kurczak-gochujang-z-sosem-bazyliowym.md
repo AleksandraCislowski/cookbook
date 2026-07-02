@@ -51,6 +51,7 @@ publishedAt: '2026-06-21T20:34:00+02:00'
 6. Przełożyć sos na osobną patelnię, zagotować.
 7. Do sosu dodać makaron lub kluski i całość wymieszać.
 8. Wyłożyć na talerz makaron (lub kluski) z sosem, na wierzch dodać mięso.
+9. Gotowe, smacznego!
 
 ## Notatki
 

@@ -36,6 +36,7 @@ publishedAt: '2026-06-22T20:03:00+02:00'
 6. Nałóż na biszkopty kolejną warstwę kremu.
 7. Powtarzaj, aż do zużycia wszystkich składników, pilnując aby ostatnią wierzchnią warstwą był krem.
 8. Wierzch deseru posyp kakao.
+9. Gotowe, smacznego!
 
 ## Notatki
 

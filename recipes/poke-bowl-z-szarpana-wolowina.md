@@ -56,6 +56,7 @@ publishedAt: '2026-06-12'
 4. Ogórka, marchewkę, owoce, awokado i kapustę pokrój na kawałki wygodne do jedzenia.
 5. Czerwoną kapustę dopraw 2 łyżkami octu ryżowego i 1 łyżeczką cukru.
 6. W miskach ułóż ryż, szarpaną wołowinę i dodatki. Polej wybranymi sosami tuż przed podaniem.
+7. Gotowe, smacznego!
 
 ## Notatki
 

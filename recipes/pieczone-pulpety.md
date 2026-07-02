@@ -41,7 +41,8 @@ publishedAt: '2026-06-23T07:33:47+02:00'
 4. Całość farszu dobrze wyrobić ręką, następnie tworzyć średniej wielkości pulpety.
 5. Rozgrzać Ninja Cooker przez 5 minut na 200°C na programie Air Crisp.
 6. Gotowe pulpeciki ułożyć na dwupoziomowej kratce, zwracając uwagę, aby były pomiędzy nimi wolne przestrzenie.
-7. Ustawić Air Crisp na tej samej temperaturze na około 17 minut.
+7. Ustawić Air Crisp na tej samej temperaturze i piec przez około 17 minut.
+8. Gotowe, smacznego!
 
 ## Notatki
 

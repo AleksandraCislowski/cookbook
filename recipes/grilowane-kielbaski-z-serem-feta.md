@@ -33,4 +33,5 @@ publishedAt: '2026-06-23T07:59:41+02:00'
 3. Ser feta pokroić w kostkę lub paski, ułożyć w “łódeczkach” z kiełbasy.
 4. Posypać przyprawą do grilla.
 5. Przełożyć kiełbaski na kratkę do pieczenia.
-6. Ustawić Grill na tej samej temperaturze na 15 minut.
+6. Ustawić Grill na tej samej temperaturze i piec przez 15 minut.
+7. Gotowe, smacznego!

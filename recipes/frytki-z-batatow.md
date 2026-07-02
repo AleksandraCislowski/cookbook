@@ -30,9 +30,10 @@ publishedAt: '2026-06-19'
 
 1. Rozgrzej Ninja Cooker przez 5 minut na 200°C na programie Air Crisp.
 2. Zamrożone frytki wsyp do koszyczka, skrop oliwą.
-3. Ustawić Air Crisp na tej samej temperaturze na 16 minut.
+3. Ustawić Air Crisp na tej samej temperaturze i piec przez 16 minut.
 4. W połowie programu, otworzyć i przemieszać frytki.
 5. Przed podaniem posypać solą.
+6. Gotowe, smacznego!
 
 ## Notatki
 

@@ -36,7 +36,6 @@ publishedAt: '2026-06-23T07:09:57+02:00'
 - oregano
 
 ## Przygotowanie
-
 1. Odciąć wierzch każdej z papryk tworząc “czapeczki”.
 2. Wydrążyć papryki z gniazd nasiennych.
 3. Na rozgrzanej patelni podsmażyć mięso wraz z przyprawami (ilości wg uznania), kukurydzą, cebulą pokrojoną w kostkę i czosnkiem przeciśniętym przez praskę.
@@ -45,4 +44,5 @@ publishedAt: '2026-06-23T07:09:57+02:00'
 6. Posypać serem w wiórkach i założyć na wierzch “czapeczki”.
 7. Rozgrzać Ninja Cooker przez 5 minut na 200°C na programie Air Crisp.
 8. Ustawić papryki pionowo w koszyczku.
-9. Ustawić Air Crisp na tej samej temperaturze na 15 minut.
+9. Ustawić Air Crisp na tej samej temperaturze i piec przez 15 minut.
+10. Gotowe, smacznego!

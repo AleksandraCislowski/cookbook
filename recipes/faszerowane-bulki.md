@@ -45,6 +45,7 @@ publishedAt: '2026-06-13'
 4. Bułki przekrój zgodnie z liniami wypieku, żeby utworzyć gniazdo w środku każdej z nich.
 5. Nakładaj farsz do środka, starając się nie rozerwać wierzchu bułek.
 6. Posyp startym serem i piecz w 200°C przez około 15 minut, aż bułki będą chrupiące, a ser się roztopi i lekko zarumieni.
+7. Gotowe, smacznego!
 
 ## Notatki
 

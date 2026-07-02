@@ -54,6 +54,7 @@ publishedAt: '2026-06-21T11:52:00+02:00'
 7. Zagotuj całość i zredukuj sos, aż będzie lśniący i gęsty.
 8. Na talerzu ułóż warzywa, ryż i kurczaka z sosem.
 9. Posyp sezamem i skrop sokiem z limonki.
+10. Gotowe, smacznego!
 
 ## Notatki
 

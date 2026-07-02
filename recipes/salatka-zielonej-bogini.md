@@ -40,6 +40,7 @@ publishedAt: '2026-07-01T07:27:34+02:00'
 2. Pokrój kapustę, ogórka i szczypiorek na małe kawałki, przełóż do miski.
 3. W kielichu blendera umieść wszystkie składniki na dressing, zblenduj na gładką masę.
 4. Wymieszaj dressing z warzywami.
+5. Gotowe, smacznego!
 
 ## Notatki
 
