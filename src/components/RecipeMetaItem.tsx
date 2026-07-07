@@ -31,10 +31,10 @@ export function RecipeMetaItem({ icon, children }: RecipeMetaItemProps) {
         variant='body2'
         sx={{
           minWidth: 0,
-          lineHeight: 1.35,
-          overflowWrap: 'normal',
+          lineHeight: 1.4,
+          overflowWrap: 'anywhere',
           textAlign: 'left',
-          whiteSpace: 'nowrap',
+          whiteSpace: 'normal',
         }}
       >
         {children}

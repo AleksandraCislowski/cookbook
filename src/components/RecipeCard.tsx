@@ -1,4 +1,11 @@
-import { Box, Card, CardActionArea, Chip, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardActionArea,
+  Chip,
+  Stack,
+  Typography,
+} from '@mui/material';
 import Link from 'next/link';
 import { RecipeImage } from '@/components/RecipeImage';
 import { RecipeMetaList } from '@/components/RecipeMetaList';
@@ -56,21 +63,30 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
             variant='h3'
             sx={{
               display: '-webkit-box',
-              minHeight: 48,
+              minHeight: 56,
               overflow: 'hidden',
-              fontSize: '1.05rem',
-              lineHeight: 1.2,
+              fontSize: '1.08rem',
+              fontWeight: 700,
+              lineHeight: 1.25,
               mb: 0.75,
               WebkitBoxOrient: 'vertical',
               WebkitLineClamp: 2,
+              letterSpacing: '0.01em',
             }}
           >
             {recipe.title}
           </Typography>
           <Typography
+            variant='body2'
             color='text.secondary'
             sx={{
-              minHeight: 76,
+              display: '-webkit-box',
+              minHeight: 70,
+              overflow: 'hidden',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 3,
+              lineHeight: 1.55,
+              letterSpacing: '0.01em',
             }}
           >
             {recipe.description}
