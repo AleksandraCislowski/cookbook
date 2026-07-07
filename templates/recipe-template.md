@@ -1,5 +1,5 @@
 ---
-title: "Nazwa przepisu"
+title: 'Nazwa przepisu'
 slug: recipe-name
 description: Krótki, konkretny opis do kart, wyszukiwarki i podglądu przepisu.
 category: Obiad
@@ -14,7 +14,7 @@ passiveTimeLabel:
 advanceNotice:
 servings:
 image: recipe-name.jpg
-publishedAt: "YYYY-MM-DDTHH:mm:ss+02:00"
+publishedAt: 'YYYY-MM-DDTHH:mm:ss+02:00'
 ---
 
 ## Składniki
@@ -32,6 +32,7 @@ publishedAt: "YYYY-MM-DDTHH:mm:ss+02:00"
 1. Zacznij od pierwszego konkretnego kroku.
 2. Dodaj kolejny ważny etap.
 3. Zakończ podaniem, odpoczynkiem albo doprawieniem.
+4. Gotowe, smacznego!
 
 ## Notatki
 
