@@ -27,6 +27,7 @@ publishedAt: '2026-07-13T06:47:50+02:00'
 - ćwierć główki czerwonej kapusty
 - 1 marchewka
 - pół pora
+- sok z połówki cytryny
 
 ## Przyprawy
 
@@ -47,7 +48,7 @@ publishedAt: '2026-07-13T06:47:50+02:00'
 5. Dusić pod przykryciem na małym ogniu przez 25 minut.
 6. Na tarce zetrzeć białą i czerwoną kapustę oraz marchew, przełożyć wszystko do miski.
 7. Pokroić drobno por i dodać do surówki.
-8. Dodać majonez, jogurt oraz chrzan, doprawić solą i pieprzem do smaku.
+8. Dodać majonez, jogurt, chrzan oraz sok z cytryny, następnie doprawić solą i pieprzem do smaku.
 9. Gotowe, smacznego!
 
 ## Notatki
