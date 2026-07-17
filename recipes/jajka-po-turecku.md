@@ -45,3 +45,5 @@ publishedAt: '2026-06-30T18:35:57+02:00'
 Jak przygotować jajka w koszulkach?
 
 Zagotuj wodę, następnie zmniejsz ogień i zamieszaj wodę, aż powstanie mały wir. Wbijaj po jednym jajku i gotuj, aż do całkowitego ścięcia się białka.
+
+Do przepisu można wykorzystać także jajka na miękko.
