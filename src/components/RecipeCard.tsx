@@ -68,29 +68,38 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
               fontSize: '1.08rem',
               fontWeight: 700,
               lineHeight: 1.25,
-              mb: 0.75,
+              mb: 1,
               WebkitBoxOrient: 'vertical',
               WebkitLineClamp: { xs: 'unset', sm: 2 },
               letterSpacing: '0.01em',
+              flexShrink: 0,
             }}
           >
             {recipe.title}
           </Typography>
-          <Typography
-            variant='body2'
-            color='text.secondary'
+          <Box
             sx={{
-              display: '-webkit-box',
-              minHeight: 70,
-              overflow: 'hidden',
-              WebkitBoxOrient: 'vertical',
-              WebkitLineClamp: 3,
-              lineHeight: 1.55,
-              letterSpacing: '0.01em',
+              display: 'flex',
+              flex: 1,
+              alignItems: 'center',
+              mb: 1,
             }}
           >
-            {recipe.description}
-          </Typography>
+            <Typography
+              variant='body2'
+              color='text.secondary'
+              sx={{
+                display: '-webkit-box',
+                overflow: 'hidden',
+                WebkitBoxOrient: 'vertical',
+                WebkitLineClamp: 3,
+                lineHeight: 1.55,
+                letterSpacing: '0.01em',
+              }}
+            >
+              {recipe.description}
+            </Typography>
+          </Box>
           <Box
             sx={{
               mt: 'auto',
