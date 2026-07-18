@@ -63,14 +63,14 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
             variant='h3'
             sx={{
               display: '-webkit-box',
-              minHeight: 56,
+              minHeight: 'auto',
               overflow: 'hidden',
               fontSize: '1.08rem',
               fontWeight: 700,
               lineHeight: 1.25,
               mb: 0.75,
               WebkitBoxOrient: 'vertical',
-              WebkitLineClamp: 2,
+              WebkitLineClamp: { xs: 'unset', sm: 2 },
               letterSpacing: '0.01em',
             }}
           >
