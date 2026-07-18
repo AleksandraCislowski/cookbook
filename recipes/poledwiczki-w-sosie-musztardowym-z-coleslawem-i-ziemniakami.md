@@ -53,4 +53,4 @@ publishedAt: '2026-07-13T06:47:50+02:00'
 
 ## Notatki
 
-Opcjonalnie do coleslawa i na ziemniaki można dodać koperek.
+Opcjonalnie do coleslawa i na ziemniaki można dodać koperek. W razie potrzeby sos zagęścić do porządanej konsystencji.
