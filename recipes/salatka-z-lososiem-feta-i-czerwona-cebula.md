@@ -2,7 +2,7 @@
 title: 'Sałatka z łososiem, fetą i czerwoną cebulą'
 slug: salatka-z-lososiem-feta-i-czerwona-cebula
 description: Świeża i sycąca sałatka z miękkimi kawałkami smażonego łososia, słoną fetą i cytrynowym dressingiem.
-category: Obiad, Z rybą
+category: Obiad, Z rybą, Sałatka
 cuisine: Domowa
 prepTime: 10
 cookTime: 5
