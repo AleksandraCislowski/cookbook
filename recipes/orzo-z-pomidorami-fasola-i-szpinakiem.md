@@ -26,7 +26,7 @@ publishedAt: '2026-07-19T19:25:29+02:00'
 - 100g szpinaku
 - 1 czerwona cebula
 - 2 ząbki czosnku
-- 500ml bulionu
+- 400ml bulionu
 - 2 łyżki keczupu
 
 ## Przyprawy
