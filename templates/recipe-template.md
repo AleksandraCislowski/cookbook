@@ -24,8 +24,8 @@ publishedAt: 'YYYY-MM-DDTHH:mm:ss+02:00'
 
 ## Przyprawy
 
-- 1 przyprawa
-- Sól i pieprz
+- sól
+- pieprz
 
 ## Przygotowanie
 
