@@ -27,7 +27,7 @@ publishedAt: '2026-08-03T20:53:35+02:00'
 
 ### Pita
 
-- 40g drożdży
+- 40g świeżych drożdży
 - 60g ciepłej wody
 - 360g jogurtu greckiego
 - 280g mąki pszennej
