@@ -4,7 +4,7 @@ slug: szaszlyki-z-tortilli
 description: Szybkie i chrupiące szaszłyki z tortilli, wypełnione aromatycznym mięsem mielonym.
 category: Obiad, Z mięsem
 cuisine: Fast food
-prepTime: 5
+prepTime: 15
 cookTime:
 bakeTime: 40
 bakeTemperature: 200°C
