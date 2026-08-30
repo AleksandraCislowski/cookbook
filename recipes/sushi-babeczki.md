@@ -21,7 +21,7 @@ publishedAt: '2026-07-01T07:28:18+02:00'
 
 ### Ryż do sushi
 
-- 250g ryżu
+- 250g ryżu do sushi
 - 300ml wody
 - łyżeczka soli
 - 50ml octu ryżowego
@@ -45,17 +45,16 @@ publishedAt: '2026-07-01T07:28:18+02:00'
 
 ## Przygotowanie
 
-1. Odważony ryż przełożyć na sitko, przepłukać gorącą wodą.
-2. Do naczynia Ninja Cooker wsypać ryż, sól i zalać wodą.
-3. Nastawić na program Pressure, z zamkniętym odpowietrznikiem, na 3 minuty. Następnie odczekać jeszcze 10 minut, a potem wypuścić pozostałą parę.
-4. Do ryżu dodać cukier i ocet ryżowy, dobrze wymieszać.
-5. Surowego łososia pokroić w kostkę. Dodać do niego sos sojowy, olej sezamowy oraz miód i dokładnie wymieszać.
-6. Foremkę na babeczki wyłożyć arkuszami nori (można lekko naciąć w rogach, aby lepiej dopasować je do kształtu foremek). Nakładać do środka porcje ryżu, lekko docisnąć.
-7. Na wierzch ryżu ułożyć surowego łososia.
-8. Piec w 220°C przez 7 minut.
-9. W tym czasie pokroić pozostałe dodatki.
-10. Po wyjęciu z piekarnika przełożyć na talerz, na wierzch łososia ułożyć ogórka i awokado. Posypać sezamem, polać ulubionymi sosami.
-11. Gotowe, smacznego!
+1. Do naczynia Ninja Cooker wsypać ryż, sól i zalać wodą.
+2. Nastawić na program Pressure, z zamkniętym odpowietrznikiem, na 3 minuty. Następnie odczekać jeszcze 10 minut, a potem wypuścić pozostałą parę.
+3. Do ryżu dodać cukier i ocet ryżowy, dobrze wymieszać.
+4. Surowego łososia pokroić w kostkę. Dodać do niego sos sojowy, olej sezamowy oraz miód i dokładnie wymieszać.
+5. Foremkę na babeczki wyłożyć arkuszami nori (można lekko naciąć w rogach, aby lepiej dopasować je do kształtu foremek). Nakładać do środka porcje ryżu, lekko docisnąć.
+6. Na wierzch ryżu ułożyć surowego łososia.
+7. Piec w 220°C przez 7 minut.
+8. W tym czasie pokroić pozostałe dodatki.
+9. Po wyjęciu z piekarnika przełożyć na talerz, na wierzch łososia ułożyć ogórka i awokado. Posypać sezamem, polać ulubionymi sosami.
+10. Gotowe, smacznego!
 
 ## Notatki
 
