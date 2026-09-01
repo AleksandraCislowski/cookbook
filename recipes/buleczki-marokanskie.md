@@ -4,7 +4,7 @@ slug: buleczki-marokanskie
 description: Puszyste bułeczki z farszem z mięsa mielonego, papryki i roztopionego sera.
 category: Obiad, Z mięsem
 cuisine: Fast food
-prepTime: 15
+prepTime:
 cookTime: 25
 bakeTime:
 bakeTemperature:

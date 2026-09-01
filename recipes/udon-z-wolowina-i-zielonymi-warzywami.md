@@ -4,8 +4,8 @@ slug: udon-z-wolowina-i-zielonymi-warzywami
 description: Smażony udon z marynowaną wołowiną, zielonymi warzywami i słodko-słonym sosem sojowym.
 category: Obiad, Z mięsem
 cuisine: Azjatycka
-prepTime: 15
-cookTime: 15
+prepTime:
+cookTime: 30
 bakeTime:
 bakeTemperature:
 restTime:

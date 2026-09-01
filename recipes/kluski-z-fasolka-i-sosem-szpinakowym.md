@@ -4,8 +4,8 @@ slug: kluski-z-fasolka-i-sosem-szpinakowym
 description: Kremowy, zielony sos szpinakowy z fasolką szparagową i makaronem.
 category: Obiad, Proteinowe, Vege, Blender
 cuisine: Nowoczesna
-prepTime: 15
-cookTime: 5
+prepTime: 30
+cookTime:
 bakeTime:
 bakeTemperature:
 restTime:

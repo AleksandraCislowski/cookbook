@@ -4,7 +4,7 @@ slug: jajka-po-turecku
 description: Kremowe jajka po turecku z czosnkowym jogurtem, masłem z wędzoną papryką i pieczywem do podania.
 category: Śniadanie, Vege
 cuisine: Nowoczesna
-prepTime: 10
+prepTime:
 cookTime: 10
 bakeTime:
 bakeTemperature:

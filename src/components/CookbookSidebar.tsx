@@ -120,8 +120,8 @@ export function CookbookSidebar({
               onChange={(event) => onSortChange(event.target.value)}
             >
               <MenuItem value='newest'>Najnowsze</MenuItem>
-              <MenuItem value='fastest'>Najszybsze</MenuItem>
-              <MenuItem value='title'>Tytuł A-Z</MenuItem>
+              <MenuItem value='oldest'>Najstarsze</MenuItem>
+              <MenuItem value='title'>Alfabetycznie</MenuItem>
             </Select>
           </FormControl>
           <Button

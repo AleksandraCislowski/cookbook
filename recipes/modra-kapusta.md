@@ -4,8 +4,8 @@ slug: modra-kapusta
 description: Klasyczna modra kapusta duszona z jabłkiem przyprawami, doskonała jako dodatek do klasycznego obiadu.
 category: Sałatka, Vege
 cuisine: Domowa
-prepTime: 10
-cookTime: 30
+prepTime:
+cookTime: 20
 bakeTime:
 bakeTemperature:
 restTime:

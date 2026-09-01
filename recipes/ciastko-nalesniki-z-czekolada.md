@@ -4,7 +4,7 @@ slug: ciastko-nalesniki-z-czekolada
 description: Delikatne ciasteczka przypominające mini naleśniki, z twarogową bazą i kawałkami czekolady — szybki, domowy deser idealny do kawy i jako przekąska.
 category: Deser, Przekąska, Blender
 cuisine: Domowa
-prepTime: 15
+prepTime:
 cookTime:
 bakeTime: 13
 bakeTemperature: 175°C

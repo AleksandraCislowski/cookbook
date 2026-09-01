@@ -4,7 +4,7 @@ slug: kurczak-alfredo
 description: Kremowy makaron z kurczakiem i lżejszym sosem alfredo z serka wiejskiego, jogurtu greckiego i czosnku.
 category: Obiad, Proteinowe, Z mięsem, Blender
 cuisine: Nowoczesna
-prepTime: 10
+prepTime:
 cookTime: 20
 bakeTime:
 bakeTemperature:

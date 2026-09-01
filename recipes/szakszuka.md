@@ -4,8 +4,8 @@ slug: szakszuka
 description: Pikantna szakszuka z soczystymi pomidorami, jajkami sadzonymi na miękkim białku i aromatycznym szczypiorkiem.
 category: Śniadanie, Vege
 cuisine: Domowa
-prepTime: 5
-cookTime: 10
+prepTime:
+cookTime: 15
 bakeTime:
 bakeTemperature:
 restTime:

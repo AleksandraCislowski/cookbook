@@ -4,8 +4,8 @@ slug: orzo-z-pomidorami-fasola-i-szpinakiem
 description: Aromatyczne orzo z soczystymi pomidorami, fasolą i świeżym szpinakiem — szybki wegetariański obiad na bazie bulionu.
 category: Obiad, Vege, Z wczorajszego rosołu
 cuisine: Nowoczesna
-prepTime: 10
-cookTime: 12
+prepTime:
+cookTime: 8
 bakeTime:
 bakeTemperature:
 restTime:

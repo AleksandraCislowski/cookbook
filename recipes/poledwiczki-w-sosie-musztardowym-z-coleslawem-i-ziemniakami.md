@@ -4,7 +4,7 @@ slug: poledwiczki-w-sosie-musztardowym-z-coleslawem-i-ziemniakami
 description: Soczyste polędwiczki w aksamitnym sosie musztardowym podane z coleslawem i pieczonymi ziemniakami.
 category: Obiad, Z mięsem
 cuisine: Domowa
-prepTime: 30
+prepTime:
 cookTime: 25
 bakeTime:
 bakeTemperature:

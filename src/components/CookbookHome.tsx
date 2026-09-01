@@ -11,9 +11,6 @@ import {
 import { RandomRecipeDialog } from '@/components/RandomRecipeDialog';
 import { RecipeResults } from '@/components/RecipeResults';
 import type { Recipe } from '@/data/recipes';
-import { getTotalTime } from '@/utils/recipeDisplay';
-
-const QUICK_RECIPE_MAX_TIME = 30;
 
 type RandomRecipePool = {
   key: string;
@@ -48,9 +45,10 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const categoryOptions = useMemo(
     () => [
       ALL_RECIPES_FILTER,
-      ...Array.from(new Set(recipes.flatMap((recipe) => recipe.categories))).sort(
-        (firstCategory, secondCategory) =>
-          firstCategory.localeCompare(secondCategory, 'pl'),
+      ...Array.from(
+        new Set(recipes.flatMap((recipe) => recipe.categories)),
+      ).sort((firstCategory, secondCategory) =>
+        firstCategory.localeCompare(secondCategory, 'pl'),
       ),
     ],
     [recipes],
@@ -91,13 +89,8 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
       )
       .filter((recipe) => matchesSearch(recipe, searchTerm))
       .sort((firstRecipe, secondRecipe) => {
-        if (sort === 'fastest') {
-          const firstTime =
-            getTotalTime(firstRecipe) || Number.POSITIVE_INFINITY;
-          const secondTime =
-            getTotalTime(secondRecipe) || Number.POSITIVE_INFINITY;
-
-          return firstTime - secondTime;
+        if (sort === 'oldest') {
+          return firstRecipe.addedDate.localeCompare(secondRecipe.addedDate);
         }
 
         if (sort === 'title') {
@@ -110,18 +103,6 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
 
   const stats = [
     { label: 'Przepisy', value: recipes.length },
-    {
-      label: 'Szybkie dania',
-      value: recipes.filter((recipe) => {
-        const totalTime = getTotalTime(recipe);
-
-        return (
-          totalTime > 0 &&
-          totalTime <= QUICK_RECIPE_MAX_TIME &&
-          !recipe.advanceNotice
-        );
-      }).length,
-    },
     { label: 'Kategorie', value: categoryOptions.length - 1 },
     { label: 'Kuchnie', value: cuisineOptions.length - 1 },
   ];
@@ -164,8 +145,9 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
 
     setRandomRecipePool({
       key: poolKey,
-      remainingSlugs: (
-        isContinuingPool ? remainingSlugs : filteredRecipeSlugs
+      remainingSlugs: (isContinuingPool
+        ? remainingSlugs
+        : filteredRecipeSlugs
       ).filter((slug) => slug !== nextRecipe.slug),
     });
     setRandomRecipe(nextRecipe);
@@ -175,11 +157,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     <Box sx={{ minHeight: '100vh', pb: 6 }}>
       <CookbookHeader />
 
-      <Container
-        component='main'
-        maxWidth='xl'
-        sx={{ pt: { xs: 3, md: 4 } }}
-      >
+      <Container component='main' maxWidth='xl' sx={{ pt: { xs: 3, md: 4 } }}>
         <Box
           sx={{
             display: 'grid',

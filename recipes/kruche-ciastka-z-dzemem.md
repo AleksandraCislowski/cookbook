@@ -4,7 +4,7 @@ slug: kruche-ciastka-z-dzemem
 description: Maślane kruche ciastka ze środkiem z ulubionego dżemu.
 category: Deser
 cuisine: Domowa
-prepTime: 30
+prepTime:
 cookTime:
 bakeTime: 30
 bakeTemperature: 180°C

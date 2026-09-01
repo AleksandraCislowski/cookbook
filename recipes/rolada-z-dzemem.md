@@ -4,7 +4,7 @@ slug: rolada-z-dzemem
 description: Delikatna rolada biszkoptowa zwinięta z ulubionym dżemem — szybki deser na każdą okazję.
 category: Deser
 cuisine: Domowa
-prepTime: 10
+prepTime:
 cookTime:
 bakeTime: 10
 bakeTemperature: 190°C

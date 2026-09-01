@@ -4,12 +4,12 @@ slug: pierozki-baozi
 description: Parowane pierożki baozi z aromatycznym farszem wieprzowym, marchewką i sosem sojowym — miękkie, soczyste i idealne na rodzinny obiad.
 category: Obiad, Z mięsem, Ninja Cooker, Proteinowe
 cuisine: Azjatycka
-prepTime: 60
-cookTime:
+prepTime:
+cookTime: 10
 bakeTime:
 bakeTemperature:
 restTime:
-passiveTime: 10
+passiveTime:
 passiveTimeLabel: Gotowanie na parze
 advanceNotice:
 servings: 5

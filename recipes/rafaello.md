@@ -4,7 +4,7 @@ slug: rafaello
 description: Delikatny domowy deser z kremem kokosowym i chrupiącymi krakersami.
 category: Deser
 cuisine: Domowa
-prepTime: 30
+prepTime:
 cookTime:
 bakeTime:
 bakeTemperature:

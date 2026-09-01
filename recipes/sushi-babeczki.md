@@ -4,7 +4,7 @@ slug: sushi-babeczki
 description: Mini sushi w formie babeczek z ryżem, łososiem i warzywami.
 category: Obiad, Przekąska, Ninja Cooker, Z rybą
 cuisine: Azjatycka
-prepTime: 10
+prepTime:
 cookTime:
 bakeTime: 7
 bakeTemperature: 220°C

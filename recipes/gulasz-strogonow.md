@@ -4,7 +4,7 @@ slug: gulasz-strogonow
 description: Kremowy gulasz z delikatną wołowiną duszoną w aromatycznym sosie.
 category: Obiad, Z mięsem, Ninja Cooker
 cuisine: Domowa
-prepTime: 15
+prepTime:
 cookTime:
 bakeTime:
 bakeTemperature:

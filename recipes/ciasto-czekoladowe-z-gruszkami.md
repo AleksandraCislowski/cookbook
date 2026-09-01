@@ -4,7 +4,7 @@ slug: ciasto-czekoladowe-z-gruszkami
 description: Wilgotne ciasto czekoladowe z kawałkami soczystych gruszek — idealne na deser dla całej rodziny.
 category: Deser
 cuisine: Domowa
-prepTime: 15
+prepTime:
 cookTime:
 bakeTime: 60
 bakeTemperature: 180°C

@@ -4,7 +4,7 @@ slug: grilowane-kielbaski-z-serem-feta
 description: Grillowane kiełbaski nacinane i nadziewane fetą, zapiekane w Ninja Cooker z przyprawą do dań z grilla.
 category: Obiad, Ninja Cooker, Z mięsem,
 cuisine: Domowa
-prepTime: 3
+prepTime:
 cookTime:
 bakeTime: 15
 bakeTemperature: 240°C

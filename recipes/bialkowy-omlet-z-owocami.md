@@ -4,7 +4,7 @@ slug: bialkowy-omlet-z-owocami
 description: Lekki, puszysty omlet z jajek i jogurtu z owocowym dodatkiem malin i borówek.
 category: Śniadanie, Proteinowe, Deser
 cuisine: Domowa
-prepTime: 5
+prepTime:
 cookTime: 10
 bakeTime:
 bakeTemperature:

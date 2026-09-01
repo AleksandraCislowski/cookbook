@@ -4,7 +4,7 @@ slug: marchewkowe-wrapy
 description: Lekki wrap z marchewkowego placka, z kurczakiem i sosem czosnkowym.
 category: Obiad, Śniadanie, Z mięsem
 cuisine: Nowoczesna
-prepTime: 8
+prepTime:
 cookTime:
 bakeTime: 22
 bakeTemperature: 180°C

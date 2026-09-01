@@ -4,14 +4,14 @@ slug: poke-bowl-z-szarpana-wolowina
 description: Kolorowa miska z ryżem, soczystą szarpaną wołowiną, chrupiącymi warzywami, mango i sojowo-limonkowym sosem.
 category: Obiad , Ninja Cooker, Z mięsem
 cuisine: Azjatycka
-prepTime: 30
-cookTime: 15
-bakeTime: 0
-bakeTemperature: ''
-restTime: 0
+prepTime:
+cookTime:
+bakeTime:
+bakeTemperature:
+restTime:
 passiveTime: 480
-passiveTimeLabel: 'mięso w wolnowarze'
-advanceNotice: 'dzień wcześniej'
+passiveTimeLabel: Slow Cook (wolnowar)
+advanceNotice:
 servings: 4
 image: poke-bowl-z-szarpana-wolowina.jpg
 publishedAt: '2026-06-12'
@@ -50,7 +50,7 @@ publishedAt: '2026-06-12'
 
 ## Przygotowanie
 
-1. Dzień wcześniej osusz wołowinę, dopraw ją solą i pieprzem, a następnie wstaw do wolnowaru na 8 godzin.
+1. Osusz wołowinę, dopraw ją solą i pieprzem, a następnie wstaw do wolnowaru na 8 godzin.
 2. Gotowe mięso poszarp widelcem i podziel na porcje. Jeśli jest zbyt suche, wymieszaj je z sosem sojowym, wodą i miodem w proporcji 1:1:0,5.
 3. Ryż ugotuj zgodnie z instrukcją na opakowaniu.
 4. Ogórka, marchewkę, owoce, awokado i kapustę pokrój na kawałki wygodne do jedzenia.

@@ -4,8 +4,8 @@ slug: pita-z-gyrosem
 description: Mięsna pita z aromatycznym kurczakiem i świeżymi warzywami.
 category: Obiad, Z mięsem
 cuisine: Fast food
-prepTime: 15
-cookTime: 25
+prepTime:
+cookTime: 6
 bakeTime:
 bakeTemperature:
 restTime:

@@ -4,8 +4,8 @@ slug: potrawka
 description: Kremowy, lekko słodko-kwaśny sos z rodzynkami i cytryną, idealny do ryżu, kurczaka i warzyw z rosołu.
 category: Obiad, Z mięsem, Z wczorajszego rosołu
 cuisine: Domowa
-prepTime: 5
-cookTime: 15
+prepTime:
+cookTime: 20
 bakeTime:
 bakeTemperature:
 restTime:

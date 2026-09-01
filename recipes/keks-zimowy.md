@@ -4,7 +4,7 @@ slug: keks-zimowy
 description: Ciasto z jabłkami i bakaliami — aromatyczny, prosty deser na każdą okazję.
 category: Deser
 cuisine: Domowa
-prepTime: 10
+prepTime:
 cookTime:
 bakeTime: 60
 bakeTemperature: 180°C

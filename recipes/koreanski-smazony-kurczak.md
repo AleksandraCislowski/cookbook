@@ -4,7 +4,7 @@ slug: koreanski-smazony-kurczak
 description: Pikantny koreański kurczak w chrupiącej panierce, podawany z aromatycznym sosem gochujang i ryżem.
 category: Obiad, Z mięsem, Ninja Cooker
 cuisine: Azjatycka
-prepTime: 20
+prepTime:
 cookTime:
 bakeTime: 16
 bakeTemperature: 180°C

@@ -4,8 +4,8 @@ slug: kurczak-w-sosie-pomaranczowym
 description: Soczysty kurczak w aromatycznym sosie pomarańczowym — słodko-kwaśny, prosty i bardzo smaczny.
 category: Obiad, Z mięsem, Ninja Cooker
 cuisine: Azjatycka
-prepTime: 20
-cookTime: 5
+prepTime:
+cookTime:
 bakeTime: 16
 bakeTemperature: 180°C
 restTime:

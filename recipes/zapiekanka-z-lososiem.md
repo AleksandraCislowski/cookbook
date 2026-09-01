@@ -4,7 +4,7 @@ slug: zapiekanka-z-lososiem
 description: Sycąca zapiekanka z łososiem, serkiem wiejskim i fetą, z pomidorkami i szpinakiem — prosty, aromatyczny obiad.
 category: Obiad, Z rybą, Proteinowe
 cuisine: Domowa
-prepTime: 15
+prepTime:
 cookTime:
 bakeTime: 60
 bakeTemperature: 180°C

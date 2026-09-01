@@ -4,7 +4,7 @@ slug: jogurtowe-babeczki-z-owocami
 description: Delikatne babeczki na jogurcie z sezonowymi owocami i kruszonką, idealne na popołudniową przekąskę lub deser.
 category: Deser, Przekąska
 cuisine: Domowa
-prepTime: 10
+prepTime:
 cookTime:
 bakeTime: 25
 bakeTemperature: 180°C

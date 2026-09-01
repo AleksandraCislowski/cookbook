@@ -4,14 +4,14 @@ slug: faszerowane-bulki
 description: Chrupiące kajzerki wypełnione farszem z kurczaka, papryki, cebuli i mozzarelli, zapiekane do roztopienia sera.
 category: Śniadanie, Z mięsem
 cuisine: Domowa
-prepTime: 20
-cookTime: 0
+prepTime:
+cookTime:
 bakeTime: 15
 bakeTemperature: 200°C
 restTime: 0
 passiveTime:
-passiveTimeLabel: ''
-advanceNotice: ''
+passiveTimeLabel:
+advanceNotice:
 servings: 4
 image: faszerowane-bulki.jpg
 publishedAt: '2026-06-13'

@@ -4,7 +4,7 @@ slug: ciasto-cynamonowe
 description: Aromatyczne ciasto cynamonowe — miękkie i wilgotne, idealne do popołudniowej herbaty.
 category: Deser
 cuisine: Domowa
-prepTime: 10
+prepTime:
 cookTime:
 bakeTime: 45
 bakeTemperature: 180°C

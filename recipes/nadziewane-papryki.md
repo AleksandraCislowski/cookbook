@@ -4,8 +4,8 @@ slug: nadziewane-papryki
 description: Nadziewane papryki z mięsem mielonym, passatą pomidorową i kremowym serkiem w środku, zapiekane w Ninja Cooker pod warstwą sera.
 category: Obiad, Ninja Cooker, Z mięsem,
 cuisine: Domowa
-prepTime: 5
-cookTime: 10
+prepTime:
+cookTime:
 bakeTime: 15
 bakeTemperature: 200°C
 restTime:
@@ -36,6 +36,7 @@ publishedAt: '2026-06-23T07:09:57+02:00'
 - oregano
 
 ## Przygotowanie
+
 1. Odciąć wierzch każdej z papryk tworząc “czapeczki”.
 2. Wydrążyć papryki z gniazd nasiennych.
 3. Na rozgrzanej patelni podsmażyć mięso wraz z przyprawami (ilości wg uznania), kukurydzą, cebulą pokrojoną w kostkę i czosnkiem przeciśniętym przez praskę.

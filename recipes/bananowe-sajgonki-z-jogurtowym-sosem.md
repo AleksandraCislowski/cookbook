@@ -4,7 +4,7 @@ slug: bananowe-sajgonki-z-jogurtowym-sosem
 description: Słodkie bananowe sajgonki w chrupiącym ryżowym cieście, podawane z kremowym jogurtowym sosem o cynamonowym aromacie.
 category: Deser, Przekąska, Ninja Cooker
 cuisine: Azjatycka
-prepTime: 5
+prepTime:
 cookTime:
 bakeTime: 16
 bakeTemperature: 180°C

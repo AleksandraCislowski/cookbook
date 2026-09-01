@@ -4,8 +4,8 @@ slug: risotto-z-kurkami
 description: Kremowe risotto z kurkami — sycące, aromatyczne i idealne na prosty obiad.
 category: Obiad, Z wczorajszego rosołu, Vege
 cuisine: Domowa
-prepTime: 10
-cookTime: 20
+prepTime:
+cookTime: 25
 bakeTime:
 bakeTemperature:
 restTime:

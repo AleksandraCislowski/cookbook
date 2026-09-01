@@ -5,7 +5,7 @@ description: Tradycyjne, miękkie kluski śląskie z charakterystycznym zagłęb
 category: Obiad, Vege
 cuisine: Domowa
 prepTime: 30
-cookTime: 3
+cookTime:
 bakeTime:
 bakeTemperature:
 restTime:
@@ -33,7 +33,7 @@ publishedAt: '2026-07-27T06:43:19+02:00'
 2. Po przestudzeniu, ugnieść ziemniaki na gładką masę.
 3. Dodać mąkę ziemniaczaną, jajko oraz sól, a następnie wyrobić ciasto.
 4. Formować kulki, które należy następnie spłaszczyć i wykonać niewielki otwór na wierzchu każdej z nich.
-5. Gotować w osolonej wodzie 3 minuty od wypłynięcia na wierzch.
+5. Gotować w osolonej wodzie 30 sekund od wypłynięcia na wierzch.
 6. Gotowe, smacznego!
 
 ## Notatki

@@ -4,7 +4,7 @@ slug: nalesniki-szpinakowe-zapiekane-pod-beszamelem
 description: Zielone naleśniki ze szpinaku, nadziewane kurczakiem i serem, zapieczone pod aksamitnym sosem beszamelowym.
 category: Obiad, Z mięsem, Blender
 cuisine: Domowa
-prepTime: 20
+prepTime:
 cookTime:
 bakeTime: 30
 bakeTemperature: 200°C

@@ -4,7 +4,7 @@ slug: salatka-arbuzowa
 description: Orzeźwiająca sałatka z arbuza, awokado i fety, doprawiona cytrynowym dressingiem i świeżą miętą.
 category: Obiad, Vege, Sałatka
 cuisine: Nowoczesna
-prepTime: 15
+prepTime: 20
 cookTime:
 bakeTime:
 bakeTemperature:

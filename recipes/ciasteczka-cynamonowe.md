@@ -4,7 +4,7 @@ slug: ciasteczka-cynamonowe
 description: Maślane ciasteczka obtoczone w cynamonowej posypce.
 category: Deser
 cuisine: Domowa
-prepTime: 10
+prepTime:
 cookTime:
 bakeTime: 20
 bakeTemperature: 200°C

@@ -4,7 +4,7 @@ slug: kluski-twarogowo-groszkowe
 description: Delikatne kluski z zielonego groszku i twarogu, gotowe w kilka minut.
 category: Obiad, Proteinowe, Vege, Blender
 cuisine: Nowoczesna
-prepTime: 20
+prepTime:
 cookTime: 2
 bakeTime:
 bakeTemperature:

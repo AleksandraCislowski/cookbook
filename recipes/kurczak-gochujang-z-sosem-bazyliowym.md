@@ -5,7 +5,7 @@ description: Pikantno-słodki kurczak z pastą gochujang, podany na makaronie lu
 category: Obiad, Z mięsem, Proteinowe, Blender
 cuisine: Azjatycka
 prepTime:
-cookTime: 15
+cookTime: 25
 bakeTime:
 bakeTemperature:
 restTime:

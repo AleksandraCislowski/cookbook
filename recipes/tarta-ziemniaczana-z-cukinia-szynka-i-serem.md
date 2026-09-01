@@ -4,7 +4,7 @@ slug: tarta-ziemniaczana-z-cukinia-szynka-i-serem
 description: Sycąca tarta ziemniaczana z cukinią, szynką i serem — prosta, pyszna i idealna na obiad.
 category: Obiad, Z mięsem
 cuisine: Domowa
-prepTime: 30
+prepTime:
 cookTime:
 bakeTime: 45
 bakeTemperature: 200°C

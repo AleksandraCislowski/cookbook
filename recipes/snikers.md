@@ -4,7 +4,7 @@ slug: snikers
 description: Domowa wersja klasycznego batonika z orzechami, karmelem i czekoladą — idealny słodki przysmak.
 category: Deser
 cuisine: Domowa
-prepTime: 30
+prepTime:
 cookTime:
 bakeTime: 20
 bakeTemperature: 180°C
