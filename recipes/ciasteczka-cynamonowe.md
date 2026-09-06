@@ -2,7 +2,7 @@
 title: 'Ciasteczka cynamonowe'
 slug: ciasteczka-cynamonowe
 description: Maślane ciasteczka obtoczone w cynamonowej posypce.
-category: Deser
+category: Deser, Przekąska
 cuisine: Domowa
 prepTime:
 cookTime:

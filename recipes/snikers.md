@@ -2,7 +2,7 @@
 title: 'Snikers'
 slug: snikers
 description: Domowa wersja klasycznego batonika z orzechami, karmelem i czekoladą — idealny słodki przysmak.
-category: Deser
+category: Deser, Przekąska
 cuisine: Domowa
 prepTime:
 cookTime:

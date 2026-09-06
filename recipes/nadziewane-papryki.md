@@ -2,7 +2,7 @@
 title: 'Nadziewane papryki'
 slug: nadziewane-papryki
 description: Nadziewane papryki z mięsem mielonym, passatą pomidorową i kremowym serkiem w środku, zapiekane w Ninja Cooker pod warstwą sera.
-category: Obiad, Ninja Cooker, Z mięsem,
+category: Obiad, Ninja Cooker, Z mięsem
 cuisine: Domowa
 prepTime:
 cookTime:

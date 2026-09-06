@@ -2,7 +2,7 @@
 title: 'Kurczak teriyaki'
 slug: kurczak-teriyaki
 description: Soczysty kurczak w lśniącym sosie teriyaki z ryżem, edamame, chrupiącymi warzywami i świeżą limonką.
-category: Obiad, Z mięsem,
+category: Obiad, Z mięsem
 cuisine: Azjatycka
 prepTime:
 cookTime: 25

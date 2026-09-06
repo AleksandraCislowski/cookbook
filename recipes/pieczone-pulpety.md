@@ -2,7 +2,7 @@
 title: 'Pieczone pulpety'
 slug: pieczone-pulpety
 description: Pieczone pulpety z mięsa mielonego z papryką, cebulą i kukurydzą, przygotowane w Ninja Cooker na chrupiąco bez smażenia.
-category: Obiad, Ninja Cooker, Z mięsem,
+category: Obiad, Ninja Cooker, Z mięsem
 cuisine: Domowa
 prepTime:
 cookTime:

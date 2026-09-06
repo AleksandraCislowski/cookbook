@@ -2,7 +2,7 @@
 title: 'Bułki z bazylią i pomidorem'
 slug: bulki-z-bazylia-i-pomidorem
 description: Puszyste, domowe bułki z serem, pomidorem i bazylią.
-category: Śniadanie,  Proteinowe, Vege, Ninja Cooker
+category: Śniadanie, Proteinowe, Vege, Ninja Cooker
 cuisine: Domowa
 prepTime:
 cookTime:

@@ -2,7 +2,7 @@
 title: 'Blok czekoladowy'
 slug: blok-czekoladowy
 description: Klasyczny blok czekoladowy z mlekiem w proszku, herbatnikami i bakaliami.
-category: Deser
+category: Deser, Przekąska
 cuisine: Domowa
 prepTime:
 cookTime:

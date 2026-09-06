@@ -2,7 +2,7 @@
 title: 'Kruche ciastka z dżemem'
 slug: kruche-ciastka-z-dzemem
 description: Maślane kruche ciastka ze środkiem z ulubionego dżemu.
-category: Deser
+category: Deser, Przekąska
 cuisine: Domowa
 prepTime:
 cookTime:
