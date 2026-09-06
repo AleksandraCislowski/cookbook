@@ -1,17 +1,15 @@
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
+import KitchenIcon from '@mui/icons-material/Kitchen';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
-import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
 import { Box } from '@mui/material';
 import { RecipeMetaItem } from '@/components/RecipeMetaItem';
 import type { Recipe } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
-import {
-  getBakingLabel,
-  getPassiveTimeLabel,
-  getTotalTime,
-} from '@/utils/recipeDisplay';
+import { getBakingLabel, getPassiveTimeLabel } from '@/utils/recipeDisplay';
 
 type RecipeMetaListProps = {
   recipe: Recipe;
@@ -20,7 +18,6 @@ type RecipeMetaListProps = {
 
 export function RecipeMetaList({ recipe, rowGap = 0.85 }: RecipeMetaListProps) {
   const bakingLabel = getBakingLabel(recipe);
-  const totalTime = getTotalTime(recipe);
   const passiveTimeLabel = getPassiveTimeLabel(recipe);
 
   return (
@@ -33,13 +30,6 @@ export function RecipeMetaList({ recipe, rowGap = 0.85 }: RecipeMetaListProps) {
         rowGap,
       }}
     >
-      {totalTime > 0 ? (
-        <RecipeMetaItem
-          icon={<TimerOutlinedIcon fontSize='small' color='action' />}
-        >
-          Razem {formatRecipeTime(totalTime)}
-        </RecipeMetaItem>
-      ) : null}
       {recipe.advanceNotice ? (
         <RecipeMetaItem
           icon={<CalendarMonthIcon fontSize='small' color='action' />}
@@ -54,11 +44,30 @@ export function RecipeMetaList({ recipe, rowGap = 0.85 }: RecipeMetaListProps) {
           {recipe.servings}
         </RecipeMetaItem>
       ) : null}
+      {recipe.prepTime ? (
+        <RecipeMetaItem icon={<KitchenIcon fontSize='small' color='action' />}>
+          Przygot. {formatRecipeTime(recipe.prepTime)}
+        </RecipeMetaItem>
+      ) : null}
+      {recipe.cookTime ? (
+        <RecipeMetaItem
+          icon={<SoupKitchenIcon fontSize='small' color='action' />}
+        >
+          Gotowanie {formatRecipeTime(recipe.cookTime)}
+        </RecipeMetaItem>
+      ) : null}
       {bakingLabel ? (
         <RecipeMetaItem
           icon={<ThermostatIcon fontSize='small' color='action' />}
         >
           {bakingLabel}
+        </RecipeMetaItem>
+      ) : null}
+      {recipe.restTime ? (
+        <RecipeMetaItem
+          icon={<HourglassEmptyIcon fontSize='small' color='action' />}
+        >
+          Odpoczynek {formatRecipeTime(recipe.restTime)}
         </RecipeMetaItem>
       ) : null}
       {passiveTimeLabel ? (
