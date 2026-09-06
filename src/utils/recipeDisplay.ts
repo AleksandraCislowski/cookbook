@@ -1,15 +1,6 @@
 import type { Recipe } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
 
-export function getTotalTime(recipe: Recipe) {
-  return (
-    (recipe.prepTime ?? 0) +
-    (recipe.cookTime ?? 0) +
-    (recipe.bakeTime ?? 0) +
-    (recipe.restTime ?? 0)
-  );
-}
-
 export function getPassiveTimeLabel(recipe: Recipe) {
   const timeLabel = recipe.passiveTime
     ? formatRecipeTime(recipe.passiveTime)

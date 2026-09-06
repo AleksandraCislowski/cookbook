@@ -6,7 +6,6 @@ import KitchenIcon from '@mui/icons-material/Kitchen';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
-import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
 import {
   Box,
   Button,
@@ -24,11 +23,7 @@ import { RecipeIngredients } from '@/components/RecipeIngredients';
 import { RecipeSpices } from '@/components/RecipeSpices';
 import { getRecipeBySlug, getRecipeSlugs, type Recipe } from '@/data/recipes';
 import { formatRecipeTime } from '@/utils/formatRecipeTime';
-import {
-  getBakingLabel,
-  getPassiveTimeLabel,
-  getTotalTime,
-} from '@/utils/recipeDisplay';
+import { getBakingLabel, getPassiveTimeLabel } from '@/utils/recipeDisplay';
 import { getAbsoluteUrl, SITE_NAME } from '@/utils/site';
 
 type RecipePageProps = {
@@ -66,7 +61,7 @@ function getStatIcon(label: string) {
     return <CalendarMonthIcon fontSize='small' color='action' />;
   }
 
-  return <TimerOutlinedIcon fontSize='small' color='action' />;
+  return <HourglassEmptyIcon fontSize='small' color='action' />;
 }
 
 function getIsoDuration(minutes?: number) {
@@ -79,7 +74,6 @@ function getIsoDuration(minutes?: number) {
 
 function getRecipeJsonLd(recipe: Recipe) {
   const recipeUrl = getAbsoluteUrl(`/recipes/${recipe.slug}`);
-  const totalTime = getTotalTime(recipe);
 
   return {
     '@context': 'https://schema.org',
@@ -94,7 +88,6 @@ function getRecipeJsonLd(recipe: Recipe) {
     recipeYield: recipe.servings ? `${recipe.servings} porcje` : undefined,
     prepTime: getIsoDuration(recipe.prepTime),
     cookTime: getIsoDuration((recipe.cookTime ?? 0) + (recipe.bakeTime ?? 0)),
-    totalTime: getIsoDuration(totalTime),
     recipeIngredient: [...recipe.ingredients, ...recipe.spices],
     recipeInstructions: recipe.steps.map((step) => ({
       '@type': 'HowToStep',
@@ -159,11 +152,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
   }
 
   const bakingLabel = getBakingLabel(recipe);
-  const totalTime = getTotalTime(recipe);
   const passiveTimeLabel = getPassiveTimeLabel(recipe);
   const recipeJsonLd = getRecipeJsonLd(recipe);
   const recipeStats = [
-    totalTime ? ['Razem', formatRecipeTime(totalTime)] : null,
     recipe.prepTime
       ? ['Przygotowanie', formatRecipeTime(recipe.prepTime)]
       : null,
