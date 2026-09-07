@@ -53,7 +53,7 @@ publishedAt: '2026-07-06T06:24:56+02:00'
 2. Do osobnej miski włożyć wszystkie pozostałe składniki na knyszę (oprócz sezamu).
 3. Dodać wodę z cukrem i drożdżami, dobrze wyrobić ciasto.
 4. Uformować z ciasta kulkę i pozostawić do wyrośnięcia w misce pod przykryciem na około jedną godzinę w ciepłym miejscu.
-5. Po godzinie ciasto przełożyć na blachę wyłożoną papierem do pieczenia, uformować okrągły placek około 0,5cm grubości. Przykryć ściereczką i ponownie zostawić na godzinę do wyrośnięcia w ciepłym miejscu.
+5. Po godzinie ciasto przełożyć na blachę wyłożoną papierem do pieczenia, uformować okrągły placek około 0,5cm grubości. Przykryć ściereczką i ponownie zostawić na godzinę do wyrośnięcia w ciepłym miejscu.
 6. Po kolejnej godzinie zwilżyć wierzch placka wodą i posypać sezamem, lekko dociskając ziarenka do ciasta.
 7. Piec przez 18 minut w 180°C.
 8. Placek podzielić na 4 części, następnie każdą część przekroić tworząc miejsce na ułożenie dodatków.

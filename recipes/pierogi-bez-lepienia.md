@@ -42,7 +42,7 @@ publishedAt: '2026-06-30T18:11:27+02:00'
 1. Ziemniaki ugotuj do miękkości i wystudź.
 2. Cebulę pokrój w kostkę, podsmaż na patelni z masłem, aż się lekko zrumieni.
 3. Do miski przełóż twaróg, dodaj ziemniaki i cebulę, dopraw do smaku solą i pieprzem - farsz jest już gotowy.
-4. Przygotuj dwie osobne miski. Do jednej wsyp mąką z odrobiną soli i wymieszaj. Do drugiej wlej zimną wodę.
+4. Przygotuj dwie osobne miski. Do jednej wsyp mąkę z odrobiną soli i wymieszaj. Do drugiej wlej zimną wodę.
 5. Z farszu przygotuj średniej wielkości kulki.
 6. Obtaczaj kulki na zmianę w mące i zimnej wodzie, pilnując, aby pierwszą i ostatnią warstwą była mąka. Tym sposobem obtaczaj każdą kulkę z farszu 5 razy w mące i 4 razy w zimnej wodzie, aż powstanie grubsza warstwa ciasta.
 7. Powtarzaj czynność do momentu wyczerpania składników.
@@ -51,4 +51,4 @@ publishedAt: '2026-06-30T18:11:27+02:00'
 
 ## Notatki
 
-Jedna porcja to około 7 średnich pierogów z dużą ilością farszu. Podawaj z ulubionymi dodatkami, np cebulką podsmażoną na maśle lub kwaśną śmietaną.
+Jedna porcja to około 7 średnich pierogów z dużą ilością farszu. Podawaj z ulubionymi dodatkami, np. cebulką podsmażoną na maśle lub kwaśną śmietaną.

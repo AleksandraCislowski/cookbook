@@ -28,7 +28,7 @@ publishedAt: '2026-08-30T19:49:55+02:00'
 ## Przygotowanie
 
 1. Jabłka razem ze skórką pokroić w kostkę, wrzucić do rondelka. Dodać wodę i dusić pod przykryciem około 15 minut.
-2. Następnie dodać pokrojoną w kostkę czekoladę, tahini oraz szafran i wymieszać, aż czekolada się rozpuści.
+2. Następnie dodać pokrojoną w kostkę czekoladę, tahini oraz szafran i wymieszać, aż czekolada się rozpuści.
 3. Całość zblendować i przełożyć do foremek.
 4. Gotowe, smacznego!
 

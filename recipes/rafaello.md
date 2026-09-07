@@ -20,8 +20,8 @@ publishedAt: '2026-08-05T17:02:01+02:00'
 ## Składniki
 
 - 1 litr mleka
-- 1.5 szkl. cukru
-- 1 cukier waniliowy
+- 1,5 szkl. cukru
+- 1 opakowanie cukru waniliowego
 - 6 łyżek mąki tortowej
 - 6 łyżek mąki ziemniaczanej
 - 250 g masła

@@ -19,7 +19,7 @@ publishedAt: '2026-09-07T18:02:33+02:00'
 
 ## Składniki
 
-- 1/4 szkl. odżywki biaowej (najlepiej czekoladowej)
+- 1/4 szkl. odżywki białkowej (najlepiej czekoladowej)
 - 8g kakao
 - 1 białko jajka
 - 2 łyżki wody

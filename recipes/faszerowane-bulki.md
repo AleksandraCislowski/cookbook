@@ -24,7 +24,7 @@ publishedAt: '2026-06-13'
 - 0,5 czerwonej cebuli
 - 1 papryka czerwona
 - 1 jajko
-- mozarella w wiórkach
+- mozzarella w wiórkach
 - szczypiorek
 - 1 ząbek czosnku
 - 2 łyżki oliwy

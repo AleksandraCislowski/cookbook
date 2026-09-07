@@ -40,7 +40,7 @@ publishedAt: '2026-07-02T06:58:52+02:00'
 6. Rozgrzej Ninja Cooker przez 5 minut na 180°C na programie Air Crisp.
 7. W koszyczku umieść arkusz papieru do pieczenia, układaj na nim sajgonki.
 8. Ustaw Air Crisp na tej samej temperaturze i piecz przez 16 minut.
-9. Po połowie czasu obróć sajgonki na drugą stronę.
+9. Po połowie czasu obróć sajgonki na drugą stronę.
 10. W miseczce wymieszaj jogurt z erytrytolem i cynamonem.
 11. Sajgonki podawaj na ciepło z sosem.
 12. Gotowe, smacznego!

@@ -39,4 +39,4 @@ publishedAt: '2026-07-19T19:27:10+02:00'
 
 ## Notatki
 
-Omlet dobrze komponuje się również z polewą czekoladową lub masłem orzechowym.
+Omlet dobrze komponuje się również z polewą czekoladową lub masłem orzechowym.

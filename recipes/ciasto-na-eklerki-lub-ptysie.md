@@ -19,7 +19,7 @@ publishedAt: '2026-08-05T17:02:24+02:00'
 
 ## Składniki
 
-- 1.5 szkl. wody
+- 1,5 szkl. wody
 - 125 g masła
 - 1 szkl. mąki krupczatki
 - 5 jajek

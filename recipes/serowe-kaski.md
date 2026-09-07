@@ -19,7 +19,7 @@ publishedAt: '2026-06-23T06:40:25+02:00'
 
 ## Składniki
 
-- 200g mrożonych gotowych serków typu mozarella sticks lub chilli cheese tops
+- 200g mrożonych gotowych serków typu mozzarella sticks lub chilli cheese tops
 
 ## Przygotowanie
 

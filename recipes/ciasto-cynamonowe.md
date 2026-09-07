@@ -23,9 +23,9 @@ publishedAt: '2026-08-14T08:14:26+02:00'
 - 1 szkl. cukru
 - 1 2/3 szkl. mąki
 - 1 szkl. oleju
-- 1.5 łyżeczki sody oczyszczonej
-- 1.5 łyżeczki kakao
-- 1.5 łyżeczki proszku do pieczenia
+- 1,5 łyżeczki sody oczyszczonej
+- 1,5 łyżeczki kakao
+- 1,5 łyżeczki proszku do pieczenia
 - 2 łyżeczki cynamonu
 
 ## Przygotowanie

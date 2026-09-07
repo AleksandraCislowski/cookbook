@@ -32,7 +32,7 @@ publishedAt: '2026-09-07T18:00:33+02:00'
 
 - 200g malin lub wiśni
 - 2 łyżki cukru
-- 1.5 łyżki mąki ziemniaczanej
+- 1,5 łyżki mąki ziemniaczanej
 - 300g czekolady
 - 150ml śmietanki 36%
 

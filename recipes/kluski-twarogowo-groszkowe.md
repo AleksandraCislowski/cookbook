@@ -28,7 +28,7 @@ publishedAt: '2026-07-15T08:22:24+02:00'
 
 ## Przygotowanie
 
-1. Groszek przekłożyć do kielicha blendera, dodać jajka, sok z cytryny i sól. Całość zblendować na gładką masę.
+1. Groszek przełożyć do kielicha blendera, dodać jajka, sok z cytryny i sól. Całość zblendować na gładką masę.
 2. Zieloną masę przełożyć do miski, dodać twaróg oraz mąkę i zagnieść, aż do uzyskania jednolitego ciasta.
 3. Z kulki ciasta odcinać nożyczkami pojedyncze kluski.
 4. Gotować w osolonej wodzie 2 minuty od wypłynięcia klusek.

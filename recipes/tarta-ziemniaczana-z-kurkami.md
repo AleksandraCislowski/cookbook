@@ -23,7 +23,7 @@ publishedAt: '2026-08-03T20:53:48+02:00'
 - 300g kurek
 - 1 duża czerwona cebula
 - 2 jajka
-- 200g gęstej śmietany lub crème fraiche
+- 200g gęstej śmietany lub crème fraîche
 - 100g sera w wiórkach
 
 ## Przyprawy

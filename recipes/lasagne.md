@@ -52,6 +52,6 @@ publishedAt: '2026-07-06T06:27:18+02:00'
 4. Na blaszkę wyłożyć odrobinę sosu beszamelowego, następnie ułożyć warstwę makaronu. Na makaron wyłożyć część mięsa z sosem pomidorowym.
 5. Następnie posypać mięso warstwą sera, a na wierzch polać warstwą sosu beszamelowego.
 6. Wykładać na zmianę makaron, mięso z sosem pomidorowym, ser raz sos beszamelowy aż do wyczerpania składników, pilnując aby ostatnią warstwą na wierzchu nie był makaron.
-7. Przykryć folią aluminiową i piec w piekarniku w 180°C przez 45 minut.
+7. Przykryć folią aluminiową i piec w piekarniku w 180°C przez 45 minut.
 8. Następnie ściągnąć folię i zapiekać jeszcze kilka minut, jeżeli chcemy na wierzchu lasagne mieć bardziej chrupiący ser.
 9. Gotowe, smacznego!

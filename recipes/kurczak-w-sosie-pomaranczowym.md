@@ -43,10 +43,10 @@ publishedAt: '2026-09-01T07:16:49+02:00'
 
 1. Mięso pokroić na większe kąski, przełożyć do miski i dodać składniki do marynaty. Odstawić minimum na pół godziny.
 2. Rozgrzać Ninja Cooker przez 5 minut na 180°C na programie Air Crisp.
-3. Kawałki kurczaka obtoczyć w skrobii ziemniaczanej, ułożyć w koszyczku do Ninja Cooker na kawałku pergaminu.
+3. Kawałki kurczaka obtoczyć w skrobi ziemniaczanej, ułożyć w koszyczku do Ninja Cooker na kawałku pergaminu.
 4. Ustawić Air Crisp na tej samej temperaturze i piec przez 16 minut.
 5. Na patelni podsmażyć czosnek przeciśnięty przez praskę wraz z olejem kokosowym i imbirem. Następnie dodać resztę składników na sos (oprócz slurry) i chwilę pogotować na małym ogniu.
-6. Do sosu dodać slurry i gotować chwilę, ciągle mieszając, aż sos zgęstnieje.
+6. Do sosu dodać slurry i gotować chwilę, ciągle mieszając, aż sos zgęstnieje.
 7. Upieczone kawałki kurczaka przełożyć do sosu i wymieszać tak, aby każdy kawałek był dokładnie pokryty sosem.
 8. Gotowe, smacznego!
 

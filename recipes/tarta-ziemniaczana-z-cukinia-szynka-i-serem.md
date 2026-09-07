@@ -24,7 +24,7 @@ publishedAt: '2026-09-01T07:16:20+02:00'
 - 300g szynki
 - 300g sera żółtego w plastrach
 - 4 jajka
-- 150g gęstej śmietany lub crème fraiche
+- 150g gęstej śmietany lub crème fraîche
 
 ## Przyprawy
 

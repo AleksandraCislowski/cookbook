@@ -35,7 +35,7 @@ publishedAt: '2026-07-06T06:25:29+02:00'
 
 ## Przygotowanie
 
-1. Jajka ubić z cukrem na puszystą masę. Dodać pozostałe składniki na babeczki (oprócz owoców) , następnie zmiksować wszystko na jednolitą, gęstą masę.
+1. Jajka ubić z cukrem na puszystą masę. Dodać pozostałe składniki na babeczki (oprócz owoców), następnie zmiksować wszystko na jednolitą, gęstą masę.
 2. Przełożyć ciasto do foremek lub papilotek.
 3. Brzoskwinie pokroić w kostkę, ułożyć na wierzch ciasta.
 4. Składniki na kruszonkę rozetrzeć w misce, aż zaczną tworzyć się pojedyncze, większe grudki ciasta. Następnie wysypać kruszonkę na owoce.

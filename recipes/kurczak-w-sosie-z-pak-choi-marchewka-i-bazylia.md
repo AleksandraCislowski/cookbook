@@ -25,7 +25,7 @@ publishedAt: '2026-07-27T06:44:26+02:00'
 - 1 średniej wielkości pak choi (ok. 125g)
 - 1 mała marchewka
 - pęczek bazylii
-- 200g gęstej śmietany lub crème fraiche
+- 200g gęstej śmietany lub crème fraîche
 - 200ml wody
 
 ## Przyprawy

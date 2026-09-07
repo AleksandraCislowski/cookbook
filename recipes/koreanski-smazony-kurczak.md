@@ -48,7 +48,7 @@ publishedAt: '2026-07-06T06:26:43+02:00'
 2. Ryż ugotować zgodnie z instrukcją na opakowaniu.
 3. Ogórka pokroić w półplastry.
 4. Rozgrzać Ninja Cooker przez 5 minut na 180°C na programie Air Crisp.
-5. Kawałki kurczaka obtoczyć w skrobii ziemniaczanej, ułożyć połowę porcji w koszyczku do Ninja Cooker na kawałku pergaminu.
+5. Kawałki kurczaka obtoczyć w skrobi ziemniaczanej, ułożyć połowę porcji w koszyczku do Ninja Cooker na kawałku pergaminu.
 6. Ustawić Air Crisp na tej samej temperaturze i piec przez 16 minut.
 7. Następnie w ten sam sposób upiec drugą partię kurczaka.
 8. Na patelnię dodać wszystkie składniki na sos, gotować chwilkę, aż zgęstnieje.

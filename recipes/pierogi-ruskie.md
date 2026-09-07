@@ -42,7 +42,7 @@ publishedAt: '2026-06-30T18:10:50+02:00'
 1. Ziemniaki ugotuj do miękkości i wystudź.
 2. Cebulę pokrój w kostkę, podsmaż na patelni z masłem, aż się lekko zrumieni.
 3. Do miski przełóż twaróg, dodaj ziemniaki i cebulę, dopraw do smaku solą i pieprzem - farsz jest już gotowy.
-4. W osobnej misce połącz mąką z wodą i solą, dobrze wyrób i zagnieć ciasto na jednolitą, sprężystą kulę.
+4. W osobnej misce połącz mąkę z wodą i solą, dobrze wyrób i zagnieć ciasto na jednolitą, sprężystą kulę.
 5. Rozwałkowuj ciasto i wykrawaj średniej wielkości kółka.
 6. Na każde kółko nakładaj około łyżeczki farszu, następnie zlep brzegi ciasta tworząc pierożek.
 7. Krawędzie pierożka można docisnąć widelcem, tworząc wzorek.
@@ -52,4 +52,4 @@ publishedAt: '2026-06-30T18:10:50+02:00'
 
 ## Notatki
 
-Jedna porcja to około 8 dużych pierogów. Podawaj z ulubionymi dodatkami, np cebulką podsmażoną na maśle lub kwaśną śmietaną.
+Jedna porcja to około 8 dużych pierogów. Podawaj z ulubionymi dodatkami, np. cebulką podsmażoną na maśle lub kwaśną śmietaną.

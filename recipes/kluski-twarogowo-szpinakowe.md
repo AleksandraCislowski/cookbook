@@ -39,7 +39,7 @@ publishedAt: '2026-06-21T12:38:00+02:00'
 1. Szpinak przenieś na sitko i sparz dużą ilością wrzątku, żeby zmniejszył swoją objętość. Następnie przepłucz zimną wodą.
 2. Do wysokiego blendera włóż szpinak, dodaj oliwę i wbij jajka. Całość zblenduj na gładką masę.
 3. Do osobnej miski włóż twaróg, sól, masę szpinakową i dodaj obie mąki.
-4. Całość zagnieć, aż ciasto nie będzie przyklejać się do rąk.
+4. Całość zagnieć, aż ciasto nie będzie przyklejać się do rąk.
 5. Ciasto podziel na części, podsyp blat mąką.
 6. Formuj wałeczki około 2cm grubości, następnie odkrawaj nożem kluski.
 7. Gotuj w osolonej wodzie 3 minuty.

@@ -46,4 +46,4 @@ publishedAt: '2026-06-23T07:33:47+02:00'
 
 ## Notatki
 
-W zależności od wielkości pulpetów czas potrzebny na upieczenie może się różnic. Po ugotowaniu można przekroić jednego pulpecika, żeby sprawdzić czy nie jest surowy w środku.
+W zależności od wielkości pulpetów czas potrzebny na upieczenie może się różnić. Po ugotowaniu można przekroić jednego pulpecika, żeby sprawdzić czy nie jest surowy w środku.

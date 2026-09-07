@@ -24,7 +24,7 @@ publishedAt: '2026-08-30T19:50:10+02:00'
 
 ## Przygotowanie
 
-1. Ugotowaną marchewkę rozgnieść, następnie dodać mąką i zagnieść jednolite ciasto.
+1. Ugotowaną marchewkę rozgnieść, następnie dodać mąkę i zagnieść jednolite ciasto.
 2. Formować średniej wielkości okrągłe kluski, które należy ugotować w osolonej wodzie, 30 sekund od wypłynięcia na powierzchnię.
 3. Gotowe, smacznego!
 

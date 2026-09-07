@@ -37,7 +37,7 @@ publishedAt: '2026-06-30T18:09:45+02:00'
 - sól
 - pieprz
 - majeranek
-- przyprawa do mięs/ kurczaka
+- przyprawa do mięs lub kurczaka
 
 ## Przygotowanie
 

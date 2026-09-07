@@ -34,7 +34,7 @@ publishedAt: '2026-09-01T07:16:35+02:00'
 
 ## Przygotowanie
 
-1. Cebulę pokroić w drobną kostkę i podsmażyć na patelni razem w oliwą.
+1. Cebulę pokroić w drobną kostkę i podsmażyć na patelni razem z oliwą.
 2. Kurki oczyścić i pokroić na mniejsze kawałki, dodać do cebuli i podsmażać jeszcze chwilę.
 3. Doprawić solą i pieprzem do smaku.
 4. Na patelnię dodać ryż, podsmażyć chwilę. Następnie partiami wlewać bulion i gotować do odparowania płynu. Czynność powtarzać do wyczerpania bulionu.
