@@ -40,7 +40,7 @@ publishedAt: '2026-09-07T18:00:33+02:00'
 
 1. Składniki na ciasto zagnieść i schłodzić.
 2. Rozwałkować ciasto, przełożyć do formy i ponakłuwać widelcem.
-3. Piec 40 min w 180°C.
+3. Piecz 40 min w 180°C.
 4. Owoce podgrzać w rondelku z cukrem i mąką ziemniaczaną.
 5. Wyłożyć owoce na upieczony spód.
 6. Śmietankę podgrzać i rozpuścić w niej czekoladę.

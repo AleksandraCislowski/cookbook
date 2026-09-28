@@ -2,7 +2,7 @@
 title: 'Kluski twarogowo-szpinakowe'
 slug: kluski-twarogowo-szpinakowe
 description: Delikatne zielone kluski z twarogiem i szpinakiem, dobre na szybki obiad albo do zamrożenia na później.
-category: Dodatki, Vege, Proteinowe
+category: Dodatki, Vege, Proteinowe, Blender
 cuisine: Nowoczesna
 prepTime:
 cookTime: 3

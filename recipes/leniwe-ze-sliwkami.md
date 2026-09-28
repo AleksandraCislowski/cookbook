@@ -31,7 +31,7 @@ publishedAt: '2026-09-22T16:53:52+02:00'
 
 - 400g śliwek
 - 40g masła
-- 60 ml likieru pomarańczowego
+- 60ml likieru pomarańczowego
 - 1 łyżka miodu
 
 ## Przyprawy

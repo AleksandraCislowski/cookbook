@@ -43,7 +43,7 @@ publishedAt: '2026-09-06T08:23:55+02:00'
 5. Cukier wymieszać w misce z orzeszkami ziemnymi.
 6. Z ciasta formować kulki i obtaczać je w posypce.
 7. Ułożyć kulki na blasze i lekko spłaszczyć.
-8. Piec 10 min w 200°C, aż brzegi zaczną się rumienić.
+8. Piecz 10 min w 200°C, aż brzegi zaczną się rumienić.
 9. Gotowe, smacznego!
 
 ## Notatki

@@ -25,7 +25,7 @@ publishedAt: '2026-08-04T20:52:34+02:00'
 - 1 łyżka proszku do pieczenia
 - 3 łyżki kakao
 - 4 jajka
-- 250 g masła
+- 250g masła
 - szczypta soli
 
 ### Dodatkowo
@@ -38,7 +38,7 @@ publishedAt: '2026-08-04T20:52:34+02:00'
 1. Masło utrzeć z cukrem i solą, następnie kontynuować ucieranie dodając kolejno po jednym jajku.
 2. Dodać pozostałe składniki i ucierać, aż powstanie jednolita masa.
 3. Następnie zetrzeć czekoladę na tarce, a gruszki pokroić w kostkę, całość dodać do masy i wymieszać.
-4. Piec 60 min w 180°C.
+4. Piecz 60 min w 180°C.
 5. Gotowe, smacznego!
 
 ## Notatki

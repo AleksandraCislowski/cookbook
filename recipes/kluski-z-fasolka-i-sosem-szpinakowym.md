@@ -43,4 +43,4 @@ publishedAt: '2026-07-15T08:23:21+02:00'
 
 ## Notatki
 
-Dodaj praktyczne uwagi: konsystencja, zamienniki, na co uważać albo co zmienić następnym razem.
+Jeśli sos wychodzi zbyt gęsty, dodaj odrobinę wody z gotowania makaronu lub klusek. Fasolka powinna zostać lekko jędrna.

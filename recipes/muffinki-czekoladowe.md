@@ -43,7 +43,7 @@ publishedAt: '2026-09-06T07:54:56+02:00'
 2. Następnie połączyć je ze sobą i wymieszać na gładką masę.
 3. Papilotki wypełniać do połowy.
 4. Dodać wybrane dodatki, np. łyżkę dżemu, i przykryć drugą częścią masy.
-5. Piec 20 min w 170°C.
+5. Piecz 20 min w 170°C.
 6. Gotowe, smacznego!
 
 ## Notatki

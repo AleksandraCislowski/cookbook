@@ -34,7 +34,7 @@ publishedAt: '2026-09-07T18:00:50+02:00'
 4. Rozwałkować ciasto, przenieść na blachę, wyciąć kształty i ponownie schładzać około 60 min.
 5. Ponakłuwać ciasto widelcem.
 6. Nagrzać piekarnik do 220°C i po włożeniu ciasta natychmiast obniżyć temperaturę do 180°C.
-7. Piec 13-16 min, aż brzegi się zarumienią.
+7. Piecz 13-16 min, aż brzegi się zarumienią.
 8. Wystudzić blaty przed przekładaniem kremem.
 9. Gotowe, smacznego!
 

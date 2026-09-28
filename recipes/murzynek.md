@@ -33,7 +33,7 @@ publishedAt: '2026-09-06T08:24:13+02:00'
 1. Jajka utrzeć z cukrem.
 2. Dodać resztę składników i zmiksować na gładką masę.
 3. Przelać ciasto do formy.
-4. Piec 50 min w 180°C.
+4. Piecz 50 min w 180°C.
 5. Gotowe, smacznego!
 
 ## Notatki

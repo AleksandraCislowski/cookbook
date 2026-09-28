@@ -32,7 +32,7 @@ publishedAt: '2026-08-14T08:14:26+02:00'
 
 1. Olej, cukier i jajka zmiksować na gładką masę,
 2. Dodać resztę składników, aż do uzyskania gładkiego ciasta.
-3. Piec 45 min w 180°C.
+3. Piecz 45 min w 180°C.
 4. Gotowe, smacznego!
 
 ## Notatki

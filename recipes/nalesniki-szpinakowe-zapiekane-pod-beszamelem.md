@@ -56,7 +56,7 @@ publishedAt: '2026-08-03T20:53:15+02:00'
 2. Smażyć naleśniki na dobrze rozgrzanej patelni, z odrobiną oleju.
 3. Następnie przygotować farsz: cebulę pokrojoną w kostkę podsmażyć na patelni z kurczakiem oraz czosnkiem przeciśniętym przez praskę. Doprawić ulubionymi przyprawami, następnie dodać szpinak oraz żółty ser.
 4. W rondelku rozpuścić masło i dodać mąkę. Chwilę podsmażać, aż mąka lekko się zrumieni. Następnie dodawać stopniowo mleko, cały czas energicznie mieszając, aby nie powstały grudki. Doprawić solą, pieprzem i gałką muszkatołową do smaku.
-5. Naleśniki nadziewać farszem i każdego zawinąć jak burito, następnie układać w naczyniu żaroodpornym. Wierzch polać sosem beszamelowym. Zapiekać w piekarniku przez 30 minut w 200°C bez przykrycia.
+5. Naleśniki nadziewaj farszem i zawijaj jak burrito, a następnie układaj w naczyniu żaroodpornym. Wierzch polej sosem beszamelowym. Zapiekaj w piekarniku przez 30 minut w 200°C bez przykrycia.
 6. Gotowe, smacznego!
 
 ## Notatki

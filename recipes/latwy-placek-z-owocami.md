@@ -36,5 +36,5 @@ publishedAt: '2026-09-06T07:54:11+02:00'
 2. Dodać resztę składników i zmiksować na gładką masę.
 3. Ciasto wylać na blachę.
 4. Na wierzchu poukładać owoce i lekko wcisnąć je w masę.
-5. Piec 45-60 min w 175°C.
+5. Piecz 45-60 min w 175°C.
 6. Gotowe, smacznego!

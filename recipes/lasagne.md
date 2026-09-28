@@ -46,12 +46,12 @@ publishedAt: '2026-07-06T06:27:18+02:00'
 
 ## Przygotowanie
 
-1. Mięso podsmażyć z cebulą pokrojoną w kostkę, czosnkiem przeciśniętym przez praskę. Dodać przyprawy według uznania.
-2. Dodać passatę pomidorową i przecier, pogotować chwilę i zdjąć z ognia.
-3. W rondelku rozpuścić masło i dodać mąkę. Chwilę podsmażać, aż mąka lekko się zrumieni. Następnie dodawać stopniowo mleko, cały czas energicznie mieszając, aby nie powstały grudki. Doprawić solą, pieprzem i gałką muszkatołową do smaku.
-4. Na blaszkę wyłożyć odrobinę sosu beszamelowego, następnie ułożyć warstwę makaronu. Na makaron wyłożyć część mięsa z sosem pomidorowym.
-5. Następnie posypać mięso warstwą sera, a na wierzch polać warstwą sosu beszamelowego.
-6. Wykładać na zmianę makaron, mięso z sosem pomidorowym, ser raz sos beszamelowy aż do wyczerpania składników, pilnując aby ostatnią warstwą na wierzchu nie był makaron.
-7. Przykryć folią aluminiową i piec w piekarniku w 180°C przez 45 minut.
-8. Następnie ściągnąć folię i zapiekać jeszcze kilka minut, jeżeli chcemy na wierzchu lasagne mieć bardziej chrupiący ser.
+1. Podsmaż mięso z cebulą pokrojoną w kostkę i czosnkiem przeciśniętym przez praskę. Dopraw do smaku.
+2. Dodaj passatę pomidorową i koncentrat pomidorowy lub keczup. Gotuj chwilę, a potem zdejmij sos z ognia.
+3. W rondelku rozpuść masło i dodaj mąkę. Podsmaż krótko, aż mąka lekko się zrumieni. Stopniowo dolewaj mleko, cały czas energicznie mieszając, żeby nie powstały grudki. Dopraw solą, pieprzem i gałką muszkatołową.
+4. Na blaszkę wyłóż odrobinę sosu beszamelowego, a następnie ułóż warstwę makaronu. Na makaron wyłóż część mięsa z sosem pomidorowym.
+5. Posyp mięso warstwą sera i polej sosem beszamelowym.
+6. Układaj na zmianę makaron, mięso z sosem pomidorowym, ser oraz sos beszamelowy, aż do wyczerpania składników. Pilnuj, żeby ostatnią warstwą na wierzchu nie był makaron.
+7. Przykryj formę folią aluminiową i piecz w 180°C przez 45 minut.
+8. Zdejmij folię i zapiekaj jeszcze kilka minut, jeśli chcesz mieć bardziej chrupiący ser na wierzchu.
 9. Gotowe, smacznego!

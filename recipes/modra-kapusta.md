@@ -34,17 +34,17 @@ publishedAt: '2026-07-27T07:26:34+02:00'
 
 ## Przygotowanie
 
-1. Zdjąć z kapusty zniszczone liście, następnie poszatkować drobno i przełożyć do dużego garnka.
-2. Zalać wodą do maksymalnie 1/3 objętości kapusty.
-3. Dodać liście laurowe oraz ziele angielskie, a następnie gotować 20 minut do miękkości.
-4. W tym czasie pokroić cebulę w drobną kostkę oraz zetrzeć jabłka na tarce o grubych oczkach.
-5. Ugotowaną kapustę odcedzić.
-6. Na patelni podsmażyć cebulę, dodać do niej kapustę oraz starte jabłko.
-7. Dodać cukier oraz sok z cytryny i całość podsmażyć.
-8. Doprawić solą i pieprzem do smaku.
-9. Całość podsmażać na małym ogniu przez klika minut.
+1. Z kapusty zdejmij zniszczone liście, a potem drobno ją poszatkuj i przełóż do dużego garnka.
+2. Zalej kapustę wodą do maksymalnie 1/3 jej objętości.
+3. Dodaj liście laurowe i ziele angielskie. Gotuj około 20 minut, aż kapusta zmięknie.
+4. W tym czasie pokrój cebulę w drobną kostkę i zetrzyj jabłka na tarce o grubych oczkach.
+5. Ugotowaną kapustę odcedź.
+6. Na patelni podsmaż cebulę, a potem dodaj kapustę i starte jabłka.
+7. Dodaj cukier oraz sok z cytryny i podsmaż całość.
+8. Dopraw solą i pieprzem do smaku.
+9. Podsmażaj na małym ogniu jeszcze przez kilka minut.
 10. Gotowe, smacznego!
 
 ## Notatki
 
-Podawać jako dodatek do gulaszy lub sosów. Gotową modrą kapustę można przechowywać zamrażarce.
+Podawaj jako dodatek do gulaszy lub sosów. Gotową modrą kapustę można przechowywać w zamrażarce.

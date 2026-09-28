@@ -19,13 +19,13 @@ publishedAt: '2026-09-22T16:53:33+02:00'
 
 ## Składniki
 
-- 400 g makaronu (np. rigatoni)
+- 400g makaronu (np. rigatoni)
 - 2 cukinie
 - 1 pęczek zielonych szparagów
 - 100g świeżego szpinaku
 - 3 ząbki czosnku
 - 150g jogurtu greckiego
-- 50 g parmezanu
+- 50g parmezanu
 - sok z połowy cytryny
 - 100ml wody z gotowania makaronu
 

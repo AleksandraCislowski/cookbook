@@ -39,7 +39,7 @@ publishedAt: '2026-09-06T09:06:19+02:00'
 3. Dodać barwnik oraz suche składniki do masy maślanej i wyrobić ciasto na jednolitą masę.
 4. Rozwałkować ciasto na grubość około 0,5 cm.
 5. Wycinać kształty i układać je na blasze.
-6. Piec 10 min w 190°C lub do lekkiego zezłocenia.
+6. Piecz 10 min w 190°C lub do lekkiego zezłocenia.
 7. Po wystudzeniu udekorować czekoladą i innymi dodatkami według uznania.
 8. Gotowe, smacznego!
 

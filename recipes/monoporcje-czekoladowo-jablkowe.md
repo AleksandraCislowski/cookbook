@@ -2,7 +2,7 @@
 title: 'Monoporcje czekoladowo-jabłkowe'
 slug: monoporcje-czekoladowo-jablkowe
 description: Gładka, aksamitna masa z jabłek i czekolady z nutą szafranu, idealna do podawania w małych porcyjnych foremkach.
-category: Deser, Przekąska
+category: Deser, Przekąska, Blender
 cuisine: Domowa
 prepTime:
 cookTime: 15

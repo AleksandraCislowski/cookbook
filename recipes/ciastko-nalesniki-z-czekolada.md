@@ -43,7 +43,7 @@ publishedAt: '2026-07-19T20:03:28+02:00'
 4. Dodać mąkę, sól, proszek do pieczenia oraz sodę oczyszczoną i całość dobrze wymieszać łyżką.
 5. Dodać dropsy czekoladowe i wymieszać.
 6. Na blachę wyłożoną papierem do pieczenia układać kulki z ciasta, w sporej odległości od siebie.
-7. Piec w 175°C przez 13 minut.
+7. Piecz w 175°C przez 13 minut.
 8. Po upieczeniu posypać wierzch ciastek solą w płatkach.
 9. Gotowe, smacznego!
 
