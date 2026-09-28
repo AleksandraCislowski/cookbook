@@ -21,22 +21,22 @@ publishedAt: '2026-09-22T16:54:16+02:00'
 
 ### Ciasto
 
-- 250 g twarogu
-- 200 g mąki pszennej
+- 250g twarogu
+- 200g mąki pszennej
 - 3 czubate łyżeczki skyru
 - 1 czubata łyżeczka proszku do pieczenia
 - 2 łyżki cukru pudru albo erytrytolu
 
 ### Masa twarogowa
 
-- 250 g twarogu
+- 250g twarogu
 - 1 żółtko
 - 25g cukru waniliowego
 - 1 łyżeczka mąki ziemniaczanej
 
 ### Śliwki
 
-- 500 g śliwek
+- 500g śliwek
 - 2 łyżeczki cukru pudru albo erytrytolu
 - 1,5 łyżeczki cynamonu
 - 1 łyżeczka mąki ziemniaczanej

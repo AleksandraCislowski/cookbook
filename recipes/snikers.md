@@ -25,7 +25,7 @@ publishedAt: '2026-08-05T17:01:31+02:00'
 - 3/4 szkl. cukru
 - 2 jajka
 - 2 żółtka
-- 200 g masła
+- 200g masła
 - 3 łyżki mleka
 - 3 łyżki miodu
 - 2 łyżeczki sody oczyszczonej
@@ -33,7 +33,7 @@ publishedAt: '2026-08-05T17:01:31+02:00'
 
 ### Polewa
 
-- 125 g masła
+- 125g masła
 - 4 łyżki cukru
 - 2 łyżki miodu
 - 200g posiekanych orzechów laskowych

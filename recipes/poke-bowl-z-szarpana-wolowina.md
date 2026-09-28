@@ -19,8 +19,8 @@ publishedAt: '2026-06-12'
 
 ## Składniki
 
-- 600 g mięsa wołowego (schab)
-- 240 g ryżu
+- 600g mięsa wołowego (schab)
+- 240g ryżu
 - 1 ogórek
 - 1 marchewka
 - 1 mango

@@ -23,7 +23,7 @@ publishedAt: '2026-08-05T17:01:44+02:00'
 
 - 4 szkl. mąki
 - 1 szkl. cukru
-- 375 g masła
+- 375g masła
 - 2 jajka
 - 1/2 łyżeczki sody oczyszczonej
 - 4 łyżeczki cukru waniliowego
@@ -37,7 +37,7 @@ publishedAt: '2026-08-05T17:01:44+02:00'
 
 1. Z podanych składników zagnieść ciasto, następnie lepić kulki wielkości orzecha włoskiego.
 2. Każdą kulkę spłaszczyć i obtoczyć w posypce z cukru i cynamonu.
-3. Piec 20 min w 200°C.
+3. Piecz 20 min w 200°C.
 4. Gotowe, smacznego!
 
 ## Notatki

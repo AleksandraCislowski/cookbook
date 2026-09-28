@@ -32,7 +32,7 @@ publishedAt: '2026-06-23T07:47:30+02:00'
 2. Skropić oliwą i posypać solą, dokładnie przemieszać.
 3. Rozgrzać Ninja Cooker przez 5 minut na 180°C na programie Air Crisp.
 4. Przełożyć jarmuż do koszyczka (maksymalnie połowę objętości koszyczka na porcję).
-5. Ustawić Air Crisp na tej samej temperaturze i piec przez 5 minut.
+5. Ustaw Air Crisp na tej samej temperaturze i piecz przez 5 minut.
 6. W połowie programu, otworzyć i przemieszać jarmuż.
 7. Gotowe, smacznego!
 

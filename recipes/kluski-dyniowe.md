@@ -19,8 +19,8 @@ publishedAt: '2026-09-28T20:47:47+02:00'
 
 ## Składniki
 
-- 500 g puree z dyni
-- 350 g mąki pszennej
+- 500g puree z dyni
+- 350g mąki pszennej
 
 ## Przyprawy
 

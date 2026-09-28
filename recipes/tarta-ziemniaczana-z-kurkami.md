@@ -35,13 +35,13 @@ publishedAt: '2026-08-03T20:53:48+02:00'
 
 ## Przygotowanie
 
-1. Ugotowane ziemniaki przekładamy na blachę do pieczenia i rozgniatamy, tworząc z nich spód i brzegi tarty.
-2. Na ziemniaki wrzucamy umyte i pokrojone na średnie kawałki kurki.
-3. Na wierzch kurek wykładamy pokrojoną w piórka cebulę.
-4. W osobnej misce mieszamy śmietanę, jajka oraz ser w wiórkach. Doprawiamy przyprawami do smaku.
-5. Wylewamy masę na wierzch tarty i pieczemy przez 50 minut w 200°C.
+1. Ugotowane ziemniaki przełóż na blachę do pieczenia i rozgnieć, tworząc spód oraz brzegi tarty.
+2. Na ziemniaki wyłóż umyte i pokrojone na średnie kawałki kurki.
+3. Na wierzchu kurek ułóż cebulę pokrojoną w piórka.
+4. W osobnej misce wymieszaj śmietanę, jajka oraz ser w wiórkach. Dopraw do smaku.
+5. Wylej masę na wierzch tarty i piecz przez 50 minut w 200°C.
 6. Gotowe, smacznego!
 
 ## Notatki
 
-Dodaj praktyczne uwagi: konsystencja, zamienniki, na co uważać albo co zmienić następnym razem.
+Tarta najlepiej kroi się po kilku minutach odpoczynku po wyjęciu z piekarnika. Jeśli kurki puszczą dużo wody, warto je wcześniej krótko odparować na patelni.

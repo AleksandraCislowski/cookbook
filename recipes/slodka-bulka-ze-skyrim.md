@@ -1,5 +1,5 @@
 ---
-title: "Słodka bułka ze Skyrim"
+title: 'Słodka bułka ze Skyrim'
 slug: slodka-bulka-ze-skyrim
 description: Maślane mini babki inspirowane słodką bułką ze Skyrim, pieczone w małych foremkach.
 category: Deser
@@ -32,7 +32,7 @@ publishedAt: "2026-09-07T18:01:42+02:00"
 2. Powoli dodawać jajka, cały czas miksując.
 3. Dodać mleko, mąkę i sól, a następnie dobrze zmiksować.
 4. Przełożyć masę do foremek wysmarowanych masłem.
-5. Piec 20 min w 180°C.
+5. Piecz 20 min w 180°C.
 6. Gotowe, smacznego!
 
 ## Notatki

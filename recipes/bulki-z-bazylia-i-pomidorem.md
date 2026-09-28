@@ -39,7 +39,7 @@ publishedAt: '2026-07-27T06:45:06+02:00'
 4. Ciasto podzielić na 2 części i uformować z nich małe, lekko spłaszczone bułki.
 5. Rozgrzać Ninja Cooker przez 5 minut na 180°C na programie Air Crisp.
 6. Ułożyć bułki na kratce, na papierze do pieczenia.
-7. Ustawić Air Crisp na tej samej temperaturze i piec przez 20 minut.
+7. Ustaw Air Crisp na tej samej temperaturze i piecz przez 20 minut.
 8. Gotowe, smacznego!
 
 ## Notatki

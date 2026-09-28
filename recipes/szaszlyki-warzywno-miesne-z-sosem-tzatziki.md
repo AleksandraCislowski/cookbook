@@ -48,7 +48,7 @@ publishedAt: '2026-09-11T10:33:08+02:00'
 4. Na placek tortilli wyłożyć 1/3 farszu i rozprowadzić po całej powierzchni. Następnie przykryć drugim plackiem tortilli i powtórzyć proces do wyczerpania składników.
 5. Tortille pociąć wzdłuż i wszerz, tak aby powstały kwadratowe kawałki z warstwami mięsa i tortilli.
 6. Nadziewać kawałki na patyczki od szaszłyków i ułożyć na blaszce wyłożonej papierem do pieczenia.
-7. Piec przez 40 minut w 200°C.
+7. Piecz przez 40 minut w 200°C.
 8. W tym czasie przygotować sos: ogórka zetrzeć na tarce i odcisnąć z nadmiaru wody.
 9. Wymieszać ogórka z jogurtem greckim, sokiem z cytryny, przeciśniętym czosnkiem, solą i pieprzem.
 10. Podawać szaszłyki z sosem tzatziki.

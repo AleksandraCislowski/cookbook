@@ -44,6 +44,6 @@ publishedAt: '2026-09-06T09:05:59+02:00'
 4. Do ciasta dodać szpinak, szynkę, kukurydzę, paprykę i tarty żółty ser. Całość wymieszać.
 5. Blachę wyłożyć papierem do pieczenia albo lekko natłuścić.
 6. Wylać masę na blachę i równomiernie rozprowadzić dodatki.
-7. Wstawić do piekarnika rozgrzanego do 200°C i piec około 30 minut, aż naleśnik się zetnie i lekko zarumieni.
+7. Wstaw do piekarnika rozgrzanego do 200°C i piecz około 30 minut, aż naleśnik się zetnie i lekko zarumieni.
 8. Gotowy naleśnik pokroić na części.
 9. Gotowe, smacznego!

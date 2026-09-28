@@ -39,7 +39,7 @@ publishedAt: '2026-07-06T06:25:29+02:00'
 2. Przełożyć ciasto do foremek lub papilotek.
 3. Brzoskwinie pokroić w kostkę, ułożyć na wierzch ciasta.
 4. Składniki na kruszonkę rozetrzeć w misce, aż zaczną tworzyć się pojedyncze, większe grudki ciasta. Następnie wysypać kruszonkę na owoce.
-5. Piec w temperaturze 180°C przez 25 minut.
+5. Piecz w temperaturze 180°C przez 25 minut.
 6. Gotowe, smacznego!
 
 ## Notatki

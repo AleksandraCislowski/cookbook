@@ -46,7 +46,7 @@ publishedAt: '2026-08-03T20:52:46+02:00'
 
 1. Tortille przeciąć na 4 części, każdą zawinąć jak rożek i spiąć wykałaczką.
 2. Każdy rożek posmarować roztrzepanym jajkiem i posypać sezamem.
-3. Ułożyć rożki na blaszce wyłożonej papierem do pieczenia i piec 9 minut w 200°C, aż się zarumienią.
+3. Ułóż rożki na blaszce wyłożonej papierem do pieczenia i piecz 9 minut w 200°C, aż się zarumienią.
 4. Cebulę pokroić w drobną kostkę, podsmażyć na patelni z mięsem i ulubionymi przyprawami, następnie całość przestudzić i przełożyć do miski.
 5. Do mięsa dodać pokrojone w drobną kostkę ogórki oraz poszatkowaną sałatę.
 6. Dodać składniki na sos i całość dobrze wymieszać.

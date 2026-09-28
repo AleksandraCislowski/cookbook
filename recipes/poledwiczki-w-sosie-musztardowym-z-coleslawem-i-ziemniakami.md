@@ -41,16 +41,16 @@ publishedAt: '2026-07-13T06:47:50+02:00'
 
 ## Przygotowanie
 
-1. Ziemniaki obrać i gotować w osolonej wodzie do miękkości.
-2. Mięso podzielić na mniejsze kawałki, rozbić, a następnie doprawić wg uznania przyprawami.
-3. Każdy kawałek mięsa obtoczyć w mące, podsmażyć krótko na patelni z oliwą.
-4. Następnie wymieszać wodę razem z musztardą, zalać mięso.
-5. Dusić pod przykryciem na małym ogniu przez 25 minut.
-6. Na tarce zetrzeć białą i czerwoną kapustę oraz marchew, przełożyć wszystko do miski.
-7. Pokroić drobno por i dodać do surówki.
-8. Dodać majonez, jogurt, chrzan oraz sok z cytryny, następnie doprawić solą i pieprzem do smaku.
+1. Ziemniaki obierz i ugotuj w osolonej wodzie do miękkości.
+2. Mięso podziel na mniejsze kawałki, rozbij i dopraw do smaku.
+3. Każdy kawałek mięsa obtocz w mące i krótko podsmaż na patelni z oliwą.
+4. Wymieszaj wodę z musztardą i zalej mięso.
+5. Duś pod przykryciem na małym ogniu przez 25 minut.
+6. Na tarce zetrzyj białą kapustę, czerwoną kapustę i marchew. Przełóż wszystko do miski.
+7. Drobno pokrój por i dodaj go do surówki.
+8. Dodaj majonez, jogurt, chrzan i sok z cytryny. Dopraw solą i pieprzem do smaku.
 9. Gotowe, smacznego!
 
 ## Notatki
 
-Opcjonalnie do coleslawa i na ziemniaki można dodać koperek. W razie potrzeby sos zagęścić do pożądanej konsystencji.
+Opcjonalnie do coleslawa i na ziemniaki można dodać koperek. W razie potrzeby zagęść sos do pożądanej konsystencji.

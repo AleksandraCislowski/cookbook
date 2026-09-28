@@ -37,7 +37,7 @@ publishedAt: '2026-07-15T08:23:38+02:00'
 2. Podzielić na 4 części i z każdej uformować bajgiel z bardzo dużym otworem (podczas pieczenia bajgiel mocno wyrośnie).
 3. Bajgle ułożyć na blaszce wyłożonej papierem do pieczenia, wierzch każdego z nich posmarować rozmąconym jajkiem.
 4. Posypać sezamem i nasionami.
-5. Piec w 180°C przez 27 minut.
+5. Piecz w 180°C przez 27 minut.
 6. Gotowe, smacznego!
 
 ## Notatki

@@ -33,9 +33,9 @@ publishedAt: '2026-09-01T07:16:20+02:00'
 
 ## Przygotowanie
 
-1. Ugotowane ziemniaki przekładamy na blachę do pieczenia i rozgniatamy, tworząc z nich spód i brzegi tarty.
-2. Cukinię kroimy wzdłuż na cienkie plastry, następnie na każdym plastrze układamy kawałki szynki i sera i zwijamy w rulony.
-3. Tak przygotowane rulony układamy ciasno na spodzie z ziemniaków.
-4. W osobnej misce roztrzepujemy jajka ze śmietaną, solą i pieprzem do smaku.
-5. Tak przygotowaną masę wylewamy na wierzch tarty, następnie całość pieczemy przez 45 minut w 200°C.
+1. Ugotowane ziemniaki przełóż na blachę do pieczenia i rozgnieć, tworząc spód oraz brzegi tarty.
+2. Cukinię pokrój wzdłuż na cienkie plastry. Na każdym plastrze ułóż kawałki szynki i sera, a potem zwiń w rulony.
+3. Tak przygotowane rulony ułóż ciasno na spodzie z ziemniaków.
+4. W osobnej misce roztrzep jajka ze śmietaną, solą i pieprzem do smaku.
+5. Wylej masę na wierzch tarty i piecz przez 45 minut w 200°C.
 6. Gotowe, smacznego!

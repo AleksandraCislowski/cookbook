@@ -1,5 +1,5 @@
 ---
-title: "Zapiekana tortilla z farszem a'la lasagne"
+title: 'Zapiekana tortilla z farszem a la lasagne'
 slug: zapiekana-tortilla-z-farszem-a-la-lasagne
 description: Trójkąty z tortilli z cienką warstwą doprawionego mięsa mielonego, beszamelem i zapieczonym serem.
 category: Obiad, Z mięsem
@@ -42,13 +42,13 @@ publishedAt: '2026-09-14T17:52:41+02:00'
 
 ## Przygotowanie
 
-1. Piekarnik rozgrzewamy do 200°C góra-dół.
-2. Mięso mielone mieszamy z solą, pieprzem, przyprawą do mięsa, majerankiem i papryką wędzoną.
-3. W rondelku rozpuszczamy masło i dodajemy mąkę. Chwilę podsmażamy, aż mąka lekko się zrumieni. Następnie stopniowo dolewamy mleko, cały czas energicznie mieszając, żeby nie powstały grudki. Doprawiamy solą, pieprzem i gałką muszkatołową.
-4. Tortille przekrawamy na pół. Na każdej połówce rozsmarowujemy bardzo cienką warstwę surowego, doprawionego mięsa mielonego.
-5. Mięso smarujemy warstwą sosu beszamelowego, a następnie składamy połówkę tortilli na 3 części, tak żeby powstał trójkąt.
-6. Żeliwną patelnię lub naczynie do zapiekania lekko natłuszczamy. Układamy trójkąty łączeniem do dołu i posypujemy tartym serem.
-7. Pieczemy przez około 20 minut, aż mięso się dopiecze, a ser roztopi i lekko przypiecze.
+1. Rozgrzej piekarnik do 200°C, góra-dół.
+2. Mięso mielone wymieszaj z solą, pieprzem, przyprawą do mięsa, majerankiem i papryką wędzoną.
+3. W rondelku rozpuść masło i dodaj mąkę. Podsmaż chwilę, aż mąka lekko się zrumieni. Następnie stopniowo dolewaj mleko, cały czas energicznie mieszając, żeby nie powstały grudki. Dopraw solą, pieprzem i gałką muszkatołową.
+4. Tortille przekrój na pół. Na każdej połówce rozsmaruj bardzo cienką warstwę surowego, doprawionego mięsa mielonego.
+5. Mięso posmaruj warstwą sosu beszamelowego, a następnie złóż połówkę tortilli na 3 części, tak żeby powstał trójkąt.
+6. Żeliwną patelnię lub naczynie do zapiekania lekko natłuść. Ułóż trójkąty łączeniem do dołu i posyp tartym serem.
+7. Piecz przez około 20 minut, aż mięso się dopiecze, a ser roztopi i lekko przypiecze.
 8. Gotowe, smacznego!
 
 ## Notatki

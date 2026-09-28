@@ -38,7 +38,7 @@ publishedAt: '2026-07-12T16:14:49+02:00'
 1. Wszystkie składniki przełożyć do miski i zagnieść ciasto. Powinno wyjść odrobinę lepiące się.
 2. Na blachę wyłożoną papierem do pieczenia wyłożyć i uformować 4 pizzerki.
 3. Wierzch posmarować ketchupem, posypać startym serem.
-4. Piec w 220°C przez 22 minuty.
+4. Piecz w 220°C przez 22 minuty.
 5. Gotowe, smacznego!
 
 ## Notatki

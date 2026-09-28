@@ -33,12 +33,12 @@ publishedAt: '2026-09-14T17:51:06+02:00'
 
 ## Przygotowanie
 
-1. Piekarnik rozgrzewamy do 225°C.
-2. Tortillą wykładamy małą tortownicę lub formę do tarty, dociskając ją do dna i boków.
-3. Kurczaka kroimy lub rwiemy na mniejsze kawałki, a następnie krótko przesmażamy na patelni ze szpinakiem, aż szpinak zmięknie. Doprawiamy solą i pieprzem.
-4. Farsz z kurczaka i szpinaku przekładamy na spód z tortilli.
-5. W misce mieszamy serek wiejski z jajkami, solą i pieprzem.
-6. Masę wylewamy na farsz, a wierzch posypujemy tartym serem.
-7. Pieczemy przez około 30 minut. Jeśli brzegi tortilli za mocno się rumienią, przykrywamy je folią aluminiową w połowie pieczenia.
-8. Po upieczeniu odstawiamy tartę na kilka minut przed krojeniem.
+1. Rozgrzej piekarnik do 225°C.
+2. Tortillą wyłóż małą tortownicę lub formę do tarty, dociskając ją do dna i boków.
+3. Kurczaka pokrój lub porwij na mniejsze kawałki, a następnie krótko przesmaż na patelni ze szpinakiem, aż szpinak zmięknie. Dopraw solą i pieprzem.
+4. Farsz z kurczaka i szpinaku przełóż na spód z tortilli.
+5. W misce wymieszaj serek wiejski z jajkami, solą i pieprzem.
+6. Masę wylej na farsz, a wierzch posyp tartym serem.
+7. Piecz przez około 30 minut. Jeśli brzegi tortilli za mocno się rumienią, przykryj je folią aluminiową w połowie pieczenia.
+8. Po upieczeniu odstaw tartę na kilka minut przed krojeniem.
 9. Gotowe, smacznego!

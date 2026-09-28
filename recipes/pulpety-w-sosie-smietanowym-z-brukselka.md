@@ -34,16 +34,16 @@ publishedAt: '2026-09-14T17:53:13+02:00'
 
 ## Przygotowanie
 
-1. Mięso mielone doprawiamy solą, pieprzem i przyprawą do mięsa, a następnie dokładnie wyrabiamy.
-2. Z mięsa formujemy małe pulpety.
-3. Na patelni obsmażamy pulpety z każdej strony, tylko do lekkiego zrumienienia.
-4. Obsmażone pulpety zalewamy bulionem, przykrywamy i gotujemy około 10 minut.
-5. Zdejmujemy pokrywkę i gotujemy jeszcze kilka minut, żeby część płynu odparowała.
-6. W misce mieszamy śmietanę obiadową z musztardą i kilkoma łyżkami gorącego bulionu z patelni.
-7. Zahartowaną śmietanę wlewamy do pulpetów i mieszamy.
-8. Mąkę rozrabiamy w małej ilości zimnej wody, wlewamy do sosu i gotujemy jeszcze chwilę, aż sos zgęstnieje. W razie potrzeby doprawiamy solą i pieprzem.
-9. W osobnym garnku gotujemy brukselkę w osolonej wodzie, aż będzie miękka, ale nadal jędrna (5-8 minut).
-10. Pulpety podajemy z sosem śmietanowo-musztardowym i gotowaną brukselką.
+1. Mięso mielone dopraw solą, pieprzem i przyprawą do mięsa, a następnie dokładnie wyrób.
+2. Z mięsa uformuj małe pulpety.
+3. Na patelni obsmaż pulpety z każdej strony, tylko do lekkiego zrumienienia.
+4. Obsmażone pulpety zalej bulionem, przykryj i gotuj około 10 minut.
+5. Zdejmij pokrywkę i gotuj jeszcze kilka minut, żeby część płynu odparowała.
+6. W misce wymieszaj śmietanę obiadową z musztardą i kilkoma łyżkami gorącego bulionu z patelni.
+7. Zahartowaną śmietanę wlej do pulpetów i wymieszaj.
+8. Mąkę rozrób w małej ilości zimnej wody, wlej do sosu i gotuj jeszcze chwilę, aż sos zgęstnieje. W razie potrzeby dopraw solą i pieprzem.
+9. W osobnym garnku ugotuj brukselkę w osolonej wodzie, aż będzie miękka, ale nadal jędrna (5-8 minut).
+10. Pulpety podawaj z sosem śmietanowo-musztardowym i gotowaną brukselką.
 11. Gotowe, smacznego!
 
 ## Notatki

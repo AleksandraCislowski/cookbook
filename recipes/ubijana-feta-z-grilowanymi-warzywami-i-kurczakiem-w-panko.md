@@ -1,5 +1,5 @@
 ---
-title: 'Ubijana feta z grilowanymi warzywami i kurczakiem w panko'
+title: 'Ubijana feta z grillowanymi warzywami i kurczakiem w panko'
 slug: ubijana-feta-z-grilowanymi-warzywami-i-kurczakiem-w-panko
 description: Kremowa ubijana feta z grillowanymi warzywami i złocistym kurczakiem w panko.
 category: Obiad, Z mięsem, Blender
@@ -47,11 +47,11 @@ publishedAt: '2026-07-13T07:10:53+02:00'
 
 ## Przygotowanie
 
-1. Warzywa pokroić na mniejsze kawałki, skropić oliwą i doprawić solą i pieprzem. Piec przez 45 minut w 180°C.
-2. Twaróg zblendować na gładką masę razem z serem feta i jogurtem.
-3. Następnie dodać oliwę, sok z cytryny, czosnek przeciśnięty przez praskę oraz pieprz i dokładnie wymieszać.
-4. Mięso podzielić na kotlety, doprawić przyprawami wg uznania.
-5. Każdy kotlet obtoczyć w bułce tartej, jajku oraz panko.
-6. Smażyć na oliwie, 2-3 minuty z każdej strony.
-7. Na talerz wyłożyć ubijaną fetę, pieczone warzywa oraz usmażony kotlet.
+1. Warzywa pokrój na mniejsze kawałki, skrop oliwą i dopraw solą oraz pieprzem. Piecz przez 45 minut w 180°C.
+2. Twaróg zblenduj na gładką masę razem z serem feta i jogurtem.
+3. Dodaj oliwę, sok z cytryny, czosnek przeciśnięty przez praskę oraz pieprz i dokładnie wymieszaj.
+4. Mięso podziel na kotlety i dopraw do smaku.
+5. Każdy kotlet obtocz w bułce tartej, jajku oraz panko.
+6. Smaż na oliwie po 2-3 minuty z każdej strony.
+7. Na talerz wyłóż ubijaną fetę, pieczone warzywa oraz usmażony kotlet.
 8. Gotowe, smacznego!

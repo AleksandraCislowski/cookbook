@@ -39,13 +39,13 @@ publishedAt: '2026-09-07T18:01:19+02:00'
 1. Rozgrzać piekarnik do 200°C.
 2. Tortownicę wyłożyć papierem do pieczenia.
 3. Ciastka zblendować na pył, dodać roztopione masło i wymieszać.
-4. Masę ciasteczkową wyłożyć do tortownicy, ugnieść i piec 6 min. Wystudzić.
+4. Masę ciasteczkową wyłóż do tortownicy, ugnieć i piecz 6 min. Wystudź.
 5. Podnieść temperaturę piekarnika do 220°C.
 6. Serek, jogurt i cukier utrzeć na gładką masę.
 7. Dodawać po 1 jajku, miksując po każdym dodaniu.
 8. Dodać śmietankę, sól i ekstrakt waniliowy, a następnie zmiksować. Masa będzie płynna.
 9. Wlać masę na podpieczony spód.
-10. Piec 30 min.
+10. Piecz 30 min.
 11. Po wystudzeniu schłodzić w lodówce minimum 8 godzin.
 12. Gotowe, smacznego!
 

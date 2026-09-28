@@ -32,7 +32,7 @@ publishedAt: '2026-08-04T20:52:01+02:00'
 1. Żółtka zmiksować z cukrem pudrem i cukrem waniliowym.
 2. Białka ubić ze szczyptą soli.
 3. Połączyć obie masy z resztą składników.
-4. Piec 10 min w 190°C w prostokątnej formie (ok. 40 × 25 cm).
+4. Piecz 10 min w 190°C w prostokątnej formie (ok. 40 × 25 cm).
 5. Wyjąć z formy i zwinąć na ściereczce oprószonej cukrem pudrem.
 6. Rozwinąć, posmarować dżemem i zwinąć z powrotem.
 7. Gotowe, smacznego!

@@ -41,7 +41,7 @@ publishedAt: '2026-08-14T08:14:09+02:00'
 1. Jajka utrzeć z cukrem.
 2. Dodać resztę składników na ciasto i zmiksować na gładką masę.
 3. Dodać owoce i bakalie i wymieszać.
-4. Piec 60 min w 180°C.
+4. Piecz 60 min w 180°C.
 5. Gotowe, smacznego!
 
 ## Notatki

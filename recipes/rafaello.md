@@ -24,7 +24,7 @@ publishedAt: '2026-08-05T17:02:01+02:00'
 - 20g cukru waniliowego
 - 6 łyżek mąki tortowej
 - 6 łyżek mąki ziemniaczanej
-- 250 g masła
+- 250g masła
 - duża paczka wiórek kokosowych
 - 2–3 opakowania solonych krakersów
 

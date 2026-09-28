@@ -2,7 +2,7 @@
 title: 'Puree z dyni'
 slug: puree-z-dyni
 description: Gładkie puree z pieczonej dyni piżmowej do zup, sosów i wypieków.
-category: Dodatki, Vege
+category: Dodatki, Vege, Blender
 cuisine: Domowa
 prepTime:
 cookTime:

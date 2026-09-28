@@ -38,7 +38,7 @@ publishedAt: '2026-08-09T15:42:46+02:00'
 3. Na placek tortilli wyłożyć 1/3 farszu z mięsa mielonego i rozprowadzić po całej powierzchni. Następnie przykryć drugim plackiem tortilli i powtórzyć proces do wyczerpania składników.
 4. Tortille pociąć wzdłuż i wszerz, tak aby powstały kwadratowe kawałki z warstwami mięsa i tortilli.
 5. Nadziewać kawałki na patyczki od szaszłyków i ułożyć na blaszce wyłożonej papierem do pieczenia.
-6. Piec przez 40 minut w 200°C.
+6. Piecz przez 40 minut w 200°C.
 7. Gotowe, smacznego!
 
 ## Notatki
