@@ -2,7 +2,7 @@
 title: 'Kluski śląskie'
 slug: kluski-slaskie
 description: Tradycyjne, miękkie kluski śląskie z charakterystycznym zagłębieniem, idealne do sosów i gulaszy.
-category: Obiad, Vege
+category: Dodatki, Vege
 cuisine: Domowa
 prepTime: 30
 cookTime:
