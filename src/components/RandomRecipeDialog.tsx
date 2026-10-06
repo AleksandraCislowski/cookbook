@@ -18,6 +18,10 @@ import { useRouter } from 'next/navigation';
 import { RecipeImage } from '@/components/RecipeImage';
 import { RecipeMetaList } from '@/components/RecipeMetaList';
 import type { Recipe } from '@/data/recipes';
+import {
+  rememberHomeScrollPosition,
+  requestHomeScrollRestore,
+} from '@/utils/homeScroll';
 
 type RandomRecipeDialogProps = {
   onClose: () => void;
@@ -34,6 +38,8 @@ export function RandomRecipeDialog({
 
   function openRecipe() {
     if (recipe) {
+      rememberHomeScrollPosition();
+      requestHomeScrollRestore();
       router.push(`/recipes/${recipe.slug}`);
     }
   }

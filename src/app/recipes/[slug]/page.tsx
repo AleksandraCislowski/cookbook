@@ -1,4 +1,3 @@
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
@@ -8,7 +7,6 @@ import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 import {
   Box,
-  Button,
   Chip,
   Container,
   Divider,
@@ -19,6 +17,7 @@ import {
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { RecipeActions } from '@/components/RecipeActions';
+import { RecipeBackButton } from '@/components/RecipeBackButton';
 import { RecipeIngredients } from '@/components/RecipeIngredients';
 import { RecipeSpices } from '@/components/RecipeSpices';
 import { getRecipeBySlug, getRecipeSlugs, type Recipe } from '@/data/recipes';
@@ -187,9 +186,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
           spacing={1}
           sx={{ mb: 2 }}
         >
-          <Button href='/' startIcon={<ArrowBackIcon />}>
-            Wróć do przepisów
-          </Button>
+          <RecipeBackButton />
           <RecipeActions
             ingredientGroups={recipe.ingredientGroups}
             printTitle={recipe.title}

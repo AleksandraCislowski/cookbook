@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Card,
@@ -10,8 +12,17 @@ import Link from 'next/link';
 import { RecipeImage } from '@/components/RecipeImage';
 import { RecipeMetaList } from '@/components/RecipeMetaList';
 import type { Recipe } from '@/data/recipes';
+import {
+  rememberHomeScrollPosition,
+  requestHomeScrollRestore,
+} from '@/utils/homeScroll';
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
+  function prepareRecipeNavigation() {
+    rememberHomeScrollPosition();
+    requestHomeScrollRestore();
+  }
+
   return (
     <Card
       variant='outlined'
@@ -24,6 +35,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
       <CardActionArea
         component={Link}
         href={`/recipes/${recipe.slug}`}
+        onClick={prepareRecipeNavigation}
         sx={{
           display: 'flex',
           flexDirection: 'column',

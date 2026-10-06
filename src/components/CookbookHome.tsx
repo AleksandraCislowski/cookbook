@@ -11,6 +11,11 @@ import {
 import { RandomRecipeDialog } from '@/components/RandomRecipeDialog';
 import { RecipeResults } from '@/components/RecipeResults';
 import type { Recipe } from '@/data/recipes';
+import {
+  HOME_SCROLL_RESTORE_KEY,
+  HOME_SCROLL_STORAGE_KEY,
+  rememberHomeScrollPosition,
+} from '@/utils/homeScroll';
 
 type RandomRecipePool = {
   key: string;
@@ -186,6 +191,54 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
         return secondRecipe.addedDate.localeCompare(firstRecipe.addedDate);
       });
   }, [category, cuisine, recipes, searchTerm, sort]);
+
+  useEffect(() => {
+    if (!hasLoadedStoredFilters) {
+      return;
+    }
+
+    window.addEventListener('scroll', rememberHomeScrollPosition, {
+      passive: true,
+    });
+    window.addEventListener('pagehide', rememberHomeScrollPosition);
+
+    return () => {
+      window.removeEventListener('scroll', rememberHomeScrollPosition);
+      window.removeEventListener('pagehide', rememberHomeScrollPosition);
+    };
+  }, [hasLoadedStoredFilters]);
+
+  useEffect(() => {
+    if (
+      !hasLoadedStoredFilters ||
+      sessionStorage.getItem(HOME_SCROLL_RESTORE_KEY) !== 'true'
+    ) {
+      return;
+    }
+
+    const savedScrollY = Number(
+      sessionStorage.getItem(HOME_SCROLL_STORAGE_KEY) ?? 0,
+    );
+
+    if (!Number.isFinite(savedScrollY)) {
+      sessionStorage.removeItem(HOME_SCROLL_RESTORE_KEY);
+      return;
+    }
+
+    sessionStorage.removeItem(HOME_SCROLL_RESTORE_KEY);
+
+    const restoreScroll = () => {
+      window.scrollTo(0, savedScrollY);
+    };
+
+    const animationFrame = requestAnimationFrame(restoreScroll);
+    const timeout = window.setTimeout(restoreScroll, 150);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      window.clearTimeout(timeout);
+    };
+  }, [filteredRecipes.length, hasLoadedStoredFilters]);
 
   const stats = [
     { label: 'Przepisy', value: recipes.length },
