@@ -3,7 +3,7 @@ title: 'Pierogi ruskie'
 slug: pierogi-ruskie
 description: Klasyczne pierogi ruskie z domowym ciastem, farszem z ziemniaków, twarogu i podsmażonej cebuli.
 category: Obiad, Vege
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime: 3
 bakeTime:

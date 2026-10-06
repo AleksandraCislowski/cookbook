@@ -3,7 +3,7 @@ title: 'Jabłecznik'
 slug: jablecznik
 description: Klasyczny, domowy jabłecznik na maślanym spodzie z cynamonem i rodzynkami.
 category: Deser, Przekąska
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime:
 bakeTime: 80

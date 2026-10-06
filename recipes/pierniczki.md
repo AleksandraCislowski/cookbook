@@ -3,7 +3,7 @@ title: 'Pierniczki'
 slug: pierniczki
 description: Proste domowe pierniczki z miodem, kakao i przyprawą korzenną, idealne do wycinania foremkami.
 category: Deser, Przekąska
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime:
 bakeTime: 15

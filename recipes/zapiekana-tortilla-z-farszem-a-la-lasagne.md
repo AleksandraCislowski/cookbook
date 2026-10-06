@@ -3,7 +3,7 @@ title: 'Zapiekana tortilla z farszem a la lasagne'
 slug: zapiekana-tortilla-z-farszem-a-la-lasagne
 description: Trójkąty z tortilli z cienką warstwą doprawionego mięsa mielonego, beszamelem i zapieczonym serem.
 category: Obiad, Z mięsem
-cuisine: Domowa
+cuisine: Włoska
 prepTime:
 cookTime:
 bakeTime: 20

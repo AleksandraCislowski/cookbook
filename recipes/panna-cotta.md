@@ -3,7 +3,7 @@ title: 'Panna cotta'
 slug: panna-cotta
 description: Delikatna panna cotta na śmietance, podawana z owocami.
 category: Deser
-cuisine: Domowa
+cuisine: Włoska
 prepTime:
 cookTime: 5
 bakeTime:

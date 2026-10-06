@@ -3,7 +3,7 @@ title: 'Mud cake proteinowy z mikrofali'
 slug: mud-cake-z-mikrofali
 description: Szybki proteinowy mud cake z mikrofalówki.
 category: Deser, Proteinowe
-cuisine: Domowa
+cuisine: Amerykańska
 prepTime:
 cookTime: 1
 bakeTime:

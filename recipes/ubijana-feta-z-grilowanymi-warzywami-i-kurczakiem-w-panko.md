@@ -3,7 +3,7 @@ title: 'Ubijana feta z grillowanymi warzywami i kurczakiem w panko'
 slug: ubijana-feta-z-grilowanymi-warzywami-i-kurczakiem-w-panko
 description: Kremowa ubijana feta z grillowanymi warzywami i złocistym kurczakiem w panko.
 category: Obiad, Z mięsem, Blender
-cuisine: Domowa
+cuisine: Grecka
 prepTime:
 cookTime:
 bakeTime: 45

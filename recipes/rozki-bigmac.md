@@ -3,7 +3,7 @@ title: 'Rożki BigMac'
 slug: rozki-bigmac
 description: Chrupiące rożki z tortilli nadziewane aromatycznym mielonym mięsem, sałatą, ogórkiem i serem — inspirowane smakiem Big Maca.
 category: Przekąska, Z mięsem
-cuisine: Fast food
+cuisine: Amerykańska
 prepTime:
 cookTime:
 bakeTime: 9

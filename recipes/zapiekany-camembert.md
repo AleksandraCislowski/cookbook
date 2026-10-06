@@ -3,7 +3,7 @@ title: 'Zapiekany camembert'
 slug: zapiekany-camembert
 description: Kremowy camembert zapiekany z nektarynką, prosciutto i pistacjami, podawany na ciepło z pieczywem.
 category: Śniadanie, Z mięsem
-cuisine: Nowoczesna
+cuisine: Francuska
 prepTime:
 cookTime:
 bakeTime: 30

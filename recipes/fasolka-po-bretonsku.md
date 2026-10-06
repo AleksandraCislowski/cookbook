@@ -3,7 +3,7 @@ title: 'Fasolka po bretońsku'
 slug: fasolka-po-bretonsku
 description: Gęsta, rozgrzewająca fasolka po bretońsku z kiełbasą i aromatyczną passatą.
 category: Obiad, Z mięsem, Ninja Cooker
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime:
 bakeTime:

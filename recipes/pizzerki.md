@@ -3,7 +3,7 @@ title: 'Pizzerki'
 slug: pizzerki
 description: Szybkie mini pizzerki z jogurtowego ciasta, pieczone z ketchupem i serem.
 category: Śniadanie, Przekąska, Vege
-cuisine: Domowa
+cuisine: Włoska
 prepTime:
 cookTime:
 bakeTime: 22

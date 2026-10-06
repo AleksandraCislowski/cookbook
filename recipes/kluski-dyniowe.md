@@ -3,7 +3,7 @@ title: 'Kluski dyniowe'
 slug: kluski-dyniowe
 description: Proste kluski dyniowe z puree z dyni i mąki pszennej, dobre jako baza do sosów albo dodatek do obiadu.
 category: Dodatki, Vege
-cuisine: Domowa
+cuisine: Polska
 prepTime: 30
 cookTime:
 bakeTime:

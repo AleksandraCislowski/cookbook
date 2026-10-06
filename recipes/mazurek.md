@@ -3,7 +3,7 @@ title: 'Mazurek'
 slug: mazurek
 description: Czekoladowy mazurek na kruchym kakaowym spodzie z warstwą malin i czekoladowym ganache.
 category: Deser
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime:
 bakeTime: 40

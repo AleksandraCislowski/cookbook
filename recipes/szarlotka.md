@@ -3,7 +3,7 @@ title: 'Szarlotka'
 slug: szarlotka
 description: Domowa szarlotka z podsmażanymi jabłkami, rodzynkami, cynamonem i warstwą delikatnej piany.
 category: Deser
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime:
 bakeTime: 60

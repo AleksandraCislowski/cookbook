@@ -2,8 +2,8 @@
 title: 'Curry dyniowe ze szpinakiem i fasolą'
 slug: curry-dyniowe-ze-szpinakiem-i-fasola
 description: Kremowe curry z dyniowym puree, porem, fasolą, szpinakiem i mleczkiem kokosowym.
-category: Obiad, Vege
-cuisine: Azjatycka
+category: Obiad, Vege, Z wczorajszego rosołu
+cuisine: Nowoczesna
 prepTime:
 cookTime: 40
 bakeTime:

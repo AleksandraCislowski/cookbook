@@ -3,7 +3,7 @@ title: 'Babka cytrynowa'
 slug: babka-cytrynowa
 description: Prosta babka cytrynowa ucierana na oleju, pachnąca skórką i aromatem cytrynowym.
 category: Deser
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime:
 bakeTime: 45

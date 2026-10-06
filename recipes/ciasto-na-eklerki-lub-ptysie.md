@@ -3,7 +3,7 @@ title: 'Ciasto na eklerki lub ptysie'
 slug: ciasto-na-eklerki-lub-ptysie
 description: Przepis na lekkie ciasto parzone do eklerków i ptysiów, które idealnie sprawdzi się jako baza do ulubionego kremu.
 category: Dodatek do deserów lub tortów
-cuisine: Domowa
+cuisine: Francuska
 prepTime:
 cookTime:
 bakeTime: 40

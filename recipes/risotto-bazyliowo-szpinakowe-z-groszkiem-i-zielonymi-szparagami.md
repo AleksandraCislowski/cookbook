@@ -2,8 +2,8 @@
 title: 'Risotto bazyliowo-szpinakowe z groszkiem i zielonymi szparagami'
 slug: risotto-bazyliowo-szpinakowe-z-groszkiem-i-zielonymi-szparagami
 description: Kremowe zielone risotto z bazylią, szpinakiem, groszkiem, szparagami i parmezanem.
-category: Obiad, Vege, Blender
-cuisine: Domowa
+category: Obiad, Vege, Blender, Z wczorajszego rosołu
+cuisine: Włoska
 prepTime:
 cookTime: 40
 bakeTime:

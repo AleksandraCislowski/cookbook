@@ -3,7 +3,7 @@ title: 'Krem Oreo'
 slug: krem-oreo
 description: Gęsty krem śmietankowo-mascarpone z ciasteczkami Oreo i białą czekoladą.
 category: Dodatek do deserów lub tortów
-cuisine: Domowa
+cuisine: Amerykańska
 prepTime: 15
 cookTime:
 bakeTime:

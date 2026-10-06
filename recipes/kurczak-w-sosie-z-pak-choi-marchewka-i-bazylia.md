@@ -3,7 +3,7 @@ title: 'Kurczak w sosie z pak choi, marchewką i bazylią'
 slug: kurczak-w-sosie-z-pak-choi-marchewka-i-bazylia
 description: Aromatyczny kurczak w kremowym sosie z pak choi, marchewką i bazylią, podawany do klusek lub kaszy.
 category: Obiad, Z mięsem
-cuisine: Domowa
+cuisine: Azjatycka
 prepTime:
 cookTime: 30
 bakeTime:

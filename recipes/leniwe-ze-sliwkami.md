@@ -3,7 +3,7 @@ title: 'Leniwe ze śliwkami'
 slug: leniwe-ze-sliwkami
 description: Delikatne kluski leniwe z twarogu, podane ze śliwkami i jogurtem greckim.
 category: Obiad, Deser, Vege, Proteinowe
-cuisine: Domowa
+cuisine: Polska
 prepTime: 40
 cookTime:
 bakeTime:

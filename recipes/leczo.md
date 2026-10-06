@@ -3,7 +3,7 @@ title: 'Leczo'
 slug: leczo
 description: Warzywne leczo z kiełbasą, cukinią, papryką i pomidorami przygotowane w wolnowarze.
 category: Obiad, Z mięsem, Ninja Cooker
-cuisine: Domowa
+cuisine: Polska
 prepTime:
 cookTime:
 bakeTime:

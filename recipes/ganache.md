@@ -3,7 +3,7 @@ title: 'Ganache'
 slug: ganache
 description: Gęsty ganache z mlecznej czekolady i śmietanki, gotowy do obkładania tortu po lekkim przestudzeniu.
 category: Dodatek do deserów lub tortów
-cuisine: Domowa
+cuisine: Francuska
 prepTime:
 cookTime: 5
 bakeTime:

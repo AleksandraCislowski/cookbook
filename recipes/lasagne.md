@@ -3,7 +3,7 @@ title: 'Lasagne'
 slug: lasagne
 description: Klasyczna lasagne z aromatycznym sosem mięsnym i kremowym beszamelem, idealna na rodzinny obiad.
 category: Obiad, Z mięsem
-cuisine: Domowa
+cuisine: Włoska
 prepTime:
 cookTime:
 bakeTime: 45
