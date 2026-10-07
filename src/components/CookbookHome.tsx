@@ -12,6 +12,7 @@ import { RandomRecipeDialog } from '@/components/RandomRecipeDialog';
 import { RecipeResults } from '@/components/RecipeResults';
 import type { Recipe } from '@/data/recipes';
 import {
+  HOME_SCROLL_RECIPE_SLUG_KEY,
   HOME_SCROLL_RESTORE_KEY,
   HOME_SCROLL_STORAGE_KEY,
   rememberHomeScrollPosition,
@@ -32,6 +33,15 @@ type StoredFilters = {
   searchTerm?: string;
   sort?: string;
 };
+
+function filtersAreActive(filters: StoredFilters) {
+  return (
+    filters.searchTerm !== '' ||
+    filters.category !== ALL_RECIPES_FILTER ||
+    filters.cuisine !== ALL_CUISINES_FILTER ||
+    filters.sort !== DEFAULT_SORT
+  );
+}
 
 function isSortOption(value: string | null | undefined) {
   return Boolean(value && SORT_OPTIONS.includes(value));
@@ -106,7 +116,10 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     sort !== DEFAULT_SORT;
 
   useEffect(() => {
-    if (wasPageReloaded()) {
+    if (
+      wasPageReloaded() &&
+      sessionStorage.getItem(HOME_SCROLL_RESTORE_KEY) !== 'true'
+    ) {
       sessionStorage.removeItem(FILTER_STORAGE_KEY);
       setHasLoadedStoredFilters(true);
       return;
@@ -191,20 +204,28 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
         return secondRecipe.addedDate.localeCompare(firstRecipe.addedDate);
       });
   }, [category, cuisine, recipes, searchTerm, sort]);
+  const filteredRecipeSlugsKey = useMemo(
+    () => filteredRecipes.map((recipe) => recipe.slug).join('|'),
+    [filteredRecipes],
+  );
 
   useEffect(() => {
     if (!hasLoadedStoredFilters) {
       return;
     }
 
-    window.addEventListener('scroll', rememberHomeScrollPosition, {
+    const rememberCurrentScrollPosition = () => {
+      rememberHomeScrollPosition();
+    };
+
+    window.addEventListener('scroll', rememberCurrentScrollPosition, {
       passive: true,
     });
-    window.addEventListener('pagehide', rememberHomeScrollPosition);
+    window.addEventListener('pagehide', rememberCurrentScrollPosition);
 
     return () => {
-      window.removeEventListener('scroll', rememberHomeScrollPosition);
-      window.removeEventListener('pagehide', rememberHomeScrollPosition);
+      window.removeEventListener('scroll', rememberCurrentScrollPosition);
+      window.removeEventListener('pagehide', rememberCurrentScrollPosition);
     };
   }, [hasLoadedStoredFilters]);
 
@@ -228,17 +249,27 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     sessionStorage.removeItem(HOME_SCROLL_RESTORE_KEY);
 
     const restoreScroll = () => {
+      const recipeSlug = sessionStorage.getItem(HOME_SCROLL_RECIPE_SLUG_KEY);
+      const recipeCard = recipeSlug
+        ? document.querySelector(`[data-recipe-slug="${recipeSlug}"]`)
+        : null;
+
+      if (recipeCard) {
+        recipeCard.scrollIntoView({ block: 'start' });
+        return;
+      }
+
       window.scrollTo(0, savedScrollY);
     };
 
     const animationFrame = requestAnimationFrame(restoreScroll);
-    const timeout = window.setTimeout(restoreScroll, 150);
+    const timeout = window.setTimeout(restoreScroll, 250);
 
     return () => {
       cancelAnimationFrame(animationFrame);
       window.clearTimeout(timeout);
     };
-  }, [filteredRecipes.length, hasLoadedStoredFilters]);
+  }, [filteredRecipeSlugsKey, hasLoadedStoredFilters]);
 
   const stats = [
     { label: 'Przepisy', value: recipes.length },
@@ -251,6 +282,44 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
     setCategory(ALL_RECIPES_FILTER);
     setCuisine(ALL_CUISINES_FILTER);
     setSort('newest');
+    sessionStorage.removeItem(FILTER_STORAGE_KEY);
+  }
+
+  function saveFilters(nextFilters: StoredFilters) {
+    const filters = {
+      category,
+      cuisine,
+      searchTerm,
+      sort,
+      ...nextFilters,
+    };
+
+    if (!filtersAreActive(filters)) {
+      sessionStorage.removeItem(FILTER_STORAGE_KEY);
+      return;
+    }
+
+    sessionStorage.setItem(FILTER_STORAGE_KEY, JSON.stringify(filters));
+  }
+
+  function changeSearchTerm(nextSearchTerm: string) {
+    setSearchTerm(nextSearchTerm);
+    saveFilters({ searchTerm: nextSearchTerm });
+  }
+
+  function changeCategory(nextCategory: string) {
+    setCategory(nextCategory);
+    saveFilters({ category: nextCategory });
+  }
+
+  function changeCuisine(nextCuisine: string) {
+    setCuisine(nextCuisine);
+    saveFilters({ cuisine: nextCuisine });
+  }
+
+  function changeSort(nextSort: string) {
+    setSort(nextSort);
+    saveFilters({ sort: nextSort });
   }
 
   function pickRandomRecipe() {
@@ -332,11 +401,11 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
               searchTerm={searchTerm}
               sort={sort}
               stats={stats}
-              onCategoryChange={setCategory}
-              onCuisineChange={setCuisine}
+              onCategoryChange={changeCategory}
+              onCuisineChange={changeCuisine}
               onResetFilters={resetFilters}
-              onSearchTermChange={setSearchTerm}
-              onSortChange={setSort}
+              onSearchTermChange={changeSearchTerm}
+              onSortChange={changeSort}
             />
 
             <RecipeResults

@@ -12,19 +12,16 @@ import Link from 'next/link';
 import { RecipeImage } from '@/components/RecipeImage';
 import { RecipeMetaList } from '@/components/RecipeMetaList';
 import type { Recipe } from '@/data/recipes';
-import {
-  rememberHomeScrollPosition,
-  requestHomeScrollRestore,
-} from '@/utils/homeScroll';
+import { rememberHomeScrollPosition } from '@/utils/homeScroll';
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
   function prepareRecipeNavigation() {
-    rememberHomeScrollPosition();
-    requestHomeScrollRestore();
+    rememberHomeScrollPosition(recipe.slug);
   }
 
   return (
     <Card
+      data-recipe-slug={recipe.slug}
       variant='outlined'
       sx={{
         height: '100%',
