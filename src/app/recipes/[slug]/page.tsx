@@ -289,7 +289,15 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
               <Typography
                 variant='h1'
-                sx={{ fontSize: { xs: '2rem', md: '2.6rem' }, lineHeight: 1 }}
+                sx={{
+                  fontSize: {
+                    xs: '1.55rem',
+                    sm: '1.95rem',
+                    md: '2.15rem',
+                  },
+                  lineHeight: 1.05,
+                  overflowWrap: 'break-word',
+                }}
               >
                 {recipe.title}
               </Typography>
