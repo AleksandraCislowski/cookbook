@@ -45,7 +45,7 @@ publishedAt: '2026-07-01T07:28:08+02:00'
 ## Przygotowanie
 
 1. Marchew zetrzyj na tarce o grubych oczkach. Dodaj jajko, ser i przyprawy, dobrze wymieszaj.
-2. Na blachę do pieczenia wyłóż papier, a następnie masę na wrapa. Rozsmaruj na kształt prostokąta o grubości ok 3-4mm.
+2. Na blachę do pieczenia wyłóż papier, a następnie masę na wrapa. Rozsmaruj na kształt prostokąta o grubości ok. 3-4 mm.
 3. Piecz w 180°C przez 22 minuty.
 4. W tym czasie pokrój kurczaka w drobną kostkę i usmaż na oliwie wraz z ulubionymi przyprawami.
 5. Sałatę, pomidora i ogórka pokrój drobno.

@@ -49,6 +49,6 @@ publishedAt: '2026-07-19T19:20:43+02:00'
 5. Dodaj groszek i upieczone oraz przestudzone ziemniaki.
 6. Fetę, jogurt, sok z cytryny oraz oliwę przełóż do kielicha blendera i zblenduj na gładką masę.
 7. Dodaj sos do pozostałych warzyw.
-8. Pokrój drobno szczypiorek oraz pistację i dodaj do sałatki, całość dobrze wymieszaj.
+8. Pokrój drobno szczypiorek oraz pistacje i dodaj do sałatki, całość dobrze wymieszaj.
 9. Dopraw solą i pieprzem do smaku.
 10. Gotowe, smacznego!

@@ -28,7 +28,7 @@ publishedAt: '2026-06-22T20:03:00+02:00'
 
 ## Przygotowanie
 
-1. Zaparz ok 200ml mocnej kawy i pozostaw do wystudzenia.
+1. Zaparz ok. 200ml mocnej kawy i pozostaw do wystudzenia.
 2. Do miski przełóż twaróg i serek, całość zblenduj, aż masa będzie gładka i bez grudek.
 3. Dodaj ksylitol lub erytrytol do smaku (można pominąć).
 4. Do pojemniczków nałóż odrobinę masy twarogowej.

@@ -24,7 +24,7 @@ publishedAt: '2026-07-19T19:21:52+02:00'
 
 ## Przyprawy
 
-- erytrytol lub inne słodziwo do smaku
+- erytrytol lub inne słodzidło do smaku
 
 ## Przygotowanie
 

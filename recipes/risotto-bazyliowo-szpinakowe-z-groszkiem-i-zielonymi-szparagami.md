@@ -62,4 +62,4 @@ publishedAt: '2026-09-28T20:50:20+02:00'
 
 ## Notatki
 
-Danie dobrze komponuje się z kotletami z piersi kurczaka, usmażonymi w chrupiącymc panko.
+Danie dobrze komponuje się z kotletami z piersi kurczaka, usmażonymi w chrupiącym panko.

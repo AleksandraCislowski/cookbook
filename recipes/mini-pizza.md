@@ -1,8 +1,8 @@
 ---
 title: 'Mini pizza'
 slug: mini-pizza
-description: Mała proteinowa pizza na cieście jogurtowym,  z szynką i serem.
-category: Obiad, Przekąska, Proteinowe
+description: Mała proteinowa pizza na cieście jogurtowym, z szynką i serem.
+category: Obiad, Przekąska, Proteinowe, Z mięsem
 cuisine: Włoska
 prepTime:
 cookTime:
@@ -33,9 +33,9 @@ publishedAt: '2026-09-22T17:34:47+02:00'
 
 ## Przygotowanie
 
-1. W misce wymieszaj skyr z mąką i zagnieć na jednolite ciasto.
+1. W misce wymieszaj jogurt grecki z mąką i zagnieć na jednolite ciasto.
 2. Podziel ciasto na 4 części.
 3. Każdą porcję rozwałkuj lub rozpłaszcz na papierze do pieczenia na cienki placek.
 4. Posmaruj placki keczupem i posyp oregano.
-5. Piecz w piekarniku rozgrzanym do 180°C przez około 10 minut, następnie dodaj ser oraz szynkę i piecz jeszcze 3 minuty, aż ser się rozpuści a brzegi zarumienią.
+5. Piecz około 10 minut w 180°C, następnie dodaj ser oraz szynkę i piecz jeszcze 3 minuty, aż ser się rozpuści, a brzegi zarumienią.
 6. Gotowe, smacznego!

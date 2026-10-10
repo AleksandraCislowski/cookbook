@@ -46,7 +46,7 @@ publishedAt: '2026-09-22T16:54:16+02:00'
 
 1. Wszystkie składniki na ciasto przełóż do misy i zagnieć na jednolitą masę.
 2. W osobnej misce wymieszaj składniki masy twarogowej.
-3. Śliwki pokrój na niejsze cząstki, a potem wymieszaj z cukrem pudrem albo erytrytolem, mąką ziemniaczaną, cynamonem, sokiem i skórką z limonki.
+3. Śliwki pokrój na mniejsze cząstki, a potem wymieszaj z cukrem pudrem albo erytrytolem, mąką ziemniaczaną, cynamonem, sokiem i skórką z limonki.
 4. Podziel ciasto na 4 części i uformuj okrągłe kule. Dłonie oprósz mąką albo zwilż wodą, żeby ciasto łatwiej się formowało.
 5. Ułóż kule na blaszce wyłożonej papierem do pieczenia i spłaszcz je, tworząc wgłębienie na dodatki.
 6. Na środek każdej bułeczki wyłóż masę twarogową.
