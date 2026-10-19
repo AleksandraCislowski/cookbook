@@ -35,7 +35,7 @@ publishedAt: '2026-10-10T22:44:09+02:00'
 ### Sałatka
 
 - 1 czerwona cebula
-- 300g pomidorków koktajlowych
+- 600g pomidorków koktajlowych
 - pęczek świeżej bazylii
 - 1 łyżka oliwy z oliwek
 - 1 łyżka octu jabłkowego

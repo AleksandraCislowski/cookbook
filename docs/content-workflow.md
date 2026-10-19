@@ -123,10 +123,19 @@ publishedAt: "2026-06-12T11:57:00+02:00"
 
 ## Writing Guidelines
 
+- When adding or updating recipes, follow the structure, wording, metadata, and appliance program conventions of comparable recipes already in the cookbook.
+- The user uses one Ninja Cooker for slow cooking, air frying, and its other cooking functions. Always add the existing `Ninja Cooker` category when a recipe uses a slow cooker, air fryer, or another function of that appliance. Follow existing recipes for program names and time fields; for slow cooking, use `passiveTime` in minutes, `passiveTimeLabel: Slow Cook (wolnowar)`, and the program and duration in the instructions (for example, `Slow Cook Low (4h)`). Keep the new recipe's own cooking times and temperatures.
+- Before assigning categories, check the categories already used in `recipes/*.md`. Use only existing category names and add all that fit the ingredients and preparation, including dietary and equipment categories such as `Z mięsem`, `Vege`, `Proteinowe`, and `Blender`. Do not invent new categories without the user's instruction.
+- `Vege` means a meat-free dish in this cookbook. Do not add it to desserts solely because they contain no meat.
+- Identify the cuisine from the dish and its preparation, using existing cuisine names. Do not leave the template's `Domowa` value automatically; use it only when it fits. For modern adaptations without a clear national cuisine, use `Nowoczesna` when appropriate.
 - Keep ingredients scannable and include amounts when possible.
+- When the user changes ingredients, reread the current recipe file and update its description, instructions, and notes to match. Remove references to deleted ingredients and techniques that depend on them; do not restore ingredients from an older version.
 - Put seasonings in `## Przyprawy`, separate from `## Składniki`.
 - Write instructions as clear numbered actions.
+- Do not include oven-preheating instructions. Give the baking duration and temperature only in the baking step, for example `Piecz 30 minut w 180°C`.
+- Do not repeat ingredient quantities in the instructions; amounts belong in the ingredient list. When an ingredient appears in multiple components, refer to its role (for example, eggs for the dough or filling). Keep cooking times, temperatures, appliance settings, and necessary portioning directions in the instructions.
 - Add practical notes after cooking the recipe.
+- Write `## Notatki` as full sentences in plain paragraphs. Do not use bulleted or numbered lists in this section, because the recipe view does not display them.
 
 ## Publishing Checklist
 
