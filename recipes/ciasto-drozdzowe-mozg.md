@@ -23,8 +23,8 @@ publishedAt: '2026-10-27T06:39:33+01:00'
 
 - 340g mąki pszennej
 - 260ml ciepłej wody
-- 4 łyżki suchych drożdży
-- 4 łyżki oliwy
+- 3 łyżki suchych drożdży
+- 3 łyżki oliwy
 - 2 łyżki cukru
 - 1 łyżeczka soli
 
