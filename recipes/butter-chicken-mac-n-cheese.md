@@ -12,7 +12,7 @@ restTime:
 passiveTime: 180
 passiveTimeLabel: Slow Cook (wolnowar)
 advanceNotice:
-servings: 4
+servings: 5
 image: butter-chicken-mac-n-cheese.jpg
 publishedAt: '2026-10-19T16:05:46+02:00'
 ---
