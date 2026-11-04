@@ -35,9 +35,9 @@ publishedAt: '2026-09-06T08:24:20+02:00'
 2. Zrobić wgłębienie i dodać pozostałe składniki oprócz mleka.
 3. Posiekać ciasto nożem.
 4. Dodawać mleko porcjami i wyrabiać ciasto, aż będzie gładkie.
-5. Rozwałkować ciasto na około 0,5 cm grubości.
+5. Rozwałkować ciasto na około 0,5cm grubości.
 6. Wycinać kształty foremkami.
-7. Piecz 10-15 min w 180°C.
+7. Piecz 10-15min w 180°C.
 8. Gotowe, smacznego!
 
 ## Notatki

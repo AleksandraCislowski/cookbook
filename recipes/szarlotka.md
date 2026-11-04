@@ -30,7 +30,7 @@ publishedAt: '2026-09-06T07:41:34+02:00'
 
 ### Nadzienie
 
-- 2-2,5 kg jabłek
+- 2-2,5kg jabłek
 - rodzynki
 - cynamon
 
@@ -42,5 +42,5 @@ publishedAt: '2026-09-06T07:41:34+02:00'
 4. Z pozostałych 3 białek ubić sztywną pianę.
 5. Wyłożyć jabłka na spód z ciasta, a na wierzchu rozprowadzić pianę z białek.
 6. Przykryć pozostałym ciastem.
-7. Piecz 60 min w 175°C.
+7. Piecz 60min w 175°C.
 8. Gotowe, smacznego!

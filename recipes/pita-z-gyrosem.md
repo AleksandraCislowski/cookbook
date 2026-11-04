@@ -49,7 +49,7 @@ publishedAt: '2026-08-03T20:53:35+02:00'
 2. Odstawić ciasto pod przykryciem, w ciepłe miejsce do wyrośnięcia, na około 20 minut.
 3. W tym czasie pokroić mięso w kostkę i usmażyć na patelni z ulubionymi przyprawami.
 4. Warzywa pokroić na mniejsze kawałki.
-5. Ciasto na pitę podzielić na 4 części, z każdej uformować płaski placek około 1 cm grubości.
+5. Ciasto na pitę podzielić na 4 części, z każdej uformować płaski placek około 1cm grubości.
 6. Placki smażyć na suchej patelni na średnim ogniu, po 3 minuty z każdej strony.
 7. Następnie składać pity: na wierzch nałożyć ulubiony sos, następnie wyłożyć mięso i pozostałe dodatki.
 8. Gotowe, smacznego!

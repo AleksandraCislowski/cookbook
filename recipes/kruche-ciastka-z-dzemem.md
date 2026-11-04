@@ -21,7 +21,7 @@ publishedAt: '2026-08-04T20:52:16+02:00'
 
 ### Ciasto
 
-- 0,5 kg mąki
+- 0,5kg mąki
 - 2 jajka
 - 125g masła
 - 1/4 szkl. cukru
@@ -35,7 +35,7 @@ publishedAt: '2026-08-04T20:52:16+02:00'
 ## Przygotowanie
 
 1. Składniki na ciasto zagnieść, aż powstanie gładka, jednolita masa.
-2. Ciasto rozwałkować na około 1 cm grubości, następnie wycinać kółka i w każdym z nich zrobić zagłębienie, do którego należy nałożyć porcję dżemu.
+2. Ciasto rozwałkować na około 1cm grubości, następnie wycinać kółka i w każdym z nich zrobić zagłębienie, do którego należy nałożyć porcję dżemu.
 3. Piecz 30 minut w 180°C.
 4. Gotowe, smacznego!
 

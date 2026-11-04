@@ -30,7 +30,7 @@ publishedAt: '2026-08-05T17:02:24+02:00'
 1. Wodę zagotować z masłem. Dodać mąkę wymieszaną z proszkiem do pieczenia, następnie dobrze wymieszać i wystudzić.
 2. Do zimnej masy dodawać po jednym jajku i dobrze zmiksować.
 3. Ciasto kłaść łyżką lub szprycą na blachę wyłożoną papierem do pieczenia.
-4. Piecz 40 min w 200°C.
+4. Piecz 40min w 200°C.
 5. Gotowe, smacznego!
 
 ## Notatki

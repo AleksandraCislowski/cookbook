@@ -29,7 +29,7 @@ publishedAt: '2026-09-07T18:01:51+02:00'
 1. Do garnka wlać wodę i wsypać cukier w proporcji 1:1.
 2. Gotować, aż cukier się rozpuści.
 3. Dodać barwnik spożywczy i wymieszać.
-4. Dodać plastry gruszek i gotować na wolnym ogniu przez 10 min.
+4. Dodać plastry gruszek i gotować na wolnym ogniu przez 10min.
 5. Wyłączyć kuchenkę i pozostawić gruszki w syropie na 2 godziny.
 6. Ułożyć plastry na blasze wyłożonej papierem do pieczenia.
 7. Pozostawić w temperaturze pokojowej na kilka godzin, aż wyschną i staną się sztywne.

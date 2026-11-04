@@ -21,7 +21,7 @@ publishedAt: '2026-09-22T16:54:45+02:00'
 
 ### Pierożki
 
-- 1 kg mielonej wieprzowiny
+- 1kg mielonej wieprzowiny
 - 3 ząbki czosnku
 - 4 łyżki sosu sojowego
 - 2 łyżki sosu ostrygowego

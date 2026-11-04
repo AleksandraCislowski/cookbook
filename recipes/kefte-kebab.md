@@ -62,8 +62,8 @@ publishedAt: '2026-10-10T22:44:09+02:00'
 3. W tym czasie pokrój czerwone cebule w drobną kostkę.
 4. W dużej misce połącz mięso mielone, keczup, przeciśnięty czosnek, pokrojoną cebulę, sól, pieprz, wędzoną paprykę, czosnek granulowany, majeranek i przyprawę do mięs.
 5. Wyrabiaj masę dłońmi przez 2-3 minuty, aż będzie kleista i dobrze połączona.
-6. Rozprowadź masę na blasze wyłożonej papierem do pieczenia w prostokąt o grubości około 1 cm.
-7. Natnij masę nożem na paski o szerokości około 2 cm.
+6. Rozprowadź masę na blasze wyłożonej papierem do pieczenia w prostokąt o grubości około 1cm.
+7. Natnij masę nożem na paski o szerokości około 2cm.
 8. Piecz 20 minut w 200°C.
 9. Po wyjęciu mięsa odlej wytopiony tłuszcz - nie będzie już potrzebny.
 10. W czasie pieczenia przygotuj sałatkę: czerwoną cebulę pokrój w drobną kostkę, pomidorki koktajlowe pokrój na ćwiartki, a bazylię posiekaj.

@@ -32,7 +32,7 @@ publishedAt: "2026-09-07T18:01:42+02:00"
 2. Powoli dodawać jajka, cały czas miksując.
 3. Dodać mleko, mąkę i sól, a następnie dobrze zmiksować.
 4. Przełożyć masę do foremek wysmarowanych masłem.
-5. Piecz 20 min w 180°C.
+5. Piecz 20min w 180°C.
 6. Gotowe, smacznego!
 
 ## Notatki

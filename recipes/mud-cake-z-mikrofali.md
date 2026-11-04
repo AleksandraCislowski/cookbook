@@ -31,7 +31,7 @@ publishedAt: '2026-09-07T18:02:33+02:00'
 2. Dodać odżywkę białkową, kakao i słodzik.
 3. Wymieszać na jednolitą masę.
 4. Przełożyć do natłuszczonego kubeczka.
-5. Grzać w mikrofalówce 45 s w 700W.
+5. Grzać w mikrofalówce 45s w 700W.
 6. Gotowe, smacznego!
 
 ## Notatki

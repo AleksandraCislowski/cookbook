@@ -37,7 +37,7 @@ publishedAt: '2026-08-05T17:01:44+02:00'
 
 1. Z podanych składników zagnieść ciasto, następnie lepić kulki wielkości orzecha włoskiego.
 2. Każdą kulkę spłaszczyć i obtoczyć w posypce z cukru i cynamonu.
-3. Piecz 20 min w 200°C.
+3. Piecz 20min w 200°C.
 4. Gotowe, smacznego!
 
 ## Notatki

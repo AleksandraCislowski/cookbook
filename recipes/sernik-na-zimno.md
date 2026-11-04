@@ -29,7 +29,7 @@ publishedAt: '2026-09-06T07:54:23+02:00'
 
 ### Wierzch
 
-- 0,5 kg truskawek
+- 0,5kg truskawek
 - 1 galaretka truskawkowa
 
 ## Przygotowanie

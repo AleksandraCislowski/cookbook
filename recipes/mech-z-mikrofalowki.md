@@ -30,7 +30,7 @@ publishedAt: '2026-09-07T18:01:07+02:00'
 
 1. Wszystkie składniki wymieszać w miseczce.
 2. Dodać barwnik spożywczy według uznania i ponownie wymieszać.
-3. Grzać w mikrofalówce 2 min w 750W albo 2,5 min w 700W.
+3. Grzać w mikrofalówce 2min w 750W albo 2,5min w 700W.
 4. Po wystudzeniu porwać albo pokruszyć na kawałki do dekoracji.
 5. Gotowe, smacznego!
 

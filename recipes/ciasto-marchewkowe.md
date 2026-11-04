@@ -48,4 +48,4 @@ publishedAt: '2026-09-12T08:06:06+02:00'
 
 ## Notatki
 
-Nie piecz ciasta do całkowicie suchego patyczka, bo odżywka białkowa łatwo je wysusza. Dzięki dodatkowi jabłka masa jest bardziej wilgotna niż w klasycznym cieście marchewkowym. Dobrze sprawdza się też pieczenie w dwóch okrągłych foremkach o średnicy 18 cm.
+Nie piecz ciasta do całkowicie suchego patyczka, bo odżywka białkowa łatwo je wysusza. Dzięki dodatkowi jabłka masa jest bardziej wilgotna niż w klasycznym cieście marchewkowym. Dobrze sprawdza się też pieczenie w dwóch okrągłych foremkach o średnicy 18cm.
