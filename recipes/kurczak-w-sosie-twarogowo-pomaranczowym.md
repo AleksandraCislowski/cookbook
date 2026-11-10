@@ -36,6 +36,11 @@ publishedAt: '2026-10-06T21:12:24+02:00'
 - 1 duża czerwona cebula
 - pęczek świeżej mięty
 
+### Do zagęszczenia (opcjonalnie)
+
+- 1 łyżeczka mąki pszennej
+- 2 łyżki zimnej wody
+
 ## Przygotowanie
 
 1. Twaróg rozdrobnij z jogurtem i sokiem pomarańczowym.
@@ -45,7 +50,7 @@ publishedAt: '2026-10-06T21:12:24+02:00'
 5. Cebulę pokrój w kostkę lub piórka. Na dużej patelni rozgrzej olej i podsmaż cebulę, aż zmięknie.
 6. Dodaj kurczaka razem z marynatą. Smaż kilka minut na średnim ogniu, mieszając, żeby sos nie przywarł.
 7. Zmniejsz ogień i duś pod przykryciem, aż kurczak będzie gotowy, a sos zrobi się kremowy.
-8. Wymieszaj odrobinę wody z mąką, wlej do sosu i gotuj jeszcze chwilę, aż sos zgęstnieje.
+8. Jeśli sos jest za rzadki, rozrób mąkę w 2 łyżkach zimnej wody. Wlej do sosu i gotuj jeszcze chwilę, mieszając, aż zgęstnieje.
 9. Na koniec dodaj posiekaną świeżą miętę i wymieszaj.
 10. Gotowe, smacznego!
 

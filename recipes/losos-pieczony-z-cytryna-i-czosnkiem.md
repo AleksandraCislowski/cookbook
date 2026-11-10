@@ -36,7 +36,7 @@ publishedAt: '2026-10-06T21:13:31+02:00'
 3. Czosnek pokrój w cienkie plasterki albo drobno posiekaj i rozłóż na łososiu.
 4. Z cytryny odkrój skórkę, a miąższ pokrój w plastry i ułóż na rybie.
 5. Masło pokrój w plasterki i rozłóż na wierzchu ryby.
-6. Piecz na środkowej półce piekarnika przez około 30 minut, aż łosoś będzie soczysty i łatwo będzie dzielił się widelcem.
+6. Piecz 30 minut w temperaturze 180°C na środkowej półce piekarnika, aż łosoś będzie soczysty i łatwo będzie dzielił się widelcem.
 7. Jeśli chcesz mocniej zapiec wierzch, na ostatnie 2-3 minuty włącz grill od góry.
 8. Gotowe, smacznego!
 

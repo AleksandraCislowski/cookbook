@@ -29,6 +29,11 @@ publishedAt: '2026-08-09T15:42:25+02:00'
 - 200ml wody
 - 1 łyżeczka musztardy
 
+### Do zagęszczenia
+
+- 1 łyżka mąki pszennej
+- 2 łyżki zimnej wody
+
 ## Przyprawy
 
 - sól
@@ -48,7 +53,7 @@ publishedAt: '2026-08-09T15:42:25+02:00'
 4. Dodać czosnek przeciśnięty przez praskę, passatę pomidorową, wodę oraz musztardę.
 5. Dodać przyprawy według uznania i zamieszać całość.
 6. Wstawić do Ninja Cooker na program Slow Cook Low (8h).
-7. Na koniec zagęścić gulasz mąką.
+7. Mąkę rozrobić w 2 łyżkach zimnej wody. Gulasz przełożyć do garnka, dodać zawiesinę i zagotować, mieszając, aż sos zgęstnieje.
 8. Gotowe, smacznego!
 
 ## Notatki

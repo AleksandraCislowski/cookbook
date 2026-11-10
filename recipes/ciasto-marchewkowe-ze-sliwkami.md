@@ -53,7 +53,7 @@ publishedAt: '2026-10-10T22:43:04+02:00'
 7. Przelej ciasto do formy wyłożonej papierem do pieczenia.
 8. Śliwki wypestkuj i pokrój na cząstki. Wymieszaj je z mąką ziemniaczaną i cynamonem.
 9. Ułóż śliwki na wierzchu ciasta skórką do dołu.
-10. Piecz około 50 minut w 170°C. Jeśli patyczek po sprawdzeniu ciasta jest bardzo wilgotny, piecz kilka minut dłużej.
+10. Piecz 55 minut w temperaturze 170°C. Jeśli patyczek po sprawdzeniu ciasta jest bardzo wilgotny, piecz kilka minut dłużej.
 11. Po upieczeniu zostaw ciasto do wystygnięcia w formie.
 12. Gotowe, smacznego!
 

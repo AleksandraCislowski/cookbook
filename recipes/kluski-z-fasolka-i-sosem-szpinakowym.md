@@ -39,7 +39,8 @@ publishedAt: '2026-07-15T08:23:21+02:00'
 2. Szpinak przełożyć na sitko, sparzyć wrzątkiem i przełożyć do kielicha blendera.
 3. Dodać serek wiejski, oliwę, czosnek, sok z cytryny i przyprawy do smaku. Całość zblendować na gładki sos.
 4. Na patelni podsmażyć por wraz z fasolką szparagową. Dodać zielony sos i chwilę podgotować.
-5. Gotowe, smacznego!
+5. Dodać ugotowany makaron lub kluski i dokładnie wymieszać z sosem oraz warzywami.
+6. Gotowe, smacznego!
 
 ## Notatki
 

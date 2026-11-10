@@ -30,6 +30,7 @@ publishedAt: '2026-10-06T21:09:32+02:00'
 - 100ml bulionu
 - 400ml czerwonego wytrawnego wina, najlepiej burgund lub pinot noir
 - 1 łyżka sosu sojowego
+- 2 łyżki masła do smażenia
 
 ### Do zagęszczenia
 

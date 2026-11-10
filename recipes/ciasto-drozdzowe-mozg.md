@@ -47,7 +47,7 @@ publishedAt: '2026-10-27T06:39:33+01:00'
 5. Rozwałkuj ciasto na grubość około 1/2cm i potnij na paski o szerokości około 3cm.
 6. Na blasze wyłożonej papierem do pieczenia ułóż paski w ciasne, falujące zakręty przypominające zwoje mózgu. Uformuj dwie połówki z bruzdą pośrodku.
 7. Wymieszaj 2 łyżki miękkiego masła z 2 łyżkami cukru i 2 łyżkami cynamonu. Powstałą mieszanką posmaruj wierzch uformowanego ciasta.
-8. Piecz w piekarniku nagrzanym do 180°C przez około 30 minut, aż ciasto będzie złociste.
+8. Piecz 30 minut w temperaturze 180°C, aż ciasto będzie złociste.
 9. Odsącz wiśnie w żelu, zachowując wiśniowy żel. Po upieczeniu pomaluj nim ciasto. Możesz też użyć innej owocowej konfitury.
 10. Gotowe, smacznego!
 

@@ -45,4 +45,5 @@ publishedAt: '2026-06-30T18:09:45+02:00'
 2. Ugotuj makaron zgodnie z instrukcją na opakowaniu (zostaw trochę wody po gotowaniu do sosu).
 3. Do kielicha blendera włóż wszystkie składniki na sos, zblenduj na gładką masę.
 4. Sos przelej na patelnię do kurczaka i całość zagotuj chwilę.
-5. Gotowe, smacznego!
+5. Dodaj ugotowany makaron i dokładnie wymieszaj z kurczakiem i sosem.
+6. Gotowe, smacznego!

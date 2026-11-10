@@ -1,7 +1,7 @@
 ---
 title: 'Snickers'
 slug: snikers
-description: Domowa wersja klasycznego batonika z orzechami, karmelem i czekoladą — idealny słodki przysmak.
+description: Miodowe ciasto przekładane budyniem i masą krówkową, z chrupiącą polewą z orzechów laskowych.
 category: Deser, Przekąska
 cuisine: Domowa
 prepTime:
@@ -49,7 +49,7 @@ publishedAt: '2026-08-05T17:01:31+02:00'
 1. Z podanych składników zagnieść ciasto i podzielić na 3 części.
 2. Blachy wyłożyć papierem do pieczenia i wylepić 3 osobne placki.
 3. Na jeden z placków wyłożyć polewę orzechową: roztopić masło, dodać cukier, miód i wymieszać orzechy.
-4. Upiec każdy placek, po 20min w 180°C.
+4. Piecz 20 minut w temperaturze 180°C, każdy placek osobno.
 5. Budyń przygotować według przepisu na opakowaniu, używając o 1/3 mleka mniej.
 6. Placki przełożyć najpierw budyniem, potem krówką, układając na wierzchu placek z orzechami.
 7. Gotowe, smacznego!

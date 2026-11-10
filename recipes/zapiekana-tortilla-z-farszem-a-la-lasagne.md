@@ -42,14 +42,13 @@ publishedAt: '2026-09-14T17:52:41+02:00'
 
 ## Przygotowanie
 
-1. Rozgrzej piekarnik do 200°C, góra-dół.
-2. Mięso mielone wymieszaj z solą, pieprzem, przyprawą do mięsa, majerankiem i papryką wędzoną.
-3. W rondelku rozpuść masło i dodaj mąkę. Podsmaż chwilę, aż mąka lekko się zrumieni. Następnie stopniowo dolewaj mleko, cały czas energicznie mieszając, żeby nie powstały grudki. Dopraw solą, pieprzem i gałką muszkatołową.
-4. Tortille przekrój na pół. Na każdej połówce rozsmaruj bardzo cienką warstwę surowego, doprawionego mięsa mielonego.
-5. Mięso posmaruj warstwą sosu beszamelowego, a następnie złóż połówkę tortilli na 3 części, tak żeby powstał trójkąt.
-6. Żeliwną patelnię lub naczynie do zapiekania lekko natłuść. Ułóż trójkąty łączeniem do dołu i posyp tartym serem.
-7. Piecz przez około 20 minut, aż mięso się dopiecze, a ser roztopi i lekko przypiecze.
-8. Gotowe, smacznego!
+1. Mięso mielone wymieszaj z solą, pieprzem, przyprawą do mięsa, majerankiem i papryką wędzoną.
+2. W rondelku rozpuść masło i dodaj mąkę. Podsmaż chwilę, aż mąka lekko się zrumieni. Następnie stopniowo dolewaj mleko, cały czas energicznie mieszając, żeby nie powstały grudki. Dopraw solą, pieprzem i gałką muszkatołową.
+3. Tortille przekrój na pół. Na każdej połówce rozsmaruj bardzo cienką warstwę surowego, doprawionego mięsa mielonego.
+4. Mięso posmaruj warstwą sosu beszamelowego, a następnie złóż połówkę tortilli na 3 części, tak żeby powstał trójkąt.
+5. Żeliwną patelnię lub naczynie do zapiekania lekko natłuść. Ułóż trójkąty łączeniem do dołu i posyp tartym serem.
+6. Piecz 20 minut w temperaturze 200°C, aż mięso się dopiecze, a ser roztopi i lekko przypiecze.
+7. Gotowe, smacznego!
 
 ## Notatki
 

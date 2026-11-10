@@ -41,6 +41,7 @@ publishedAt: '2026-09-22T16:54:16+02:00'
 - 1,5 łyżeczki cynamonu
 - 1 łyżeczka mąki ziemniaczanej
 - sok z połowy limonki
+- skórka otarta z połowy limonki
 
 ## Przygotowanie
 
@@ -51,7 +52,7 @@ publishedAt: '2026-09-22T16:54:16+02:00'
 5. Ułóż kule na blaszce wyłożonej papierem do pieczenia i spłaszcz je, tworząc wgłębienie na dodatki.
 6. Na środek każdej bułeczki wyłóż masę twarogową.
 7. Na masie ułóż przygotowane śliwki.
-8. Piecz w 180°C przez około 45 minut, aż bułeczki się zarumienią.
+8. Piecz 45 minut w temperaturze 180°C, aż bułeczki się zarumienią.
 9. Gotowe, smacznego!
 
 ## Notatki

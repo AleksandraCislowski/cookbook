@@ -36,15 +36,14 @@ publishedAt: '2026-09-12T08:06:06+02:00'
 
 ## Przygotowanie
 
-1. Rozgrzej piekarnik do 180°C.
-2. Marchewkę i jabłko zetrzyj drobno. Jeśli jabłko puści bardzo dużo soku, delikatnie je odciśnij.
-3. W misce wymieszaj jajka, purée z dyni i jogurt.
-4. Dodaj mąkę, odżywkę białkową, proszek do pieczenia, cynamon i sól.
-5. Dodaj startą marchewkę i jabłko. Wymieszaj tylko do połączenia.
-6. Przełóż masę do niewielkiej foremki wyłożonej papierem do pieczenia i piecz 30 minut w 180°C.
-7. Wyjmij, kiedy środek jest już ścięty, ale nadal lekko wilgotny.
-8. Po ostudzeniu można polukrować.
-9. Gotowe, smacznego!
+1. Marchewkę i jabłko zetrzyj drobno. Jeśli jabłko puści bardzo dużo soku, delikatnie je odciśnij.
+2. W misce wymieszaj jajka, purée z dyni i jogurt.
+3. Dodaj mąkę, odżywkę białkową, proszek do pieczenia, cynamon i sól.
+4. Dodaj startą marchewkę i jabłko. Wymieszaj tylko do połączenia.
+5. Przełóż masę do niewielkiej foremki wyłożonej papierem do pieczenia. Piecz 30 minut w temperaturze 180°C.
+6. Wyjmij, kiedy środek jest już ścięty, ale nadal lekko wilgotny.
+7. Po ostudzeniu można polukrować.
+8. Gotowe, smacznego!
 
 ## Notatki
 

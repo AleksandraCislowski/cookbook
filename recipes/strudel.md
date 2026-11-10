@@ -3,7 +3,7 @@ title: 'Strudel'
 slug: strudel
 description: Klasyczny strudel z jabłkami, rodzynkami i cynamonem — kruchy i aromatyczny deser.
 category: Deser
-cuisine: Domowa
+cuisine: Austriacka
 prepTime:
 cookTime:
 bakeTime: 30
@@ -41,7 +41,7 @@ publishedAt: '2026-08-14T08:14:33+02:00'
 1. Z podanych składników zagnieść ciasto.
 2. Jabłka pokroić w kostkę i wymieszać z cukrem waniliowym i bakaliami. Doprawić cynamonem według uznania.
 3. Rozwałkować ciasto na około 1cm grubości, następnie wyłożyć farsz z owoców i zawinąć w roladę.
-4. Piecz 20 – 30min w 170°C.
+4. Piecz 30 minut w temperaturze 170°C.
 5. Gotowe, smacznego!
 
 ## Notatki

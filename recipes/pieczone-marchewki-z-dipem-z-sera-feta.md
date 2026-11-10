@@ -42,16 +42,15 @@ publishedAt: '2026-09-28T20:49:12+02:00'
 
 ## Przygotowanie
 
-1. Rozgrzej piekarnik do 220°C.
-2. Marchewki obierz i pokrój wzdłuż na długie kawałki. Grubsze marchewki przekrój na połówki lub ćwiartki, żeby wszystkie kawałki miały podobną grubość.
-3. Wymieszaj oliwę ze słodką papryką wędzoną, oregano, solą i pieprzem.
-4. Dodaj marchewki do marynaty i wymieszaj, żeby każdy kawałek był nią pokryty.
-5. Ułóż marchewki pojedynczą warstwą na blaszce wyłożonej papierem do pieczenia.
-6. Piecz około 30 minut, obracając marchewki w połowie pieczenia, aż będą miękkie i lekko skarmelizowane na brzegach.
-7. W czasie pieczenia przygotuj dip: do blendera dodaj fetę, jogurt grecki, oliwę, czosnek, miód, sok z cytryny i pieprz.
-8. Zblenduj na gładki, kremowy dip. Spróbuj przed dodaniem soli, bo feta jest już słona.
-9. Podawaj pieczone marchewki na dipie z fety albo obok niego.
-10. Gotowe, smacznego!
+1. Marchewki obierz i pokrój wzdłuż na długie kawałki. Grubsze marchewki przekrój na połówki lub ćwiartki, żeby wszystkie kawałki miały podobną grubość.
+2. Wymieszaj oliwę ze słodką papryką wędzoną, oregano, solą i pieprzem.
+3. Dodaj marchewki do marynaty i wymieszaj, żeby każdy kawałek był nią pokryty.
+4. Ułóż marchewki pojedynczą warstwą na blaszce wyłożonej papierem do pieczenia.
+5. Piecz 30 minut w temperaturze 220°C, obracając marchewki w połowie pieczenia, aż będą miękkie i lekko skarmelizowane na brzegach.
+6. W czasie pieczenia przygotuj dip: do blendera dodaj fetę, jogurt grecki, oliwę, czosnek, miód, sok z cytryny i pieprz.
+7. Zblenduj na gładki, kremowy dip. Spróbuj przed dodaniem soli, bo feta jest już słona.
+8. Podawaj pieczone marchewki na dipie z fety albo obok niego.
+9. Gotowe, smacznego!
 
 ## Notatki
 

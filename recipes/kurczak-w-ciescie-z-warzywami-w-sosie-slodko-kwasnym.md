@@ -25,6 +25,7 @@ publishedAt: '2026-10-11T18:17:14+02:00'
 - 2 łyżki sosu sojowego
 - 2 łyżki mąki pszennej do obtoczenia
 - olej do głębokiego smażenia
+- biały pieprz do smaku
 
 ### Ciasto
 
