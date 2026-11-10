@@ -56,4 +56,4 @@ publishedAt: '2026-10-19T16:03:51+02:00'
 
 ## Notatki
 
-Podawaj z puree ziemniaczanym.
+Podawaj z purée ziemniaczanym.

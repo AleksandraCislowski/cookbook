@@ -1,9 +1,9 @@
 ---
 title: 'Curry dyniowe ze szpinakiem i fasolą'
 slug: curry-dyniowe-ze-szpinakiem-i-fasola
-description: Kremowe curry z dyniowym puree, porem, fasolą, szpinakiem i mleczkiem kokosowym.
+description: Kremowe curry z dyniowym purée, porem, fasolą, szpinakiem i mleczkiem kokosowym.
 category: Obiad, Vege, Z wczorajszego rosołu
-cuisine: Nowoczesna
+cuisine: Azjatycka
 prepTime:
 cookTime: 40
 bakeTime:
@@ -19,7 +19,7 @@ publishedAt: '2026-09-28T20:48:47+02:00'
 
 ## Składniki
 
-- 500g puree z dyni
+- 500g purée z dyni
 - 1 mały por
 - 2 ząbki czosnku
 - 200ml bulionu warzywnego
@@ -38,7 +38,7 @@ publishedAt: '2026-09-28T20:48:47+02:00'
 
 1. Pora pokrój w plasterki, a czosnek posiekaj lub przeciśnij przez praskę.
 2. Do garnka dodaj pora, czosnek, curry, imbir w proszku, kurkumę i odrobinę bulionu. Duś kilka minut, aż por zmięknie.
-3. Dodaj puree z dyni, resztę bulionu warzywnego i mleczko kokosowe. Wymieszaj na gładki, kremowy sos.
+3. Dodaj purée z dyni, resztę bulionu warzywnego i mleczko kokosowe. Wymieszaj na gładki, kremowy sos.
 4. Dodaj odsączoną fasolę i gotuj kilka minut, aż całość się podgrzeje i lekko zgęstnieje.
 5. Dodaj szpinak i podgrzewaj tylko do momentu, aż zwiędnie.
 6. Dopraw solą oraz w razie potrzeby dodatkową porcją curry, imbiru lub kurkumy.

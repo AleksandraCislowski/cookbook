@@ -1,7 +1,7 @@
 ---
 title: 'Kluski dyniowe'
 slug: kluski-dyniowe
-description: Proste kluski dyniowe z puree z dyni i mąki pszennej, dobre jako baza do sosów albo dodatek do obiadu.
+description: Proste kluski dyniowe z purée z dyni i mąki pszennej, dobre jako baza do sosów albo dodatek do obiadu.
 category: Dodatki, Vege
 cuisine: Polska
 prepTime: 30
@@ -19,7 +19,7 @@ publishedAt: '2026-09-28T20:47:47+02:00'
 
 ## Składniki
 
-- 500g puree z dyni
+- 500g purée z dyni
 - 350g mąki pszennej
 
 ## Przyprawy
@@ -28,7 +28,7 @@ publishedAt: '2026-09-28T20:47:47+02:00'
 
 ## Przygotowanie
 
-1. Puree z dyni wymieszaj z mąką pszenną i szczyptą soli.
+1. Purée z dyni wymieszaj z mąką pszenną i szczyptą soli.
 2. Krótko zagnieć ciasto, tylko do połączenia składników.
 3. Podsyp blat mąką, podziel ciasto na części i uformuj wałki.
 4. Pokrój wałki na kluski.
@@ -37,4 +37,4 @@ publishedAt: '2026-09-28T20:47:47+02:00'
 
 ## Notatki
 
-Ilość mąki może się lekko różnić w zależności od wilgotności puree. Jeśli ciasto bardzo się klei, dosypuj mąkę stopniowo, ale nie wyrabiaj go zbyt długo.
+Ilość mąki może się lekko różnić w zależności od wilgotności purée. Jeśli ciasto bardzo się klei, dosypuj mąkę stopniowo, ale nie wyrabiaj go zbyt długo.

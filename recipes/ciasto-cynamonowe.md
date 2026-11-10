@@ -30,8 +30,8 @@ publishedAt: '2026-08-14T08:14:26+02:00'
 
 ## Przygotowanie
 
-1. Olej, cukier i jajka zmiksować na gładką masę,
-2. Dodać resztę składników, aż do uzyskania gładkiego ciasta.
+1. Olej, cukier i jajka zmiksować na gładką masę.
+2. Dodać resztę składników i zmiksować do uzyskania gładkiego ciasta.
 3. Piecz 45min w 180°C.
 4. Gotowe, smacznego!
 

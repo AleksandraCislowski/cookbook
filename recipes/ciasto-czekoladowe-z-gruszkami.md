@@ -35,7 +35,7 @@ publishedAt: '2026-08-04T20:52:34+02:00'
 
 ## Przygotowanie
 
-1. Masło utrzeć z cukrem i solą, następnie kontynuować ucieranie dodając kolejno po jednym jajku.
+1. Masło utrzeć z cukrem i solą, następnie kontynuować ucieranie, dodając kolejno po jednym jajku.
 2. Dodać pozostałe składniki i ucierać, aż powstanie jednolita masa.
 3. Następnie zetrzeć czekoladę na tarce, a gruszki pokroić w kostkę, całość dodać do masy i wymieszać.
 4. Piecz 60min w 180°C.

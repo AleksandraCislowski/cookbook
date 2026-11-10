@@ -1,7 +1,7 @@
 ---
 title: 'Ciastko-naleśniki z czekoladą'
 slug: ciastko-nalesniki-z-czekolada
-description: Delikatne ciasteczka przypominające mini naleśniki, z twarogową bazą i kawałkami czekolady — szybki, domowy deser idealny do kawy i jako przekąska.
+description: Delikatne ciasteczka przypominające małe naleśniki, z twarogową bazą i kawałkami czekolady — szybki, domowy deser idealny do kawy i jako przekąska.
 category: Deser, Przekąska, Blender
 cuisine: Domowa
 prepTime:
@@ -37,7 +37,7 @@ publishedAt: '2026-07-19T20:03:28+02:00'
 
 ## Przygotowanie
 
-1. Serek wiejski przełożyć do kielich blendera razem z miodem i cukrem waniliowym, dobrze zblendować na gładką masę.
+1. Serek wiejski przełożyć do kielicha blendera razem z miodem i cukrem waniliowym, dobrze zblendować na gładką masę.
 2. W osobnej dużej misce utrzeć jajko razem z cukrem.
 3. Do utartego jajka z cukrem dodać rozpuszczone masło i masę z serka wiejskiego, dobrze wszystko razem zmiksować.
 4. Dodać mąkę, sól, proszek do pieczenia oraz sodę oczyszczoną i całość dobrze wymieszać łyżką.

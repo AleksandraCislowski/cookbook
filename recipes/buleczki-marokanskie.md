@@ -54,7 +54,7 @@ publishedAt: '2026-08-17T17:57:44+02:00'
 3. Odstaw w ciepłe miejsce na około 20 minut, żeby ciasto wyrosło.
 4. Przygotuj farsz: mięso usmaż na patelni wraz z pokrojoną w kostkę cebulą i papryką. Dodaj przyprawy według uznania.
 5. Ciasto podziel na 8 części, każdą rozwałkuj cienko.
-6. Na każdy krążek ciasta nakładaj farsz oraz ser żółty, a następnie zawiń tworząc lekko spłaszczone kule.
+6. Na każdy krążek ciasta nakładaj farsz oraz ser żółty, a następnie zawiń, tworząc lekko spłaszczone kule.
 7. Każdą bułeczkę usmaż na suchej patelni, na średnim ogniu, po kilka minut z każdej strony.
 8. Gotowe, smacznego!
 

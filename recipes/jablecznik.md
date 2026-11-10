@@ -42,7 +42,7 @@ publishedAt: '2026-08-04T20:51:45+02:00'
 
 1. Wszystkie składniki na ciasto zagnieść na jednolitą masę.
 2. 2/3 ciasta wyłożyć na spód oraz boki blaszki.
-3. Jabłko zetrzeć na tarce i wyłożyć na ciasto.
+3. Jabłka zetrzeć na tarce i wyłożyć na ciasto.
 4. Posypać wierzch jabłek cynamonem oraz rodzynkami.
 5. Pozostałe ciasto poskubać na wierzch.
 6. Piecz 1h 20min w 180°C.
