@@ -20,7 +20,7 @@ publishedAt: '2026-09-01T07:16:35+02:00'
 ## Składniki
 
 - 250g ryżu do risotto
-- 1000ml bulionu/ rosołu
+- 1000ml bulionu lub rosołu
 - 200g kurek
 - 1 duża czerwona cebula
 - 25g sera typu parmezan

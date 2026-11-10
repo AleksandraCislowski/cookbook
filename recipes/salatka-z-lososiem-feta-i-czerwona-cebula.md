@@ -42,7 +42,7 @@ publishedAt: '2026-07-10T07:06:21+02:00'
 1. Łososia pokroić na małe kawałki, doprawić solą i pieprzem cytrynowym do smaku. Usmażyć na patelni.
 2. W osobnym naczyniu wymieszać dobrze składniki na sos: oliwę, musztardę, miód, sok z cytryny i czosnek przeciśnięty przez praskę.
 3. Sałatę porwać na mniejsze części, do tego posiekać cebulę w drobną kostkę. Wymieszać z dressingiem i wyłożyć na talerze.
-4. Na wierzch sałaty ułożyć łososia i pokruszony ser feta.
+4. Na wierzchu sałaty ułożyć łososia i pokruszony ser feta.
 5. Posypać świeżo zmielonym pieprzem.
 6. Gotowe, smacznego!
 

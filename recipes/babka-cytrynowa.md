@@ -20,7 +20,7 @@ publishedAt: '2026-09-09T22:14:12+02:00'
 ## Składniki
 
 - 4 duże jajka
-- 0.5 szkl. cukru
+- 0,5 szkl. cukru
 - 1 szkl. mąki tortowej
 - 80g mąki ziemniaczanej
 - 200ml oleju

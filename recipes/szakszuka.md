@@ -1,7 +1,7 @@
 ---
 title: 'Szakszuka'
 slug: szakszuka
-description: Pikantna szakszuka z soczystymi pomidorami, jajkami sadzonymi na miękkim białku i aromatycznym szczypiorkiem.
+description: Szakszuka z soczystymi pomidorami, jajkami o ściętym białku i płynnym żółtku oraz aromatycznym szczypiorkiem.
 category: Śniadanie, Vege
 cuisine: Turecka
 prepTime:
@@ -38,7 +38,7 @@ publishedAt: '2026-07-02T06:59:07+02:00'
 2. Porozsuwaj na patelni pomidory tak, aby wytworzyć wgłębienia na jajka.
 3. Wbij po jednym jajku do każdego wgłębienia.
 4. Smaż chwilę pod przykryciem na zmniejszonym ogniu, aż białko się zetnie, ale żółtko pozostanie płynne.
-5. Posyp na wierzchu solą , świeżo zmielonym pieprzem oraz szczypiorkiem.
+5. Posyp na wierzchu solą, świeżo zmielonym pieprzem oraz szczypiorkiem.
 6. Gotowe, smacznego!
 
 ## Notatki

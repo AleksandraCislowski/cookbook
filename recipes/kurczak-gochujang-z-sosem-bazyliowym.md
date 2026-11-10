@@ -25,7 +25,7 @@ publishedAt: '2026-06-21T20:34:00+02:00'
 - 2 łyżki sosu sojowego
 - 2 łyżki soku z cytryny
 - 1 łyżeczka miodu
-- 1 łyeczka soli
+- 1 łyżeczka soli
 
 ### Sos
 
@@ -39,11 +39,11 @@ publishedAt: '2026-06-21T20:34:00+02:00'
 
 ### Dodatkowo
 
-- Makaron lub kluski do podania.
+- makaron lub kluski do podania
 
 ## Przygotowanie
 
-1. Ugotować makaron/ kluski wg instrukcji na opakowaniu.
+1. Ugotować makaron lub kluski wg instrukcji na opakowaniu.
 2. Na patelni podsmażyć mięso z solą.
 3. Dodać pastę gochujang, tahini, sos sojowy, sok z cytryny i miód. Smażyć chwilę do połączenia składników.
 4. Do blendera dodać wszystkie składniki na sos: bazylię, jajko, serek wiejski, parmezan, wodę i przyprawy.

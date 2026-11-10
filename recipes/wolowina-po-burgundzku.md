@@ -60,7 +60,7 @@ publishedAt: '2026-10-06T21:09:32+02:00'
 13. Wymieszaj mąkę z wodą na gładką zawiesinę.
 14. Wlej mieszankę do sosu, cały czas mieszając, i gotuj kilka minut, aż sos zgęstnieje.
 15. Dopraw solą i pieprzem do smaku.
-16. Podawaj z puree ziemniaczanym albo ziemniakami przeciśniętymi przez praskę.
+16. Podawaj z purée ziemniaczanym albo ziemniakami przeciśniętymi przez praskę.
 17. Gotowe, smacznego!
 
 ## Notatki

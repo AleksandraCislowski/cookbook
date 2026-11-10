@@ -1,5 +1,5 @@
 ---
-title: 'Mini tortille z mięsem, boczkiem i sałatą a la Cezar'
+title: 'Mini tortille z mięsem, boczkiem i sałatą à la Cezar'
 slug: mini-tortille-z-miesem-boczkiem-i-salata-a-la-cezar
 description: Szybkie tortille z podsmażaną warstwą mięsa i świeżą sałatką z fetą w sosie Cezar.
 category: Obiad, Przekąska, Z mięsem

@@ -23,7 +23,7 @@ publishedAt: '2026-10-10T22:43:27+02:00'
 
 - 3 jajka
 - 80g jogurtu greckiego
-- 120g puree z dyni
+- 120g purée z dyni
 - 120ml mleka
 - 50g mąki pszennej
 - 100g erytrytolu
@@ -60,7 +60,7 @@ publishedAt: '2026-10-10T22:43:27+02:00'
 1. Lekko natłuść dwie niskie foremki o średnicy 18cm.
 2. W jednej misce wymieszaj mokre składniki warstwy ciasteczkowej: jogurt grecki, jajko i ekstrakt waniliowy.
 3. Dodaj mąkę pszenną, odżywkę białkową, erytrytol, sodę i sól. Wymieszaj tylko do połączenia.
-4. W drugiej misce wymieszaj mokre składniki warstwy brownie: jajka, jogurt grecki, puree z dyni i mleko.
+4. W drugiej misce wymieszaj mokre składniki warstwy brownie: jajka, jogurt grecki, purée z dyni i mleko.
 5. Dodaj mąkę pszenną, erytrytol, odżywkę białkową, kakao, sodę, proszek do pieczenia i sól. Wymieszaj delikatnie, tylko do połączenia składników.
 6. Podziel masę brownie równo między foremki.
 7. Na wierzch wyłóż porcje ciasta ciasteczkowego i delikatnie je rozprowadź.

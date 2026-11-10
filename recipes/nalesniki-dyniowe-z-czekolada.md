@@ -2,7 +2,7 @@
 title: 'Naleśniki dyniowe z czekoladą'
 slug: nalesniki-dyniowe-z-czekolada
 description: Puszyste dyniowe placuszki z twarogiem, cynamonem i kawałkami gorzkiej czekolady.
-category: Śniadanie, Proteinowe
+category: Śniadanie, Proteinowe, Vege
 cuisine: Domowa
 prepTime:
 cookTime: 25
@@ -19,7 +19,7 @@ publishedAt: '2026-10-06T21:10:28+02:00'
 
 ## Składniki
 
-- 250g puree z dyni
+- 250g purée z dyni
 - 250g delikatnego twarogu
 - 2 jajka
 - 1 łyżeczka proszku do pieczenia
@@ -31,7 +31,7 @@ publishedAt: '2026-10-06T21:10:28+02:00'
 
 ## Przygotowanie
 
-1. Do miski przełóż puree z dyni, twaróg i jajka. Wymieszaj na jednolitą masę.
+1. Do miski przełóż purée z dyni, twaróg i jajka. Wymieszaj na jednolitą masę.
 2. Dodaj mąkę, proszek do pieczenia, cynamon, olejek pomarańczowy oraz erytrytol lub ksylitol do smaku.
 3. Wymieszaj tylko do połączenia składników. Jeśli masa jest bardzo gęsta, dodaj odrobinę mleka lub wody.
 4. Gorzką czekoladę posiekaj na małe kawałki i wmieszaj do ciasta.

@@ -1,7 +1,7 @@
 ---
-title: 'Lody pinacolada'
+title: 'Lody piña colada'
 slug: lody-pinacolada
-description: Orzeźwiające domowe lody pinacolada z ananasem i mleczkiem kokosowym — proste do zrobienia i idealne na upały.
+description: Orzeźwiające domowe lody piña colada z ananasem i mleczkiem kokosowym — proste do zrobienia i idealne na upały.
 category: Deser, Przekąska, Blender
 cuisine: Domowa
 prepTime: 10

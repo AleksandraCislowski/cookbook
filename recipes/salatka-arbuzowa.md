@@ -42,4 +42,4 @@ publishedAt: '2026-07-06T06:27:49+02:00'
 
 ## Notatki
 
-Podawaj schłodzone.
+Podawaj schłodzoną.

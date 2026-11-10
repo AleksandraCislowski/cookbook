@@ -1,7 +1,7 @@
 ---
-title: 'Puree z dyni'
+title: 'Purée z dyni'
 slug: puree-z-dyni
-description: Gładkie puree z pieczonej dyni piżmowej do zup, sosów i wypieków.
+description: Gładkie purée z pieczonej dyni piżmowej do zup, sosów i wypieków.
 category: Dodatki, Vege, Blender
 cuisine: Domowa
 prepTime:
@@ -28,7 +28,7 @@ publishedAt: '2026-09-11T10:32:21+02:00'
 3. Piecz w 175°C przez około 60 minut, aż dynia będzie bardzo miękka.
 4. Odstaw dynię na kilka minut, żeby lekko przestygła.
 5. Usuń pestki, następnie przełóż dynię do miski.
-6. Zblenduj na gładkie puree.
+6. Zblenduj na gładkie purée.
 7. Gotowe, smacznego!
 
 ## Notatki

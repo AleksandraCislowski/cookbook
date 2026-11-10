@@ -17,6 +17,8 @@ image: kurczak-w-sosie-pomaranczowym.jpg
 publishedAt: '2026-09-01T07:16:49+02:00'
 ---
 
+## Składniki
+
 - 750g mięsa z piersi kurczaka
 - 150g skrobi ziemniaczanej
 

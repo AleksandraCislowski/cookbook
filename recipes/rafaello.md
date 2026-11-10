@@ -1,5 +1,5 @@
 ---
-title: 'Rafaello'
+title: 'Raffaello'
 slug: rafaello
 description: Delikatny domowy deser z kremem kokosowym i chrupiącymi krakersami.
 category: Deser
@@ -25,7 +25,7 @@ publishedAt: '2026-08-05T17:02:01+02:00'
 - 6 łyżek mąki tortowej
 - 6 łyżek mąki ziemniaczanej
 - 250g masła
-- duża paczka wiórek kokosowych
+- duża paczka wiórków kokosowych
 - 2–3 opakowania solonych krakersów
 
 ## Przygotowanie
@@ -33,7 +33,7 @@ publishedAt: '2026-08-05T17:02:01+02:00'
 1. Z litra mleka odlać 1 szklankę i rozrobić w niej obie mąki.
 2. Resztę mleka zagotować z cukrem i cukrem waniliowym.
 3. Gdy mleko się zagotuje, dodać rozrobione z mlekiem mąki i mieszać, aż do zagotowania – postępować jak z budyniem. Następnie masę lekko przestudzić.
-4. W osobnej misce ubić masło, następnie kontynuować ubijanie dodając po łyżce letniej masy. Następnie dodać wiórki kokosowe (odsypać część do dekoracji).
+4. W osobnej misce ubić masło, następnie kontynuować ubijanie, dodając po łyżce letniej masy. Następnie dodać wiórki kokosowe (odsypać część do dekoracji).
 5. Przekładać krakersy masą, aż do wyczerpania składników. Posypać wierzch pozostałymi wiórkami kokosowymi.
 6. Zostawić na noc w lodówce.
 7. Gotowe, smacznego!

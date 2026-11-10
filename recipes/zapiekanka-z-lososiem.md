@@ -38,7 +38,7 @@ publishedAt: '2026-07-19T19:23:29+02:00'
 
 1. Do naczynia żaroodpornego wbić jajka, następnie dodać serek wiejski, pokruszony ser feta i dokładnie wymieszać.
 2. Do masy dodać pokrojone pomidorki koktajlowe, cebulę pokrojoną w kostkę, czosnek przeciśnięty przez praskę i szpinak. Doprawić solą i pieprzem, wymieszać całość.
-3. Łososia podzielić na porcje, przyprawić solą i pieprzem cytrynowym, ułożyć na górę naczynia żaroodpornego.
+3. Łososia podzielić na porcje, przyprawić solą i pieprzem cytrynowym, ułożyć na wierzchu masy w naczyniu żaroodpornym.
 4. Cytrynę obrać ze skórki, pokroić na plastry i ułożyć na rybie.
 5. Piecz w 180°C przez 50 minut pod przykryciem. Ostatnie 10 minut zapiekaj bez przykrycia.
 6. Przed podaniem skropić dodatkowo sokiem z cytryny.

@@ -44,7 +44,7 @@ publishedAt: '2026-06-30T18:10:50+02:00'
 3. Do miski przełóż twaróg, dodaj ziemniaki i cebulę, dopraw do smaku solą i pieprzem - farsz jest już gotowy.
 4. W osobnej misce połącz mąkę z wodą i solą, dobrze wyrób i zagnieć ciasto na jednolitą, sprężystą kulę.
 5. Rozwałkowuj ciasto i wykrawaj średniej wielkości kółka.
-6. Na każde kółko nakładaj około łyżeczki farszu, następnie zlep brzegi ciasta tworząc pierożek.
+6. Na każde kółko nakładaj około łyżeczki farszu, następnie zlep brzegi ciasta, tworząc pierożek.
 7. Krawędzie pierożka można docisnąć widelcem, tworząc wzorek.
 8. Powtarzaj czynność do momentu wyczerpania składników.
 9. Gotuj w osolonej wodzie około 3 minut od wypłynięcia pierogów.

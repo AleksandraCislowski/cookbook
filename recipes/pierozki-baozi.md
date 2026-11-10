@@ -44,7 +44,7 @@ publishedAt: '2026-07-19T19:22:37+02:00'
 1. Do miski przełożyć mięso mielone, dodać przyprawy.
 2. Dodać pokrojoną w drobną kostkę cebulę, startą marchewkę oraz czosnek przeciśnięty przez praskę. Całość dobrze wyrobić, do połączenia się składników.
 3. W osobnej misce połączyć mąkę wraz z jogurtem i zagnieść na jednolite ciasto.
-4. Z ciasta formować kulki, które należy rozpłaszczyć. Następnie na każdy placuszek ciasta położyć kulkę farszu i utworzyć zamknięte pierożki. Górę każdego pierożka ścisnąć lekko, nadając im kształt podobny do tych ze zdjęcia.
+4. Z ciasta formować kulki, które należy rozpłaszczyć. Następnie na każdy placuszek ciasta położyć kulkę farszu i utworzyć zamknięte pierożki. Górę każdego pierożka ścisnąć lekko, nadając mu kształt podobny do tych ze zdjęcia.
 5. Pierożki układać na kratce do Ninja Cooker wyłożonej papierem do pieczenia (zmieści się połowa porcji).
 6. Na dno garnka Ninja Cooker wlać 250ml wody.
 7. Ułożyć pierożki na kratce i ustawić program Steam na 10 minut z otwartym odpowietrznikiem.

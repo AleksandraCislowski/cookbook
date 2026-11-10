@@ -26,7 +26,7 @@ publishedAt: '2026-06-23T06:55:16+02:00'
 1. Rozgrzej Ninja Cooker przez 5 minut na 200°C na programie Air Crisp.
 2. Zamrożone kąski wsyp do koszyczka.
 3. Ustaw Air Crisp na tej samej temperaturze i piecz przez 14 minut.
-4. W połowie programu, otworzyć i przemieszać kąski z kurczaka.
+4. W połowie programu otworzyć i przemieszać kąski z kurczaka.
 5. Gotowe, smacznego!
 
 ## Notatki

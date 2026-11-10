@@ -1,5 +1,5 @@
 ---
-title: 'Snikers'
+title: 'Snickers'
 slug: snikers
 description: Domowa wersja klasycznego batonika z orzechami, karmelem i czekoladą — idealny słodki przysmak.
 category: Deser, Przekąska

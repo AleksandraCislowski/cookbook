@@ -35,7 +35,7 @@ publishedAt: '2026-07-01T07:28:49+02:00'
 ## Przygotowanie
 
 1. Camembert pokrój w kostkę, ułóż w naczyniu żaroodpornym.
-2. Nektarynkę pokrój w plastry, poukładaj pomiędzy serem.
+2. Nektarynki pokrój w plastry, poukładaj pomiędzy serem.
 3. Szynkę złóż w mniejsze kawałki, poukładaj pomiędzy serem i owocami.
 4. Pistacje posiekaj drobno, posyp wierzch dania.
 5. Składniki na sos wymieszaj, następnie polej nimi całość dania.

@@ -1,5 +1,5 @@
 ---
-title: 'Rożki BigMac'
+title: 'Rożki Big Mac'
 slug: rozki-bigmac
 description: Chrupiące rożki z tortilli nadziewane aromatycznym mielonym mięsem, sałatą, ogórkiem i serem — inspirowane smakiem Big Maca.
 category: Przekąska, Z mięsem
@@ -55,4 +55,4 @@ publishedAt: '2026-08-03T20:52:46+02:00'
 
 ## Notatki
 
-Jedna porcja to małe 4 rożki.
+Jedna porcja to 4 małe rożki.

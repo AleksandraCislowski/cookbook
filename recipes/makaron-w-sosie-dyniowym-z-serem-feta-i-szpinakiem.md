@@ -1,5 +1,5 @@
 ---
-title: 'Makaron w sosie dyniowym, z serem feta i szpinakiem'
+title: 'Makaron w sosie dyniowym z serem feta i szpinakiem'
 slug: makaron-w-sosie-dyniowym-z-serem-feta-i-szpinakiem
 description: Kremowy makaron w sosie dyniowym z kurczakiem, szpinakiem, serkiem topionym i słoną fetą.
 category: Obiad, Z mięsem, Blender
@@ -19,7 +19,7 @@ publishedAt: '2026-10-11T18:16:24+02:00'
 
 ## Składniki
 
-- 300g puree z dyni
+- 300g purée z dyni
 - 700g piersi z kurczaka
 - 1 czerwona cebula
 - 3 ząbki czosnku
@@ -42,7 +42,7 @@ publishedAt: '2026-10-11T18:16:24+02:00'
 1. Makaron lub kluski ugotować zgodnie z instrukcją na opakowaniu.
 2. Kurczaka pokroić w kostkę, doprawić solą, pieprzem, czosnkiem granulowanym i papryką słodką wędzoną.
 3. Cebulę pokroić w kostkę, a czosnek posiekać lub przecisnąć przez praskę.
-4. Do blendera dodać puree z dyni, serek topiony, fetę i wodę. Zblendować na gładki sos.
+4. Do blendera dodać purée z dyni, serek topiony, fetę i wodę. Zblendować na gładki sos.
 5. Na dużej patelni podsmażyć cebulę, dodać kurczaka i smażyć, aż będzie złocisty i ugotowany w środku. Pod koniec dodać czosnek.
 6. Kurczaka zalać sosem dyniowym i wymieszać.
 7. Doprawić gałką muszkatołową, solą i pieprzem.

@@ -55,4 +55,4 @@ publishedAt: '2026-09-22T16:53:52+02:00'
 
 ## Notatki
 
-Ciasto na leniwe zagniataj krótko, tylko do połączenia składników. Im dłużej wyrabiane i im więcej mąki, tym twardsze kluski. Podawaj zdodatkiem kwaśnej śmietany lub jogurtu greckiego.
+Ciasto na leniwe zagniataj krótko, tylko do połączenia składników. Im dłużej wyrabiane i im więcej mąki, tym twardsze kluski. Podawaj z dodatkiem kwaśnej śmietany lub jogurtu greckiego.

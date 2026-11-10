@@ -50,10 +50,10 @@ publishedAt: '2026-07-01T07:28:18+02:00'
 3. Do ryżu dodać cukier i ocet ryżowy, dobrze wymieszać.
 4. Surowego łososia pokroić w kostkę. Dodać do niego sos sojowy, olej sezamowy oraz miód i dokładnie wymieszać.
 5. Foremkę na babeczki wyłożyć arkuszami nori (można lekko naciąć w rogach, aby lepiej dopasować je do kształtu foremek). Nakładać do środka porcje ryżu, lekko docisnąć.
-6. Na wierzch ryżu ułożyć surowego łososia.
+6. Na wierzchu ryżu ułożyć surowego łososia.
 7. Piecz w 220°C przez 7 minut.
 8. W tym czasie pokroić pozostałe dodatki.
-9. Po wyjęciu z piekarnika przełożyć na talerz, na wierzch łososia ułożyć ogórka i awokado. Posypać sezamem, polać ulubionymi sosami.
+9. Po wyjęciu z piekarnika przełożyć na talerz, na wierzchu łososia ułożyć ogórka i awokado. Posypać sezamem, polać ulubionymi sosami.
 10. Gotowe, smacznego!
 
 ## Notatki

@@ -1,7 +1,7 @@
 ---
 title: 'Słodka bułka ze Skyrim'
 slug: slodka-bulka-ze-skyrim
-description: Maślane mini babki inspirowane słodką bułką ze Skyrim, pieczone w małych foremkach.
+description: Maślane małe babki inspirowane słodką bułką ze Skyrim, pieczone w małych foremkach.
 category: Deser
 cuisine: Domowa
 prepTime:
