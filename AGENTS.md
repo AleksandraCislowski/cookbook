@@ -2,6 +2,8 @@
 
 Notatki w przepisach mają być krótkie i treściwe.
 
+Opisy przepisów pisz krótko i naturalnie, zwykle w jednym zdaniu. Wybierz charakterystyczny smak, konsystencję lub zastosowanie potrawy, zamiast wyliczać składniki i powtarzać tytuł. Unikaj szablonowych sformułowań i nie dopisuj każdego składnika do opisu po zmianach w przepisie.
+
 Zamiast skyru zawsze używaj jogurtu greckiego, również gdy przepis źródłowy podaje skyr waniliowy. Zachowuj podaną ilość i uwzględniaj zamianę w składnikach, opisie oraz przygotowaniu.
 
 Nazwy z „mini” zapisuj ze spacją, np. „mini pizza”, „mini tortille”, „mini wrapy”.
