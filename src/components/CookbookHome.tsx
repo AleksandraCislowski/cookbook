@@ -66,7 +66,7 @@ function matchesSearch(recipe: Recipe, searchTerm: string) {
     recipe.title,
     recipe.description,
     ...recipe.categories,
-    recipe.cuisine,
+    ...recipe.cuisines,
     ...recipe.ingredients,
     ...recipe.spices,
   ]
@@ -94,7 +94,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
   const cuisineOptions = useMemo(
     () => [
       ALL_CUISINES_FILTER,
-      ...Array.from(new Set(recipes.map((recipe) => recipe.cuisine))).sort(
+      ...Array.from(new Set(recipes.flatMap((recipe) => recipe.cuisines))).sort(
         (firstCuisine, secondCuisine) =>
           firstCuisine.localeCompare(secondCuisine, 'pl'),
       ),
@@ -189,7 +189,7 @@ export function CookbookHome({ recipes }: { recipes: Recipe[] }) {
       )
       .filter(
         (recipe) =>
-          cuisine === ALL_CUISINES_FILTER || recipe.cuisine === cuisine,
+          cuisine === ALL_CUISINES_FILTER || recipe.cuisines.includes(cuisine),
       )
       .filter((recipe) => matchesSearch(recipe, searchTerm))
       .sort((firstRecipe, secondRecipe) => {

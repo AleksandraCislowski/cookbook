@@ -3,7 +3,7 @@ title: 'Sernik baskijski'
 slug: sernik-baskijski
 description: Kremowy sernik baskijski na ciasteczkowym spodzie, mocno przypieczony z wierzchu i chłodzony przez noc.
 category: Deser, Blender
-cuisine: Domowa
+cuisine: Hiszpańska
 prepTime:
 cookTime:
 bakeTime: 36

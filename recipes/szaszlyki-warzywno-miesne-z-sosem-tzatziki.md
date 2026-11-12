@@ -3,7 +3,7 @@ title: 'Szaszłyki warzywno-mięsne z sosem tzatziki'
 slug: szaszlyki-warzywno-miesne-z-sosem-tzatziki
 description: Szybkie i chrupiące szaszłyki z tortilli, mięsa mielonego i warzyw, podane z sosem tzatziki.
 category: Obiad, Z mięsem
-cuisine: Grecka
+cuisine: Grecka, Fast food
 prepTime:
 cookTime:
 bakeTime: 40

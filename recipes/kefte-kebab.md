@@ -3,7 +3,7 @@ title: 'Kefta kebab w mini tortillach'
 slug: kefte-kebab
 description: Mini wrapy z pieczoną keftą z mięsa wieprzowo-wołowego, sałatką z pomidorków i bazylii oraz jogurtowym sosem z pieczonym czosnkiem.
 category: Obiad, Z mięsem, Blender
-cuisine: Turecka
+cuisine: Turecka, Fast food
 prepTime:
 cookTime:
 bakeTime: 20

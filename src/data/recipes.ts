@@ -6,7 +6,7 @@ export type Recipe = {
   title: string;
   description: string;
   categories: string[];
-  cuisine: string;
+  cuisines: string[];
   prepTime?: number;
   cookTime?: number;
   bakeTime?: number;
@@ -184,28 +184,27 @@ function readOptionalNumber(
   return value;
 }
 
-function readRequiredCategories(
+function readRequiredStringList(
   frontmatter: Record<string, string | string[]>,
   key: keyof RecipeFrontmatter,
 ) {
   const value = frontmatter[key];
-  const categories =
+  const values =
     typeof value === 'string'
       ? value.split(',')
       : Array.isArray(value)
         ? value
         : [];
-  const normalizedCategories = categories
-    .map((category) => category.trim())
+  const normalizedValues = values
+    .map((value) => value.trim())
     .filter(Boolean);
 
-  if (normalizedCategories.length === 0) {
+  if (normalizedValues.length === 0) {
     throw new Error(`Missing required recipe field: ${key}`);
   }
 
-  return Array.from(new Set(normalizedCategories)).sort(
-    (firstCategory, secondCategory) =>
-      firstCategory.localeCompare(secondCategory, 'pl'),
+  return Array.from(new Set(normalizedValues)).sort(
+    (firstValue, secondValue) => firstValue.localeCompare(secondValue, 'pl'),
   );
 }
 
@@ -300,8 +299,8 @@ function parseRecipeFile(filename: string): Recipe {
     slug,
     title: readRequiredString(frontmatter, 'title'),
     description: readOptionalString(frontmatter, 'description'),
-    categories: readRequiredCategories(frontmatter, 'category'),
-    cuisine: readOptionalString(frontmatter, 'cuisine'),
+    categories: readRequiredStringList(frontmatter, 'category'),
+    cuisines: readRequiredStringList(frontmatter, 'cuisine'),
     prepTime: readOptionalNumber(frontmatter, 'prepTime'),
     cookTime: readOptionalNumber(frontmatter, 'cookTime'),
     bakeTime: readOptionalNumber(frontmatter, 'bakeTime'),

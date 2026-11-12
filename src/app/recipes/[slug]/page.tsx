@@ -83,7 +83,7 @@ function getRecipeJsonLd(recipe: Recipe) {
     url: recipeUrl,
     datePublished: recipe.addedDate,
     recipeCategory: recipe.categories.join(', '),
-    recipeCuisine: recipe.cuisine,
+    recipeCuisine: recipe.cuisines,
     recipeYield: recipe.servings ? `${recipe.servings} porcje` : undefined,
     prepTime: getIsoDuration(recipe.prepTime),
     cookTime: getIsoDuration((recipe.cookTime ?? 0) + (recipe.bakeTime ?? 0)),
@@ -284,7 +284,14 @@ export default async function RecipePage({ params }: RecipePageProps) {
                     label={category}
                   />
                 ))}
-                <Chip size='small' variant='outlined' label={recipe.cuisine} />
+                {recipe.cuisines.map((cuisine) => (
+                  <Chip
+                    key={cuisine}
+                    size='small'
+                    variant='outlined'
+                    label={cuisine}
+                  />
+                ))}
               </Stack>
 
               <Typography

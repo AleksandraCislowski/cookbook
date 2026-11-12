@@ -3,7 +3,7 @@ title: 'Mini pizza'
 slug: mini-pizza
 description: Mała proteinowa pizza na cieście jogurtowym, z szynką i serem.
 category: Obiad, Przekąska, Proteinowe, Z mięsem
-cuisine: Włoska
+cuisine: Włoska, Fast food
 prepTime:
 cookTime:
 bakeTime: 13

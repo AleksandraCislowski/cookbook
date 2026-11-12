@@ -3,7 +3,7 @@ title: 'Calzone z kurczakiem'
 slug: calzone-z-kurczakiem
 description: Calzone na cieście z jogurtu naturalnego, z kurczakiem, pieczarkami, papryką i żółtym serem.
 category: Obiad, Z mięsem, Proteinowe
-cuisine: Włoska
+cuisine: Włoska, Fast food
 prepTime:
 cookTime:
 bakeTime: 10

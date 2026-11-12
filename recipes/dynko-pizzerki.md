@@ -3,7 +3,7 @@ title: 'Dyńko-pizzerki'
 slug: dynko-pizzerki
 description: Pizzerki z ciasta kruchego z szynką, serem i keczupem, obwiązane sznurkiem w kształt małych dyń.
 category: Halloween, Przekąska, Z mięsem, Gotowce
-cuisine: Domowa
+cuisine: Fast food
 prepTime:
 cookTime:
 bakeTime: 25
