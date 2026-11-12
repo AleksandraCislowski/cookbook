@@ -2,6 +2,8 @@
 
 Notatki w przepisach mają być krótkie i treściwe.
 
+Zamiast skyru zawsze używaj jogurtu greckiego, również gdy przepis źródłowy podaje skyr waniliowy. Zachowuj podaną ilość i uwzględniaj zamianę w składnikach, opisie oraz przygotowaniu.
+
 Nazwy z „mini” zapisuj ze spacją, np. „mini pizza”, „mini tortille”, „mini wrapy”.
 
 Przy rozbieżnościach między nazwą a składnikami dopasowuj tytuł i opis do użytych składników, zamiast zmieniać składniki pod nazwę.

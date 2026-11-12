@@ -23,7 +23,7 @@ publishedAt: '2026-09-22T16:54:16+02:00'
 
 - 250g twarogu
 - 200g mąki pszennej
-- 3 czubate łyżeczki skyru
+- 3 czubate łyżeczki jogurtu greckiego
 - 1 czubata łyżeczka proszku do pieczenia
 - 2 łyżki cukru pudru albo erytrytolu
 

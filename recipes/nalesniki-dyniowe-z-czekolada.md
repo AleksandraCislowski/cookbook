@@ -37,8 +37,7 @@ publishedAt: '2026-10-06T21:10:28+02:00'
 4. Gorzką czekoladę posiekaj na małe kawałki i wmieszaj do ciasta.
 5. Rozgrzej nieprzywierającą patelnię na średnim ogniu i nakładaj mniejsze porcje ciasta.
 6. Smaż placuszki po kilka minut z każdej strony, aż będą rumiane i dopieczone w środku.
-7. Podawaj od razu, na przykład z jogurtem, skyrem albo dodatkową czekoladą.
-8. Gotowe, smacznego!
+7. Gotowe, smacznego!
 
 ## Notatki
 

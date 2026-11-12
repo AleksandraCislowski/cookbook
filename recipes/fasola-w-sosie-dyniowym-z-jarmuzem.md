@@ -20,7 +20,7 @@ publishedAt: '2026-11-10T07:19:29+01:00'
 ## Składniki
 
 - 460g mixu białej i czerwonej fasoli (ok. 2 opakowania)
-- 200g jarmużu
+- 100g jarmużu
 - 1 cebula
 - 500g purée z dyni
 - 500ml bulionu
