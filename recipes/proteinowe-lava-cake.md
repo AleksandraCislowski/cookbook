@@ -1,7 +1,7 @@
 ---
 title: 'Proteinowe lava cake'
 slug: proteinowe-lava-cake
-description: Mocno kakaowe ciastka z serka wiejskiego, z kremową konsystencją, groszkami czekoladowymi na wierzchu i polewą orzechową.
+description: Mocno kakaowe ciastka z serka wiejskiego z kremowym środkiem i orzechową polewą.
 category: Deser, Proteinowe, Blender
 cuisine: Francuska
 prepTime:

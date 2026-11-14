@@ -1,7 +1,7 @@
 ---
 title: 'Sushi warstwowe'
 slug: sushi-warstwowe
-description: Warstwowe sushi z łososiem, awokado, ogórkiem i kremowym serkiem w chrupiącej, delikatnej formie.
+description: Warstwowe sushi z wędzonym łososiem i kremowym serkiem, krojone na małe kawałki.
 category: Obiad, Przekąska, Ninja Cooker, Z rybą
 cuisine: Azjatycka
 prepTime: 20

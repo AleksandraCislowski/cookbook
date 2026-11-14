@@ -1,7 +1,7 @@
 ---
 title: "Butter chicken Mac 'n' Cheese"
 slug: butter-chicken-mac-n-cheese
-description: Makaron muszelki z kurczakiem z Ninja Cooker w kremowym sosie z pomidorów, serka i cheddara, doprawionym curry, imbirem i garam masala.
+description: Muszelki z kurczakiem w kremowym sosie pomidorowo-serowym z aromatycznymi indyjskimi przyprawami.
 category: Obiad, Z mięsem, Proteinowe, Ninja Cooker
 cuisine: Indyjska
 prepTime:

@@ -1,7 +1,7 @@
 ---
 title: 'Zupa brokułowa'
 slug: zupa-brokulowa
-description: Krem z pieczonego brokułu z fetą, szpinakiem, białą fasolą i serkiem wiejskim, podawany z jajkami na twardo.
+description: Gęsty krem z pieczonego brokułu ze słoną fetą i jajkiem na twardo.
 category: Obiad, Zupy, Vege, Z wczorajszego rosołu, Proteinowe, Blender
 cuisine: Domowa
 prepTime:

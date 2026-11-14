@@ -1,7 +1,7 @@
 ---
 title: 'Proteinowy wrap z twarożkiem jagodowym i kruszonką'
 slug: proteinowy-wrap-z-twarozkiem-jagodowym-i-kruszonka
-description: Proteinowy wrap z serka wiejskiego z kremowym twarożkiem i frużeliną jagodową z miodem, posypany maślaną kruszonką z cynamonem.
+description: Wrap z serka wiejskiego z jagodowym twarożkiem i maślaną kruszonką z cynamonem.
 category: Śniadanie, Deser, Proteinowe, Blender
 cuisine: Domowa
 prepTime:

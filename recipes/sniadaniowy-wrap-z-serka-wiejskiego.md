@@ -1,7 +1,7 @@
 ---
 title: 'Śniadaniowy wrap z serka wiejskiego'
 slug: sniadaniowy-wrap-z-serka-wiejskiego
-description: Wrap z serka wiejskiego i papryki z kremową jajecznicą, chrupiącym boczkiem, awokado i sosem jogurtowo-musztardowym.
+description: Paprykowy wrap z serka wiejskiego z jajecznicą, chrupiącym boczkiem i musztardowym sosem.
 category: Śniadanie, Z mięsem, Proteinowe, Blender
 cuisine: Nowoczesna
 prepTime:

@@ -1,7 +1,7 @@
 ---
 title: 'Kurczak w sosie twarogowo-pomarańczowym'
 slug: kurczak-w-sosie-twarogowo-pomaranczowym
-description: Kremowy kurczak marynowany w twarogu, jogurcie, soku pomarańczowym i mocno pieprznym sosie.
+description: Kurczak w kremowym sosie twarogowym z pomarańczową nutą, wyraźnym pieprzem i świeżą miętą.
 category: Obiad, Z mięsem, Blender
 cuisine: Domowa
 prepTime:

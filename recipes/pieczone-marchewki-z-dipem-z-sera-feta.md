@@ -1,7 +1,7 @@
 ---
 title: 'Pieczone marchewki z dipem z sera feta'
 slug: pieczone-marchewki-z-dipem-z-sera-feta
-description: Karmelizowane marchewki w paprykowo-ziołowej marynacie podane z kremowym dipem z fety, jogurtu greckiego, miodu i cytryny.
+description: Pieczone marchewki z wędzoną papryką i kremowym dipem z fety.
 category: Dodatki, Przekąska, Vege, Blender
 cuisine: Grecka
 prepTime:

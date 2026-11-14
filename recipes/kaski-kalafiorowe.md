@@ -1,7 +1,7 @@
 ---
 title: 'Kąski kalafiorowe'
 slug: kaski-kalafiorowe
-description: Chrupiące kąski kalafiora w przyprawach i chrupiącej panierce.
+description: Delikatny kalafior w chrupiącej panierce panko z wędzoną papryką.
 category: Przekąska, Vege
 cuisine: Domowa
 prepTime:

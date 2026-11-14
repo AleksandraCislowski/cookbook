@@ -1,7 +1,7 @@
 ---
 title: 'Owocowa pianka proteinowa'
 slug: owocowa-pianka-proteinowa
-description: Lekka proteinowa pianka z wiśniowej galaretki, jogurtu greckiego, waniliowej odżywki i mrożonych owoców jagodowych.
+description: Lekka pianka o wiśniowo-waniliowym smaku z owocami jagodowymi i orzechową polewą.
 category: Deser, Przekąska, Proteinowe
 cuisine: Domowa
 prepTime:

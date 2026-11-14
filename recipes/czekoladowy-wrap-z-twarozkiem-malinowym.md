@@ -1,7 +1,7 @@
 ---
 title: 'Czekoladowy wrap z twarożkiem malinowym'
 slug: czekoladowy-wrap-z-twarozkiem-malinowym
-description: Czekoladowy wrap z serka wiejskiego z kremowym nadzieniem z twarogu, jogurtu greckiego i malin. Prosty deser bogaty w białko.
+description: Czekoladowy wrap z serka wiejskiego z kremowym twarożkiem malinowym.
 category: Śniadanie, Deser, Proteinowe, Blender
 cuisine: Domowa
 prepTime:
