@@ -2,7 +2,7 @@
 title: 'Sałatka zielonej bogini'
 slug: salatka-zielonej-bogini
 description: Orzeźwiająca sałatka z kapusty, ogórka i szczypiorku w kremowym, zielonym dressingu.
-category: Sałatka, Blender, Vege
+category: Sałatka, Blender, Wegetariańskie
 cuisine: Nowoczesna
 prepTime: 20
 cookTime:

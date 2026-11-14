@@ -2,7 +2,7 @@
 title: 'Wiosenna sałatka z pieczonych ziemniaków'
 slug: wiosenna-salatka-z-pieczonych-ziemniakow
 description: Lekka sałatka z pieczonych ziemniaków, groszku, rzodkiewki i sosu z sera feta.
-category: Obiad, Sałatka, Vege, Blender
+category: Obiad, Sałatka, Wegetariańskie, Blender
 cuisine: Domowa
 prepTime:
 cookTime:

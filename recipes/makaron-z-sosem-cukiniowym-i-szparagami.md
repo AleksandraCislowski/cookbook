@@ -2,7 +2,7 @@
 title: 'Makaron z sosem cukiniowym i szparagami'
 slug: makaron-z-sosem-cukiniowym-i-szparagami
 description: Makaron w kremowym sosie cukiniowym ze szparagami i cytrynową nutą.
-category: Obiad, Vege, Blender
+category: Obiad, Wegetariańskie, Blender
 cuisine: Domowa
 prepTime:
 cookTime: 30

@@ -2,7 +2,7 @@
 title: 'Szakszuka'
 slug: szakszuka
 description: Szakszuka z soczystymi pomidorami, jajkami o ściętym białku i płynnym żółtku oraz aromatycznym szczypiorkiem.
-category: Śniadanie, Vege
+category: Śniadanie, Wegetariańskie
 cuisine: Turecka
 prepTime:
 cookTime: 15

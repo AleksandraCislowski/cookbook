@@ -2,7 +2,7 @@
 title: 'Piklowana czerwona cebula'
 slug: piklowana-czerwona-cebula
 description: Szybka piklowana czerwona cebula do kanapek, tacos, burgerów i sałatek.
-category: Dodatki, Vege
+category: Dodatki, Wegetariańskie
 cuisine: Domowa
 prepTime:
 cookTime:

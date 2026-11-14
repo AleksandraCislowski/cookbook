@@ -2,7 +2,7 @@
 title: 'Risotto z kurkami'
 slug: risotto-z-kurkami
 description: Kremowe risotto z kurkami — sycące, aromatyczne i idealne na prosty obiad.
-category: Obiad, Z wczorajszego rosołu, Vege
+category: Obiad, Z wczorajszego rosołu, Wegetariańskie
 cuisine: Włoska
 prepTime:
 cookTime: 25

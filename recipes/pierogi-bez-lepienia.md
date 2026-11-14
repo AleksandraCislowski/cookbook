@@ -2,7 +2,7 @@
 title: 'Pierogi ruskie bez lepienia'
 slug: pierogi-bez-lepienia
 description: Pierogi ruskie bez lepienia, z kulkami farszu obtaczanymi w mące i wodzie zamiast klasycznego wałkowania.
-category: Obiad, Vege
+category: Obiad, Wegetariańskie
 cuisine: Polska
 prepTime:
 cookTime: 3

@@ -2,7 +2,7 @@
 title: 'Udon w sosie orzechowym'
 slug: udon-w-sosie-orzechowym
 description: Kremowy makaron udon w aromatycznym sosie z masła orzechowego, oleju sezamowego i sosu sojowego, podany z sezamem.
-category: Obiad, Vege
+category: Obiad, Wegetariańskie
 cuisine: Azjatycka
 prepTime:
 cookTime: 10

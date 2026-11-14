@@ -2,7 +2,7 @@
 title: 'Serowe kąski'
 slug: serowe-kaski
 description: Szybkie, mrożone serowe kąski z Ninja Cooker, chrupiące z zewnątrz i ciągnące w środku, idealne jako przekąska z ulubionym sosem.
-category: Ninja Cooker, Vege, Przekąska
+category: Ninja Cooker, Wegetariańskie, Przekąska
 cuisine: Fast food
 prepTime:
 cookTime:

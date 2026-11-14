@@ -2,7 +2,7 @@
 title: 'Zupa dyniowa z grzankami'
 slug: zupa-dyniowa-z-grzankami
 description: Kremowa zupa z purée dyniowego i mleczka kokosowego, podana z chrupiącymi domowymi grzankami.
-category: Obiad, Vege, Zupy
+category: Obiad, Wegetariańskie, Zupy
 cuisine: Domowa
 prepTime:
 cookTime: 20

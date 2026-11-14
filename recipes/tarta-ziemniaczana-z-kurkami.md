@@ -2,7 +2,7 @@
 title: 'Tarta ziemniaczana z kurkami'
 slug: tarta-ziemniaczana-z-kurkami
 description: Aromatyczna tarta z ziemniaków i kurek, zapiekana pod kremową mieszanką śmietany, jajek i sera.
-category: Obiad, Vege
+category: Obiad, Wegetariańskie
 cuisine: Domowa
 prepTime:
 cookTime:

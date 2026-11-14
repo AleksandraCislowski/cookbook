@@ -2,7 +2,7 @@
 title: 'Twaróg z rzodkiewką i szczypiorkiem'
 slug: twarog-z-rzodkiewka-i-szczypiorkiem
 description: Świeży twaróg z chrupiącą rzodkiewką i aromatycznym szczypiorkiem.
-category: Śniadanie, Vege, Proteinowe
+category: Śniadanie, Wegetariańskie, Proteinowe
 cuisine: Polska
 prepTime: 15
 cookTime:

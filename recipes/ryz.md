@@ -2,7 +2,7 @@
 title: 'Ryż na parze'
 slug: ryz
 description: Prosty ryż na parze z Ninja Cookera, dobry jako neutralny dodatek do sosów, curry, mięsa albo warzyw.
-category: Dodatki, Ninja Cooker, Vege
+category: Dodatki, Ninja Cooker, Wegetariańskie
 cuisine: Domowa
 prepTime:
 cookTime:

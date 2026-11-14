@@ -2,7 +2,7 @@
 title: 'Leniwe ze śliwkami'
 slug: leniwe-ze-sliwkami
 description: Delikatne leniwe ze śliwkami w korzennym sosie z nutą pomarańczy.
-category: Obiad, Deser, Vege, Proteinowe
+category: Obiad, Wegetariańskie, Proteinowe
 cuisine: Polska
 prepTime: 40
 cookTime:

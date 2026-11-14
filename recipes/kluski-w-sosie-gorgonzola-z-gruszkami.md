@@ -2,7 +2,7 @@
 title: 'Kluski w sosie gorgonzola z gruszkami'
 slug: kluski-w-sosie-gorgonzola-z-gruszkami
 description: Kluski lub makaron w kremowym sosie gorgonzola z gruszką.
-category: Obiad, Vege
+category: Obiad, Wegetariańskie
 cuisine: Włoska
 prepTime: 35
 cookTime:
