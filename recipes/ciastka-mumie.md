@@ -2,7 +2,7 @@
 title: "Ciastka mumie"
 slug: ciastka-mumie
 description: Halloweenowe mumie z ciasta francuskiego z Nutellą i bananem, owinięte paskami ciasta i udekorowane cukrowymi oczkami.
-category: Deser, Przekąska, Halloween, Gotowce
+category: Deser, Przekąska, Halloween
 cuisine: Domowa
 prepTime:
 cookTime:

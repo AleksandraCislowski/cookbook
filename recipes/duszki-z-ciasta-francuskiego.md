@@ -2,7 +2,7 @@
 title: 'Duszki z ciasta francuskiego'
 slug: duszki-z-ciasta-francuskiego
 description: Duszki z chrupiącego ciasta francuskiego z parówkami. Prosta przekąska na Halloween.
-category: Przekąska, Halloween, Z mięsem, Gotowce
+category: Przekąska, Halloween, Z mięsem
 cuisine: Fast food
 prepTime:
 cookTime:

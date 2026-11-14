@@ -2,7 +2,7 @@
 title: 'Kurczakowe kąski'
 slug: kurczakowe-kaski
 description: Szybkie mrożone kurczakowe kąski z Ninja Cooker, chrupiące z zewnątrz i soczyste w środku, idealne do podania z ulubionym sosem.
-category: Ninja Cooker, Z mięsem, Przekąska, Gotowce
+category: Ninja Cooker, Z mięsem, Przekąska
 cuisine: Fast food
 prepTime:
 cookTime:

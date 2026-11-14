@@ -2,7 +2,7 @@
 title: 'Bułeczki bao z mięsem i warzywami'
 slug: bulki-bao-z-miesem-i-warzywami
 description: Miękkie bułeczki bao wypełnione pikantnym mięsem i chrupiącymi warzywami — szybki obiad inspirowany kuchnią azjatycką.
-category: Obiad, Z mięsem, Gotowce
+category: Obiad, Z mięsem
 cuisine: Azjatycka
 prepTime:
 cookTime: 30

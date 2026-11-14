@@ -14,10 +14,6 @@ Tytuły przepisów zawsze zapisuj z poprawnymi polskimi znakami (ą, ć, ę, ł,
 
 Nie dodawaj w przepisach instrukcji rozgrzewania ani nagrzewania piekarnika na żadnym etapie. Podawaj wyłącznie instrukcję pieczenia w formie „Piecz X minut w temperaturze Y”, z czasem i temperaturą zgodnymi z metadanymi przepisu.
 
-Jeśli przepis wykorzystuje gotowe ciasto (np. kruche, francuskie lub do pizzy) albo podobny gotowy półprodukt, zawsze dodawaj kategorię „Gotowce” obok pozostałych kategorii przepisu.
-
-Tortille są wyjątkiem: nie dodawaj kategorii „Gotowce” z powodu użycia tortilli.
-
 Kategorie dobieraj według głównego zastosowania potrawy i używaj istniejących nazw kategorii. Grzanki i inne składniki podawane przede wszystkim jako uzupełnienie zup, sałatek lub dań przypisuj do „Dodatki”. Nie dodawaj „Przekąska” wyłącznie dlatego, że coś można też zjeść samodzielnie.
 
 Kuchnię dobieraj do charakteru całego dania, a nie pojedynczego składnika lub marki produktu. Przepis może mieć jedną lub więcej kuchni, jeśli jest to uzasadnione; zapisuj je po przecinku w polu „cuisine”, np. „Włoska, Fast food”. Nie dodawaj drugiej kuchni na siłę. „Fast food” może uzupełniać kuchnię narodową przy daniach takich jak pizza, kebab czy pita z gyrosem. Sama tortilla, panierka, nadziewana bułka, krótki czas przygotowania lub gotowy półprodukt nie wystarczają do przypisania „Fast food”. Kąski kalafiorowe i faszerowane bułki pozostają w kuchni „Domowa”. Dla dań bez wyraźnej inspiracji regionalnej stosuj „Domowa”, a dla współczesnych przeróbek i połączeń różnych kuchni — „Nowoczesna”.

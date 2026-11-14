@@ -2,7 +2,7 @@
 title: 'Kurczak z chorizo w cieście francuskim'
 slug: kurczak-z-chorizo-w-ciescie-francuskim
 description: Babeczki z ciasta francuskiego z kurczakiem i chorizo, podawane na gęstym sosie gravy z patelni po smażeniu.
-category: Obiad, Z mięsem, Gotowce
+category: Obiad, Z mięsem
 cuisine: Domowa
 prepTime:
 cookTime:
