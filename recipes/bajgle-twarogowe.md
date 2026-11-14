@@ -2,7 +2,7 @@
 title: 'Bajgle twarogowe'
 slug: bajgle-twarogowe
 description: Puszyste bajgle z twarogiem, idealne na śniadanie lub drugie śniadanie z ulubionymi dodatkami.
-category: Śniadanie, Proteinowe, Vege
+category: Śniadanie, Proteinowe, Wegetariańskie
 cuisine: Domowa
 prepTime:
 cookTime:

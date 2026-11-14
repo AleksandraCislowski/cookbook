@@ -2,7 +2,7 @@
 title: 'Pieczone marchewki z dipem z sera feta'
 slug: pieczone-marchewki-z-dipem-z-sera-feta
 description: Pieczone marchewki z wędzoną papryką i kremowym dipem z fety.
-category: Dodatki, Przekąska, Vege, Blender
+category: Dodatki, Przekąska, Wegetariańskie, Blender
 cuisine: Grecka
 prepTime:
 cookTime:

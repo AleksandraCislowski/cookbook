@@ -2,7 +2,7 @@
 title: 'Fasola w sosie dyniowym z jarmużem'
 slug: fasola-w-sosie-dyniowym-z-jarmuzem
 description: Biała fasola z jarmużem w kremowym sosie z purée z dyni i serka wiejskiego, podawana z ulubionym pieczywem.
-category: Obiad, Vege, Z wczorajszego rosołu, Blender
+category: Obiad, Wegetariańskie, Z wczorajszego rosołu, Blender
 cuisine: Domowa
 prepTime: 30
 cookTime:

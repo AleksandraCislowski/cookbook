@@ -2,7 +2,7 @@
 title: 'Kluski marchewkowe'
 slug: kluski-marchewkowe
 description: Delikatne, lekko słodkie kluski z marchewki przygotowane z prostego ciasta.
-category: Dodatki, Vege
+category: Dodatki, Wegetariańskie
 cuisine: Polska
 prepTime: 30
 cookTime:

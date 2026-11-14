@@ -2,7 +2,7 @@
 title: 'Naleśniki dyniowe z czekoladą'
 slug: nalesniki-dyniowe-z-czekolada
 description: Puszyste dyniowe placuszki z twarogiem, cynamonem i kawałkami gorzkiej czekolady.
-category: Śniadanie, Proteinowe, Vege
+category: Śniadanie, Proteinowe, Wegetariańskie
 cuisine: Domowa
 prepTime:
 cookTime: 25

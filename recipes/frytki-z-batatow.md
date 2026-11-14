@@ -2,7 +2,7 @@
 title: 'Frytki z batatów'
 slug: frytki-z-batatow
 description: Szybkie frytki z batatów z Ninja Cooker, chrupiące z zewnątrz i miękkie w środku, dobre jako dodatek albo przekąska.
-category: Dodatki, Ninja Cooker, Vege
+category: Dodatki, Ninja Cooker, Wegetariańskie
 cuisine: Fast food
 prepTime:
 cookTime:

@@ -2,7 +2,7 @@
 title: 'Grzanki'
 slug: grzanki
 description: Chrupiące grzanki z czosnkiem, tymiankiem i papryką, do zup, kremów i sałatek.
-category: Dodatki, Vege
+category: Dodatki, Wegetariańskie
 cuisine: Domowa
 prepTime:
 cookTime:

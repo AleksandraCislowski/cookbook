@@ -2,7 +2,7 @@
 title: 'Ciasto drożdżowe - mózg'
 slug: ciasto-drozdzowe-mozg
 description: Cynamonowe ciasto drożdżowe w kształcie mózgu. Słodka przekąska na Halloween.
-category: Halloween, Deser, Przekąska, Vege
+category: Halloween, Deser, Przekąska
 cuisine: Domowa
 prepTime:
 cookTime:

@@ -2,7 +2,7 @@
 title: 'Pajęcze jajka'
 slug: pajecze-jajka
 description: Jajka z pajęczynowym wzorem na Halloween, faszerowane żółtkami z majonezem i szczypiorkiem.
-category: Halloween, Przekąska, Śniadanie, Vege
+category: Halloween, Przekąska, Śniadanie, Wegetariańskie
 cuisine: Domowa
 prepTime:
 cookTime: 10
