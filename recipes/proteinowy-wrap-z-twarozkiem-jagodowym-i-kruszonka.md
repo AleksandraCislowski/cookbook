@@ -7,7 +7,7 @@ cuisine: Domowa
 prepTime:
 cookTime:
 bakeTime: 20
-bakeTemperature: 180°C
+bakeTemperature: 190°C
 restTime:
 passiveTime:
 passiveTimeLabel:
