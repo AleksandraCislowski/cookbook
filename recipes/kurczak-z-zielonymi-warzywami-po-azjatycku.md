@@ -44,3 +44,4 @@ publishedAt: '2026-11-10T07:20:04+01:00'
 4. Wymieszaj bulion, sos sojowy, sos ostrygowy i sok z cytryny. Wlej sos na patelnię do kurczaka.
 5. Dodaj z powrotem warzywa, wymieszaj i podgrzewaj razem, aż całość będzie gorąca.
 6. Podawaj z ryżem ugotowanym zgodnie z instrukcją na opakowaniu.
+7. Gotowe, smacznego!

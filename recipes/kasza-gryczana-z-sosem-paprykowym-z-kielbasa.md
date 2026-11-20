@@ -42,6 +42,7 @@ publishedAt: '2026-11-12T06:24:45+01:00'
 4. Wlej większość z 200ml wody, a resztę zostaw do rozrobienia mąki. Dodaj passatę pomidorową, sól, pieprz, majeranek i słodką paprykę. Duś na małym ogniu, aż papryka zmięknie, a kiełbasa będzie ugotowana w środku.
 5. Mąkę rozrób z pozostałą zimną wodą na gładką zawiesinę. Dodawaj stopniowo do sosu, mieszając, aż uzyskasz pożądaną gęstość. Gotuj jeszcze kilka minut i dopraw do smaku.
 6. Kaszę podziel na 4 porcje i podawaj z sosem oraz kiełbasą.
+7. Gotowe, smacznego!
 
 ## Notatki
 

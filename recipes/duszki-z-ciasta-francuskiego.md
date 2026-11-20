@@ -29,6 +29,7 @@ publishedAt: '2026-11-10T07:58:57+01:00'
 3. Na połowie bez otworów ułóż połówkę parówki. Złóż ciasto na pół, przykrywając parówkę częścią z otworami. Dolny koniec parówki może lekko wystawać spod ciasta, jak na zdjęciu.
 4. Ułóż duszki na blasze wyłożonej papierem do pieczenia, otworami do góry.
 5. Piecz 15 minut w temperaturze 200°C, aż ciasto będzie złociste.
+6. Gotowe, smacznego!
 
 ## Notatki
 

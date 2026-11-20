@@ -41,6 +41,7 @@ publishedAt: '2026-11-12T06:23:47+01:00'
 4. W tym czasie połącz twaróg z jogurtem greckim i erytrytolem, mieszając łyżką. Dodaj maliny i wymieszaj z masą twarogową.
 5. Upieczony placek lekko przestudź i ostrożnie oddziel od papieru do pieczenia.
 6. Posmaruj placek twarożkiem malinowym, zwiń w wrap i przekrój na dwie porcje.
+7. Gotowe, smacznego!
 
 ## Notatki
 

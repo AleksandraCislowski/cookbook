@@ -56,6 +56,7 @@ publishedAt: '2026-11-15T15:47:52+01:00'
 6. Sałatę umyj, osusz i porwij na kawałki.
 7. Wymieszaj jogurt grecki z musztardą i sokiem z limonki. Dopraw sos solą i pieprzem.
 8. Sałatę wymieszaj z sosem i rozłóż na talerzach. Dodaj płatki parmezanu, a na wierzchu ułóż ciepłe nuggetsy.
+9. Gotowe, smacznego!
 
 ## Notatki
 

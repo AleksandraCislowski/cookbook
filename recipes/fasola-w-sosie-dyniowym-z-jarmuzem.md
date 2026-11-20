@@ -42,3 +42,4 @@ publishedAt: '2026-11-10T07:19:29+01:00'
 2. Purée z dyni, bulion, sok z cytryny, obrany czosnek i serek wiejski zblenduj z solą, pieprzem, gałką muszkatołową i słodką papryką na gładki sos.
 3. Wlej sos na patelnię z cebulą i jarmużem. Dodaj odsączoną fasolę, wymieszaj i podgrzewaj, aż całość będzie gorąca.
 4. Podawaj z ulubionym pieczywem.
+5. Gotowe, smacznego!

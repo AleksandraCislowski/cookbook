@@ -56,3 +56,4 @@ publishedAt: '2026-11-12T06:24:21+01:00'
 7. Połącz twaróg z jogurtem greckim i 2 łyżkami erytrytolu, mieszając łyżką.
 8. Upieczony placek lekko przestudź i ostrożnie oddziel od papieru do pieczenia.
 9. Posmaruj placek twarożkiem i ostudzoną frużeliną jagodową, zwiń w wrap i przekrój na dwie porcje. Posyp kruszonką cynamonową.
+10. Gotowe, smacznego!
